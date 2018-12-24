@@ -11,4 +11,4 @@ License: CC-BY-SA 4.0 International
 
 ## Contents
 
-3. [Atoms](chapter3.md)
+3. [Atoms, Bonds and Molecules](chapter3.md)
