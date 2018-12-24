@@ -7,10 +7,10 @@ graph-based representation of molecules, where bonds are edges between
 two atoms being the nodes [2].
 
 Before we start, it is important to note that CDK 2.0 has an important
-convention around object properties: when a property is unset, the ob-
-ject’s field is set to null. This brings in sources for `NullPointerExceptions`,
-but also allows us to distinguish between, for example, zero and unset for-
-mal charge. In the former case, the formal charge value be set and have
+convention around object properties: when a property is unset, the
+object’s field is set to null. This brings in sources for `NullPointerExceptions`,
+but also allows us to distinguish between, for example, zero and unset
+formal charge. In the former case, the formal charge value be set and have
 a zero value; in the latter case, the field has a null value, indicating the
 formal charge is currently unknown.
 
@@ -69,6 +69,38 @@ which outputs:
 Symbol: C
 Atomic number: 6
 ```
+
+### IIsotope
+
+The `IIsotope` information consists of the mass number, exact mass and
+natural abundance:
+
+```groovy
+IAtom atom = new Atom("C");
+atom.setMassNumber(13)
+atom.setNaturalAbundance(1.07)
+atom.setExactMass(13.00335484)
+```
+
+Here too, the complementary get methods are available:
+
+```groovy
+println "Mass number: " + atom.getMassNumber()
+println "Natural abundance: " + atom.getNaturalAbundance()
+println "Exact mass: " + atom.getExactMass()
+```
+
+giving:
+
+```plain
+Mass number: 13
+Natural abundance: 1.07
+Exact mass: 13.00335484
+```
+
+Appendix B lists all isotopes defined in the CDK with a natural abun-
+dance of more then 0.1.
+
 
 ## References
 
