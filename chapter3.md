@@ -28,7 +28,7 @@ IAtom atom = new Atom("C");
 Alternatively, we can also construct a new carbon atom, by passing a
 carbon `IElement`, conveniently provided by the `Elements` class:
 
-```(groovy)
+```groovy
 IAtom atom = new Atom(Elements.CARBON);
 ```
 
@@ -39,7 +39,7 @@ inheritance specified by the CDK data model.
 These constructors will set both the symbol as well as the atomic number
 of the atom:
 
-```(plain)
+```plain
 atomic number: 6
 ```
 
@@ -50,14 +50,14 @@ number. Because the `IAtom` extends the `IElement`, CDK atoms also have
 these properties. Therefore, we can set these properties for atoms
 manually too:
 
-```(groovy)
+```groovy
 atom.setSymbol("N")
 atom.setAtomicNumber(7)
 ```
 
 Of course, we can use the matching get methods to recover the properties:
 
-```(groovy)
+```groovy
 IAtom atom = new Atom(Elements.CARBON);
 println "Symbol: " + atom.getSymbol()
 println "Atomic number: " + atom.getAtomicNumber()
@@ -65,7 +65,7 @@ println "Atomic number: " + atom.getAtomicNumber()
 
 which outputs:
 
-```(plain)
+```plain
 Symbol: C
 Atomic number: 6
 ```
@@ -75,7 +75,7 @@ Atomic number: 6
 The `IIsotope` information consists of the mass number, exact mass and
 natural abundance:
 
-```(groovy)
+```groovy
 IAtom atom = new Atom("C");
 atom.setMassNumber(13)
 atom.setNaturalAbundance(1.07)
@@ -84,7 +84,7 @@ atom.setExactMass(13.00335484)
 
 Here too, the complementary get methods are available:
 
-```(groovy)
+```groovy
 println "Mass number: " + atom.getMassNumber()
 println "Natural abundance: " + atom.getNaturalAbundance()
 println "Exact mass: " + atom.getExactMass()
@@ -92,14 +92,62 @@ println "Exact mass: " + atom.getExactMass()
 
 giving:
 
-```(plain)
+```plain
 Mass number: 13
 Natural abundance: 1.07
 Exact mass: 13.00335484
 ```
 
-Appendix B lists all isotopes defined in the CDK with a natural abun-
-dance of more then 0.1.
+Appendix B lists all isotopes defined in the CDK with a natural
+abundance of more then 0.1.
+
+
+### IAtomType
+
+Atom types are an important concept in cheminformatics. They describe
+some basic facts about that particular atom in some particular
+configuration. These properties are used in many cheminformatics algorithms,
+including adding hydrogens to hydrogen-depleted chemical graphs (see
+Section 14.4.1) and force fields. Chapter 12 provides much more detail
+on the atom type infrastructure in the CDK library, and, for example,
+details how atom types can be perceived, and how atom type information
+is set for atoms.
+
+The `IAtomType` interface contains fields that relate to atom types. These
+properties include formal charge, neighbor count, maximum bond order
+and atom type name:
+
+```groovy
+atom.setAtomTypeName("C.3")
+atom.setFormalCharge(-1)
+atom.setMaxBondOrder(IBond.Order.SINGLE)
+atom.setFormalNeighbourCount(4)
+```
+
+### Coordinates
+
+The `IAtom` class supports three types of coordinates: 2D coordinates,
+used for diagrams, 3D coordinates for geometries, and crystal unit cell
+or notional coordinates. These properties are set with the respective
+methods:
+
+```groovy
+atom.setPoint2d(
+new Point2d(1.0, 2.3)
+)
+atom.setPoint3d(
+new Point3d(-2.0, -3.5, 4.7)
+)
+atom.setFractionalPoint3d(
+  new Point3d(0.1, 0.5, 0.25)
+)
+```
+
+The latter coordinates define the locations of the atoms with respect to
+(or inside) the crystal structure’s unit cell. Section 5.2 explains the full
+crystal structure functionality.
+
+## Bonds
 
 
 ## References
