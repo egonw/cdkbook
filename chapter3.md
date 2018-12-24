@@ -149,6 +149,106 @@ crystal structure functionality.
 
 ## Bonds
 
+The `IBond` interface of the CDK is an interaction between two or more
+`IAtom`s, extending the `IElectronContainer` interface. While the most
+common application in the CDK originates from graph theory [2], it is not
+restricted to that. That said, many algorithms implemented in the CDK
+expect a graph theory based model, where each bond connects two, and
+not more, atoms.
+
+For example, to create ethanol we write:
+
+```groovy
+IAtom atom1 = new Atom("C")
+IAtom atom2 = new Atom("C")
+IAtom atom3 = new Atom("O")
+IBond bond1 = new Bond(atom1, atom2, IBond.Order.SINGLE);
+IBond bond2 = new Bond(atom2, atom3, IBond.Order.SINGLE);
+```
+
+The CDK has a few bond orders, which we can list with this groovy code:
+
+```groovy
+IBond.Order.eachprintln it
+```
+
+which outputs:
+
+```
+SINGLE
+DOUBLE
+TRIPLE
+QUADRUPLE
+QUINTUPLE
+SEXTUPLE
+UNSET
+```
+
+As you might notice, there is no `AROMATIC` bond defined. This is
+deliberate and the CDK allows to define single-double bond order patterns at
+the same time as aromaticity information. For example, a kekule
+structure of benzene with bonds marked as aromatic can be constructed with:
+
+```groovy
+IAtom atom1 = new Atom("C")
+IAtom atom2 = new Atom("C")
+IAtom atom3 = new Atom("C")
+IAtom atom4 = new Atom("C")
+IAtom atom5 = new Atom("C")
+IAtom atom6 = new Atom("C")
+IBond bond1 = new Bond(atom1, atom2, IBond.Order.SINGLE)
+IBond bond2 = new Bond(atom2, atom3, IBond.Order.DOUBLE)
+IBond bond3 = new Bond(atom3, atom4, IBond.Order.SINGLE)
+IBond bond4 = new Bond(atom4, atom5, IBond.Order.DOUBLE)
+IBond bond5 = new Bond(atom5, atom6, IBond.Order.SINGLE)
+IBond bond6 = new Bond(atom6, atom1, IBond.Order.DOUBLE)
+bond1.setFlag(CDKConstants.ISAROMATIC, true);
+bond2.setFlag(CDKConstants.ISAROMATIC, true);
+bond3.setFlag(CDKConstants.ISAROMATIC, true);
+bond4.setFlag(CDKConstants.ISAROMATIC, true);
+bond5.setFlag(CDKConstants.ISAROMATIC, true);
+bond6.setFlag(CDKConstants.ISAROMATIC, true);
+```
+
+### Electron counts
+
+Bond orders, as we have seen earlier, are commonly used in the CDK to
+indicate the electronic properties of a bond. At the same time, each bond
+consists of a number of atoms. For example, in a single (sigma) bond, two
+electrons are involved. In a double (pi) bond, four electrons are involved,
+and in a triple bond, six electrons are involved. We can report on the
+electron counts for the various orders with this code:
+
+```groovy
+IBond.Order.each { order ->
+  bond = new Bond(
+    new Atom("C"), new Atom("C"),
+    order
+  )
+  println "Bond order $order has " + bond.electronCount + " electrons"
+}
+```
+
+showing us the default implementation:
+
+```plain
+Bond order SINGLE has 2 electrons
+Bond order DOUBLE has 4 electrons
+Bond order TRIPLE has 6 electrons
+Bond order QUADRUPLE has 8 electrons
+Bond order QUINTUPLE has 0 electrons
+Bond order SEXTUPLE has 0 electrons
+Bond order UNSET has 0 electrons
+```
+ 
+### Bond stereochemistry
+
+The `IBond.setStereo()` method is discussed in Section 4.1.
+
+
+## Molecules
+
+
 
 ## References
 
