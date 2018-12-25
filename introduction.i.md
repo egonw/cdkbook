@@ -3,7 +3,7 @@
 Readers of this book will probably know what the
 [Chemistry Development Kit](http://cdk.github.io/)
 (CDK) is: *An Open-Source Java Library for Chemo- and
-Bioinformatics* [1]. While the CDK project was founded in
+Bioinformatics* [<cite>Q27061829</cite>]. While the CDK project was founded in
 2000, the code base originates from the groundbreaking open source
 cheminformatics work Christoph Steinbeck started in 1997 with the
 JChemPaint [2] and CompChem projects.
@@ -39,7 +39,7 @@ experienced CDK developers.
 
 ## References
 
-1. steinbeck2006
+<references/>
 2. jchempaint
 3. cdk2
 4. cdk3
