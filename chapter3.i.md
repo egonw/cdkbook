@@ -21,7 +21,7 @@ a new atom is fairly easy. For example, we can create an atom of element
 type carbon, as defined by the element’s symbol that we pass as parameter
 in the constructor:
 
-<code src="CreateAtom1" />
+<code>CreateAtom1</code>
 
 Alternatively, we can also construct a new carbon atom, by passing a
 carbon `IElement`, conveniently provided by the `Elements` class:

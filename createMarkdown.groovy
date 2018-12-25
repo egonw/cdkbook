@@ -7,16 +7,16 @@ input = args[0]
 def lines = new File(input).readLines()
 
 lines.each { String line ->
-  if (line.contains("<code")) {
+  if (line.contains("<code>")) {
     def instruction = new XmlSlurper().parseText(line)
-      if (instruction.@src) {
-        def srcLines = new File("code/${instruction.@src}.verbatim.md").readLines()
-        srcLines.each { String srcLine -> println srcLine }
-      } else if (instruction.@out) {
-        println "```plain"
-        println "" + instruction.@out
-	println "```"
-      }    
+    def srcLines = new File("code/${instruction.text()}.verbatim.md").readLines()
+    srcLines.each { String srcLine -> println srcLine }
+  } else if (line.contains("<out>")) {
+    def instruction = new XmlSlurper().parseText(line)
+    println "```plain"
+    def srcLines = new File("code/${instruction.text()}.verbatim.md").readLines()
+    srcLines.each { String srcLine -> println srcLine }
+    println "```"
   } else if (line.contains(".i.md")) {
     line = line.replace(".i.md", ".md")
     println line
