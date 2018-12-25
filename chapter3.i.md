@@ -56,31 +56,18 @@ which outputs:
 
 ### IIsotope
 
-The `IIsotope` information consists of the mass number, exact mass and
-natural abundance:
+The `IIsotope` information consists of the *mass number*, *exact mass* and
+*natural abundance*:
 
-```groovy
-IAtom atom = new Atom("C");
-atom.setMassNumber(13)
-atom.setNaturalAbundance(1.07)
-atom.setExactMass(13.00335484)
-```
+<code>IsotopeProperties</code>
 
 Here too, the complementary get methods are available:
 
-```groovy
-println "Mass number: " + atom.getMassNumber()
-println "Natural abundance: " + atom.getNaturalAbundance()
-println "Exact mass: " + atom.getExactMass()
-```
+<code>IsotopeGetProperties</code>
 
 giving:
 
-```plain
-Mass number: 13
-Natural abundance: 1.07
-Exact mass: 13.00335484
-```
+<out>IsotopeGetProperties</out>
 
 Appendix B lists all isotopes defined in the CDK with a natural
 abundance of more then 0.1.
@@ -101,12 +88,7 @@ The `IAtomType` interface contains fields that relate to atom types. These
 properties include formal charge, neighbor count, maximum bond order
 and atom type name:
 
-```groovy
-atom.setAtomTypeName("C.3")
-atom.setFormalCharge(-1)
-atom.setMaxBondOrder(IBond.Order.SINGLE)
-atom.setFormalNeighbourCount(4)
-```
+<code>AtomTypeProperties</code>
 
 ### Coordinates
 
@@ -115,17 +97,7 @@ used for diagrams, 3D coordinates for geometries, and crystal unit cell
 or notional coordinates. These properties are set with the respective
 methods:
 
-```groovy
-atom.setPoint2d(
-new Point2d(1.0, 2.3)
-)
-atom.setPoint3d(
-new Point3d(-2.0, -3.5, 4.7)
-)
-atom.setFractionalPoint3d(
-  new Point3d(0.1, 0.5, 0.25)
-)
-```
+<code>AtomCoordinates</code>
 
 The latter coordinates define the locations of the atoms with respect to
 (or inside) the crystal structure’s unit cell. Section 5.2 explains the full
@@ -142,57 +114,22 @@ not more, atoms.
 
 For example, to create ethanol we write:
 
-```groovy
-IAtom atom1 = new Atom("C")
-IAtom atom2 = new Atom("C")
-IAtom atom3 = new Atom("O")
-IBond bond1 = new Bond(atom1, atom2, IBond.Order.SINGLE);
-IBond bond2 = new Bond(atom2, atom3, IBond.Order.SINGLE);
-```
+<code>Ethanol</code>
 
 The CDK has a few bond orders, which we can list with this groovy code:
 
-```groovy
-IBond.Order.eachprintln it
-```
+<code>BondOrders</code>
 
 which outputs:
 
-```
-SINGLE
-DOUBLE
-TRIPLE
-QUADRUPLE
-QUINTUPLE
-SEXTUPLE
-UNSET
-```
+<out>BondOrders</out>
 
 As you might notice, there is no `AROMATIC` bond defined. This is
 deliberate and the CDK allows to define single-double bond order patterns at
 the same time as aromaticity information. For example, a kekule
 structure of benzene with bonds marked as aromatic can be constructed with:
 
-```groovy
-IAtom atom1 = new Atom("C")
-IAtom atom2 = new Atom("C")
-IAtom atom3 = new Atom("C")
-IAtom atom4 = new Atom("C")
-IAtom atom5 = new Atom("C")
-IAtom atom6 = new Atom("C")
-IBond bond1 = new Bond(atom1, atom2, IBond.Order.SINGLE)
-IBond bond2 = new Bond(atom2, atom3, IBond.Order.DOUBLE)
-IBond bond3 = new Bond(atom3, atom4, IBond.Order.SINGLE)
-IBond bond4 = new Bond(atom4, atom5, IBond.Order.DOUBLE)
-IBond bond5 = new Bond(atom5, atom6, IBond.Order.SINGLE)
-IBond bond6 = new Bond(atom6, atom1, IBond.Order.DOUBLE)
-bond1.setFlag(CDKConstants.ISAROMATIC, true);
-bond2.setFlag(CDKConstants.ISAROMATIC, true);
-bond3.setFlag(CDKConstants.ISAROMATIC, true);
-bond4.setFlag(CDKConstants.ISAROMATIC, true);
-bond5.setFlag(CDKConstants.ISAROMATIC, true);
-bond6.setFlag(CDKConstants.ISAROMATIC, true);
-```
+<code>AromaticBond</code>
 
 ### Electron counts
 
@@ -203,27 +140,11 @@ electrons are involved. In a double (pi) bond, four electrons are involved,
 and in a triple bond, six electrons are involved. We can report on the
 electron counts for the various orders with this code:
 
-```groovy
-IBond.Order.each { order ->
-  bond = new Bond(
-    new Atom("C"), new Atom("C"),
-    order
-  )
-  println "Bond order $order has " + bond.electronCount + " electrons"
-}
-```
+<code>ElectronCounts</code>
 
 showing us the default implementation:
 
-```plain
-Bond order SINGLE has 2 electrons
-Bond order DOUBLE has 4 electrons
-Bond order TRIPLE has 6 electrons
-Bond order QUADRUPLE has 8 electrons
-Bond order QUINTUPLE has 0 electrons
-Bond order SEXTUPLE has 0 electrons
-Bond order UNSET has 0 electrons
-```
+<out>ElectronCounts</out>
  
 ### Bond stereochemistry
 
