@@ -1,3 +1,4 @@
+*.groovy
 *.out
 *.jar
 *.md

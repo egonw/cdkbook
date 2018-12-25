@@ -84,6 +84,7 @@ runWriter.close();
 // create Markdown files
 mdTypes = new ArrayList();
 mdTypes.add("verbatim");
+mdTypes.add("code");
 
 for (int type=0; type<mdTypes.size(); type++) {
   mdFile = inFile.substring(0,inFile.indexOf(suffix)) +
@@ -107,6 +108,9 @@ for (int type=0; type<mdTypes.size(); type++) {
         line = line.replace("%STEM%", runClass);
         line = line.replace("%EXT%", runExt);
         mdWriter.write(line + "\n");
+      } else if (line.contains("%SOURCECODE%")) {
+        def srcLines = new File(runFile).readLines()
+        srcLines.each { String srcLine -> mdWriter.write(srcLine + "\n") }
       } else {
         mdWriter.write(line + "\n");
       }

@@ -11,4 +11,5 @@ chapter3.md: chapter3.mdi createMarkdown.groovy
 	@groovy createMarkdown.groovy chapter3.mdi > chapter3.md
 
 install:
-	@cp *.md live/.
+	@cp index.md ch*.md live/.
+	@cp code/*.code.md live/code/.

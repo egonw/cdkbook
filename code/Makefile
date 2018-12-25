@@ -3,6 +3,8 @@ CDKVERSION=2.0
 CODEFILES: \
  $(shell groovy ../findScripts.groovy .. .out)
 
+.PRECIOUS: %.groovy
+
 all: allScriptsCompiled
 
 CLASSPATH=cdk-${CDKVERSION}.jar:.
@@ -16,10 +18,10 @@ clean:
 allScriptsCompiled: ${CODEFILES}
 	@touch allScriptsCompiled
 
-%.groovy : %.groovyin
+%.groovy : %.groovyin md.*.template
 	@echo "Processing " $<
 	@groovy process $<
 
-%.out: %.groovy md.*.template 
+%.out: %.groovy
 	@echo "doing $@..."
 	@groovy -cp ${CLASSPATH} ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy >> $@

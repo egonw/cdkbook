@@ -1,4 +1,4 @@
-**Script** [code/%STEM%.%EXT%](code/%STEM%.verbatim.md)
+**Script** [code/%STEM%.%EXT%](code/%STEM%.code.md)
 ```groovy
 %MD%
 ```
