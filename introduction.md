@@ -39,7 +39,7 @@ experienced CDK developers.
 
 ## References
 
-1. steinbeck2006
+1. C. Steinbeck, Y. Han, S. Kuhn, O. Horlacher, E. Luttmann, E. Willighagen, The Chemistry Development Kit (CDK): An Open-Source Java Library for Chemo- and Bioinformatics, J. Chem. Inf. Comput. Sci. 2003, 43, 493–500. <br />
 2. jchempaint
 3. cdk2
 4. cdk3
