@@ -21,6 +21,7 @@ a new atom is fairly easy. For example, we can create an atom of element
 type carbon, as defined by the element’s symbol that we pass as parameter
 in the constructor:
 
+**Script** [code/CreateAtom1.groovy](code/CreateAtom1.verbatim.md)
 ```groovy
 IAtom atom = new Atom("C");
 ```
