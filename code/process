@@ -79,7 +79,6 @@ runWriter.close();
 
 // create Markdown files
 mdTypes = new ArrayList();
-mdTypes.add("lst");
 mdTypes.add("verbatim");
 
 for (int type=0; type<mdTypes.size(); type++) {
