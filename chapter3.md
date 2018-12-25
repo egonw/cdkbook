@@ -29,6 +29,7 @@ IAtom atom = new Atom("C");
 Alternatively, we can also construct a new carbon atom, by passing a
 carbon `IElement`, conveniently provided by the `Elements` class:
 
+**Script** [code/CreateAtom2.groovy](code/CreateAtom2.code.md)
 ```groovy
 IAtom atom = new Atom(Elements.CARBON);
 ```
@@ -51,6 +52,7 @@ number. Because the `IAtom` extends the `IElement`, CDK atoms also have
 these properties. Therefore, we can set these properties for atoms
 manually too:
 
+**Script** [code/ElementProperties.groovy](code/ElementProperties.code.md)
 ```groovy
 atom.setSymbol("N")
 atom.setAtomicNumber(7)
@@ -58,6 +60,7 @@ atom.setAtomicNumber(7)
 
 Of course, we can use the matching get methods to recover the properties:
 
+**Script** [code/ElementGetProperties.groovy](code/ElementGetProperties.code.md)
 ```groovy
 IAtom atom = new Atom(Elements.CARBON);
 println "Symbol: " + atom.getSymbol()
@@ -73,9 +76,10 @@ Atomic number: 6
 
 ### IIsotope
 
-The `IIsotope` information consists of the mass number, exact mass and
-natural abundance:
+The `IIsotope` information consists of the *mass number*, *exact mass* and
+*natural abundance*:
 
+**Script** [code/IsotopeProperties.groovy](code/IsotopeProperties.code.md)
 ```groovy
 IAtom atom = new Atom("C");
 atom.setMassNumber(13)
@@ -85,6 +89,7 @@ atom.setExactMass(13.00335484)
 
 Here too, the complementary get methods are available:
 
+**Script** [code/IsotopeGetProperties.groovy](code/IsotopeGetProperties.code.md)
 ```groovy
 println "Mass number: " + atom.getMassNumber()
 println "Natural abundance: " + atom.getNaturalAbundance()
@@ -118,6 +123,7 @@ The `IAtomType` interface contains fields that relate to atom types. These
 properties include formal charge, neighbor count, maximum bond order
 and atom type name:
 
+**Script** [code/AtomTypeProperties.groovy](code/AtomTypeProperties.code.md)
 ```groovy
 atom.setAtomTypeName("C.3")
 atom.setFormalCharge(-1)
@@ -132,12 +138,13 @@ used for diagrams, 3D coordinates for geometries, and crystal unit cell
 or notional coordinates. These properties are set with the respective
 methods:
 
+**Script** [code/AtomCoordinates.groovy](code/AtomCoordinates.code.md)
 ```groovy
 atom.setPoint2d(
-new Point2d(1.0, 2.3)
+  new Point2d(1.0, 2.3)
 )
 atom.setPoint3d(
-new Point3d(-2.0, -3.5, 4.7)
+  new Point3d(-2.0, -3.5, 4.7)
 )
 atom.setFractionalPoint3d(
   new Point3d(0.1, 0.5, 0.25)
@@ -159,6 +166,7 @@ not more, atoms.
 
 For example, to create ethanol we write:
 
+**Script** [code/Ethanol.groovy](code/Ethanol.code.md)
 ```groovy
 IAtom atom1 = new Atom("C")
 IAtom atom2 = new Atom("C")
@@ -169,13 +177,16 @@ IBond bond2 = new Bond(atom2, atom3, IBond.Order.SINGLE);
 
 The CDK has a few bond orders, which we can list with this groovy code:
 
+**Script** [code/BondOrders.groovy](code/BondOrders.code.md)
 ```groovy
-IBond.Order.eachprintln it
+IBond.Order.each {
+  println it
+}
 ```
 
 which outputs:
 
-```
+```plain
 SINGLE
 DOUBLE
 TRIPLE
@@ -190,6 +201,7 @@ deliberate and the CDK allows to define single-double bond order patterns at
 the same time as aromaticity information. For example, a kekule
 structure of benzene with bonds marked as aromatic can be constructed with:
 
+**Script** [code/AromaticBond.groovy](code/AromaticBond.code.md)
 ```groovy
 IAtom atom1 = new Atom("C")
 IAtom atom2 = new Atom("C")
@@ -220,13 +232,15 @@ electrons are involved. In a double (pi) bond, four electrons are involved,
 and in a triple bond, six electrons are involved. We can report on the
 electron counts for the various orders with this code:
 
+**Script** [code/ElectronCounts.groovy](code/ElectronCounts.code.md)
 ```groovy
 IBond.Order.each { order ->
   bond = new Bond(
     new Atom("C"), new Atom("C"),
     order
   )
-  println "Bond order $order has " + bond.electronCount + " electrons"
+  println "Bond order $order has " +
+    bond.electronCount + " electrons"
 }
 ```
 
@@ -237,8 +251,8 @@ Bond order SINGLE has 2 electrons
 Bond order DOUBLE has 4 electrons
 Bond order TRIPLE has 6 electrons
 Bond order QUADRUPLE has 8 electrons
-Bond order QUINTUPLE has 0 electrons
-Bond order SEXTUPLE has 0 electrons
+Bond order QUINTUPLE has 10 electrons
+Bond order SEXTUPLE has 12 electrons
 Bond order UNSET has 0 electrons
 ```
  
