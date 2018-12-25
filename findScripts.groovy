@@ -17,16 +17,15 @@ def suffix = ""
 if (args.length == 2) suffix = args[1]
 
 def basedir = new File(folder)
-files = basedir.listFiles().grep(~/.*mdi$/)
+files = basedir.listFiles().grep(~/.*i.md$/)
 files.each { file ->
   file.eachLine { line ->
-    if (line.contains("<code")) {
+    if (line.contains("<code>")) {
       def instruction = new XmlSlurper().parseText(line)
-      if (instruction.@src) {
-        println "" + instruction.@src + suffix
-      } else if (instruction.@out) {
-        println "" + instruction.@out + suffix
-      }
+      println "" + instruction.text() + suffix
+    } else if (line.contains("<out>")) {
+      def instruction = new XmlSlurper().parseText(line)
+      println "" + instruction.text() + suffix
     }
   }
 }

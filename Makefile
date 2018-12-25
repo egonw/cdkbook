@@ -1,12 +1,11 @@
-TARGETS= chapter3.md index.md
+TARGETS := chapter3.md index.md
 
-all: code ${TARGETS}
+SUBDIRS := code
+
+all: ${SUBDIRS} ${TARGETS}
 
 clean:
 	@rm chapter3.md index.md
-
-code:
-	@cd code; make all
 
 %.md : %.i.md createMarkdown.groovy
 	@groovy createMarkdown.groovy $< > $@
@@ -14,3 +13,7 @@ code:
 install:
 	@cp ${TARGETS} live/.
 	@cp code/*.code.md live/code/.
+
+$(SUBDIRS):
+	@$(MAKE) -C $@
+

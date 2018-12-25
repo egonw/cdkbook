@@ -14,7 +14,7 @@ lines.each { String line ->
   } else if (line.contains("<out>")) {
     def instruction = new XmlSlurper().parseText(line)
     println "```plain"
-    def srcLines = new File("code/${instruction.text()}.verbatim.md").readLines()
+    def srcLines = new File("code/${instruction.text()}.out").readLines()
     srcLines.each { String srcLine -> println srcLine }
     println "```"
   } else if (line.contains(".i.md")) {

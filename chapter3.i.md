@@ -26,9 +26,7 @@ in the constructor:
 Alternatively, we can also construct a new carbon atom, by passing a
 carbon `IElement`, conveniently provided by the `Elements` class:
 
-```groovy
-IAtom atom = new Atom(Elements.CARBON);
-```
+<code>CreateAtom2</code>
 
 A CDK atom has many properties, many of them inherited from the `IElement`,
 `IIsotope` and `IAtomType` interfaces. Figure 3.1 shows the interface
@@ -37,9 +35,7 @@ inheritance specified by the CDK data model.
 These constructors will set both the symbol as well as the atomic number
 of the atom:
 
-```plain
-atomic number: 6
-```
+<out>CreateAtom2</out>
 
 ### IElement
 
@@ -48,25 +44,15 @@ number. Because the `IAtom` extends the `IElement`, CDK atoms also have
 these properties. Therefore, we can set these properties for atoms
 manually too:
 
-```groovy
-atom.setSymbol("N")
-atom.setAtomicNumber(7)
-```
+<code>ElementProperties</code>
 
 Of course, we can use the matching get methods to recover the properties:
 
-```groovy
-IAtom atom = new Atom(Elements.CARBON);
-println "Symbol: " + atom.getSymbol()
-println "Atomic number: " + atom.getAtomicNumber()
-```
+<code>ElementGetProperties</code>
 
 which outputs:
 
-```plain
-Symbol: C
-Atomic number: 6
-```
+<out>ElementGetProperties</out>
 
 ### IIsotope
 

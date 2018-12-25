@@ -1,7 +1,7 @@
 CDKVERSION=2.0
 
 CODEFILES: \
- $(shell groovy ../findScripts.groovy .. .out)
+ $(shell groovy ../findScripts.groovy .. .out | sort | uniq)
 
 .PRECIOUS: %.groovy
 
