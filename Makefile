@@ -5,7 +5,7 @@ SUBDIRS := code
 all: ${SUBDIRS} ${TARGETS}
 
 clean:
-	@rm chapter3.md index.md
+	@rm ${TARGETS}
 
 %.md : %.i.md createMarkdown.groovy
 	@groovy createMarkdown.groovy $< > $@
