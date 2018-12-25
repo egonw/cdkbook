@@ -1,0 +1,14 @@
+# %FILE%
+
+
+**Source code:**
+
+```groovy
+%SOURCECODE%
+```
+
+**Output:**
+
+```plain
+%OUT%
+```
