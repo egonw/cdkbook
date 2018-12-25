@@ -1,15 +1,16 @@
+TARGETS= chapter3.md index.md
 
-all: code chapter3.md
+all: code ${TARGETS}
 
 clean:
-	@rm chapter3.md
+	@rm chapter3.md index.md
 
 code:
 	@cd code; make all
 
-chapter3.md: chapter3.i.md createMarkdown.groovy
-	@groovy createMarkdown.groovy chapter3.i.md > chapter3.md
+%.md : %.i.md createMarkdown.groovy
+	@groovy createMarkdown.groovy $< > $@
 
 install:
-	@cp index.md ch*.md live/.
+	@cp ${TARGETS} live/.
 	@cp code/*.code.md live/code/.
