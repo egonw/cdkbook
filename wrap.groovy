@@ -1,3 +1,7 @@
+// Copyright (c) 2011-2018  Egon Willighagen <egon.willighagen@gmail.com>
+//
+// GPL v3
+
 // checks
 
 maxLineLength = 50

@@ -1,3 +1,7 @@
+// Copyright (c) 2009-2018  Egon Willighagen <egon.willighagen@gmail.com>
+//
+// GPL v3
+
 import java.io.*;
 import java.util.*;
 

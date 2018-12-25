@@ -1,3 +1,7 @@
+// Copyright (c) 2018  Egon Willighagen <egon.willighagen@gmail.com>
+//
+// GPL v3
+
 input = args[0]
 
 def lines = new File(input).readLines()
