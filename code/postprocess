@@ -1,0 +1,78 @@
+// Copyright (c) 2009-2018  Egon Willighagen <egon.willighagen@gmail.com>
+//
+// GPL v3
+
+import java.io.*;
+import java.util.*;
+
+GROOVY = ".groovyin";
+suffix = GROOVY;
+
+ending = "in";
+inFile = args[0] + ending;
+
+runClass = inFile.substring(0,inFile.indexOf(suffix));
+runExt = suffix.substring(1,suffix.indexOf(ending));
+runFile = runClass + "." + runExt;
+
+// create Markdown files
+md = new StringBuffer();
+
+// read the input
+reader = new BufferedReader(
+  new FileReader(new File(inFile))
+);
+line = reader.readLine();
+while (line != null) {
+  if (line.trim().length() > 0) {
+    if (line.charAt(0) == '#') {
+    } else if (line.charAt(0) == '%') {
+      md.append(line.substring(1)+"\n");
+    } else {
+      md.append(line+"\n");
+    }
+  }  
+  line = reader.readLine();
+}
+
+mdTypes = new ArrayList();
+mdTypes.add("verbatim");
+mdTypes.add("code");
+
+for (int type=0; type<mdTypes.size(); type++) {
+  mdFile = inFile.substring(0,inFile.indexOf(suffix)) +
+            "." + mdTypes.get(type) + ".md";
+  mdWriter = new FileWriter(
+    new File(mdFile)
+  );
+  template = new BufferedReader(
+    new FileReader(new File("md." + mdTypes.get(type) + ".template"))
+  );
+  line = template.readLine();
+  while (line != null) {
+    if (line.length() > 0) {
+      if (line.contains("%MD%")) {
+        line = line.replace("%MD%", md.toString());
+        mdWriter.write(line);
+      } else if (line.contains("%FILE%")) {
+        line = line.replace("%FILE%", runFile);
+        mdWriter.write(line + "\n");
+      } else if (line.contains("%STEM%")) {
+        line = line.replace("%STEM%", runClass);
+        line = line.replace("%EXT%", runExt);
+        mdWriter.write(line + "\n");
+      } else if (line.contains("%SOURCECODE%")) {
+        def srcLines = new File(runFile).readLines()
+        srcLines.each { String srcLine -> mdWriter.write(srcLine + "\n") }
+      } else if (line.contains("%OUT%")) {
+        def srcLines = new File(runClass + ".out").readLines()
+        srcLines.each { String srcLine -> mdWriter.write(srcLine + "\n") }
+      } else {
+        mdWriter.write(line + "\n");
+      }
+    }
+    line = template.readLine();
+  }
+  mdWriter.close();
+}
+

@@ -18,10 +18,11 @@ clean:
 allScriptsCompiled: ${CODEFILES}
 	@touch allScriptsCompiled
 
-%.groovy : %.groovyin md.*.template
+%.groovy : %.groovyin source.*.template
 	@echo "Processing " $<
-	@groovy process $<
+	@groovy preprocess $<
 
-%.out: %.groovy
+%.out: %.groovy md.*.template
 	@echo "doing $@..."
 	@groovy -cp ${CLASSPATH} ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy >> $@
+	@groovy postprocess $<

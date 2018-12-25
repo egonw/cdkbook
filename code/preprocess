@@ -21,7 +21,6 @@ if (inFile.endsWith(GROOVY)) {
 reader = new BufferedReader(
   new FileReader(new File(inFile))
 );
-md = new StringBuffer();
 imports = new StringBuffer();
 source = new StringBuffer();
 line = reader.readLine();
@@ -42,7 +41,6 @@ while (line != null) {
       } else {
         source.append(line+"\n");
       }
-      md.append(line+"\n");
     }
   }
   line = reader.readLine();
@@ -70,9 +68,6 @@ while (line != null) {
     } else if (line.contains("%CODE%")) {
       line = line.replace("%CODE%", source.toString());
       runWriter.write(line);
-    } else if (line.contains("%MD%")) {
-      line = line.replace("%MD%", md.toString());
-      runWriter.write(line);
     } else {
       runWriter.write(line+"\n");
     }
@@ -80,43 +75,3 @@ while (line != null) {
   line = template.readLine();
 }
 runWriter.close();
-
-// create Markdown files
-mdTypes = new ArrayList();
-mdTypes.add("verbatim");
-mdTypes.add("code");
-
-for (int type=0; type<mdTypes.size(); type++) {
-  mdFile = inFile.substring(0,inFile.indexOf(suffix)) +
-            "." + mdTypes.get(type) + ".md";
-  mdWriter = new FileWriter(
-    new File(mdFile)
-  );
-  template = new BufferedReader(
-    new FileReader(new File("md." + mdTypes.get(type) + ".template"))
-  );
-  line = template.readLine();
-  while (line != null) {
-    if (line.length() > 0) {
-      if (line.contains("%MD%")) {
-        line = line.replace("%MD%", md.toString());
-        mdWriter.write(line);
-      } else if (line.contains("%FILE%")) {
-        line = line.replace("%FILE%", runFile);
-        mdWriter.write(line + "\n");
-      } else if (line.contains("%STEM%")) {
-        line = line.replace("%STEM%", runClass);
-        line = line.replace("%EXT%", runExt);
-        mdWriter.write(line + "\n");
-      } else if (line.contains("%SOURCECODE%")) {
-        def srcLines = new File(runFile).readLines()
-        srcLines.each { String srcLine -> mdWriter.write(srcLine + "\n") }
-      } else {
-        mdWriter.write(line + "\n");
-      }
-    }
-    line = template.readLine();
-  }
-  mdWriter.close();
-}
-
