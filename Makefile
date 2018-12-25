@@ -1,4 +1,4 @@
-TARGETS := chapter3.md index.md
+TARGETS := introduction.md cheminfo.md atomsbonds.md index.md
 
 SUBDIRS := code
 
