@@ -13,6 +13,7 @@ clean:
 install:
 	@cp ${TARGETS} live/.
 	@cp code/*.code.md live/code/.
+	@cp images/*.png live/images/.
 
 $(SUBDIRS):
 	@$(MAKE) -C $@
