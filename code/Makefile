@@ -22,4 +22,4 @@ allScriptsCompiled: ${CODEFILES}
 
 %.out: %.groovy md.*.template 
 	@echo "doing $@..."
-	@groovy -cp ${CLASSPATH} ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy > $@
+	@groovy -cp ${CLASSPATH} ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy >> $@
