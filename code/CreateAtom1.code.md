@@ -9,5 +9,4 @@ assert atom.getAtomicNumber() == 6;
 ```
 **Output:**
 ```plain
-%OUT%
 ```
