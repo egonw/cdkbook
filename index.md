@@ -11,6 +11,8 @@ License: CC-BY-SA 4.0 International
 
 ## Contents
 
+1. [Introduction](introduction.md) <br />
+2. [Cheminformatics](cheminfo.md) <br />
 3. [Atoms, Bonds and Molecules](chapter3.md) <br />
 3.1. [Atoms](chapter3.md#atoms) <br />
 3.1.1. [IElement](chapter3.md#ielement) <br />
