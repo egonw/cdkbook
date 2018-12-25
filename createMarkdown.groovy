@@ -17,6 +17,9 @@ lines.each { String line ->
         println "" + instruction.@out
 	println "```"
       }    
+  } else if (line.contains(".i.md")) {
+    line = line.replace(".i.md", ".md")
+    println line
   } else {
     println line
   }
