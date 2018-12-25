@@ -1,6 +1,6 @@
 # Cheminformatics
 
-While the purpose of this book is not to educate in cheminformatics (see the [Introduction](index.md)),
+While the purpose of this book is not to educate in cheminformatics (see the [Introduction](introdution.md)),
 this chapter provides minimal information about the representation of molecules and molecular systems.
 Such a representation is needed to allow analysis and manipulation of chemical
 structures in the computer. This is of paramount importance in areas like
@@ -19,10 +19,10 @@ predicting other properties, or even the same property for a more diverse set
 of molecules. From simple physico-chemical principles, it is clear why this
 is the case.
 
-![](images/boilingPoints.png)
+![](images/boilingPoints.png) <br />
 **Figure 1.1:** Diagram showing the relation between the boiling point and the number
 of carbon atoms in alkanes [1].
 
 # References
 
-1. Wiener 1947
+1. H. Wiener, Structural Determination of Paraffin Boiling Points, Journal of the American Chemical Society 1947, 69, 17–20.
