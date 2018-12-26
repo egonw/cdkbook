@@ -23,7 +23,7 @@ of the applications of the CDK.
 During the discussion of the various features, we will also discuss some
 of the important cheminformatics concepts, but in a minimal way only. The goal of this
 book is not to provide an introduction into cheminformatics. For that,
-various other books are available [<cite>Q60167226</cite>,<cite>Q30149558</cite>,<cite>Q60167327</cite>,<cite>missing</cite>,<cite>missing</cite>].
+various other books are available [<cite>Q60167226</cite>,<cite>Q60167327</cite>,<cite>missing</cite>,<cite>Q47543807</cite>,<cite>Q60167615</cite>].
 
 As such, this book does require a basic chemical education. It assumes that
 you know what atoms are, how they are connected by chemical bonds, and it

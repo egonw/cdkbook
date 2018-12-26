@@ -43,9 +43,9 @@ lines.each { String line ->
         refCounter++
         references.put(cites, "" + refCounter)
         if (bibliography.get(cites) != null) {
-          bibList += "${refCounter}. " + bibliography.get(cites) + " <br />\n"
+          bibList += "${refCounter}. " + bibliography.get(cites) + "\n"
         } else {
-          bibList += "${refCounter}. Missing <br />\n"
+          bibList += "${refCounter}. Missing\n"
         }
         replacement = refCounter
       } else {
