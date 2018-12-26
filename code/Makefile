@@ -5,7 +5,7 @@ CODEFILES: \
 
 .PRECIOUS: %.groovy
 
-all: allScriptsCompiled
+all: allScriptsCompiled scriptCount.tex
 
 CLASSPATH=cdk-${CDKVERSION}.jar:.
 
@@ -14,6 +14,9 @@ distclean: clean
 
 clean:
 	@rm -f *~ *.class allScriptsCompiled
+
+scriptCount.tex: ${CODEFILES}
+	@groovy ../findScripts.groovy .. .out | sort | uniq | wc -l > scriptCount.tex
 
 allScriptsCompiled: ${CODEFILES}
 	@touch allScriptsCompiled
