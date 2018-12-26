@@ -6,7 +6,7 @@ Readers of this book will probably know what the
 Bioinformatics* [1]. While the CDK project was founded in
 2000, the code base originates from the groundbreaking open source
 cheminformatics work Christoph Steinbeck started in 1997 with the
-JChemPaint [2] and CompChem projects.
+[JChemPaint](https://jchempaint.github.io/) [2] and CompChem projects.
 
 This book is not about those past projects, however; it is about the CDK as it is
 now. It has evolved enormously over the past 10 years, and got more and more
@@ -39,12 +39,13 @@ experienced CDK developers.
 
 ## References
 
-1. C. Steinbeck, Y. Han, S. Kuhn, O. Horlacher, E. Luttmann, E. Willighagen, The Chemistry Development Kit (CDK): An Open-Source Java Library for Chemo- and Bioinformatics, J. Chem. Inf. Comput. Sci. 2003, 43, 493–500. <br />
-2. jchempaint
-3. cdk2
-4. cdk3
-5. Gasteiger2003
-6. Leach2007
-7. Faulon2010
-8. Wikberg2010
-9. Wild2012
+1. C. Steinbeck, Y. Han, S. Kuhn, O. Horlacher, E. Luttmann, E. Willighagen, The Chemistry Development Kit (CDK): An Open-Source Java Library for Chemo- and Bioinformatics, J. Chem. Inf. Comput. Sci. 2003, 43, 493–500.
+2. S. Krause, E. L. Willighagen, C. Steinbeck, JChemPaint - Using the Collaborative Forces of the Internet to Develop a Free Editor for 2D Chemical Structures, Molecules 2000, 5, 93–98.
+3. C. Steinbeck, C. Hoppe, S. Kuhn, M. Floris, R. Guha, E. L. Willighagen, Recent developments of the Chemistry Development Kit (CDK) - an open-source java library for chemo- and bioinformatics. Current pharmaceutical design 2006, 12, 2111–2120.
+4. Missing
+5. J. Gasteiger, T. Engel, Chemoinformatics: A Textbook (Ed.: J. Gasteiger), Wiley-VCH, 1st ed., 2003.
+6. A. R. Leach, V. J. Gillet, An introduction to chemoinformatics, Springer, Rev. Ed, 2007.
+7. Missing
+8. J. Wikberg, M. Eklund, E. Willighagen, O. Spjuth, M. Lapins, O. Engkvist, J. Alvarsson, Introduction to Pharmaceutical Bioinformatics, Oakleaf Academic, Stockholm, Sweden, 2010.
+9. D. Wild, Introducing Cheminformatics, Lulu.com, 2013.
+

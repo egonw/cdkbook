@@ -23,6 +23,7 @@ is the case.
 **Figure 1.1:** Diagram showing the relation between the boiling point and the number
 of carbon atoms in alkanes [1].
 
-# References
+## References
 
 1. H. Wiener, Structural Determination of Paraffin Boiling Points, Journal of the American Chemical Society 1947, 69, 17–20.
+
