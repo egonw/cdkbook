@@ -37,11 +37,16 @@ lines.each { String line ->
       citeStart = line.indexOf("<cite>")
       citeEnd = line.indexOf("</cite>")
       cites = line.substring(citeStart+6, citeEnd)
+      if (cites.isEmpty()) cites = "?"
       replacement = ""
       if (!references.containsKey(cites)) {
         refCounter++
         references.put(cites, "" + refCounter)
-        bibList = "${refCounter}. " + bibliography.get(cites) + " <br />"
+        if (bibliography.get(cites) != null) {
+          bibList += "${refCounter}. " + bibliography.get(cites) + " <br />\n"
+        } else {
+          bibList += "${refCounter}. Missing <br />\n"
+        }
         replacement = refCounter
       } else {
         replacement = Integer.valueOf(references.get(cites))

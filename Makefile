@@ -7,7 +7,7 @@ all: ${SUBDIRS} ${TARGETS}
 clean:
 	@rm -f ${TARGETS}
 
-%.md : %.i.md createMarkdown.groovy
+%.md : %.i.md createMarkdown.groovy references.dat
 	@groovy createMarkdown.groovy $< > $@
 
 install:

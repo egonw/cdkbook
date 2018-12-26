@@ -1,10 +1,10 @@
 #  Atoms, Bonds and Molecules
 
-The basic objects in the CDK are the `IAtom`, `IBond` and `IAtomContainer` [1].
+The basic objects in the CDK are the `IAtom`, `IBond` and `IAtomContainer` [<cite>Q27061829</cite>].
 The name of the latter is somewhat misleading, as it contains
 not just `IAtom`s but also `IBond`s. The primary use of the model is the
 graph-based representation of molecules, where bonds are edges between
-two atoms being the nodes [2].
+two atoms being the nodes [<cite>Q37988904</cite>].
 
 Before we start, it is important to note that CDK 2.0 has an important
 convention around object properties: when a property is unset, the
@@ -157,5 +157,4 @@ The `IBond.setStereo()` method is discussed in Section 4.1.
 
 ## References
 
-1. C. Steinbeck, Y. Han, S. Kuhn, O. Horlacher, E. Luttmann, E. Willighagen, The Chemistry Development Kit (CDK): An Open-Source Java Library for Chemo- and Bioinformatics, J. Chem. Inf. Comput. Sci. 2003, 43, 493–500.
-2. A. T. Balaban, Applications of graph theory in chemistry, Journal of Chemical Information and Computer Sciences 1985, 25, 334–343.
+<references/>
