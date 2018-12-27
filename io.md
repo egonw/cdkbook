@@ -71,6 +71,6 @@ Writer: org.openscience.cdk.io.CMLWriter
 
 ## References
 
-1. P. Murray-Rust, H. S. Rzepa, Chemical Markup, XML, and the Worldwide Web. 1. Basic Principles, J. Chem. Inf. Comput. Sci. 1999, 39, 928–942.
-2. E. L. Willighagen, Processing CML conventions in Java, Internet Journal of Chemistry 2001, 4, 4+.
+1. Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the Worldwide Web. 1. Basic Principles. Journal of Chemical Information and Modeling. 1999 Jan 1;39(6):928–42. 
+2. Willighagen E. Processing CML conventions in Java. Internet Journal of Chemistry [Internet]. 2001 Jan 1;4:4. Available from: https://zenodo.org/record/1495470
 

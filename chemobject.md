@@ -89,8 +89,8 @@ which requires more coding, but has the advantage that it keeps track of the ind
 
 ```plain
 Number of containers: 2
-container 0 has hashcode 1782580546
-container 1 has hashcode 168366
+container 0 has hashcode 2114684409
+container 1 has hashcode 1357563986
 ```
 
 ## IReactionSet and IRingSet

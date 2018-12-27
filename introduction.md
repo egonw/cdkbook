@@ -39,13 +39,13 @@ experienced CDK developers.
 
 ## References
 
-1. C. Steinbeck, Y. Han, S. Kuhn, O. Horlacher, E. Luttmann, E. Willighagen, The Chemistry Development Kit (CDK): An Open-Source Java Library for Chemo- and Bioinformatics, J. Chem. Inf. Comput. Sci. 2003, 43, 493–500.
-2. S. Krause, E. L. Willighagen, C. Steinbeck, JChemPaint - Using the Collaborative Forces of the Internet to Develop a Free Editor for 2D Chemical Structures, Molecules 2000, 5, 93–98.
-3. C. Steinbeck, C. Hoppe, S. Kuhn, M. Floris, R. Guha, E. L. Willighagen, Recent developments of the Chemistry Development Kit (CDK) - an open-source java library for chemo- and bioinformatics. Current pharmaceutical design 2006, 12, 2111–2120.
-4. Missing
-5. J. Gasteiger, T. Engel, Chemoinformatics: A Textbook (Ed.: J. Gasteiger), Wiley-VCH, 1st ed., 2003.
-6. A. R. Leach, V. J. Gillet, An introduction to chemoinformatics, Springer, Rev. Ed, 2007.
+1. Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Journal of Chemical Information and Modeling. 2003 Feb 11;43(2):493–500. 
+2. Krause S, Willighagen E, Steinbeck C. JChemPaint - Using the Collaborative Forces of the Internet to Develop a Free Editor for 2D Chemical Structures. Molecules. 2000 Jan 28;5(1):93–8. 
+3. Steinbeck C, Hoppe C, Hoppe C, Kuhn S, Floris M, Guha R, et al. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Current Pharmaceutical Design [Internet]. 2006 Jun 1;12(17):2111–20. Available from: https://cdk.github.io/cdk-paper-2/
+4. Willighagen E, Mayfield JW, Alvarsson J, Berg A, Berg A, Carlsson L, et al. The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching. Journal of Cheminformatics. 2017 Jun 6;9(1). 
+5. Gasteiger J, Engel T, editors. Chemoinformatics: A Textbook. Wiley-VCH; 2003. 
+6. Leach AR, Gillet VJ. An introduction to chemoinformatics. Springer Science+Business Media; 2007. 
 7. Missing
-8. J. Wikberg, M. Eklund, E. Willighagen, O. Spjuth, M. Lapins, O. Engkvist, J. Alvarsson, Introduction to Pharmaceutical Bioinformatics, Oakleaf Academic, Stockholm, Sweden, 2010.
-9. D. Wild, Introducing Cheminformatics, Lulu.com, 2013.
+8. Wikberg J, Eklund M, Willighagen E, Spjuth O, Lapins M, Engkvist O, et al. Introduction to Pharmaceutical Bioinformatics. 2018. 
+9. Wild DJ. Introducing Cheminformatics. 2013. 
 

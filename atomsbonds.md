@@ -267,6 +267,6 @@ The `IBond.setStereo()` method is discussed in Section 4.1.
 
 ## References
 
-1. C. Steinbeck, Y. Han, S. Kuhn, O. Horlacher, E. Luttmann, E. Willighagen, The Chemistry Development Kit (CDK): An Open-Source Java Library for Chemo- and Bioinformatics, J. Chem. Inf. Comput. Sci. 2003, 43, 493–500.
-2. A. T. Balaban, Applications of graph theory in chemistry, Journal of Chemical Information and Computer Sciences 1985, 25, 334–343.
+1. Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Journal of Chemical Information and Modeling. 2003 Feb 11;43(2):493–500. 
+2. Balaban AT. Applications of graph theory in chemistry. Journal of Chemical Information and Modeling. 1985 Aug 1;25(3):334–43. 
 

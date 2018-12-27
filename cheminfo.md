@@ -25,5 +25,5 @@ of carbon atoms in alkanes [1].
 
 ## References
 
-1. H. Wiener, Structural Determination of Paraffin Boiling Points, Journal of the American Chemical Society 1947, 69, 17–20.
+1. Wiener H. Correlation of Heats of Isomerization, and Differences in Heats of Vaporization of Isomers, Among the Paraffin Hydrocarbons. Journal of the American Chemical Society. 1947 Jan 1;69(11):2636–8. 
 
