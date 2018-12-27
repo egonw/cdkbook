@@ -1,4 +1,4 @@
-TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md
+TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md chemobject.md
 
 SUBDIRS := code
 

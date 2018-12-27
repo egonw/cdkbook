@@ -23,4 +23,5 @@ License: CC-BY-SA 4.0 International
 3.2.1. [Electron counts](atomsbonds.i.md#electron-counts) <br />
 3.2.2. [Electron counts](atomsbonds.i.md#bond-stereochemistry) <br />
 3.3. [Molecules](atomsbonds.i.md#molecules) <br />
+9. [From IChemObject to IChemFile](chemobject.i.md) <br />
 11. [Input/Output](io.i.md) <br />
