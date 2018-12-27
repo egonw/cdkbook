@@ -6,3 +6,5 @@ introduction.md
 io.md
 scriptcount.tex
 chemobject.md
+package*json
+node_modules/
