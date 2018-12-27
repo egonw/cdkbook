@@ -12,7 +12,7 @@ Many different representations have been developed, each capturing different
 bits of information about the molecular system under study. Unfortunately,
 in many cases it is unclear which part of the information is essential for a
 certain application. For example, although the boiling points correlates well
-with the number of carbon atoms in a homologous series of alkanes [<cite>Q60167306</cite>]
+with the number of carbon atoms in a homologous series of alkanes [<cite>Q28837922</cite>]
 (see Figure 1.1), the
 carbon count descriptor is not generally useful for
 predicting other properties, or even the same property for a more diverse set
