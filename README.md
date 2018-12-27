@@ -9,6 +9,11 @@ Long time CDK developer
 
 License: CC-BY-SA 4.0 International
 
+## Dependencies
+
+* Groovy
+* nodejs and citation-js
+
 ## About
 
 Further information: [http://chem-bla-ics.blogspot.com/](http://chem-bla-ics.blogspot.com/)
