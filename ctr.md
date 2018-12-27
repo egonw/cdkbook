@@ -47,7 +47,7 @@ while (iterator.hasNext()) {
 }
 ```
 
-![](images/generated/CTR.png) <br />
+![](images/generated/CTR2.png) <br />
 **Figure 20.1**: 2D diagram of caffeine.
 
 ## Depict a compound as an image
