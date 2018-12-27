@@ -29,3 +29,6 @@ allScriptsCompiled: ${CODEFILES}
 	@echo "doing $@..."
 	@groovy -cp ${CLASSPATH} ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy >> $@
 	@groovy postprocess $<
+	@if [ -e *.png ]; then mogrify -trim *.png ; fi
+	@if [ -e *.png ]; then mv *.png ../images/generated/. ; fi
+

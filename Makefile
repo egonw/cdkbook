@@ -26,6 +26,7 @@ install:
 	@cp ${TARGETS} live/.
 	@cp code/*.code.md live/code/.
 	@cp images/*.png live/images/.
+	@cp images/generated/*.png live/images/generated/.
 
 $(SUBDIRS):
 	@$(MAKE) -C $@
