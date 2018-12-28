@@ -18,8 +18,16 @@ formal charge is currently unknown.
 
 The CDK interface `IAtom` is the underlying data model of atoms. Creating
 a new atom is fairly easy. For example, we can create an atom of element
-type carbon, as defined by the element’s symbol that we pass as parameter
+type carbon, as defined by the element’s atomic number that we pass as parameter
 in the constructor:
+
+**Script** [code/CreateAtom3.groovy](code/CreateAtom3.code.md)
+```groovy
+atom = new Atom(6);
+```
+
+An atom can also be constructed by passing in the symbol but this is marginally
+less efficient:
 
 **Script** [code/CreateAtom1.groovy](code/CreateAtom1.code.md)
 ```groovy
@@ -38,8 +46,7 @@ A CDK atom has many properties, many of them inherited from the `IElement`,
 `IIsotope` and `IAtomType` interfaces. Figure 3.1 shows the interface
 inheritance specified by the CDK data model.
 
-These constructors will set both the symbol as well as the atomic number
-of the atom:
+These constructors will set the atomic number of the atom:
 
 ```plain
 atomic number: 6
