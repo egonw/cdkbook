@@ -25,4 +25,7 @@ License: CC-BY-SA 4.0 International
 3.3. [Molecules](atomsbonds.i.md#molecules) <br />
 9. [From IChemObject to IChemFile](chemobject.i.md) <br />
 11. [Input/Output](io.i.md) <br />
+11.1. [File Format Detection](io.i.md#file-format-detection) <br />
+11.2. [Custom format matchers](io.i.md#custom-format-matchers) <br />
+11.3. [Reading from Readers and InputStreams](io.i.md#reading-from-readers-and-inputstreams) <br />
 20. [Chemistry Toolkit Rosetta](ctr.i.md) <br />
