@@ -1,0 +1,12 @@
+digraph {
+
+  rankdir= BT;
+
+  idbstereo -> istereo;
+  itetra -> istereo;
+
+  itetra [shape=box,label="ITetrahedralChirality"];
+  idbstereo [shape=box,label="IDoubleBondStereochemistry"];
+  istereo [shape=box,label="IStereoElement"];
+
+}

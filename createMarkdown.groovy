@@ -17,11 +17,11 @@ refCounter = 0;
 
 def lines = new File(input).readLines()
 lines.each { String line ->
-  if (line.contains("<code>")) {
+  if (line.startsWith("<code>")) {
     def instruction = new XmlSlurper().parseText(line)
     def srcLines = new File("code/${instruction.text()}.verbatim.md").readLines()
     srcLines.each { String srcLine -> println srcLine }
-  } else if (line.contains("<out>")) {
+  } else if (line.startsWith("<out>")) {
     def instruction = new XmlSlurper().parseText(line)
     println "```plain"
     def srcLines = new File("code/${instruction.text()}.out").readLines()
@@ -29,6 +29,8 @@ lines.each { String line ->
     println "```"
   } else if (line.contains("<references/>")) {
     println bibList
+  } else if (line.startsWith("%%%")) {
+    // ignore/remove this line
   } else {
     while (line.contains(".i.md")) {
       line = line.replace(".i.md", ".md")

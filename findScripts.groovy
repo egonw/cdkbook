@@ -20,12 +20,21 @@ def basedir = new File(folder)
 files = basedir.listFiles().grep(~/.*i.md$/)
 files.each { file ->
   file.eachLine { line ->
-    if (line.contains("<code>")) {
-      def instruction = new XmlSlurper().parseText(line)
-      println "" + instruction.text() + suffix
-    } else if (line.contains("<out>")) {
-      def instruction = new XmlSlurper().parseText(line)
-      println "" + instruction.text() + suffix
+    try {
+      if (line.contains("<code>")) {
+        start = line.indexOf("<code>")
+        end = line.indexOf("</code>")
+        text = line.substring(start + 6, end)
+        println "" + text + suffix
+      } else if (line.contains("<out>")) {
+        start = line.indexOf("<out>")
+        end = line.indexOf("</out>")
+        text = line.substring(start + 5, end)
+        println "" + text + suffix
+      }
+    } catch (Exception exception) {
+      println "Error reading line: " + line
+      System.exit(-1)
     }
   }
 }
