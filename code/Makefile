@@ -3,7 +3,7 @@ CDKVERSION=2.0
 CODEFILES: \
  $(shell groovy ../findScripts.groovy .. .out | sort | uniq)
 
-.PRECIOUS: %.groovy
+.PRECIOUS: %.java %.groovy
 
 all: allScriptsCompiled scriptCount.tex
 
@@ -15,7 +15,7 @@ distclean: clean
 clean:
 	@rm -f *~ *.class allScriptsCompiled
 
-scriptCount.tex: ${CODEFILES}
+scriptCount.tex: SMILESFormatMatcher.class ${CODEFILES}
 	@groovy ../findScripts.groovy .. .out | sort | uniq | wc -l > scriptCount.tex
 
 allScriptsCompiled: ${CODEFILES}
@@ -25,10 +25,21 @@ allScriptsCompiled: ${CODEFILES}
 	@echo "Processing " $<
 	@groovy preprocess $<
 
+%.class : %.java
+	@javac -classpath ${CLASSPATH} $<
+
+%.java : %.javap
+	@echo "Processing " $<
+	@groovy preprocess $<
+
+%.out: %.class
+	@echo "doing $@..."
+	@java ${OPTIONS} -classpath ${CLASSPATH} `echo "$<" | sed -e "s/.class//"` > $@
+	@groovy postprocess $<
+
 %.out: %.groovy md.*.template
 	@echo "doing $@..."
 	@groovy -cp ${CLASSPATH} ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy >> $@
-	@groovy postprocess $<
 	@if [ -e *.png ]; then mogrify -trim *.png ; fi
 	@if [ -e *.png ]; then mv *.png ../images/generated/. ; fi
-
+	@groovy postprocess $<

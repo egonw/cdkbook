@@ -2,12 +2,12 @@ TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md chemobject.m
 
 SUBDIRS := code
 
-all: ${SUBDIRS} scriptcount.tex references.dat ${TARGETS}
+all: ${SUBDIRS} scriptcount.tex ${TARGETS}
 
 clean:
 	@rm -f ${TARGETS}
 
-references.qids: findCitations.groovy *.i.md
+references.qids: findCitations.groovy
 	@groovy findCitations.groovy . | grep "^Q" | sort | uniq > references.qids
 
 references.dat: references.qids

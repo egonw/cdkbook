@@ -5,22 +5,39 @@
 import java.io.*;
 import java.util.*;
 
-GROOVY = ".groovyin";
-suffix = GROOVY;
+GROOVY = ".groovy";
+JAVACLASS = ".class";
 
-ending = "in";
-inFile = args[0] + ending;
+inFile = args[0];
 
-runClass = inFile.substring(0,inFile.indexOf(suffix));
-runExt = suffix.substring(1,suffix.indexOf(ending));
-runFile = runClass + "." + runExt;
+if (inFile.endsWith(GROOVY)) {
+  runSuffix = GROOVY;
+  srcSuffix = runSuffix;
+  ending = "in"
+} else if (inFile.endsWith(JAVACLASS)) {
+  runSuffix = JAVACLASS;
+  srcSuffix = ".java";
+  ending = "p"
+} else {
+  println "Unsupported processing of ${inFile}"
+  System.exit(-1);
+}
+
+runClass = inFile.substring(0,inFile.indexOf(runSuffix));
+println "runClass: " + runClass
+runExt = runSuffix.substring(1)
+println "runExt: " + runExt
+runFile = runClass + runSuffix;
+println "runFile: " + runFile
+srcFile = runClass + srcSuffix
+println "srcFile: " + srcFile
 
 // create Markdown files
 md = new StringBuffer();
 
 // read the input
 reader = new BufferedReader(
-  new FileReader(new File(inFile))
+  new FileReader(srcFile + ending)
 );
 line = reader.readLine();
 while (line != null) {
@@ -40,8 +57,8 @@ mdTypes.add("verbatim");
 mdTypes.add("code");
 
 for (int type=0; type<mdTypes.size(); type++) {
-  mdFile = inFile.substring(0,inFile.indexOf(suffix)) +
-            "." + mdTypes.get(type) + ".md";
+  mdFile = runClass + "." + mdTypes.get(type) + ".md";
+  println "mdFile " + mdFile
   mdWriter = new FileWriter(
     new File(mdFile)
   );
@@ -62,7 +79,7 @@ for (int type=0; type<mdTypes.size(); type++) {
         line = line.replace("%EXT%", runExt);
         mdWriter.write(line + "\n");
       } else if (line.contains("%SOURCECODE%")) {
-        def srcLines = new File(runFile).readLines()
+        def srcLines = new File(srcFile).readLines()
         srcLines.each { String srcLine -> mdWriter.write(srcLine + "\n") }
       } else if (line.contains("%OUT%")) {
         def srcLines = new File(runClass + ".out").readLines()

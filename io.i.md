@@ -45,6 +45,46 @@ It reports:
 
 ### Custom format matchers
 
+The SMILES format is one of the few formats which does not have a matcher.
+This is because there is no generally accepted file format based on this
+line notation.
+
+However, we can define a custom matcher ourselves and use that. First,
+the matcher will look something like:
+
+<code>SMILESFormatMatcher</code>
+
+If we then register this new matcher with the `FormatFactory`:
+
+<code>GuessSMILES</code>
+
+And with this, we can detect a file with SMILES strings and names:
+
+<out>GuessSMILES</out>
+
+Keep in mind that the more specific your custom matcher is, the lower
+the change of other formats accidentally recognized by your custom matcher.
+
+REINSERT TABLE
+
+## Reading from Readers and InputStreams
+
+Many input readers in the CDK allow reading from a Java `Reader` class,
+but all are required to also read from an `InputStream`. The difference
+between these two Java classes is that the Reader is based on a character
+stream, while an InputStream is based on an byte stream. For some readers this
+difference is crucial: processing an XML based format, such as CML and XML
+formats used by PubChem should be read from an InputStream, not a Reader.
+
+For other formats, it does not matter. This allows, for example, to read
+a file easily from a string with a `StringReader`
+(mind the newlines indicated by `\n`):
+
+<code>InputFromStringReader</code>
+
+But besides reading XML files correctly, the support for InputStream also allows
+reading files directly from the internet and from gzipped files (see
+Section XX.
 
 ## References
 

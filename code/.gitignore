@@ -2,3 +2,5 @@
 *.out
 *.jar
 *.md
+*.java
+*.class
