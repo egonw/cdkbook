@@ -1,4 +1,4 @@
-# SMILESFormatMatcher.class
+# SMILESFormatMatcher.java
 **Source code:**
 ```java
 import org.openscience.cdk.interfaces.*;
