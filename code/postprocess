@@ -72,9 +72,6 @@ for (int type=0; type<mdTypes.size(); type++) {
       if (line.contains("%MD%")) {
         line = line.replace("%MD%", md.toString());
         mdWriter.write(line);
-      } else if (line.contains("%FILE%")) {
-        line = line.replace("%FILE%", runFile);
-        mdWriter.write(line + "\n");
       } else if (line.contains("%STEM%")) {
         line = line.replace("%STEM%", runClass);
         line = line.replace("%EXT%", srcExt);
