@@ -36,7 +36,7 @@ method:
 
 <code>StereoisomerOne</code>
 
-This `setStereo()` and \code{getStereo()} methods in `IBond` take
+This `setStereo()` and `getStereo()` methods in `IBond` take
 and `IBond.Stereo` class. The values are defined by the matching enumeration
 and can be iterated over and printed with:
 
@@ -45,7 +45,7 @@ and can be iterated over and printed with:
 That gives a fairly long list. Keep in mind that a bond is directed: a bond
 has a first and second atom. That is the reason why an `UP` bond is
 directed too. The thicker wedge side is at the side of the second atom.
-If you like to \emph{invert} that wedge bond, you use the `UP_INVERTED`
+If you like to *invert* that wedge bond, you use the `UP_INVERTED`
 version.
 
 But if we look at the full list, we also see that `IBond.Stereo` also
