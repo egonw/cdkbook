@@ -79,6 +79,9 @@ for (int type=0; type<mdTypes.size(); type++) {
         line = line.replace("%STEM%", runClass);
         line = line.replace("%EXT%", srcExt);
         mdWriter.write(line + "\n");
+      } else if (line.contains("%SYNTAX%")) {
+        line = line.replace("%SYNTAX%", srcExt);
+        mdWriter.write(line + "\n");
       } else if (line.contains("%SOURCECODE%")) {
         def srcLines = new File(srcFile).readLines()
         srcLines.each { String srcLine -> mdWriter.write(srcLine + "\n") }
