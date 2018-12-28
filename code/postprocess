@@ -26,6 +26,7 @@ if (inFile.endsWith(GROOVY)) {
 runClass = inFile.substring(0,inFile.indexOf(runSuffix));
 println "runClass: " + runClass
 runExt = runSuffix.substring(1)
+srcExt = srcSuffix.substring(1)
 println "runExt: " + runExt
 runFile = runClass + runSuffix;
 println "runFile: " + runFile
@@ -76,7 +77,7 @@ for (int type=0; type<mdTypes.size(); type++) {
         mdWriter.write(line + "\n");
       } else if (line.contains("%STEM%")) {
         line = line.replace("%STEM%", runClass);
-        line = line.replace("%EXT%", runExt);
+        line = line.replace("%EXT%", srcExt);
         mdWriter.write(line + "\n");
       } else if (line.contains("%SOURCECODE%")) {
         def srcLines = new File(srcFile).readLines()
