@@ -21,9 +21,7 @@ a new atom is fairly easy. For example, we can create an atom of element
 type carbon, as defined by the element’s atomic number that we pass as parameter
 in the constructor:
 
-```
-new Atom(6); // 6=Carbon
-```
+<code>CreateAtom3</code>
 
 An atom can also be constructed by passing in the symbol but this is marginally
 less efficient:
