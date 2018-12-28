@@ -75,8 +75,8 @@ line notation.
 However, we can define a custom matcher ourselves and use that. First,
 the matcher will look something like:
 
-**Script** [code/SMILESFormatMatcher.class](code/SMILESFormatMatcher.code.md)
-```groovy
+**Script** [code/SMILESFormatMatcher.java](code/SMILESFormatMatcher.code.md)
+```java
 public class SMILESFormatMatcher
   extends SMILESFormat
   implements IChemFormatMatcher {

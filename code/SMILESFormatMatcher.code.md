@@ -1,6 +1,6 @@
 # SMILESFormatMatcher.class
 **Source code:**
-```groovy
+```java
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.io.formats.*;
 import org.openscience.cdk.io.formats.IChemFormatMatcher.MatchResult;
