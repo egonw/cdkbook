@@ -6,7 +6,7 @@ such as `IReaction`. But there are many more data structure interfaces used
 by the CDK, and this chapter will give an overview of what is available.
 
 All these data interfaces have one interface in common:
-`IChemObject, which we already briefly saw in Section 3.5.
+`IChemObject`, which we already briefly saw in Section 3.5.
 The core `IChemObject` interface itself, extends another core, though commonly
 hidden, interface: `ICDKObject`.
 The roles of these two classes are to provide basic functionality needed by the
@@ -89,8 +89,8 @@ which requires more coding, but has the advantage that it keeps track of the ind
 
 ```plain
 Number of containers: 2
-container 0 has hashcode 2114684409
-container 1 has hashcode 1357563986
+container 0 has hashcode 1782580546
+container 1 has hashcode 168366
 ```
 
 ## IReactionSet and IRingSet
