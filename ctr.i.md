@@ -22,7 +22,7 @@ The solution lists all heavy atom counts:
 
 <code>CTR1</code>
 
-![images/generated/CTR.png]
+![](images/generated/CTR2.png) <br />
 **Figure 20.1**: 2D diagram of caffeine.
 
 ## Depict a compound as an image
