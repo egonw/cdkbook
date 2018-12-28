@@ -6,7 +6,7 @@ such as `IReaction`. But there are many more data structure interfaces used
 by the CDK, and this chapter will give an overview of what is available.
 
 All these data interfaces have one interface in common:
-`IChemObject, which we already briefly saw in Section 3.5.
+`IChemObject`, which we already briefly saw in Section 3.5.
 The core `IChemObject` interface itself, extends another core, though commonly
 hidden, interface: `ICDKObject`.
 The roles of these two classes are to provide basic functionality needed by the
