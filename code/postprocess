@@ -24,14 +24,10 @@ if (inFile.endsWith(GROOVY)) {
 }
 
 runClass = inFile.substring(0,inFile.indexOf(runSuffix));
-println "runClass: " + runClass
 runExt = runSuffix.substring(1)
 srcExt = srcSuffix.substring(1)
-println "runExt: " + runExt
 runFile = runClass + runSuffix;
-println "runFile: " + runFile
 srcFile = runClass + srcSuffix
-println "srcFile: " + srcFile
 
 // create Markdown files
 md = new StringBuffer();
@@ -59,7 +55,6 @@ mdTypes.add("code");
 
 for (int type=0; type<mdTypes.size(); type++) {
   mdFile = runClass + "." + mdTypes.get(type) + ".md";
-  println "mdFile " + mdFile
   mdWriter = new FileWriter(
     new File(mdFile)
   );
