@@ -25,4 +25,9 @@ License: CC-BY-SA 4.0 International
 3.3. [Molecules](atomsbonds.md#molecules) <br />
 9. [From IChemObject to IChemFile](chemobject.md) <br />
 11. [Input/Output](io.md) <br />
+11.1. [File Format Detection](io.md#file-format-detection) <br />
+11.2. [Custom format matchers](io.md#custom-format-matchers) <br />
+11.3. [Reading from Readers and InputStreams](io.md#reading-from-readers-and-inputstreams) <br />
 20. [Chemistry Toolkit Rosetta](ctr.md) <br />
+20.1 [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
+20.2 [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
