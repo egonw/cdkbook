@@ -27,6 +27,10 @@ The solution lists all heavy atom counts:
 
 ## Depict a compound as an image
 
+**Warning: this code example is greatly outdated, and needs updating. It works (it is used
+to generate many of the structural diagrams in this book), but your code can be a lot simpler.
+See [this blog post](https://github.com/cdk/cdk/wiki/Toolkit-Rosetta).**
+
 The CTR asks in this task an approach to take a SMILES string, generate 2D coordinates, and depict the result
 in a PNG image. Chapter XX describes the last step, and for the first and second step
 we use the `SmilesParser` and `StructureDiagramGenerator` classes, respectively.
