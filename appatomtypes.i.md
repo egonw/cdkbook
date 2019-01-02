@@ -1,4 +1,4 @@
-## Atom Type Lists
+# Atom Type Lists
 
 The table listed in this Appendix is generated with the following
 code, listing all six properties of CDK atom types, as outlined
@@ -14,9 +14,29 @@ to code to load the proper atom type list:
 ## CDK Atom Types
 
 <table>
+<tr>
+<td><b>atom type</b></td>
+<td><b>element symbol</b></td>
+<td><b>formal charge</b></td>
+<td><b>number of neighbors</b></td>
+<td><b>hybridization</b></td>
+<td><b>number of lone pairs</b></td>
+<td><b>number of pi bonds</b></td>
+</tr>
 <in>atomtypelist.md</in>
 </table>
 
 ## Sybyl Atom Types
 
-
+<table>
+<tr>
+<td><b>atom type</b></td>
+<td><b>element symbol</b></td>
+<td><b>formal charge</b></td>
+<td><b>number of neighbors</b></td>
+<td><b>hybridization</b></td>
+<td><b>number of lone pairs</b></td>
+<td><b>number of pi bonds</b></td>
+</tr>
+<in>atomtypelist.md</in>
+</table>
