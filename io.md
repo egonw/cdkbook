@@ -20,7 +20,7 @@ formalize rules for inspecting the file content to determine what file format
 it is. The CDK has such functionality available for recognizing chemical
 file formats. But, to ensure no false detections are made, it
 requires a fairly accurate method for detecting
-the chemical format of a file. Appendix D
+the <a name="tp1">chemical format</a> of a file. Appendix D
 provides a list of all chemical file formats the CDK knows about.
 
 Programmatically, the format of a file can be detected using the

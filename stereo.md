@@ -4,12 +4,12 @@ An intrinsic property of molecular structures is the 3D organization of the atom
 resulting in a unique <a name="tp1">`geometry`</a>. If we change the position of an atom, we get a
 different geometry. We can lengthen and shorten a bond; change the angle
 between two bonds; and rotate around bonds, changing torsion angles in
-the molecules. All these changes lead to different `conformations` of the structure.
+the molecules. All these changes lead to different <a name="tp2">conformations</a> of the structure.
 
 However, when we starting switching two atoms, or two atom groups, then we are
 no longer talking about conformations, but about stereoisomers. Stereoisomers share
 the same chemical graph, but no matter what combinations of bond and torsion changes,
-we cannot `superimpose` the two molecules on top of each other.
+we cannot <a name="tp3">superimpose</a> the two molecules on top of each other.
 
 There are many kinds of geometrical constructs giving rise to stereochemistry.
 What they share, is that they are properties of the molecules, even though we
@@ -20,7 +20,7 @@ and double bond stereochemistry.
 ## Stereochemistry in a flat world
 
 Two dimensions drawings allow for depicting of three dimensional stereochemistry.
-It is not good at that, particular using `wedge bonds`, as us chemists typically
+It is not good at that, particular using <a name="tp4">wedge bonds</a>, as us chemists typically
 do. In fact, there are so many ways it can go wrongs that a long list of guidelines
 have been developed [1].
 
@@ -90,7 +90,7 @@ sections.
 
 ## Tetrahedral chirality
 
-The `tetrahedral chirality` describes the geometry around four-coordinate
+The <a name="tp5">tetrahedral chirality</a> describes the geometry around four-coordinate
 atoms. For example, consider methane. It has five atoms, connected with
 four bonds. For the 3D geometry, a four-coordinate carbon gives a tetrahedral
 structure with the four atoms connected to the atoms at the four corners and a
@@ -129,7 +129,7 @@ stereo elements derive. This is depicted in Figure XX.
 interfaces extends the `IStereoElement` interface.
 
 The `ITetrahedralChirality` interface requires you to specify the four neighboring
-atoms around a central `chiral atom`. Thus for bromochlorofluoroiodomethane
+atoms around a central <a name="tp6">chiral atom</a>. Thus for bromochlorofluoroiodomethane
 we can define the chirality also without coordinates. For this, we use the
 constructor of the interface's prime implementation:
 
@@ -187,8 +187,8 @@ ITetrahedralChirality.Stereo.each {
 ```
 
 Which shows that following seen from the first ligand atom, in order of the
-remaining three ligand atoms, they following a `clockwise` or
-`anti-clockwise` circle:
+remaining three ligand atoms, they following a <a name="tp7">clockwise</a> or
+<a name="tp8">anti-clockwise</a> circle:
 
 ```plain
 CLOCKWISE
