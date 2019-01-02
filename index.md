@@ -1,6 +1,6 @@
 # Groovy Cheminformatics with the Chemistry Development Kit
 
-Edition 2.0-1
+Edition 2.0-3
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
@@ -24,6 +24,8 @@ License: CC-BY-SA 4.0 International
 3.2.2. [Electron counts](atomsbonds.md#bond-stereochemistry) <br />
 3.3. [Molecules](atomsbonds.md#molecules) <br />
 4. [Stereochemistry](stereo.md) <br />
+4.1 [Stereochemistry in a flat world](stereo.md#stereochemistry-in-a-flat-world) <br />
+4.2 [Tetrahedral chirality](stereo.md#tetrahedral-chirality) <br />
 9. [From IChemObject to IChemFile](chemobject.md) <br />
 11. [Input/Output](io.md) <br />
 11.1. [File Format Detection](io.md#file-format-detection) <br />
