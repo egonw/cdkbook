@@ -16,7 +16,7 @@ formal charge is currently unknown.
 
 ## Atoms
 
-The CDK interface `IAtom` is the underlying data model of atoms. Creating
+The CDK interface <a name="tp2">`IAtom`</a> is the underlying data model of atoms. Creating
 a new atom is fairly easy. For example, we can create an atom of element
 type carbon, as defined by the element’s atomic number that we pass as parameter
 in the constructor:
@@ -54,7 +54,7 @@ atomic number: 6
 
 ### IElement
 
-The most common property of `IElement`s are their symbol and atomic
+The most common property of <a name="tp3">`IElement`</a>s are their symbol and atomic
 number. Because the `IAtom` extends the `IElement`, CDK atoms also have
 these properties. Therefore, we can set these properties for atoms
 manually too:
@@ -83,7 +83,7 @@ Atomic number: 6
 
 ### IIsotope
 
-The `IIsotope` information consists of the *mass number*, *exact mass* and
+The <a name="tp4">`IIsotope`</a> information consists of the *mass number*, *exact mass* and
 *natural abundance*:
 
 **Script** [code/IsotopeProperties.groovy](code/IsotopeProperties.code.md)
@@ -126,7 +126,7 @@ on the atom type infrastructure in the CDK library, and, for example,
 details how atom types can be perceived, and how atom type information
 is set for atoms.
 
-The `IAtomType` interface contains fields that relate to atom types. These
+The <a name="tp5">`IAtomType`</a> interface contains fields that relate to atom types. These
 properties include formal charge, neighbor count, maximum bond order
 and atom type name:
 
@@ -140,9 +140,9 @@ atom.setFormalNeighbourCount(4)
 
 ### Coordinates
 
-The `IAtom` class supports three types of coordinates: <a name="tp2">2D coordinates</a>,
-used for diagrams, <a name="tp3">3D coordinates</a> for geometries, and crystal <a name="tp4">unit cell</a>
-or <a name="tp5">notional coordinates</a>. These properties are set with the respective
+The `IAtom` class supports three types of coordinates: <a name="tp6">2D coordinates</a>,
+used for diagrams, <a name="tp7">3D coordinates</a> for geometries, and crystal <a name="tp8">unit cell</a>
+or <a name="tp9">notional coordinates</a>. These properties are set with the respective
 methods:
 
 **Script** [code/AtomCoordinates.groovy](code/AtomCoordinates.code.md)
@@ -164,14 +164,14 @@ crystal structure functionality.
 
 ## Bonds
 
-The `IBond` interface of the CDK is an interaction between two or more
-`IAtom`s, extending the `IElectronContainer` interface. While the most
+The <a name="tp10">`IBond`</a> interface of the CDK is an interaction between two or more
+`IAtom`s, extending the <a name="tp11">`IElectronContainer`</a> interface. While the most
 common application in the CDK originates from graph theory [2], it is not
 restricted to that. That said, many algorithms implemented in the CDK
 expect a graph theory based model, where each bond connects two, and
 not more, atoms.
 
-For example, to create <a name="tp6">ethanol</a> we write:
+For example, to create <a name="tp12">ethanol</a> we write:
 
 **Script** [code/Ethanol.groovy](code/Ethanol.code.md)
 ```groovy
@@ -206,7 +206,7 @@ UNSET
 As you might notice, there is no `AROMATIC` bond defined. This is
 deliberate and the CDK allows to define single-double bond order patterns at
 the same time as aromaticity information. For example, a kekule
-structure of <a name="tp7">benzene</a> with bonds marked as aromatic can be constructed with:
+structure of <a name="tp13">benzene</a> with bonds marked as aromatic can be constructed with:
 
 **Script** [code/AromaticBond.groovy](code/AromaticBond.code.md)
 ```groovy
@@ -235,7 +235,7 @@ bond6.setFlag(CDKConstants.ISAROMATIC, true);
 Bond orders, as we have seen earlier, are commonly used in the CDK to
 indicate the electronic properties of a bond. At the same time, each bond
 consists of a number of atoms. For example, in a single (sigma) bond, two
-<a name="tp8">electrons</a> are involved. In a double (pi) bond, four electrons are involved,
+<a name="tp14">electrons</a> are involved. In a double (pi) bond, four electrons are involved,
 and in a triple bond, six electrons are involved. We can report on the
 electron counts for the various orders with this code:
 
