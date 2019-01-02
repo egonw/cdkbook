@@ -1,0 +1,10 @@
+digraph {
+
+  rankdir= BT;
+
+  icrystal -> iatomcontainer;
+
+  iatomcontainer [shape=box,label="IAtomContainer"];
+  icrystal [shape=box,label="ICrystal"];
+
+}
