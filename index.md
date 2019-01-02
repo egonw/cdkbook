@@ -38,3 +38,6 @@ License: CC-BY-SA 4.0 International
 20.1 [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
 20.2 [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
 [Index](indexList.md) <br />
+[Appendix A](appatomtypes.md) <br />
+A.1 [CDK Atom Types](appatomtypes.md#cdk-atom-types) <br />
+A.2 [Sybyl Atom Types](appatomtypes.md#sybyl-atom-types) <br />

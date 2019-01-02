@@ -11,7 +11,7 @@ factory = AtomTypeFactory.getInstance(
   "org/openscience/cdk/dict/data/sybyl-atom-types.owl",
   SilentChemObjectBuilder.getInstance()
 );
-output = new File("../sybylatomtypelist.tex")
+output = new File("../sybylatomtypelist.md")
 output.text = ""
 
 IAtomType[] types = factory.getAllAtomTypes();
@@ -28,22 +28,21 @@ for (IAtomType type : types) {
     CDKConstants.PI_BOND_COUNT
   )
   output.append(
-    type.atomTypeName + " & " +
-    type.symbol + " & " +
-    type.formalCharge + " & " +
-    (type.formalNeighbourCount == null
-      ? ""
-      : type.formalNeighbourCount) + " & " +
+    "<tr>" +
+    "<td>${type.atomTypeName}</td>" +
+    "<td>${type.symbol}</td>" +
+    "<td>${type.formalCharge}</td>" +
+    "<td>${type.formalNeighbourCount}</td>" +
     (type.hybridization == null
-      ? ""
-      : type.hybridization) + " & " +
+      ? "<td></td>"
+      : "<td>${type.hybridization}</td>") +
     (lonepairs == null
-      ? ""
-      : lonepairs) + " & " +
+      ? "<td></td>"
+      : "<td>${lonepairs}</td>") +
     (pibondcount == null
-      ? ""
-      : pibondcount) + "\\\\\n"
-  )
+      ? "<td></td>"
+      : "<td>${pibondcount}</td>"
+    ) + "</td></tr>\n")
 }
 ```
 **Output:**
