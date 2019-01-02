@@ -140,9 +140,9 @@ atom.setFormalNeighbourCount(4)
 
 ### Coordinates
 
-The `IAtom` class supports three types of coordinates: 2D coordinates,
-used for diagrams, 3D coordinates for geometries, and crystal unit cell
-or notional coordinates. These properties are set with the respective
+The `IAtom` class supports three types of coordinates: <a name="tp2">2D coordinates</a>,
+used for diagrams, <a name="tp3">3D coordinates</a> for geometries, and crystal <a name="tp4">unit cell</a>
+or <a name="tp5">notional coordinates</a>. These properties are set with the respective
 methods:
 
 **Script** [code/AtomCoordinates.groovy](code/AtomCoordinates.code.md)
@@ -171,7 +171,7 @@ restricted to that. That said, many algorithms implemented in the CDK
 expect a graph theory based model, where each bond connects two, and
 not more, atoms.
 
-For example, to create ethanol we write:
+For example, to create <a name="tp6">ethanol</a> we write:
 
 **Script** [code/Ethanol.groovy](code/Ethanol.code.md)
 ```groovy
