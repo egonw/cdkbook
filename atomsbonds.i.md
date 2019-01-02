@@ -16,7 +16,7 @@ formal charge is currently unknown.
 
 ## Atoms
 
-The CDK interface `IAtom` is the underlying data model of atoms. Creating
+The CDK interface <topic type="class">IAtom</topic> is the underlying data model of atoms. Creating
 a new atom is fairly easy. For example, we can create an atom of element
 type carbon, as defined by the element’s atomic number that we pass as parameter
 in the constructor:
@@ -43,7 +43,7 @@ These constructors will set the atomic number of the atom:
 
 ### IElement
 
-The most common property of `IElement`s are their symbol and atomic
+The most common property of <topic type="class">IElement</topic>s are their symbol and atomic
 number. Because the `IAtom` extends the `IElement`, CDK atoms also have
 these properties. Therefore, we can set these properties for atoms
 manually too:
@@ -60,7 +60,7 @@ which outputs:
 
 ### IIsotope
 
-The `IIsotope` information consists of the *mass number*, *exact mass* and
+The <topic type="class">IIsotope</topic> information consists of the *mass number*, *exact mass* and
 *natural abundance*:
 
 <code>IsotopeProperties</code>
@@ -88,7 +88,7 @@ on the atom type infrastructure in the CDK library, and, for example,
 details how atom types can be perceived, and how atom type information
 is set for atoms.
 
-The `IAtomType` interface contains fields that relate to atom types. These
+The <topic type="class">IAtomType</topic> interface contains fields that relate to atom types. These
 properties include formal charge, neighbor count, maximum bond order
 and atom type name:
 
@@ -109,8 +109,8 @@ crystal structure functionality.
 
 ## Bonds
 
-The `IBond` interface of the CDK is an interaction between two or more
-`IAtom`s, extending the `IElectronContainer` interface. While the most
+The <topic type="class">IBond</topic> interface of the CDK is an interaction between two or more
+`IAtom`s, extending the <topic type="class">IElectronContainer</topic> interface. While the most
 common application in the CDK originates from graph theory [2], it is not
 restricted to that. That said, many algorithms implemented in the CDK
 expect a graph theory based model, where each bond connects two, and
