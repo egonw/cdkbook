@@ -1,6 +1,6 @@
 # Cheminformatics
 
-While the purpose of this book is not to educate in cheminformatics (see the [Introduction](introdution.i.md)),
+While the purpose of this book is not to educate in <topic>cheminformatics</topic> (see the [Introduction](introdution.i.md)),
 this chapter provides minimal information about the representation of molecules and molecular systems.
 Such a representation is needed to allow analysis and manipulation of chemical
 structures in the computer. This is of paramount importance in areas like
@@ -11,7 +11,7 @@ and structure elucidation.
 Many different representations have been developed, each capturing different
 bits of information about the molecular system under study. Unfortunately,
 in many cases it is unclear which part of the information is essential for a
-certain application. For example, although the boiling points correlates well
+certain application. For example, although the <topic>boiling points</topic> correlates well
 with the number of carbon atoms in a homologous series of alkanes [<cite>Q28837922</cite>]
 (see Figure 1.1), the
 carbon count descriptor is not generally useful for

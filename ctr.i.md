@@ -11,7 +11,7 @@ CC-BY-SA license, as it is in the wiki.
 ## Heavy atom counts from an SD file
 
 This tasks starts with an SD file (see Section XX) and counts for each structure in the file
-the number of heavy atoms (non-hydrogen atoms). Because we simply handle the structures one by one,
+the number of <topic>heavy atoms</topic> (non-hydrogen atoms). Because we simply handle the structures one by one,
 the solution uses the `IteratingSDFReader` reader. The input file (`benzodiazepine.sdf.gz`) is a
 gzipped file, which we handle by using a `GZIPInputStream` as outlined in Section XX.
 Because we want to make sure the input file does not have any unexpected content, we use the `STRICT`
