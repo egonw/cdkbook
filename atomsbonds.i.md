@@ -1,6 +1,6 @@
 #  Atoms, Bonds and Molecules
 
-The basic objects in the CDK are the `IAtom`, `IBond` and `IAtomContainer` [<cite>Q27061829</cite>].
+The basic objects in the CDK are the <topic type="class">IAtom</topic>, `IBond` and `IAtomContainer` [<cite>Q27061829</cite>].
 The name of the latter is somewhat misleading, as it contains
 not just `IAtom`s but also `IBond`s. The primary use of the model is the
 graph-based representation of molecules, where bonds are edges between
@@ -96,9 +96,9 @@ and atom type name:
 
 ### Coordinates
 
-The `IAtom` class supports three types of coordinates: 2D coordinates,
-used for diagrams, 3D coordinates for geometries, and crystal unit cell
-or notional coordinates. These properties are set with the respective
+The `IAtom` class supports three types of coordinates: <topic>2D coordinates</topic>,
+used for diagrams, <topic>3D coordinates</topic> for geometries, and crystal <topic>unit cell</topic>
+or <topic>notional coordinates</topic>. These properties are set with the respective
 methods:
 
 <code>AtomCoordinates</code>
@@ -116,7 +116,7 @@ restricted to that. That said, many algorithms implemented in the CDK
 expect a graph theory based model, where each bond connects two, and
 not more, atoms.
 
-For example, to create ethanol we write:
+For example, to create <topic>ethanol</topic> we write:
 
 <code>Ethanol</code>
 
@@ -131,7 +131,7 @@ which outputs:
 As you might notice, there is no `AROMATIC` bond defined. This is
 deliberate and the CDK allows to define single-double bond order patterns at
 the same time as aromaticity information. For example, a kekule
-structure of benzene with bonds marked as aromatic can be constructed with:
+structure of <topic>benzene</topic> with bonds marked as aromatic can be constructed with:
 
 <code>AromaticBond</code>
 
@@ -140,7 +140,7 @@ structure of benzene with bonds marked as aromatic can be constructed with:
 Bond orders, as we have seen earlier, are commonly used in the CDK to
 indicate the electronic properties of a bond. At the same time, each bond
 consists of a number of atoms. For example, in a single (sigma) bond, two
-electrons are involved. In a double (pi) bond, four electrons are involved,
+<topic>electrons</topic> are involved. In a double (pi) bond, four electrons are involved,
 and in a triple bond, six electrons are involved. We can report on the
 electron counts for the various orders with this code:
 

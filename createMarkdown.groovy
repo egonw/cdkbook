@@ -14,6 +14,7 @@ bibLines.each { String line ->
 references = new HashMap<String,String>();
 bibList = "";
 refCounter = 0;
+topicCounter = 0;
 
 def lines = new File(input).readLines()
 lines.each { String line ->
@@ -54,6 +55,22 @@ lines.each { String line ->
         replacement = Integer.valueOf(references.get(cites))
       }
       line = line.substring(0, citeStart) + replacement + line.substring(citeEnd+7)
+    }
+    while (line.contains("<topic")) {
+      topicCounter++
+      topicStart = line.indexOf("<topic")
+      topicEnd = line.indexOf("</topic>")
+      topicsXML = line.substring(topicStart, topicEnd+8)
+      def topicsInstruction = new XmlSlurper().parseText(topicsXML)
+      replacement = ""
+      if (topicsInstruction.@type == "class" ||
+          topicsInstruction.@type == "key") {
+        replacement = "`" + topicsInstruction.text() + "`"
+      } else {
+        replacement = topicsInstruction.text()
+      }
+      replacement = "<a name=\"tp${topicCounter}\">" + replacement + "</a>"
+      line = line.substring(0, topicStart) + replacement + line.substring(topicEnd+8)
     }
     println line
   }
