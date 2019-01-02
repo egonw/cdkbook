@@ -1,7 +1,7 @@
 SOURCES := io.i.md introduction.i.md cheminfo.i.md atomsbonds.i.md index.i.md \
-  chemobject.i.md ctr.i.md stereo.i.md salts.i.md
+  chemobject.i.md ctr.i.md stereo.i.md salts.i.md appatomtypes.i.md
 TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md \
-  chemobject.md ctr.md stereo.md indexList.md salts.md
+  chemobject.md ctr.md stereo.md indexList.md salts.md appatomtypes.md
 
 SUBDIRS := code
 

@@ -28,6 +28,10 @@ lines.each { String line ->
     def srcLines = new File("code/${instruction.text()}.out").readLines()
     srcLines.each { String srcLine -> println srcLine }
     println "```"
+  } else if (line.startsWith("<in>")) {
+    def instruction = new XmlSlurper().parseText(line)
+    def srcLines = new File("${instruction.text()}").readLines()
+    srcLines.each { String srcLine -> println srcLine }
   } else if (line.contains("<references/>")) {
     println bibList
   } else if (line.startsWith("%%%")) {
