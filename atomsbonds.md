@@ -1,6 +1,6 @@
 #  Atoms, Bonds and Molecules
 
-The basic objects in the CDK are the `<a name="tp1">IAtom</a>`, `IBond` and `IAtomContainer` [1].
+The basic objects in the CDK are the <a name="tp1">`IAtom`</a>, `IBond` and `IAtomContainer` [1].
 The name of the latter is somewhat misleading, as it contains
 not just `IAtom`s but also `IBond`s. The primary use of the model is the
 graph-based representation of molecules, where bonds are edges between
