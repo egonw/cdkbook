@@ -1,7 +1,7 @@
 # Stereochemistry
 
 An intrinsic property of molecular structures is the 3D organization of the atoms,
-resulting in a unique `geometry`. If we change the position of an atom, we get a
+resulting in a unique <a name="tp1">`geometry`</a>. If we change the position of an atom, we get a
 different geometry. We can lengthen and shorten a bond; change the angle
 between two bonds; and rotate around bonds, changing torsion angles in
 the molecules. All these changes lead to different `conformations` of the structure.

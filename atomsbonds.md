@@ -206,7 +206,7 @@ UNSET
 As you might notice, there is no `AROMATIC` bond defined. This is
 deliberate and the CDK allows to define single-double bond order patterns at
 the same time as aromaticity information. For example, a kekule
-structure of benzene with bonds marked as aromatic can be constructed with:
+structure of <a name="tp7">benzene</a> with bonds marked as aromatic can be constructed with:
 
 **Script** [code/AromaticBond.groovy](code/AromaticBond.code.md)
 ```groovy
@@ -235,7 +235,7 @@ bond6.setFlag(CDKConstants.ISAROMATIC, true);
 Bond orders, as we have seen earlier, are commonly used in the CDK to
 indicate the electronic properties of a bond. At the same time, each bond
 consists of a number of atoms. For example, in a single (sigma) bond, two
-electrons are involved. In a double (pi) bond, four electrons are involved,
+<a name="tp8">electrons</a> are involved. In a double (pi) bond, four electrons are involved,
 and in a triple bond, six electrons are involved. We can report on the
 electron counts for the various orders with this code:
 
