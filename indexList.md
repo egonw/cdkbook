@@ -5,31 +5,33 @@
 
 3D coordinates [atomsbonds](atomsbonds.md#tp7)<br />
 
-anti-clockwise [stereo](stereo.md#tp28)<br />
+anti-clockwise [stereo](stereo.md#tp8)<br />
 
 benzene [atomsbonds](atomsbonds.md#tp13)<br />
 
-boiling points [cheminfo](cheminfo.md#tp17)<br />
+boiling points [cheminfo](cheminfo.md#tp2)<br />
 
-chemical format [io](io.md#tp29)<br />
+chemical format [io](io.md#tp1)<br />
 
-cheminformatics [cheminfo](cheminfo.md#tp16)<br />
+cheminformatics [cheminfo](cheminfo.md#tp1)<br />
 
-chiral atom [stereo](stereo.md#tp26)<br />
+chiral atom [stereo](stereo.md#tp6)<br />
 
-clockwise [stereo](stereo.md#tp27)<br />
+clockwise [stereo](stereo.md#tp7)<br />
 
-conformations [stereo](stereo.md#tp22)<br />
+conformations [stereo](stereo.md#tp2)<br />
 
-crystal [salts](salts.md#tp19)<br />
+crystal [salts](salts.md#tp2)<br />
 
 electrons [atomsbonds](atomsbonds.md#tp14)<br />
 
 ethanol [atomsbonds](atomsbonds.md#tp12)<br />
 
-geometry [stereo](stereo.md#tp21)<br />
+Gaussian input file [io](io.md#tp2)<br />
 
-heavy atoms [ctr](ctr.md#tp15)<br />
+geometry [stereo](stereo.md#tp1)<br />
+
+heavy atoms [ctr](ctr.md#tp1)<br />
 
 IAtom [atomsbonds](atomsbonds.md#tp1)<br />
 
@@ -39,7 +41,7 @@ IAtomType [atomsbonds](atomsbonds.md#tp5)<br />
 
 IBond [atomsbonds](atomsbonds.md#tp10)<br />
 
-ICrystal [salts](salts.md#tp20)<br />
+ICrystal [salts](salts.md#tp3)<br />
 
 IElectronContainer [atomsbonds](atomsbonds.md#tp11)<br />
 
@@ -49,13 +51,13 @@ IIsotope [atomsbonds](atomsbonds.md#tp4)<br />
 
 notional coordinates [atomsbonds](atomsbonds.md#tp9)<br />
 
-salt [salts](salts.md#tp18)<br />
+salt [salts](salts.md#tp1)<br />
 
-superimpose [stereo](stereo.md#tp23)<br />
+superimpose [stereo](stereo.md#tp3)<br />
 
-tetrahedral chirality [stereo](stereo.md#tp25)<br />
+tetrahedral chirality [stereo](stereo.md#tp5)<br />
 
 unit cell [atomsbonds](atomsbonds.md#tp8)<br />
 
-wedge bonds [stereo](stereo.md#tp24)<br />
+wedge bonds [stereo](stereo.md#tp4)<br />
 
