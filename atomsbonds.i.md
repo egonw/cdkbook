@@ -1,8 +1,9 @@
 #  Atoms, Bonds and Molecules
 
-The basic objects in the CDK are the <topic type="class">IAtom</topic>, `IBond` and `IAtomContainer` [<cite>Q27061829</cite>].
+The basic objects in the CDK are the <topic type="class">IAtom</topic>, <class>IBond</class> and
+<class>IAtomContainer</class> [<cite>Q27061829</cite>].
 The name of the latter is somewhat misleading, as it contains
-not just `IAtom`s but also `IBond`s. The primary use of the model is the
+not just <class>IAtom</class>s but also <class>IBond</class>s. The primary use of the model is the
 graph-based representation of molecules, where bonds are edges between
 two atoms being the nodes [<cite>Q37988904</cite>].
 
@@ -29,7 +30,7 @@ less efficient:
 <code>CreateAtom1</code>
 
 Alternatively, we can also construct a new carbon atom, by passing a
-carbon `IElement`, conveniently provided by the `Elements` class:
+carbon <class>IElement</class>, conveniently provided by the <class>Elements</class> class:
 
 <code>CreateAtom2</code>
 

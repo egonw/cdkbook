@@ -1,0 +1,6 @@
+IBond	org.openscience.cdk.interfaces	interfaces
+IAtomContainer	org.openscience.cdk.interfaces	interfaces
+IAtom	org.openscience.cdk.interfaces	interfaces
+IBond	org.openscience.cdk.interfaces	interfaces
+IElement	org.openscience.cdk.interfaces	interfaces
+Elements	org.openscience.cdk.config	core

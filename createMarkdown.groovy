@@ -11,12 +11,24 @@ bibLines.each { String line ->
   bibliography.put(fields[0], fields[1])
 }
 
+pkgs = new HashMap<String,String>();
+modules = new HashMap<String,String>();
+def lines = new File("classinfo.tsv").readLines()
+lines.each { String line ->
+  data = line.split("\t")
+  topic = data[0]
+  pkg = data[1]
+  module = data[2]
+  pkgs.put(topic, pkg)
+  modules.put(topic, module)
+}
+
 references = new HashMap<String,String>();
 bibList = "";
 refCounter = 0;
 topicCounter = 0;
 
-def lines = new File(input).readLines()
+lines = new File(input).readLines()
 lines.each { String line ->
   if (line.startsWith("<code>")) {
     def instruction = new XmlSlurper().parseText(line)
@@ -75,6 +87,20 @@ lines.each { String line ->
       }
       replacement = "<a name=\"tp${topicCounter}\">" + replacement + "</a>"
       line = line.substring(0, topicStart) + replacement + line.substring(topicEnd+8)
+    }
+    while (line.contains("<class")) {
+      classStart = line.indexOf("<class")
+      classEnd = line.indexOf("</class>")
+      classXML = line.substring(classStart, classEnd+8)
+      def classInstruction = new XmlSlurper().parseText(classXML)
+      classname = classInstruction.text()
+      if (pkgs.containsKey(classname)) {
+        replacement = "[`${classname}`](http://cdk.github.io/cdk/latest/docs/api/" +
+          pkgs.get(classname).replace(".", "/") + "/${classname}.html)"
+      } else {
+        replacement = "`" + classname + "`"
+      }
+      line = line.substring(0, classStart) + replacement + line.substring(classEnd+8)
     }
     println line
   }

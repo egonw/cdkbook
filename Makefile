@@ -5,10 +5,18 @@ TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md \
 
 SUBDIRS := code
 
-all: ${SUBDIRS} scriptcount.tex ${TARGETS}
+all: ${SUBDIRS} scriptcount.tex ${TARGETS} classinfo.tsv
 
 clean:
 	@rm -f ${TARGETS}
+
+classinfo.tsv: classes.lst updateClassInfo.groovy
+	@echo "Updating the class info TSV..."
+	@groovy updateClassInfo.groovy  . > classinfo.tsv.new
+	@mv classinfo.tsv.new classinfo.tsv
+
+classes.lst: ${SOURCES} findClasses.groovy
+	@groovy findClasses.groovy . > classes.lst
 
 indexList.i.md: topics.tsv makeIndex.groovy
 	@groovy makeIndex.groovy > indexList.i.md
@@ -29,6 +37,7 @@ code/scriptCount.tex:
 	@cd code; make scriptCount.tex
 
 %.md : %.i.md createMarkdown.groovy references.dat
+	@echo "Creating $@"
 	@groovy createMarkdown.groovy $< > $@
 
 install:
