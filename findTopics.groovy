@@ -18,6 +18,7 @@ def topicCounter = 0
 def basedir = new File(folder)
 files = basedir.listFiles().grep(~/.*i.md$/)
 files.each { file ->
+  topicCounter = 0
   context = file.name.substring(0, file.name.indexOf("."))
   file.eachLine { line ->
     while (line.contains("<topic")) {
