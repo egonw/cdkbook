@@ -1,8 +1,9 @@
 #  Atoms, Bonds and Molecules
 
-The basic objects in the CDK are the <a name="tp1">`IAtom`</a>, `IBond` and `IAtomContainer` [1].
+The basic objects in the CDK are the <a name="tp1">`IAtom`</a>, `[IBond](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html)` and
+`[IAtomContainer](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html)` [1].
 The name of the latter is somewhat misleading, as it contains
-not just `IAtom`s but also `IBond`s. The primary use of the model is the
+not just `[IAtom](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtom.html)`s but also `[IBond](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html)`s. The primary use of the model is the
 graph-based representation of molecules, where bonds are edges between
 two atoms being the nodes [2].
 
@@ -35,7 +36,7 @@ IAtom atom = new Atom("C");
 ```
 
 Alternatively, we can also construct a new carbon atom, by passing a
-carbon `IElement`, conveniently provided by the `Elements` class:
+carbon `[IElement](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IElement.html)`, conveniently provided by the `[Elements](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/config/Elements.html)` class:
 
 **Script** [code/CreateAtom2.groovy](code/CreateAtom2.code.md)
 ```groovy
