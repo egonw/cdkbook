@@ -177,6 +177,155 @@ But besides reading XML files correctly, the support for InputStream also allows
 reading files directly from the internet and from gzipped files (see
 Section XX.
 
+## Customizing the Output
+
+An interesting feature of file IO in the CDK is that it is customizable. Before
+I will give all the details, let's start with a simple example: creating a
+<a name="tp2">Gaussian input file</a> for optimizing the structure of methane,
+and let's start with an XYZ file, that is, with `methane.xyz`:
+
+5
+methane
+C  0.25700 -0.36300  0.00000
+H  0.25700  0.72700  0.00000
+H  0.77100 -0.72700  0.89000
+H  0.77100 -0.72700 -0.89000
+H -0.77100 -0.72700  0.00000
+
+The output will look something like:
+
+%nprocl=5
+# b3lyp/6-31g opt
+
+Job started on Linux cluster on 20041010.
+
+0 1
+C 0 0.257 -0.363 0.0
+H 0 0.257 0.727 0.0
+H 0 0.771 -0.727 0.89
+H 0 0.771 -0.727 -0.89
+H 0 -0.771 -0.727 0.0
+
+
+The writer used the default IO options in the above example. So, the next step is to see
+which options the writer allows. To get a list of options for a certain IO
+class in one does something along the lines:
+
+**Script** [code/ListIOOptions.groovy](code/ListIOOptions.code.md)
+```groovy
+IChemObjectWriter writer = new GaussianInputWriter();
+for (IOSetting setting : writer.getIOSettings()) {
+  println "[" + setting.getName() + "]"
+  println "Option: " + setting.getQuestion()
+  println "Current value: " + setting.getSetting()
+}
+```
+
+which results in the following output:
+
+```plain
+[OpenShell]
+Option: Should the calculation be open shell?
+Current value: false
+[Comment]
+Option: What comment should be put in the file?
+Current value: Created with CDK (http://cdk.sf.n...
+  et/)
+[Memory]
+Option: How much memory do you want to use?
+Current value: unset
+[Command]
+Option: What kind of job do you want to perform?
+Current value: energy calculation
+[ProcessorCount]
+Option: How many processors should be used by Ga...
+  ussian?
+Current value: 1
+```
+
+### Setting Properties
+
+The IO settings system allows interactive setting of these options, but a
+perfectly fine alternative is to use a Java Properties object.
+
+Consider the following source code:
+
+**Script** [code/PropertiesSettings.groovy](code/PropertiesSettings.code.md)
+```groovy
+// the custom settings
+Properties customSettings = new Properties();
+customSettings.setProperty("Basis",   "6-31g*");
+customSettings.setProperty("Command",
+  "geometry optimization");
+customSettings.setProperty("Comment",
+  "Job started on Linux cluster on 20041010.");
+customSettings.setProperty("ProcessorCount", "5");
+PropertiesListener listener = new PropertiesListener(
+  customSettings
+);
+// create the writer
+GaussianInputWriter writer = new GaussianInputWriter(
+  new FileWriter(new File("methane.gin"))
+);
+writer.addChemObjectIOListener(listener);
+XYZReader reader = new XYZReader(
+  new FileReader(new File("data/methane.xyz"))
+);
+// convert the file
+ChemFile content = (ChemFile)reader.read(new ChemFile());
+IAtomContainer molecule = content.getChemSequence(0).
+  getChemModel(0).getMoleculeSet().getAtomContainer(0);
+writer.write(molecule);
+writer.close();
+```
+
+The `PropertiesListener` takes a `Properties` class as parameter in
+its constructor. Therefore, the properties are defined by the
+`customSettings` variable in the first few lines. The
+`PropertiesListener` `listener` is the instantiated with the
+customizations as constructor parameter.
+
+The output writer, specified to write to the `methane.gin` file, is
+created after which the `ChemObjectIOListener` is set. Only by setting
+this listener, the output will be customized with the earlier defined
+properties. The rest of the code reads a molecule from an XYZ file and writes
+the `content` to the created Gaussian Input file.
+
+## Example: creating unit tests for atom type perception
+
+We saw earlier an example for reading files directly from PubChem
+(see Section XX).
+This can be conveniently used to create `CDK source code`, for example,
+for use in unit tests for the atom type perception code (see
+Section XX). But because we do not want
+2D and 3D coordinates being set in the source code, we disable those
+options:
+
+**Script** [code/AtomTypeUnitTest.groovy](code/AtomTypeUnitTest.code.md)
+```groovy
+cid = 3396560
+mol = reader.read(new AtomContainer())
+stringWriter = new StringWriter();
+CDKSourceCodeWriter writer =
+  new CDKSourceCodeWriter(stringWriter);
+customSettings = new Properties();
+customSettings.setProperty("write2DCoordinates", "false");
+customSettings.setProperty("write3DCoordinates", "false");
+writer.addChemObjectIOListener(
+  new PropertiesListener(
+    customSettings
+  )
+)
+writer.write(mol);
+writer.close();
+println stringWriter.toString();
+```
+
+This results in this source code:
+
+```plain
+```
+
 ## References
 
 1. Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the Worldwide Web. 1. Basic Principles. Journal of Chemical Information and Modeling. 1999 Jan 1;39(6):928–42. 

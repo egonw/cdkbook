@@ -1,13 +1,19 @@
 # Groovy Cheminformatics with the Chemistry Development Kit
 
-Edition 2.0-3
+Edition 2.0-4
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
 
-© E.L. Willighagen 2011-2018
+© E.L. Willighagen 2011-2019
 
 License: CC-BY-SA 4.0 International
+
+## Warning
+
+This book is being opensourced. This involves transforming the LaTeX source into Markdown,
+and updating all scripts to ensure all the automation works well. I have made good
+steps forward, but it will take some time for things to iron out.
 
 ## Contents
 
@@ -34,6 +40,8 @@ License: CC-BY-SA 4.0 International
 11.1. [File Format Detection](io.md#file-format-detection) <br />
 11.2. [Custom format matchers](io.md#custom-format-matchers) <br />
 11.3. [Reading from Readers and InputStreams](io.md#reading-from-readers-and-inputstreams) <br />
+11.4. [Customizing the Output](io.md#customizing-the-output) <br />
+11.5. [Setting Properties](io.md#setting-properties) <br />
 20. [Chemistry Toolkit Rosetta](ctr.md) <br />
 20.1 [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
 20.2 [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
