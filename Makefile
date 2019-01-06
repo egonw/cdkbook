@@ -5,7 +5,7 @@ TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md \
 
 SUBDIRS := code
 
-all: ${SUBDIRS} scriptcount.tex ${TARGETS} classinfo.tsv
+all: ${SUBDIRS} classinfo.tsv scriptcount.tex ${TARGETS}
 
 clean:
 	@rm -f ${TARGETS}
