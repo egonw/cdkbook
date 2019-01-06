@@ -1,0 +1,10 @@
+#import org.openscience.cdk.io.IChemObjectWriter;
+#import org.openscience.cdk.io.program.GaussianInputWriter;
+#import org.openscience.cdk.io.setting.IOSetting;
+#
+IChemObjectWriter writer = new GaussianInputWriter();
+for (IOSetting setting : writer.getIOSettings()) {
+  println "[" + setting.getName() + "]"
+  println "Option: " + setting.getQuestion()
+  println "Current value: " + setting.getSetting()
+}

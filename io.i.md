@@ -86,6 +86,66 @@ But besides reading XML files correctly, the support for InputStream also allows
 reading files directly from the internet and from gzipped files (see
 Section XX.
 
+## Customizing the Output
+
+An interesting feature of file IO in the CDK is that it is customizable. Before
+I will give all the details, let's start with a simple example: creating a
+<topic>Gaussian input file</topic> for optimizing the structure of methane,
+and let's start with an XYZ file, that is, with `methane.xyz`:
+
+<in>code/data/methane.xyz</in>
+
+The output will look something like:
+
+<in>code/methane.gin</in>
+
+The writer used the default IO options in the above example. So, the next step is to see
+which options the writer allows. To get a list of options for a certain IO
+class in one does something along the lines:
+
+<code>ListIOOptions</code>
+
+which results in the following output:
+
+<out>ListIOOptions</out>
+
+### Setting Properties
+
+The IO settings system allows interactive setting of these options, but a
+perfectly fine alternative is to use a Java Properties object.
+
+Consider the following source code:
+
+<code>PropertiesSettings</code>
+
+The `PropertiesListener` takes a `Properties` class as parameter in
+its constructor. Therefore, the properties are defined by the
+`customSettings` variable in the first few lines. The
+`PropertiesListener` `listener` is the instantiated with the
+customizations as constructor parameter.
+
+The output writer, specified to write to the `methane.gin` file, is
+created after which the `ChemObjectIOListener` is set. Only by setting
+this listener, the output will be customized with the earlier defined
+properties. The rest of the code reads a molecule from an XYZ file and writes
+the `content` to the created Gaussian Input file.
+
+## Example: creating unit tests for atom type perception
+
+We saw earlier an example for reading files directly from PubChem
+(see Section XX).
+This can be conveniently used to create `CDK source code`, for example,
+for use in unit tests for the atom type perception code (see
+Section XX). But because we do not want
+2D and 3D coordinates being set in the source code, we disable those
+options:
+
+<code>AtomTypeUnitTest</code>
+
+This results in this source code:
+
+<out>AtomTypeUnitTest</out>
+
 ## References
 
 <references/>

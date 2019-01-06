@@ -40,6 +40,8 @@ steps forward, but it will take some time for things to iron out.
 11.1. [File Format Detection](io.i.md#file-format-detection) <br />
 11.2. [Custom format matchers](io.i.md#custom-format-matchers) <br />
 11.3. [Reading from Readers and InputStreams](io.i.md#reading-from-readers-and-inputstreams) <br />
+11.4. [Customizing the Output](io.i.md#customizing-the-output) <br />
+11.5. [Setting Properties](io.i.md#setting-properties) <br />
 20. [Chemistry Toolkit Rosetta](ctr.i.md) <br />
 20.1 [Heavy atom counts from an SD file](ctr.i.md#heavy-atom-counts-from-an-sd-file) <br />
 20.2 [Depict a compound as an image](ctr.i.md#depict-a-compound-as-an-image) <br />
