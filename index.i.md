@@ -1,13 +1,19 @@
 # Groovy Cheminformatics with the Chemistry Development Kit
 
-Edition 2.0-3
+Edition 2.0-4
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
 
-© E.L. Willighagen 2011-2018
+© E.L. Willighagen 2011-2019
 
 License: CC-BY-SA 4.0 International
+
+## Warning
+
+This book is being opensourced. This involves transforming the LaTeX source into Markdown,
+and updating all scripts to ensure all the automation works well. I have made good
+steps forward, but it will take some time for things to iron out.
 
 ## Contents
 
