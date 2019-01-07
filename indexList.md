@@ -53,6 +53,8 @@ notional coordinates [atomsbonds](atomsbonds.md#tp9)<br />
 
 salt [salts](salts.md#tp1)<br />
 
+SMILES [migration](migration.md#tp1)<br />
+
 superimpose [stereo](stereo.md#tp3)<br />
 
 tetrahedral chirality [stereo](stereo.md#tp5)<br />
