@@ -93,11 +93,15 @@ I will give all the details, let's start with a simple example: creating a
 <topic>Gaussian input file</topic> for optimizing the structure of methane,
 and let's start with an XYZ file, that is, with `methane.xyz`:
 
+```
 <in>code/data/methane.xyz</in>
+```
 
 The output will look something like:
 
+```
 <in>code/methane.gin</in>
+```
 
 The writer used the default IO options in the above example. So, the next step is to see
 which options the writer allows. To get a list of options for a certain IO
