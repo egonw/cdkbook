@@ -45,6 +45,7 @@ steps forward, but it will take some time for things to iron out.
 20. [Chemistry Toolkit Rosetta](ctr.md) <br />
 20.1 [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
 20.2 [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
+24. [Migration](migration.md) <br />
 [Index](indexList.md) <br />
 [Appendix A](appatomtypes.md) <br />
 A.1 [CDK Atom Types](appatomtypes.md#cdk-atom-types) <br />
