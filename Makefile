@@ -1,7 +1,9 @@
 SOURCES := io.i.md introduction.i.md cheminfo.i.md atomsbonds.i.md index.i.md \
-  chemobject.i.md ctr.i.md stereo.i.md salts.i.md appatomtypes.i.md
+  chemobject.i.md ctr.i.md stereo.i.md salts.i.md appatomtypes.i.md \
+  migration.i.md
 TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md \
-  chemobject.md ctr.md stereo.md indexList.md salts.md appatomtypes.md
+  chemobject.md ctr.md stereo.md indexList.md salts.md appatomtypes.md \
+  migration.md
 
 SUBDIRS := code
 
@@ -18,8 +20,10 @@ classinfo.tsv: classes.lst updateClassInfo.groovy
 	@groovy updateClassInfo.groovy  . > classinfo.tsv.new
 	@mv classinfo.tsv.new classinfo.tsv
 
-classes.lst: ${SOURCES} findClasses.groovy
-	@groovy findClasses.groovy . > classes.lst
+classes.lst: ${SOURCES} findClasses.groovy foo.sh
+	@groovy findClasses.groovy . | sort | uniq > classes.lst
+	@bash foo.sh  | sed -r 's/..\/cdk\/[^\/]*\/([^\/]*)\/src\/main\/java\/(.*)\/(.*)\.java/\3\t\2\t\1/' | grep "org/openscience" | grep -v "\.\./cdk" | sed 's/\//\./g' > classes.lst2
+	@mv classes.lst2 classes.lst
 
 indexList.i.md: topics.tsv makeIndex.groovy
 	@groovy makeIndex.groovy > indexList.i.md

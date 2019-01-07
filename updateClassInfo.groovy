@@ -27,11 +27,14 @@ lines.each { String line ->
 
 lines = new File("classes.lst").readLines()
 lines.each { String line ->
-  clazz = line.trim()
+  data = line.split("\t")
+  clazz = data[0]
+  pkg = data[1]
+  module = data[2]
   if (pkgs.containsKey(clazz)) {
     println clazz + "\t" + pkgs.get(clazz) + "\t" + modules.get(clazz)
   } else {
-    println clazz
+    println clazz + "\t" + pkg + "\t" + module
   }
 }
 
