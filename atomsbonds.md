@@ -1,11 +1,11 @@
 #  Atoms, Bonds and Molecules
 
 The basic objects in the CDK are the <a name="tp1">`IAtom`</a>, [`IBond`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html) and
-[`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) [1].
+[`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) [<a href="#citeref1">1</a>].
 The name of the latter is somewhat misleading, as it contains
 not just [`IAtom`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtom.html)s but also [`IBond`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html)s. The primary use of the model is the
 graph-based representation of molecules, where bonds are edges between
-two atoms being the nodes [2].
+two atoms being the nodes [<a href="#citeref2">2</a>].
 
 Before we start, it is important to note that CDK 2.0 has an important
 convention around object properties: when a property is unset, the
@@ -275,6 +275,6 @@ The `IBond.setStereo()` method is discussed in Section 4.1.
 
 ## References
 
-1. Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Journal of Chemical Information and Modeling. 2003 Feb 11;43(2):493–500.  doi:[10.1021/CI025584Y](https://doi.org/10.1021/CI025584Y)
-2. Balaban AT. Applications of graph theory in chemistry. Journal of Chemical Information and Modeling. 1985 Aug 1;25(3):334–43.  doi:[10.1021/CI00047A033](https://doi.org/10.1021/CI00047A033)
+<a name="citeref1">1</a>. Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Journal of Chemical Information and Modeling. 2003 Feb 11;43(2):493–500.  doi:[10.1021/CI025584Y](https://doi.org/10.1021/CI025584Y)
+<a name="citeref2">2</a>. Balaban AT. Applications of graph theory in chemistry. Journal of Chemical Information and Modeling. 1985 Aug 1;25(3):334–43.  doi:[10.1021/CI00047A033](https://doi.org/10.1021/CI00047A033)
 

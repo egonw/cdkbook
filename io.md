@@ -37,7 +37,7 @@ System.out.println("Format: " + format.getFormatName());
 ```
 
 For example, this script recognizes that a file has the Chemical Markup
-Language [1,2] format:
+Language [<a href="#citeref1">1</a>,<a href="#citeref2">2</a>] format:
 
 ```plain
 Format: Chemical Markup Language
@@ -387,6 +387,6 @@ This results in this source code:
 
 ## References
 
-1. Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the Worldwide Web. 1. Basic Principles. Journal of Chemical Information and Modeling. 1999 Jan 1;39(6):928–42.  doi:[10.1021/CI990052B](https://doi.org/10.1021/CI990052B)
-2. Willighagen E. Processing CML conventions in Java. Internet Journal of Chemistry [Internet]. 2001 Jan 1;4:4. Available from: https://zenodo.org/record/1495470 doi:[10.5281/zenodo.1495470](https://doi.org/10.5281/zenodo.1495470)
+<a name="citeref1">1</a>. Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the Worldwide Web. 1. Basic Principles. Journal of Chemical Information and Modeling. 1999 Jan 1;39(6):928–42.  doi:[10.1021/CI990052B](https://doi.org/10.1021/CI990052B)
+<a name="citeref2">2</a>. Willighagen E. Processing CML conventions in Java. Internet Journal of Chemistry [Internet]. 2001 Jan 1;4:4. Available from: https://zenodo.org/record/1495470 doi:[10.5281/zenodo.1495470](https://doi.org/10.5281/zenodo.1495470)
 

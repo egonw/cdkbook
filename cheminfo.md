@@ -12,7 +12,7 @@ Many different representations have been developed, each capturing different
 bits of information about the molecular system under study. Unfortunately,
 in many cases it is unclear which part of the information is essential for a
 certain application. For example, although the <a name="tp2">boiling points</a> correlates well
-with the number of carbon atoms in a homologous series of alkanes [1]
+with the number of carbon atoms in a homologous series of alkanes [<a href="#citeref1">1</a>]
 (see Figure 1.1), the
 carbon count descriptor is not generally useful for
 predicting other properties, or even the same property for a more diverse set
@@ -25,5 +25,5 @@ of carbon atoms in alkanes [1].
 
 ## References
 
-1. Wiener H. Correlation of Heats of Isomerization, and Differences in Heats of Vaporization of Isomers, Among the Paraffin Hydrocarbons. Journal of the American Chemical Society. 1947 Jan 1;69(11):2636–8.  doi:[10.1021/JA01203A022](https://doi.org/10.1021/JA01203A022)
+<a name="citeref1">1</a>. Wiener H. Correlation of Heats of Isomerization, and Differences in Heats of Vaporization of Isomers, Among the Paraffin Hydrocarbons. Journal of the American Chemical Society. 1947 Jan 1;69(11):2636–8.  doi:[10.1021/JA01203A022](https://doi.org/10.1021/JA01203A022)
 

@@ -22,7 +22,7 @@ and double bond stereochemistry.
 Two dimensions drawings allow for depicting of three dimensional stereochemistry.
 It is not good at that, particular using <a name="tp4">wedge bonds</a>, as us chemists typically
 do. In fact, there are so many ways it can go wrongs that a long list of guidelines
-have been developed [1].
+have been developed [<a href="#citeref1">1</a>].
 
 The CDK has supported wedge bond stereo for a very long time, with its origin
 in the JChemPaint. An example 2D depiction is that of bromochlorofluoroiodomethane
@@ -197,6 +197,6 @@ ANTI_CLOCKWISE
 
 ## References
 
-1. Brecher J. Graphical representation of stereochemical configuration (IUPAC Recommendations 2006). Pure and Applied Chemistry. 2006 Jan 1;78(10):1897–970.  doi:[10.1351/PAC200678101897](https://doi.org/10.1351/PAC200678101897)
+<a name="citeref1">1</a>. Brecher J. Graphical representation of stereochemical configuration (IUPAC Recommendations 2006). Pure and Applied Chemistry. 2006 Jan 1;78(10):1897–970.  doi:[10.1351/PAC200678101897](https://doi.org/10.1351/PAC200678101897)
 
 
