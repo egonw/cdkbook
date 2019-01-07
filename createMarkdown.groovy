@@ -63,12 +63,13 @@ lines.each { String line ->
       if (!references.containsKey(cites)) {
         refCounter++
         references.put(cites, "" + refCounter)
+        bibList += "${refCounter}. <a name=\"citeref${refCounter}\"></a>"
         if (bibliography.get(cites) != null) {
-          bibList += "${refCounter}. " + bibliography.get(cites) + "\n"
+          bibList += bibliography.get(cites) + "\n"
         } else {
-          bibList += "${refCounter}. Missing\n"
+          bibList += "Missing\n"
         }
-        replacement = refCounter
+        replacement = "<a href=\"#citeref${refCounter}\">${refCounter}</a>"
       } else {
         replacement = Integer.valueOf(references.get(cites))
       }
