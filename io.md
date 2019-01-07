@@ -185,6 +185,7 @@ I will give all the details, let's start with a simple example: creating a
 <a name="tp2">Gaussian input file</a> for optimizing the structure of methane,
 and let's start with an XYZ file, that is, with `methane.xyz`:
 
+```
 5
 methane
 C  0.25700 -0.36300  0.00000
@@ -192,9 +193,11 @@ H  0.25700  0.72700  0.00000
 H  0.77100 -0.72700  0.89000
 H  0.77100 -0.72700 -0.89000
 H -0.77100 -0.72700  0.00000
+```
 
 The output will look something like:
 
+```
 %nprocl=5
 # b3lyp/6-31g opt
 
@@ -207,6 +210,7 @@ H 0 0.771 -0.727 0.89
 H 0 0.771 -0.727 -0.89
 H 0 -0.771 -0.727 0.0
 
+```
 
 The writer used the default IO options in the above example. So, the next step is to see
 which options the writer allows. To get a list of options for a certain IO
