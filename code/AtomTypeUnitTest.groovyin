@@ -11,7 +11,7 @@ cid = 3396560
 #try {
 #reader = new PCCompoundXMLReader(
 #  new URL(
-#    "http://pubchem.ncbi.nlm.nih.gov/summary/" +
+#    "https://pubchem.ncbi.nlm.nih.gov/summary/" +
 #    "summary.cgi?cid=$cid&disopt=SaveXML"
 #  ).newInputStream()
 #)
