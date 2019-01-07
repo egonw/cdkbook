@@ -7,7 +7,9 @@ input = args[0]
 bibliography = new HashMap<String,String>();
 def bibLines = new File("references.dat").readLines()
 bibLines.each { String line ->
-  fields = line.split("=1. ")
+  splitString = '=1. '; fields = []
+  fields[0] = line.substring(0,line.indexOf(splitString))
+  fields[1] = line.substring(line.indexOf(splitString)+splitString.length())
   bibliography.put(fields[0], fields[1])
 }
 
