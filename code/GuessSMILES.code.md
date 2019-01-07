@@ -16,4 +16,5 @@ System.out.println("Format: " + format.getFormatName());
 ```
 **Output:**
 ```plain
+Format: SMILES
 ```
