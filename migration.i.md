@@ -12,7 +12,7 @@ V2000 version of the MDL formats.
 ## CDK 1.4 to 2.0
 
 This section highlights the important API changes between the CDK 1.4 and
-1.6 series.
+2.0 series. Innovations of CDK 2.0 are described in [<cite>Q30149558</cite>].
 
 ### Removed classes
 
