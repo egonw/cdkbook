@@ -12,7 +12,7 @@ V2000 version of the MDL formats.
 ## CDK 1.4 to 2.0
 
 This section highlights the important API changes between the CDK 1.4 and
-1.6 series.
+2.0 series. Innovations of CDK 2.0 are described in [1].
 
 ### Removed classes
 
@@ -196,5 +196,6 @@ println "$smiles"
 
 ## References
 
+1. Willighagen E, Mayfield JW, Alvarsson J, Berg A, Berg A, Carlsson L, et al. The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching. Journal of Cheminformatics. 2017 Jun 6;9(1). 
 
 
