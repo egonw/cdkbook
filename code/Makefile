@@ -1,4 +1,4 @@
-CDKVERSION=2.0
+CDKVERSION=`cat ../cdk.version`
 
 CODEFILES: \
  $(shell groovy ../findScripts.groovy .. .out)
