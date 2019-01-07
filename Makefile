@@ -34,7 +34,7 @@ topics.tsv: ${SOURCES} findTopics.groovy
 references.qids: findCitations.groovy
 	@groovy findCitations.groovy . | grep "^Q" | sort | uniq > references.qids
 
-references.dat: references.qids
+references.dat: references.qids references.js
 	@nodejs references.js
 
 scriptcount.tex: code/scriptCount.tex
