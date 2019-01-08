@@ -12,6 +12,6 @@ lines.each { String line ->
   topic = data[0]
   where = data[1]
   ref = data[2]
-  println "$topic [$where](${where}.i.md#$ref)<br />\n"
+  println "$topic [$where](${where}.i.md#$ref)<br />"
 }
 
