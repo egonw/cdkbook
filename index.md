@@ -35,6 +35,7 @@ steps forward, but it will take some time for things to iron out.
 5. [Salts and other disconnected structures](salts.md) <br />
 5.1 [Salts](salts.md#salts) <br />
 5.2 [Crystals](salts.md#crystals) <br />
+6. [Paired and unpaired electrons](unpairedelectrons.md) <br />
 9. [From IChemObject to IChemFile](chemobject.md) <br />
 11. [Input/Output](io.md) <br />
 11.1. [File Format Detection](io.md#file-format-detection) <br />

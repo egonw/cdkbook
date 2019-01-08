@@ -45,11 +45,17 @@ ICrystal [salts](salts.md#tp3)<br />
 
 IElectronContainer [atomsbonds](atomsbonds.md#tp11)<br />
 
+IElectronContainer [unpairedelectrons](unpairedelectrons.md#tp1)<br />
+
 IElement [atomsbonds](atomsbonds.md#tp3)<br />
 
 IIsotope [atomsbonds](atomsbonds.md#tp4)<br />
 
+lone pairs [unpairedelectrons](unpairedelectrons.md#tp2)<br />
+
 notional coordinates [atomsbonds](atomsbonds.md#tp9)<br />
+
+radical [unpairedelectrons](unpairedelectrons.md#tp5)<br />
 
 salt [salts](salts.md#tp1)<br />
 
@@ -60,6 +66,10 @@ superimpose [stereo](stereo.md#tp3)<br />
 tetrahedral chirality [stereo](stereo.md#tp5)<br />
 
 unit cell [atomsbonds](atomsbonds.md#tp8)<br />
+
+unpaired electron [unpairedelectrons](unpairedelectrons.md#tp4)<br />
+
+water [unpairedelectrons](unpairedelectrons.md#tp3)<br />
 
 wedge bonds [stereo](stereo.md#tp4)<br />
 
