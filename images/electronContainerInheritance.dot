@@ -1,0 +1,14 @@
+digraph {
+
+  rankdir= BT;
+
+  ibond -> ielectroncontainer;
+  ilonepair -> ielectroncontainer;
+  isingleelectron -> ielectroncontainer;
+
+  ibond [shape=box,label="IBond"];
+  ielectroncontainer [shape=box,label="IElectronContainer"];
+  ilonepair [shape=box,label="ILonePair"];
+  isingleelectron [shape=box,label="ISingleElectron"];
+
+}

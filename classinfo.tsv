@@ -9,8 +9,11 @@ IBitFingerprint	org.openscience.cdk.fingerprint	core
 IBond	org.openscience.cdk.interfaces	interfaces
 IChemObjectBuilder	org.openscience.cdk.interfaces	interfaces
 ICountFingerprint	org.openscience.cdk.fingerprint	core
+IElectronContainer	org.openscience.cdk.interfaces	interfaces
 IElement	org.openscience.cdk.interfaces	interfaces
 IFingerprinter	org.openscience.cdk.fingerprint	core
+ILonePair	org.openscience.cdk.interfaces	interfaces
+ISingleElectron	org.openscience.cdk.interfaces	interfaces
 IsotopeFactory	org.openscience.cdk.config	core
 Isotopes	org.openscience.cdk.config	core
 IteratingSDFReader	org.openscience.cdk.io.iterator	ctab
