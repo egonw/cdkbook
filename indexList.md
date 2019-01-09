@@ -17,13 +17,11 @@ ethanol [atomsbonds](atomsbonds.md#tp12)<br />
 Gaussian input file [io](io.md#tp2)<br />
 geometry [stereo](stereo.md#tp1)<br />
 heavy atoms [ctr](ctr.md#tp1)<br />
-IAtom [atomsbonds](atomsbonds.md#tp1)<br />
-IAtom [atomsbonds](atomsbonds.md#tp2)<br />
+IAtom [atomsbonds](atomsbonds.md#tp1) [atomsbonds](atomsbonds.md#tp2)<br />
 IAtomType [atomsbonds](atomsbonds.md#tp5)<br />
 IBond [atomsbonds](atomsbonds.md#tp10)<br />
 ICrystal [salts](salts.md#tp3)<br />
-IElectronContainer [atomsbonds](atomsbonds.md#tp11)<br />
-IElectronContainer [unpairedelectrons](unpairedelectrons.md#tp1)<br />
+IElectronContainer [atomsbonds](atomsbonds.md#tp11) [unpairedelectrons](unpairedelectrons.md#tp1)<br />
 IElement [atomsbonds](atomsbonds.md#tp3)<br />
 IIsotope [atomsbonds](atomsbonds.md#tp4)<br />
 lone pairs [unpairedelectrons](unpairedelectrons.md#tp2)<br />
@@ -36,4 +34,4 @@ tetrahedral chirality [stereo](stereo.md#tp5)<br />
 unit cell [atomsbonds](atomsbonds.md#tp8)<br />
 unpaired electron [unpairedelectrons](unpairedelectrons.md#tp4)<br />
 water [unpairedelectrons](unpairedelectrons.md#tp3)<br />
-wedge bonds [stereo](stereo.md#tp4)<br />
+wedge bonds [stereo](stereo.md#tp4)
