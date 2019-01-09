@@ -7,11 +7,18 @@
 println "# Index\n\n";
 
 def lines = new File("topics.tsv").readLines()
+prevTopic = ""
 lines.each { String line ->
   data = line.split("\t")
   topic = data[0]
   where = data[1]
   ref = data[2]
-  println "$topic [$where](${where}.i.md#$ref)<br />"
+  if (prevTopic == topic) {
+    print " [$where](${where}.i.md#$ref)"
+  } else {
+    if (prevTopic != "") println "<br />"
+    print "$topic [$where](${where}.i.md#$ref)"
+  }
+  prevTopic = topic
 }
 
