@@ -8,7 +8,7 @@ DNA in the CDK, and this chapter will outline some of that.
 The core interface is the [`IBioPolymer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBioPolymer.html) interface, which is derived from an
 IAtomContainer. Figure XX shows its hierarchy.
 
-#[](images/biopolymer.png) <br />
+![](images/biopolymer.png) <br />
 Figure XX: The [`IBioPolymer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBioPolymer.html) interface extends the [`IPolymer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IPolymer.html) interface,
 which extends the [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) interface.
 
@@ -140,8 +140,7 @@ Monomer name: ALAA9
         type: ALA
 ```
 
-
-![](mages/strandmonomer.png) <br />
+![](images/strandmonomer.png) <br />
 Figure XX: The [`IStrand`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IStrand.html) and [`IMonomer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IMonomer.html) interfaces extend the
 [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) interface.
 
