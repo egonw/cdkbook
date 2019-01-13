@@ -1,0 +1,12 @@
+digraph {
+
+  rankdir= BT;
+
+  ipolymer -> imolecule;
+  ibiopolymer -> ipolymer;
+
+  imolecule [shape=box,label="IAtomContainer"];
+  ipolymer [shape=box,label="IPolymer"];
+  ibiopolymer [shape=box,label="IBioPolymer"];
+
+}

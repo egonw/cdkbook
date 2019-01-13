@@ -1,4 +1,4 @@
-all: stereo.png crystal.png electronContainerInheritance.png
+all: stereo.png crystal.png electronContainerInheritance.png biopolymer.png
 
 %.png : %.dot
 	@echo "Processing " $<
