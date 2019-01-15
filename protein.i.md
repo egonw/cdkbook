@@ -8,7 +8,7 @@ DNA in the CDK, and this chapter will outline some of that.
 The core interface is the <class>IBioPolymer</class> interface, which is derived from an
 IAtomContainer. Figure XX shows its hierarchy.
 
-#[](images/biopolymer.png) <br />
+![](images/biopolymer.png) <br />
 Figure XX: The <class>IBioPolymer</class> interface extends the <class>IPolymer</class> interface,
 which extends the <class>IAtomContainer</class> interface.
 
@@ -75,8 +75,7 @@ Using these methods, we get some additional information about the strands and mo
 
 <out>BioNameType</out>
 
-
-![](mages/strandmonomer.png) <br />
+![](images/strandmonomer.png) <br />
 Figure XX: The <class>IStrand</class> and <class>IMonomer</class> interfaces extend the
 <class>IAtomContainer</class> interface.
 

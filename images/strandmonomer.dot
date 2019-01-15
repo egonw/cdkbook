@@ -1,0 +1,12 @@
+digraph {
+
+  rankdir= BT;
+
+  istrand -> iatomcontainer;
+  imonomer -> iatomcontainer;
+
+  imonomer [shape=box,label="IMonomer"];
+  istrand [shape=box,label="IStrand"];
+  iatomcontainer [shape=box,label="IAtomContainer"];
+
+}
