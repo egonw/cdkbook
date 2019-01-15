@@ -57,7 +57,7 @@ From there on, we can easily extract the reaction details:
 
 ## CMLReact files
 
-There is also a CML extension for reactions [<cite>Holliday2006</cite>]. But because CML files can contain a lot
+There is also a CML extension for reactions [<cite>Q27162658</cite>]. But because CML files can contain a lot
 of information, we read an <class>IChemFile</class> from this file, and extract the <class>IReaction</class> from that:
 
 <code>ReactionCMLReact</code>
