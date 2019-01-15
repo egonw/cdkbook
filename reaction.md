@@ -108,7 +108,7 @@ From there on, we can easily extract the reaction details:
 ## CMLReact files
 
 There is also a CML extension for reactions [<a href="#citeref1">1</a>]. But because CML files can contain a lot
-of information, we read an [`IChemFile`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemFile.html) from this file, and extrac the [`IReaction`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IReaction.html) from that:
+of information, we read an [`IChemFile`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemFile.html) from this file, and extract the [`IReaction`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IReaction.html) from that:
 
 **Script** [code/ReactionCMLReact.groovy](code/ReactionCMLReact.code.md)
 ```groovy
@@ -135,6 +135,6 @@ Products: 1
 
 ## References
 
-1. <a name="citeref1"></a>Missing
+1. <a name="citeref1"></a>Holliday GL, Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the World Wide Web. 6. CMLReact, an XML Vocabulary for Chemical Reactions. Journal of Chemical Information and Modeling. 2006 Jan 1;46(1):145–57.  doi:[10.1021/CI0502698](https://doi.org/10.1021/CI0502698)
 
 
