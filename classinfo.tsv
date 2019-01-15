@@ -9,6 +9,7 @@ IBioPolymer	org.openscience.cdk.interfaces	interfaces
 IBitFingerprint	org.openscience.cdk.fingerprint	core
 IBond	org.openscience.cdk.interfaces	interfaces
 IChemFile	org.openscience.cdk.interfaces	interfaces
+IChemObject	org.openscience.cdk.interfaces	interfaces
 IChemObjectBuilder	org.openscience.cdk.interfaces	interfaces
 ICountFingerprint	org.openscience.cdk.fingerprint	core
 IElectronContainer	org.openscience.cdk.interfaces	interfaces
@@ -17,13 +18,16 @@ IFingerprinter	org.openscience.cdk.fingerprint	core
 ILonePair	org.openscience.cdk.interfaces	interfaces
 IMonomer	org.openscience.cdk.interfaces	interfaces
 IPolymer	org.openscience.cdk.interfaces	interfaces
+IReaction	org.openscience.cdk.interfaces	interfaces
 ISingleElectron	org.openscience.cdk.interfaces	interfaces
 IsotopeFactory	org.openscience.cdk.config	core
 Isotopes	org.openscience.cdk.config	core
 IStrand	org.openscience.cdk.interfaces	interfaces
 IteratingSDFReader	org.openscience.cdk.io.iterator	ctab
+MDLRXNReader	org.openscience.cdk.io	ctab
 MDLV2000Writer	org.openscience.cdk.io	ctab
 ModelBuilder3D	org.openscience.cdk.modeling.builder3d	builder3d
+MolecularFormulaManipulator	org.openscience.cdk.tools.manipulator	formula
 PDBReader	org.openscience.cdk.io	pdb
 SilentChemObjectBuilder	org.openscience.cdk.silent	silent
 SmilesGenerator	org.openscience.cdk.smiles	smiles
