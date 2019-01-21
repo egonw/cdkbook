@@ -156,7 +156,7 @@ showing us the default implementation:
 The `IBond.setStereo()` method is discussed in Section 4.1.
 
 
-## Molecules
+<section level="##" label="molecules">Molecules</section>
 
 
 

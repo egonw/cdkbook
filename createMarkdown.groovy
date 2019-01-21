@@ -33,6 +33,18 @@ figdataLines.each { String line ->
   figureNumbers.put(data[0], data[2])
 }
 
+sectionChapters = new HashMap<String,String>();
+sectionNumbers = new HashMap<String,String>();
+def secdataLines = new File("sections.txt").readLines()
+secdataLines.each { String line ->
+  data = line.split("\t")
+  label = data[0]
+  chapter = data[1]
+  number = data[2]
+  sectionChapters.put(data[0], data[1])
+  sectionNumbers.put(data[0], data[2])
+}
+
 pkgs = new HashMap<String,String>();
 modules = new HashMap<String,String>();
 def lines = new File("classinfo.tsv").readLines()
@@ -75,6 +87,10 @@ lines.each { String line ->
     def instruction = new XmlSlurper().parseText(line)
     def srcLines = new File("${instruction.text()}").readLines()
     srcLines.each { String srcLine -> println srcLine }
+  } else if (line.startsWith("<section")) {
+    def instruction = new XmlSlurper().parseText(line)
+    println "<a name=\"sec:${instruction.@label}\"></a>"
+    println "${instruction.@level} ${instruction.text()}"
   } else if (line.startsWith("<toc>")) {
     def instruction = new XmlSlurper().parseText(line)
     def srcLines = new File("${instruction.text()}").readLines()
@@ -162,8 +178,12 @@ lines.each { String line ->
       xrefname = xrefInstruction.text()
       if (figureChapters.containsKey(xrefname)) {
         doc = ""
-        if (figureChapters.get(xrefname) != chapter) doc = figureChapters.get(xrefname) + ".md"
+        if (figureChapters.get(xrefname) != context) doc = figureChapters.get(xrefname) + ".md"
         replacement = "[${doc}#fig:${xrefname}](" + figureNumbers.get(xrefname) + ")"
+      } else if (sectionChapters.containsKey(xrefname)) {
+        doc = ""
+        if (sectionChapters.get(xrefname) != context) doc = sectionChapters.get(xrefname) + ".md"
+        replacement = "[${doc}#sec:${xrefname}](" + sectionNumbers.get(xrefname) + ")"
       } else {
         replacement = "??"
       }

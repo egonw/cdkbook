@@ -29,6 +29,19 @@ new File(chapters).eachLine { chapter ->
       sectionTitle = line.substring(4).trim()
       sectionHref = sectionTitle.toLowerCase().replaceAll(" ", "-").replaceAll("\\.", "")
       println "${chapterCounter}.${sectionCounter}.${subsectionCounter}. [${sectionTitle}](${chapter}.i.md#${sectionHref}) <br />"
+    } else if (line.startsWith("<section")) {
+      def instruction = new XmlSlurper().parseText(line)
+      if (instruction.@level == "##") {
+        subsectionCounter = 0
+        sectionTitle = instruction.text()
+        sectionCounter++
+        sectionHref = sectionTitle.toLowerCase().replaceAll(" ", "-").replaceAll("\\.", "")
+        println "${chapterCounter}.${sectionCounter}. [${sectionTitle}](${chapter}.i.md#${sectionHref}) <br />"
+      } else if (instruction.@level == "###") {
+        sectionTitle = instruction.text()
+        sectionHref = sectionTitle.toLowerCase().replaceAll(" ", "-").replaceAll("\\.", "")
+        println "${chapterCounter}.${sectionCounter}.${subsectionCounter}. [${sectionTitle}](${chapter}.i.md#${sectionHref}) <br />"
+      }
     }
   }  
 }
