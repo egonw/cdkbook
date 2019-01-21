@@ -179,11 +179,11 @@ lines.each { String line ->
       if (figureChapters.containsKey(xrefname)) {
         doc = ""
         if (figureChapters.get(xrefname) != context) doc = figureChapters.get(xrefname) + ".md"
-        replacement = "[${doc}#fig:${xrefname}](" + figureNumbers.get(xrefname) + ")"
+        replacement = "[${figureNumbers.get(xrefname)}](${doc}#fig:${xrefname})"
       } else if (sectionChapters.containsKey(xrefname)) {
         doc = ""
         if (sectionChapters.get(xrefname) != context) doc = sectionChapters.get(xrefname) + ".md"
-        replacement = "[${doc}#sec:${xrefname}](" + sectionNumbers.get(xrefname) + ")"
+        replacement = "[${sectionNumbers.get(xrefname)}](${doc}#sec:${xrefname})"
       } else {
         replacement = "??"
       }
