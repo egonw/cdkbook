@@ -46,6 +46,10 @@ lines.each { String line ->
     def instruction = new XmlSlurper().parseText(line)
     def srcLines = new File("${instruction.text()}").readLines()
     srcLines.each { String srcLine -> println srcLine }
+  } else if (line.startsWith("<toc>")) {
+    def instruction = new XmlSlurper().parseText(line)
+    def srcLines = new File("${instruction.text()}").readLines()
+    srcLines.each { String srcLine -> println srcLine.replaceAll(".i.md", ".md") }
   } else if (line.contains("<references/>")) {
     println bibList
   } else if (line.startsWith("%%%")) {

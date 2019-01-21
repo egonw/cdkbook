@@ -7,13 +7,16 @@ TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md \
 
 SUBDIRS := code
 
-all: cdk.version ${SUBDIRS} classinfo.tsv scriptcount.tex ${TARGETS}
+all: cdk.version ${SUBDIRS} toc.txt classinfo.tsv scriptcount.tex ${TARGETS}
 
 clean:
 	@rm -f ${TARGETS} scriptcount.tex cdk.version
 
 cdk.version: README.md
 	@grep "^\[Edition" README.md | cut -d' ' -f2 | cut -d'-' -f1 > cdk.version
+
+toc.txt: order.txt
+	@groovy findSections.groovy > toc.txt
 
 classinfo.tsv: classes.lst updateClassInfo.groovy
 	@echo "Updating the class info TSV..."
