@@ -30,7 +30,7 @@ is shown in Figure [4.1](#fig:wedgebond).
 
 <a name="fig:wedgebond"></a>
 ![](images/generated/StereoisomerOne.png)
-**Figure 4.1**: 2D depictions can reflect stereochemistry using wedge bonds.
+<br />**Figure 4.1**: 2D depictions can reflect stereochemistry using wedge bonds.
 
 To add such 2D stereochemistry information we use the `IBond.setStereo()`
 method:
@@ -100,7 +100,7 @@ would not make any difference.
 
 <a name="fig:mirrorImages"></a>
 ![](images/generated/StereoisomerOne.png)![](images/generated/StereoisomerTwo.png)
-**Figure 4.2**: Stereoisomers of bromochlorofluoroiodomethane.
+<br />**Figure 4.2**: Stereoisomers of bromochlorofluoroiodomethane.
 
 If we replace two hydrogens with a chloride and a bromide, we can still switch
 the two hydrogen atoms, and still have the same geometry. If we switch the two
@@ -127,7 +127,7 @@ stereo elements derive. This is depicted in Figure [4.3](#fig:stereoInheritance)
 
 <a name="fig:stereoInheritance"></a>
 ![](images/stereo.png)
-**Figure 4.3**: The `ITetrahedralChirality` and `IDoubleBondStereochemistry` interfaces extends the `IStereoElement` interface.
+<br />**Figure 4.3**: The `ITetrahedralChirality` and `IDoubleBondStereochemistry` interfaces extends the `IStereoElement` interface.
 
 The `ITetrahedralChirality` interface requires you to specify the four neighboring
 atoms around a central <a name="tp6">chiral atom</a>. Thus for bromochlorofluoroiodomethane
