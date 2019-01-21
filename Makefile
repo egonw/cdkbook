@@ -7,7 +7,7 @@ TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md \
 
 SUBDIRS := code
 
-all: cdk.version ${SUBDIRS} toc.txt classinfo.tsv scriptcount.tex ${TARGETS}
+all: cdk.version ${SUBDIRS} classinfo.tsv scriptcount.tex ${TARGETS}
 
 clean:
 	@rm -f ${TARGETS} scriptcount.tex cdk.version
@@ -15,7 +15,10 @@ clean:
 cdk.version: README.md
 	@grep "^\[Edition" README.md | cut -d' ' -f2 | cut -d'-' -f1 > cdk.version
 
-toc.txt: order.txt
+figures.txt: order.txt ${SOURCES}
+	@groovy findFigures.groovy > figures.txt
+
+toc.txt: order.txt ${SOURCES}
 	@groovy findSections.groovy > toc.txt
 
 classinfo.tsv: classes.lst updateClassInfo.groovy
@@ -46,7 +49,7 @@ scriptcount.tex: code/scriptCount.tex
 code/scriptCount.tex:
 	@cd code; make scriptCount.tex
 
-%.md : %.i.md createMarkdown.groovy references.dat
+%.md : %.i.md createMarkdown.groovy references.dat topics.tsv toc.txt figures.txt
 	@echo "Creating $@"
 	@groovy createMarkdown.groovy $< > $@
 

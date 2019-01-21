@@ -26,10 +26,11 @@ have been developed [<cite>Q54062338</cite>].
 
 The CDK has supported wedge bond stereo for a very long time, with its origin
 in the JChemPaint. An example 2D depiction is that of bromochlorofluoroiodomethane
-is shown in Figure XX.
+is shown in Figure <xref>wedgebond</xref>.
 
+<figure label="wedgebond" caption="2D depictions can reflect stereochemistry using wedge bonds.">
 ![](images/generated/StereoisomerOne.png) <br />
-**Figure**: 2D depictions can reflect stereochemistry using wedge bonds.
+</figure>
 
 To add such 2D stereochemistry information we use the `IBond.setStereo()`
 method:
@@ -66,9 +67,10 @@ structure with the four atoms connected to the atoms at the four corners and a
 carbon right in the middle. Note that we can two switch hydrogen atoms, but that
 would not make any difference.
 
+<figure caption="Stereoisomers of bromochlorofluoroiodomethane.">
 ![](images/generated/StereoisomerOne.png)
 ![](images/generated/StereoisomerTwo.png) <br />
-**Figure**: Stereoisomers of bromochlorofluoroiodomethane.
+</figure>
 %%% <code>StereoisomerOne</code>
 %%% <code>StereoisomerTwo</code>
 
@@ -95,9 +97,9 @@ Because wedge bonds are ambiguous and only work for systems with specified
 systems. The base interface is `IStereoElement` from which specific
 stereo elements derive. This is depicted in Figure XX.
 
+<figure caption="The `ITetrahedralChirality` and `IDoubleBondStereochemistry` interfaces extends the `IStereoElement` interface.">
 ![](images/stereo.png) <br />
-**Figure**: The `ITetrahedralChirality` and `IDoubleBondStereochemistry`
-interfaces extends the `IStereoElement` interface.
+</figure>
 
 The `ITetrahedralChirality` interface requires you to specify the four neighboring
 atoms around a central <topic>chiral atom</topic>. Thus for bromochlorofluoroiodomethane
