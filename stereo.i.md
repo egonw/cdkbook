@@ -29,7 +29,7 @@ in the JChemPaint. An example 2D depiction is that of bromochlorofluoroiodometha
 is shown in Figure <xref>wedgebond</xref>.
 
 <figure label="wedgebond" caption="2D depictions can reflect stereochemistry using wedge bonds.">
-![](images/generated/StereoisomerOne.png) <br />
+![](images/generated/StereoisomerOne.png)
 </figure>
 
 To add such 2D stereochemistry information we use the `IBond.setStereo()`
@@ -69,7 +69,7 @@ would not make any difference.
 
 <figure label="mirrorImages" caption="Stereoisomers of bromochlorofluoroiodomethane.">
 ![](images/generated/StereoisomerOne.png)
-![](images/generated/StereoisomerTwo.png) <br />
+![](images/generated/StereoisomerTwo.png)
 </figure>
 %%% <code>StereoisomerOne</code>
 %%% <code>StereoisomerTwo</code>
@@ -98,7 +98,7 @@ systems. The base interface is `IStereoElement` from which specific
 stereo elements derive. This is depicted in Figure <xref>stereoInheritance</xref>.
 
 <figure label="stereoInheritance" caption="The `ITetrahedralChirality` and `IDoubleBondStereochemistry` interfaces extends the `IStereoElement` interface.">
-![](images/stereo.png) <br />
+![](images/stereo.png)
 </figure>
 
 The `ITetrahedralChirality` interface requires you to specify the four neighboring

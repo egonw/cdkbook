@@ -108,7 +108,7 @@ lines.each { String line ->
       println "<a name=\"fig:${figuresInstruction.@label}\"></a>"
     }
     println figuresInstruction.text().trim()
-    println "**Figure ${currentChapterCounter}.${figureCounter}**: " + figuresInstruction.@caption
+    println "<br />**Figure ${currentChapterCounter}.${figureCounter}**: " + figuresInstruction.@caption
     inFigure = false
   } else if (line.startsWith("<figure")) {
     inFigure = true
