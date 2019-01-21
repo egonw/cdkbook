@@ -30,11 +30,11 @@ steps forward, but it will take some time for things to iron out.
 3.2.2. [Electron counts](atomsbonds.md#bond-stereochemistry) <br />
 3.3. [Molecules](atomsbonds.md#molecules) <br />
 4. [Stereochemistry](stereo.md) <br />
-4.1 [Stereochemistry in a flat world](stereo.md#stereochemistry-in-a-flat-world) <br />
-4.2 [Tetrahedral chirality](stereo.md#tetrahedral-chirality) <br />
+4.1. [Stereochemistry in a flat world](stereo.md#stereochemistry-in-a-flat-world) <br />
+4.2. [Tetrahedral chirality](stereo.md#tetrahedral-chirality) <br />
 5. [Salts and other disconnected structures](salts.md) <br />
-5.1 [Salts](salts.md#salts) <br />
-5.2 [Crystals](salts.md#crystals) <br />
+5.1. [Salts](salts.md#salts) <br />
+5.2. [Crystals](salts.md#crystals) <br />
 6. [Paired and unpaired electrons](unpairedelectrons.md) <br />
 9. [From IChemObject to IChemFile](chemobject.md) <br />
 11. [Input/Output](io.md) <br />
@@ -44,8 +44,8 @@ steps forward, but it will take some time for things to iron out.
 11.4. [Customizing the Output](io.md#customizing-the-output) <br />
 11.5. [Setting Properties](io.md#setting-properties) <br />
 20. [Chemistry Toolkit Rosetta](ctr.md) <br />
-20.1 [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
-20.2 [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
+20.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
+20.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
 24. [Migration](migration.md) <br />
 [Index](indexList.md) <br />
 [Appendix A](appatomtypes.md) <br />
