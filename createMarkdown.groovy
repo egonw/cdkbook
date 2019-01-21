@@ -164,6 +164,8 @@ lines.each { String line ->
         doc = ""
         if (figureChapters.get(xrefname) != chapter) doc = figureChapters.get(xrefname) + ".md"
         replacement = "[${doc}#fig:${xrefname}](" + figureNumbers.get(xrefname) + ")"
+      } else {
+        replacement = "??"
       }
       line = line.substring(0, xrefStart) + replacement + line.substring(xrefEnd+7)
     }
