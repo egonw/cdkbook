@@ -1,6 +1,6 @@
 # Salts and other disconnected structures
 
-In the section [Molecules](atomsbonds.md#molecules) we saw how atoms and bonds are contained in
+In the Section [atomsbonds.md#sec:molecules](3.3) we saw how atoms and bonds are contained in
 the `IAtomContainer` data model. It was mentioned that 
 it is a general container, and this is exactly what we need for disconnected
 structures like salts and molecular crystal structures.

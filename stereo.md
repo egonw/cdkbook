@@ -98,6 +98,7 @@ structure with the four atoms connected to the atoms at the four corners and a
 carbon right in the middle. Note that we can two switch hydrogen atoms, but that
 would not make any difference.
 
+<a name="fig:mirrorImages"></a>
 ![](images/generated/StereoisomerOne.png)![](images/generated/StereoisomerTwo.png)
 **Figure 4.2**: Stereoisomers of bromochlorofluoroiodomethane.
 
@@ -117,13 +118,14 @@ carbon right in the middle.
 With this geometry we no longer can switch two atoms bound to the carbon without
 changing the geometry: switching two halogens causes the stereochemistry to
 change. In fact, there are two possible stereoisomers, each of which is a mirror
-image of the other, as depicted in Figure XX.
+image of the other, as depicted in Figure [#fig:mirrorImages](4.2).
 
 Because wedge bonds are ambiguous and only work for systems with specified
 2D coordinates, a data model has been set up that is independent from coordinate
 systems. The base interface is `IStereoElement` from which specific
-stereo elements derive. This is depicted in Figure XX.
+stereo elements derive. This is depicted in Figure [#fig:stereoInheritance](4.3).
 
+<a name="fig:stereoInheritance"></a>
 ![](images/stereo.png)
 **Figure 4.3**: The `ITetrahedralChirality` and `IDoubleBondStereochemistry` interfaces extends the `IStereoElement` interface.
 

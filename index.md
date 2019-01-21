@@ -55,7 +55,7 @@ steps forward, but it will take some time for things to iron out.
 9.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
 9.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
 10. [Migration](migration.md) <br />
-10.1. [CDK 1.4 to 2.0](migration.md#cdk-1.4-to-2.0) <br />
+10.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
 10.1.1. [Removed classes](migration.md#removed-classes) <br />
 10.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
 10.1.3. [Changed behavior](migration.md#changed-behavior) <br />
