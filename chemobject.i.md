@@ -1,4 +1,4 @@
-## From IChemObject to IChemFile
+# From IChemObject to IChemFile
 
 The previous chapters showed us various core data classes, including `IAtom`,
 `IAtom`, and `IAtomContainer`, but also a few more complex data structures,
