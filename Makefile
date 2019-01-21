@@ -19,7 +19,7 @@ figures.txt: order.txt ${SOURCES}
 	@groovy findFigures.groovy > figures.txt
 
 toc.txt: order.txt ${SOURCES}
-	@groovy findSections.groovy > toc.txt
+	@groovy makeToC.groovy > toc.txt
 
 classinfo.tsv: classes.lst updateClassInfo.groovy
 	@echo "Updating the class info TSV..."
