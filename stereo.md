@@ -26,10 +26,11 @@ have been developed [<a href="#citeref1">1</a>].
 
 The CDK has supported wedge bond stereo for a very long time, with its origin
 in the JChemPaint. An example 2D depiction is that of bromochlorofluoroiodomethane
-is shown in Figure XX.
+is shown in Figure [#fig:wedgebond](4.1).
 
-![](images/generated/StereoisomerOne.png) <br />
-**Figure**: 2D depictions can reflect stereochemistry using wedge bonds.
+<a name="fig:wedgebond"></a>
+![](images/generated/StereoisomerOne.png)
+**Figure 4.1**: 2D depictions can reflect stereochemistry using wedge bonds.
 
 To add such 2D stereochemistry information we use the `IBond.setStereo()`
 method:
@@ -97,9 +98,8 @@ structure with the four atoms connected to the atoms at the four corners and a
 carbon right in the middle. Note that we can two switch hydrogen atoms, but that
 would not make any difference.
 
-![](images/generated/StereoisomerOne.png)
-![](images/generated/StereoisomerTwo.png) <br />
-**Figure**: Stereoisomers of bromochlorofluoroiodomethane.
+![](images/generated/StereoisomerOne.png)![](images/generated/StereoisomerTwo.png)
+**Figure 4.2**: Stereoisomers of bromochlorofluoroiodomethane.
 
 If we replace two hydrogens with a chloride and a bromide, we can still switch
 the two hydrogen atoms, and still have the same geometry. If we switch the two
@@ -124,9 +124,8 @@ Because wedge bonds are ambiguous and only work for systems with specified
 systems. The base interface is `IStereoElement` from which specific
 stereo elements derive. This is depicted in Figure XX.
 
-![](images/stereo.png) <br />
-**Figure**: The `ITetrahedralChirality` and `IDoubleBondStereochemistry`
-interfaces extends the `IStereoElement` interface.
+![](images/stereo.png)
+**Figure 4.3**: The `ITetrahedralChirality` and `IDoubleBondStereochemistry` interfaces extends the `IStereoElement` interface.
 
 The `ITetrahedralChirality` interface requires you to specify the four neighboring
 atoms around a central <a name="tp6">chiral atom</a>. Thus for bromochlorofluoroiodomethane
