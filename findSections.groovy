@@ -22,12 +22,12 @@ new File(chapters).eachLine { chapter ->
       subsectionCounter = 0
       sectionTitle = line.substring(3).trim()
       sectionCounter++
-      sectionHref = sectionTitle.toLowerCase().replaceAll(" ", "-")
+      sectionHref = sectionTitle.toLowerCase().replaceAll(" ", "-").replaceAll("\\.", "")
       println "${chapterCounter}.${sectionCounter}. [${sectionTitle}](${chapter}.i.md#${sectionHref}) <br />"
     } else if (line.startsWith("### ")) {
       subsectionCounter++
       sectionTitle = line.substring(4).trim()
-      sectionHref = sectionTitle.toLowerCase().replaceAll(" ", "-")
+      sectionHref = sectionTitle.toLowerCase().replaceAll(" ", "-").replaceAll("\\.", "")
       println "${chapterCounter}.${sectionCounter}.${subsectionCounter}. [${sectionTitle}](${chapter}.i.md#${sectionHref}) <br />"
     }
   }  
