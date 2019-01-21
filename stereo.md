@@ -26,7 +26,7 @@ have been developed [<a href="#citeref1">1</a>].
 
 The CDK has supported wedge bond stereo for a very long time, with its origin
 in the JChemPaint. An example 2D depiction is that of bromochlorofluoroiodomethane
-is shown in Figure [#fig:wedgebond](4.1).
+is shown in Figure [4.1](#fig:wedgebond).
 
 <a name="fig:wedgebond"></a>
 ![](images/generated/StereoisomerOne.png)
@@ -118,12 +118,12 @@ carbon right in the middle.
 With this geometry we no longer can switch two atoms bound to the carbon without
 changing the geometry: switching two halogens causes the stereochemistry to
 change. In fact, there are two possible stereoisomers, each of which is a mirror
-image of the other, as depicted in Figure [#fig:mirrorImages](4.2).
+image of the other, as depicted in Figure [4.2](#fig:mirrorImages).
 
 Because wedge bonds are ambiguous and only work for systems with specified
 2D coordinates, a data model has been set up that is independent from coordinate
 systems. The base interface is `IStereoElement` from which specific
-stereo elements derive. This is depicted in Figure [#fig:stereoInheritance](4.3).
+stereo elements derive. This is depicted in Figure [4.3](#fig:stereoInheritance).
 
 <a name="fig:stereoInheritance"></a>
 ![](images/stereo.png)
