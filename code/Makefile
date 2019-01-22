@@ -15,7 +15,7 @@ distclean: clean
 clean:
 	@rm -f *~ *.class allScriptsCompiled
 
-scriptCount.tex: SMILESFormatMatcher.class ${CODEFILES}
+scriptCount.tex: SMILESFormatMatcher.class SimpleFingerprinter.class ${CODEFILES}
 	@groovy ../findScripts.groovy .. .out | sort | uniq | wc -l > scriptCount.tex
 
 allScriptsCompiled: ${CODEFILES}
