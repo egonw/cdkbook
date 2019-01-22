@@ -6,5 +6,6 @@ salts
 unpairedelectrons
 chemobject
 io
+substructure
 ctr
 migration
