@@ -14,8 +14,10 @@ conformations [stereo](stereo.md#tp2)<br />
 crambin [protein](protein.md#tp4)<br />
 crystal [salts](salts.md#tp2)<br />
 DNA [protein](protein.md#tp2)<br />
+ECFP [substructure](substructure.md#tp3)<br />
 electrons [atomsbonds](atomsbonds.md#tp14)<br />
 ethanol [atomsbonds](atomsbonds.md#tp12)<br />
+FCFP [substructure](substructure.md#tp4)<br />
 Gaussian input file [io](io.md#tp2)<br />
 geometry [stereo](stereo.md#tp1)<br />
 heavy atoms [ctr](ctr.md#tp1)<br />
@@ -27,7 +29,9 @@ IElectronContainer [atomsbonds](atomsbonds.md#tp11) [unpairedelectrons](unpaired
 IElement [atomsbonds](atomsbonds.md#tp3)<br />
 IIsotope [atomsbonds](atomsbonds.md#tp4)<br />
 lone pairs [unpairedelectrons](unpairedelectrons.md#tp2)<br />
+MACCSFingerprinter [substructure](substructure.md#tp2)<br />
 MDL RXN [reaction](reaction.md#tp4)<br />
+molecular fingerprints [substructure](substructure.md#tp1)<br />
 notional coordinates [atomsbonds](atomsbonds.md#tp9)<br />
 PDB files [protein](protein.md#tp3)<br />
 products [reaction](reaction.md#tp3)<br />

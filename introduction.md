@@ -1,3 +1,4 @@
+<a name="sec:intro"></a>
 # Introduction
 
 Readers of this book will probably know what the
@@ -45,7 +46,7 @@ experienced CDK developers.
 4. <a name="citeref4"></a>Willighagen E, Mayfield JW, Alvarsson J, Berg A, Berg A, Carlsson L, et al. The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching. Journal of Cheminformatics. 2017 Jun 6;9(1).  doi:[10.1186/S13321-017-0220-4](https://doi.org/10.1186/S13321-017-0220-4)
 5. <a name="citeref5"></a>Gasteiger J, Engel T, editors. Chemoinformatics: A Textbook. Wiley-VCH; 2003. 
 6. <a name="citeref6"></a>Leach AR, Gillet VJ. An introduction to chemoinformatics. Springer Science+Business Media; 2007. 
-7. <a name="citeref7"></a>Missing
+7. <a name="citeref7"></a>Faulon J-L, Bender A, editors. Handbook of Chemoinformatics Algorithms. 2010. 
 8. <a name="citeref8"></a>Wikberg J, Eklund M, Willighagen E, Spjuth O, Lapins M, Engkvist O, et al. Introduction to Pharmaceutical Bioinformatics. 2018. 
 9. <a name="citeref9"></a>Wild DJ. Introducing Cheminformatics. 2013. 
 

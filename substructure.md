@@ -118,7 +118,7 @@ of a substructure, such as a phenyl or a carbonyl group. We have then
 defined a substructure fingerprint.
 
 The CDK has several kinds of fingerprints, including path-based
-fingerprints ([`Fingerprinter`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/fingerprint/Fingerprinter.html) and `HybridizationFingerprinter`), a MACSS fingerprint
+fingerprints ([`Fingerprinter`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/fingerprint/Fingerprinter.html) and [`HybridizationFingerprinter`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/fingerprint/HybridizationFingerprinter.html)), a MACSS fingerprint
 (`MACSSFingerprinter`) [<a href="#citeref1">1</a>], and the PubChem fingerprint
 (`PubChemFingerprinter`).
 These fingerprints have been used for various tasks, including ligand
@@ -157,7 +157,7 @@ ethanol: {81, 108, 113, 138, 152, 154, 156, 159,...
 The CDK also has an implementation for the circular <a name="tp3">ECFP</a> and <a name="tp4">FCFP</a>
 fingerprints [<a href="#citeref5">5</a>]. These are developed by Alex M. Clark at
 [Collaborative Drug Discovery, Inc](http://collaborativedrug.com) in the
-`CircularFingerprinter` [<a href="#citeref6">6</a>].
+[`CircularFingerprinter`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/fingerprint/CircularFingerprinter.html) [<a href="#citeref6">6</a>].
 It implements both in four variants:
 ECFP0, ECFP2, ECFP4, ECFP6, FCFP0, FCFP2, FCFP4, and FCFP6. The code is quite similar
 as for other fingerprints, but we do have to indicate what variant we want:

@@ -1,6 +1,6 @@
 # Groovy Cheminformatics with the Chemistry Development Kit
 
-Edition 2.0-5
+Edition 2.0-6
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
@@ -51,19 +51,23 @@ steps forward, but it will take some time for things to iron out.
 8.3. [Customizing the Output](io.md#customizing-the-output) <br />
 8.3.1. [Setting Properties](io.md#setting-properties) <br />
 8.4. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
-9. [Chemistry Toolkit Rosetta](ctr.md) <br />
-9.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
-9.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
-10. [Migration](migration.md) <br />
-10.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
-10.1.1. [Removed classes](migration.md#removed-classes) <br />
-10.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
-10.1.3. [Changed behavior](migration.md#changed-behavior) <br />
-10.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
-10.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
-10.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
-10.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
-10.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
+9. [Substructure Searching](substructure.md) <br />
+9.1. [Fingerprints](substructure.md#fingerprints) <br />
+9.2. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
+9.3. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
+10. [Chemistry Toolkit Rosetta](ctr.md) <br />
+10.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
+10.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
+11. [Migration](migration.md) <br />
+11.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
+11.1.1. [Removed classes](migration.md#removed-classes) <br />
+11.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
+11.1.3. [Changed behavior](migration.md#changed-behavior) <br />
+11.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
+11.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
+11.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
+11.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
+11.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
 [Index](indexList.md) <br />
 [Appendix A](appatomtypes.md) <br />
 A.1 [CDK Atom Types](appatomtypes.md#cdk-atom-types) <br />
