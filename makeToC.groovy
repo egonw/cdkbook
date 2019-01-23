@@ -41,6 +41,10 @@ new File(chapters).eachLine { chapter ->
         sectionTitle = instruction.text()
         sectionHref = sectionTitle.toLowerCase().replaceAll(" ", "-").replaceAll("\\.", "")
         println "${chapterCounter}.${sectionCounter}.${subsectionCounter}. [${sectionTitle}](${chapter}.i.md#${sectionHref}) <br />"
+      } else if (instruction.@level == "#") {
+        sectionTitle = instruction.text()
+        sectionHref = sectionTitle.toLowerCase().replaceAll(" ", "-").replaceAll("\\.", "")
+        println "${chapterCounter}. [${sectionTitle}](${chapter}.i.md) <br />"
       }
     }
   }  
