@@ -32,7 +32,7 @@ with the following bit definitions:
 * bit 3: molecule contains a oxygen
 * bit 4: molecule contains a chlorine
 
-Let's call this fingerprinter Cclass>SimpleFingerprinter</class>:
+Let's call this fingerprinter `SimpleFingerprinter`:
 
 <code>SimpleFingerprinter</code>
 
@@ -55,9 +55,9 @@ fingerprints (<class>Fingerprinter</class> and <class>HybridizationFingerprinter
 These fingerprints have been used for various tasks, including ligand
 classification [<cite>Q42704791</cite>], and databases like BRENDA [<cite>Q24599948</cite>] and TIN [<cite>Q33874102</cite>].
 
-## MACCS Fingerprints
+### MACCS Fingerprints
 
-One substructure-based fingerprinter is the <topic>MACCSFingerprinter</topic>
+One substructure-based fingerprinter is the <class type="topic">MACCSFingerprinter</class>
 which partly implements the MACSS fingerprint specification [<cite>Q34160151</cite>]. The
 substructures are defined as SMARTS substructure specifications,
 inherited from RDKit ([http://rdkit.org/](http://rdkit.org/)). For this fingerprint it is required the implicit hydrogen
@@ -70,7 +70,7 @@ which we can convert into a Java `BitSet` with the `asBitSet` method:
 	
 <out>MACCSFingerprint</out>
 
-## ECFP and FCFP Fingerprints
+### ECFP and FCFP Fingerprints
 
 The CDK also has an implementation for the circular <topic>ECFP</topic> and <topic>FCFP</topic>
 fingerprints [<cite>Q29616639</cite>]. These are developed by Alex M. Clark at
