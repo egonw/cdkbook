@@ -17,8 +17,7 @@ new File(chapters).eachLine { chapter ->
   chapterCounter++
   currentChapterCounter = chapterCounters.get(chapter)
   file = "${chapter}.i.md"
-  sectionCounter = 0
-  subsectionCounter = 0
+  figureCounter = 0
   lines = new File(file).readLines()
   figureInstructionText = ""
   inFigure = false
