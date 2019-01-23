@@ -1,8 +1,10 @@
 CDKAtomTypeMatcher	org.openscience.cdk.atomtype	core
 CDKHydrogenAdder	org.openscience.cdk.tools	valencycheck
+CircularFingerprinter	org.openscience.cdk.fingerprint	fingerprint
 DescriptorEngine	org.openscience.cdk.qsar	qsarmolecular
 Elements	org.openscience.cdk.config	core
 Fingerprinter	org.openscience.cdk.fingerprint	standard
+HybridizationFingerprinter	org.openscience.cdk.fingerprint	standard
 IAtom	org.openscience.cdk.interfaces	interfaces
 IAtomContainer	org.openscience.cdk.interfaces	interfaces
 IBioPolymer	org.openscience.cdk.interfaces	interfaces
