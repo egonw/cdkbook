@@ -31,7 +31,9 @@ MDLV2000Writer	org.openscience.cdk.io	ctab
 ModelBuilder3D	org.openscience.cdk.modeling.builder3d	builder3d
 MolecularFormulaManipulator	org.openscience.cdk.tools.manipulator	formula
 PDBReader	org.openscience.cdk.io	pdb
+RebondTool	org.openscience.cdk.graph.rebond	standard
 SilentChemObjectBuilder	org.openscience.cdk.silent	silent
 SmilesGenerator	org.openscience.cdk.smiles	smiles
+StructureDiagramGenerator	org.openscience.cdk.layout	sdg
 UniversalIsomorphismTester	org.openscience.cdk.isomorphism	standard
 XMLIsotopeFactory	org.openscience.cdk.config	extra
