@@ -119,7 +119,13 @@ println "Monoisotopic mass: " +
 
 XYZ files do not have bond information, and may look like:
 
-<input>code/data/methane.xyz</input>
+5
+methane
+C  0.25700 -0.36300  0.00000
+H  0.25700  0.72700  0.00000
+H  0.77100 -0.72700  0.89000
+H  0.77100 -0.72700 -0.89000
+H -0.77100 -0.72700  0.00000
 
 Fortunately, we can reasonably assume bonds to have a certain length, and
 reasonably understand how many connections and atom can have at most. Then,
@@ -204,10 +210,10 @@ fbot = new FixBondOrdersTool()
 pyrrole = fbot.kekuliseAromaticRings(pyrrole)
 ```
 
-This results in the image given in Figure ??.
+This results in the image given in Figure [9.1](#fig:pyrrole).
 
 <a name="fig:pyrrole"></a>
-![](generated/FixPyrroleBondOrders)
+![](code/generated/FixPyrroleBondOrders)
 <br />**Figure 9.1**: 2D diagram of pyrrole.
 
 <a name="sec:missinghydrogens"></a>
@@ -264,15 +270,10 @@ println "Atom count: $molecule.atomCount"
 
 which reports for the running methane example:
 
-**Script** [code/ExplicitHydrogens.groovy](code/ExplicitHydrogens.code.md)
-```groovy
-adder.addImplicitHydrogens(molecule);
-println "Atom count: $molecule.atomCount"
-println " .. adding explicit hydrogens .."
-AtomContainerManipulator.convertImplicitToExplicitHydrogens(
-  molecule
-);
-println "Atom count: $molecule.atomCount"
+```plain
+Atom count: 1
+ .. adding explicit hydrogens ..
+Atom count: 5
 ```
 
 <a name="sec:layout"></a>
@@ -311,7 +312,7 @@ C: (0.5759618943233435, 1.8749999999999947)
 Mass spectrometry (MS) is a technology where the experiment yields monoisotopic
 masses for molecules. In order to analyze these further, it is common to convert
 them to <a name="tp17">molecular formula</a>. The `MassToFormulaTool` has functionality
-to determine these missing formulae. Miguel Rojas-Chert\'o developed this code
+to determine these missing formulae. Miguel Rojas-Chertó developed this code
 for use in <a name="tp18">metabolomics</a> [<a href="#citeref1">1</a>]. Basic usage looks like:
 
 **Script** [code/MissingMF.groovy](code/MissingMF.code.md)
@@ -401,3 +402,10 @@ C8H7NO 133.052763844
 Of course, this is a long way from actual chemical structures. An Open Source structure
 generator has been a long standing holy grail, and recently the CDK-based Open Molecular
 Generator addressed this gap [<a href="#citeref2">2</a>].
+
+## References
+
+1. <a name="citeref1"></a>Rojas-Cherto M, Rojas-Cherto M, Kasper PT, Willighagen E, Vreeken RJ, Hankemeier T, et al. Elemental composition determination based on MSn. Bioinformatics. 2011 Jul 14;27(17):2376–83.  doi:[10.1093/BIOINFORMATICS/BTR409](https://doi.org/10.1093/BIOINFORMATICS/BTR409)
+2. <a name="citeref2"></a>Peironcely JE, Rojas-Chertó M, Fichera D, Reijmers T, Reijmers T, Coulier L, et al. OMG: Open Molecule Generator. Journal of Cheminformatics. 2012 Sep 17;4(1):21.  doi:[10.1186/1758-2946-4-21](https://doi.org/10.1186/1758-2946-4-21)
+
+
