@@ -19,6 +19,7 @@ steps forward, but it will take some time for things to iron out.
 
 1. [Introduction](introduction.md) <br />
 2. [Cheminformatics](cheminfo.md) <br />
+2.1. [Molecular Representations](cheminfo.md#molecular-representations) <br />
 3. [Atoms, Bonds and Molecules](atomsbonds.md) <br />
 3.1. [Atoms](atomsbonds.md#atoms) <br />
 3.1.1. [IElement](atomsbonds.md#ielement) <br />
@@ -51,23 +52,34 @@ steps forward, but it will take some time for things to iron out.
 8.3. [Customizing the Output](io.md#customizing-the-output) <br />
 8.3.1. [Setting Properties](io.md#setting-properties) <br />
 8.4. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
-9. [Substructure Searching](substructure.md) <br />
-9.1. [Fingerprints](substructure.md#fingerprints) <br />
-9.2. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
-9.3. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
-10. [Chemistry Toolkit Rosetta](ctr.md) <br />
-10.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
-10.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
-11. [Migration](migration.md) <br />
-11.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
-11.1.1. [Removed classes](migration.md#removed-classes) <br />
-11.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
-11.1.3. [Changed behavior](migration.md#changed-behavior) <br />
-11.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
-11.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
-11.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
-11.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
-11.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
+9. [Missing Information](missing.md) <br />
+9.1. [Element and Isotope information](missing.md#element-and-isotope-information) <br />
+9.1.1. [Elements](missing.md#elements) <br />
+9.1.2. [Isotopes](missing.md#isotopes) <br />
+9.2. [Reconnecting Atoms](missing.md#reconnecting-atoms) <br />
+9.3. [Missing Bond Orders](missing.md#missing-bond-orders) <br />
+9.4. [Missing Hydrogens](missing.md#missing-hydrogens) <br />
+9.4.0. [Implicit Hydrogens](missing.md#implicit-hydrogens) <br />
+9.4.0. [Explicit Hydrogens](missing.md#explicit-hydrogens) <br />
+9.5. [2D Coordinates](missing.md#2d-coordinates) <br />
+9.6. [Unknown Molecular Formula](missing.md#unknown-molecular-formula) <br />
+10. [Substructure Searching](substructure.md) <br />
+10.1. [Fingerprints](substructure.md#fingerprints) <br />
+10.1.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
+10.1.2. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
+11. [Chemistry Toolkit Rosetta](ctr.md) <br />
+11.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
+11.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
+12. [Migration](migration.md) <br />
+12.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
+12.1.1. [Removed classes](migration.md#removed-classes) <br />
+12.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
+12.1.3. [Changed behavior](migration.md#changed-behavior) <br />
+12.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
+12.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
+12.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
+12.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
+12.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
 [Index](indexList.md) <br />
 [Appendix A](appatomtypes.md) <br />
 A.1 [CDK Atom Types](appatomtypes.md#cdk-atom-types) <br />

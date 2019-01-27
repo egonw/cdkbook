@@ -43,7 +43,7 @@ with the following bit definitions:
 * bit 3: molecule contains a oxygen
 * bit 4: molecule contains a chlorine
 
-Let's call this fingerprinter Cclass>SimpleFingerprinter</class>:
+Let's call this fingerprinter `SimpleFingerprinter`:
 
 **Script** [code/SimpleFingerprinter.java](code/SimpleFingerprinter.code.md)
 ```java
@@ -124,9 +124,9 @@ fingerprints ([`Fingerprinter`](http://cdk.github.io/cdk/latest/docs/api/org/ope
 These fingerprints have been used for various tasks, including ligand
 classification [<a href="#citeref2">2</a>], and databases like BRENDA [<a href="#citeref3">3</a>] and TIN [<a href="#citeref4">4</a>].
 
-## MACCS Fingerprints
+### MACCS Fingerprints
 
-One substructure-based fingerprinter is the <a name="tp2">MACCSFingerprinter</a>
+One substructure-based fingerprinter is the `MACCSFingerprinter`
 which partly implements the MACSS fingerprint specification [1]. The
 substructures are defined as SMARTS substructure specifications,
 inherited from RDKit ([http://rdkit.org/](http://rdkit.org/)). For this fingerprint it is required the implicit hydrogen
@@ -152,9 +152,9 @@ ethanol: {81, 108, 113, 138, 152, 154, 156, 159,...
    163}
 ```
 
-## ECFP and FCFP Fingerprints
+### ECFP and FCFP Fingerprints
 
-The CDK also has an implementation for the circular <a name="tp3">ECFP</a> and <a name="tp4">FCFP</a>
+The CDK also has an implementation for the circular <a name="tp2">ECFP</a> and <a name="tp3">FCFP</a>
 fingerprints [<a href="#citeref5">5</a>]. These are developed by Alex M. Clark at
 [Collaborative Drug Discovery, Inc](http://collaborativedrug.com) in the
 [`CircularFingerprinter`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/fingerprint/CircularFingerprinter.html) [<a href="#citeref6">6</a>].
