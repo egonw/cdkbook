@@ -268,11 +268,188 @@ Bond order UNSET has 0 electrons
 
 The `IBond.setStereo()` method is discussed in Section 4.1.
 
-
 <a name="sec:molecules"></a>
 ## Molecules
 
+We already saw in the previous pieces of code how the CDK can be used to create
+molecules, and while the above is, strictly speaking, enough to find all atoms in the
+<a name="tp15">molecule</a> starting with only one of the atoms in the molecule, it often is more
+convenient to store all atoms and bonds in a container.
 
+The CDK has one container: the [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html).
+It is a general container to holds atoms an bonds, and can contain both
+unconnected as well asfully connected structures. The latter
+has the added implication that it holds a single molecule, of which all
+atoms are connected to each other via one or more covalent bonds.
+
+Adding atoms and bonds is done by the methods `addAtom(IAtom)` and
+`addBond(IBond)`:
+
+**Script** [code/AtomContainerAddAtomsAndBonds.groovy](code/AtomContainerAddAtomsAndBonds.code.md)
+```groovy
+mol = new AtomContainer();
+mol.addAtom(new Atom("C"));
+mol.addAtom(new Atom("H"));
+mol.addAtom(new Atom("H"));
+mol.addAtom(new Atom("H"));
+mol.addAtom(new Atom("H"));
+mol.addBond(new Bond(mol.getAtom(0), mol.getAtom(1)));
+mol.addBond(new Bond(mol.getAtom(0), mol.getAtom(2)));
+mol.addBond(new Bond(mol.getAtom(0), mol.getAtom(3)));
+mol.addBond(new Bond(mol.getAtom(0), mol.getAtom(4)));
+```
+
+The `addBond()` method has an alternative which takes three parameters:
+the first atom, the second atom, and the bond order. Note that atom indices
+follows programmers habits and starts at `0`, as you can observe in the
+previous example too. This shortens the previous version a bit:
+
+**Script** [code/AtomContainerAddAtomsAndBonds2.groovy](code/AtomContainerAddAtomsAndBonds2.code.md)
+```groovy
+mol = new AtomContainer();
+mol.addAtom(new Atom("C"));
+mol.addAtom(new Atom("H"));
+mol.addAtom(new Atom("H"));
+mol.addAtom(new Atom("H"));
+mol.addAtom(new Atom("H"));
+mol.addBond(0,1,IBond.Order.SINGLE);
+mol.addBond(0,2,IBond.Order.SINGLE);
+mol.addBond(0,3,IBond.Order.SINGLE);
+mol.addBond(0,4,IBond.Order.SINGLE);
+```
+
+### Iterating over atoms and bonds
+
+The [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) comes with convenience methods to iterate over atoms
+and bonds. Both methods use the `Iterable` interfaces, and for atoms we
+do:
+
+**Script** [code/CountHydrogens.groovy](code/CountHydrogens.code.md)
+```groovy
+int hydrogenCount = 0
+for (IAtom atom : mol.atoms()) {
+    if ("H".equals(atom.getSymbol())) hydrogenCount++
+}
+println "Number of hydrogens: $hydrogenCount"
+```
+
+which returns
+
+```plain
+Number of hydrogens: 4
+```
+
+And for bonds the equivalent:
+
+**Script** [code/CountDoubleBonds.groovy](code/CountDoubleBonds.code.md)
+```groovy
+int doubleBondCount = 0
+for (IBond bond : mol.bonds()) {
+  if (IBond.Order.DOUBLE == bond.getOrder())
+    doubleBondCount++
+}
+println "Number of double bonds: $doubleBondCount"
+```
+
+giving
+
+```plain
+Number of double bonds: 1
+```
+
+### Neighboring atoms and bonds
+
+It is quite common that you like to see what atoms are connected
+to one particular atom. For example, you may wish to count how many
+bonds surround a particular atom. Or, you may want to list all atoms
+that are bound to this atom. The [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) class
+provides methods for these use cases. But it should be stressed that
+these methods do only take into account explicit hydrogens (see the
+next section).
+
+Let's consider ethanol again, given in Script XX,
+and count the number of neighbors for each atom:
+
+**Script** [code/NeighborCount.groovy](code/NeighborCount.code.md)
+```groovy
+for (atom in ethanol.atoms()) {
+  println atom.getSymbol() +
+    " " + ethanol.getConnectedAtomsCount(atom)
+}
+```
+
+which lists for the three heavy atoms:
+
+```plain
+C 1
+C 2
+O 1
+```
+
+Similarly, we can also list all <a name="tp16">connected atoms</a>:
+
+**Script** [code/ConnectedAtoms.groovy](code/ConnectedAtoms.code.md)
+```groovy
+for (atom in ethanol.atoms()) {
+  print atom.getSymbol() +
+    " is connected to "
+  for (neighbor in ethanol.getConnectedAtomsList(atom)) {
+    print neighbor.getSymbol() + " "
+  }
+  println ""
+}
+```
+
+which outputs:
+
+```plain
+C is connected to C 
+C is connected to C O 
+O is connected to C 
+```
+
+We can do the same thing for <a name="tp17">connected bonds</a>:
+
+**Script** [code/ConnectedBonds.groovy](code/ConnectedBonds.code.md)
+```groovy
+for (atom in ethanol.atoms()) {
+  print atom.getSymbol() +
+    " has bond(s)"
+  for (bond in ethanol.getConnectedBondsList(atom)) {
+    print " " + bond.getOrder()
+  }
+  println ""
+}
+```
+
+which outputs:
+
+```plain
+C has bond(s) SINGLE
+C has bond(s) SINGLE SINGLE
+O has bond(s) SINGLE
+```
+
+<a name="sec:molecularFormula"></a>
+ Molecular Formula
+
+Getting the <a name="tp18">molecular formula</a> of a molecule and returning that as a String
+is both done with the [`MolecularFormulaManipulator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/manipulator/MolecularFormulaManipulator.html) class:
+
+**Script** [code/MFGeneration.groovy](code/MFGeneration.code.md)
+```groovy
+molForm = MolecularFormulaManipulator.getMolecularFormula(
+  azulene
+)
+mfString = MolecularFormulaManipulator.getString(molForm)
+println "Azulene: $mfString"
+```
+
+giving:
+
+```plain
+Azulene: C10H8
+```
 
 ## References
 

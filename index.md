@@ -30,6 +30,8 @@ steps forward, but it will take some time for things to iron out.
 3.2.1. [Electron counts](atomsbonds.md#electron-counts) <br />
 3.2.2. [Bond stereochemistry](atomsbonds.md#bond-stereochemistry) <br />
 3.3. [Molecules](atomsbonds.md#molecules) <br />
+3.3.1. [Iterating over atoms and bonds](atomsbonds.md#iterating-over-atoms-and-bonds) <br />
+3.3.2. [Neighboring atoms and bonds](atomsbonds.md#neighboring-atoms-and-bonds) <br />
 4. [Stereochemistry](stereo.md) <br />
 4.1. [Stereochemistry in a flat world](stereo.md#stereochemistry-in-a-flat-world) <br />
 4.2. [Tetrahedral chirality](stereo.md#tetrahedral-chirality) <br />

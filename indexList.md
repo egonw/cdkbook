@@ -14,6 +14,8 @@ chiral atom [stereo](stereo.md#tp6)<br />
 clockwise [stereo](stereo.md#tp7)<br />
 complexity [cheminfo](cheminfo.md#tp11)<br />
 conformations [stereo](stereo.md#tp2)<br />
+connected atoms [atomsbonds](atomsbonds.md#tp16)<br />
+connected bonds [atomsbonds](atomsbonds.md#tp17)<br />
 coordinates [missing](missing.md#tp16)<br />
 covalent radii [missing](missing.md#tp10)<br />
 covalent radius [missing](missing.md#tp6)<br />
@@ -46,7 +48,8 @@ MDL RXN [reaction](reaction.md#tp4)<br />
 metabolomics [missing](missing.md#tp18)<br />
 missing hydrogens [missing](missing.md#tp12)<br />
 molecular fingerprints [substructure](substructure.md#tp1)<br />
-molecular formula [missing](missing.md#tp17)<br />
+molecular formula [atomsbonds](atomsbonds.md#tp18) [missing](missing.md#tp17)<br />
+molecule [atomsbonds](atomsbonds.md#tp15)<br />
 monoisotopic mass [missing](missing.md#tp9)<br />
 notional coordinates [atomsbonds](atomsbonds.md#tp9)<br />
 PDB files [protein](protein.md#tp3)<br />
