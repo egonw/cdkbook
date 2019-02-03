@@ -54,34 +54,36 @@ steps forward, but it will take some time for things to iron out.
 8.3. [Customizing the Output](io.md#customizing-the-output) <br />
 8.3.1. [Setting Properties](io.md#setting-properties) <br />
 8.4. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
-9. [Missing Information](missing.md) <br />
-9.1. [Element and Isotope information](missing.md#element-and-isotope-information) <br />
-9.1.1. [Elements](missing.md#elements) <br />
-9.1.2. [Isotopes](missing.md#isotopes) <br />
-9.2. [Reconnecting Atoms](missing.md#reconnecting-atoms) <br />
-9.3. [Missing Bond Orders](missing.md#missing-bond-orders) <br />
-9.4. [Missing Hydrogens](missing.md#missing-hydrogens) <br />
-9.4.0. [Implicit Hydrogens](missing.md#implicit-hydrogens) <br />
-9.4.0. [Explicit Hydrogens](missing.md#explicit-hydrogens) <br />
-9.5. [2D Coordinates](missing.md#2d-coordinates) <br />
-9.6. [Unknown Molecular Formula](missing.md#unknown-molecular-formula) <br />
-10. [Substructure Searching](substructure.md) <br />
-10.1. [Fingerprints](substructure.md#fingerprints) <br />
-10.1.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
-10.1.2. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
-11. [Chemistry Toolkit Rosetta](ctr.md) <br />
-11.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
-11.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
-12. [Migration](migration.md) <br />
-12.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
-12.1.1. [Removed classes](migration.md#removed-classes) <br />
-12.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
-12.1.3. [Changed behavior](migration.md#changed-behavior) <br />
-12.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
-12.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
-12.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
-12.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
-12.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
+9. [Atom types](atomtype.md) <br />
+9.1. [The CDK atom type model](atomtype.md#the-cdk-atom-type-model) <br />
+10. [Missing Information](missing.md) <br />
+10.1. [Element and Isotope information](missing.md#element-and-isotope-information) <br />
+10.1.1. [Elements](missing.md#elements) <br />
+10.1.2. [Isotopes](missing.md#isotopes) <br />
+10.2. [Reconnecting Atoms](missing.md#reconnecting-atoms) <br />
+10.3. [Missing Bond Orders](missing.md#missing-bond-orders) <br />
+10.4. [Missing Hydrogens](missing.md#missing-hydrogens) <br />
+10.4.0. [Implicit Hydrogens](missing.md#implicit-hydrogens) <br />
+10.4.0. [Explicit Hydrogens](missing.md#explicit-hydrogens) <br />
+10.5. [2D Coordinates](missing.md#2d-coordinates) <br />
+10.6. [Unknown Molecular Formula](missing.md#unknown-molecular-formula) <br />
+11. [Substructure Searching](substructure.md) <br />
+11.1. [Fingerprints](substructure.md#fingerprints) <br />
+11.1.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
+11.1.2. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
+12. [Chemistry Toolkit Rosetta](ctr.md) <br />
+12.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
+12.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
+13. [Migration](migration.md) <br />
+13.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
+13.1.1. [Removed classes](migration.md#removed-classes) <br />
+13.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
+13.1.3. [Changed behavior](migration.md#changed-behavior) <br />
+13.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
+13.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
+13.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
+13.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
+13.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
 [Index](indexList.md) <br />
 [Appendix A](appatomtypes.md) <br />
 A.1 [CDK Atom Types](appatomtypes.md#cdk-atom-types) <br />

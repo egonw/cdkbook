@@ -5,6 +5,7 @@
 3D coordinates [atomsbonds](atomsbonds.md#tp7)<br />
 anti-clockwise [stereo](stereo.md#tp8)<br />
 atomic number [missing](missing.md#tp1)<br />
+atom types [atomtype](atomtype.md#tp1)<br />
 benzene [atomsbonds](atomsbonds.md#tp13)<br />
 boiling points [cheminfo](cheminfo.md#tp2)<br />
 bond orders [missing](missing.md#tp11)<br />
