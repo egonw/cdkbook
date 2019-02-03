@@ -6,6 +6,7 @@ salts
 unpairedelectrons
 chemobject
 io
+atomtype
 missing
 substructure
 ctr
