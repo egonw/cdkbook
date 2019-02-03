@@ -11,8 +11,8 @@ properties of the atoms in a molecule. Within such formalism, a sp<sup>3</sup> c
 is a carbon with four neighbors organized in a tetrahedral coordination,
 as depicted in Figure <xref>methane</xref>.
 
-<figure label="methane" caption="3D structure of methane, showing a sp$^3$ carbon surrounded by
-four hydrogens. Image from Wikipedia: \url{http://en.wikipedia.org/wiki/File:Methane-CRC-MW-dimensions-2D.png} (public domain).">
+<figure label="methane" caption="3D structure of methane, showing a sp<sup>3</sup> carbon surrounded by
+four hydrogens. Image from Wikipedia: [File:Methane-CRC-MW-dimensions-2D.png](http://en.wikipedia.org/wiki/File:Methane-CRC-MW-dimensions-2D.png) (public domain).">
 ![](images/methane.png)
 </figure>
 
