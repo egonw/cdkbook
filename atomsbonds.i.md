@@ -155,10 +155,96 @@ showing us the default implementation:
 
 The `IBond.setStereo()` method is discussed in Section 4.1.
 
-
 <section level="##" label="molecules">Molecules</section>
 
+We already saw in the previous pieces of code how the CDK can be used to create
+molecules, and while the above is, strictly speaking, enough to find all atoms in the
+<topic>molecule</topic> starting with only one of the atoms in the molecule, it often is more
+convenient to store all atoms and bonds in a container.
 
+The CDK has one container: the <class>IAtomContainer</class>.
+It is a general container to holds atoms an bonds, and can contain both
+unconnected as well asfully connected structures. The latter
+has the added implication that it holds a single molecule, of which all
+atoms are connected to each other via one or more covalent bonds.
+
+Adding atoms and bonds is done by the methods `addAtom(IAtom)` and
+`addBond(IBond)`:
+
+<code>AtomContainerAddAtomsAndBonds</code>
+
+The `addBond()` method has an alternative which takes three parameters:
+the first atom, the second atom, and the bond order. Note that atom indices
+follows programmers habits and starts at `0`, as you can observe in the
+previous example too. This shortens the previous version a bit:
+
+<code>AtomContainerAddAtomsAndBonds2</code>
+
+### Iterating over atoms and bonds
+
+The <class>IAtomContainer</class> comes with convenience methods to iterate over atoms
+and bonds. Both methods use the <class>Iterable</class> interfaces, and for atoms we
+do:
+
+<code>CountHydrogens</code>
+
+which returns
+
+<out>CountHydrogens</out>
+
+And for bonds the equivalent:
+
+<code>CountDoubleBonds</code>
+
+giving
+
+<out>CountDoubleBonds</out>
+
+### Neighboring atoms and bonds
+
+It is quite common that you like to see what atoms are connected
+to one particular atom. For example, you may wish to count how many
+bonds surround a particular atom. Or, you may want to list all atoms
+that are bound to this atom. The <class>IAtomContainer</class> class
+provides methods for these use cases. But it should be stressed that
+these methods do only take into account explicit hydrogens (see the
+next section).
+
+Let's consider ethanol again, given in Script XX,
+and count the number of neighbors for each atom:
+
+<code>NeighborCount</code>
+
+which lists for the three heavy atoms:
+
+<out>NeighborCount</out>
+
+Similarly, we can also list all <topic>connected atoms</topic>:
+
+<code>ConnectedAtoms</code>
+
+which outputs:
+
+<out>ConnectedAtoms</out>
+
+We can do the same thing for <topic>connected bonds</topic>:
+
+<code>ConnectedBonds</code>
+
+which outputs:
+
+<out>ConnectedBonds</out>
+
+<section lavel="##" label="molecularFormula">Molecular Formula</section>
+
+Getting the <topic>molecular formula</topic> of a molecule and returning that as a String
+is both done with the <class>MolecularFormulaManipulator</class> class:
+
+<code>MFGeneration</code>
+
+giving:
+
+<out>MFGeneration</out>
 
 ## References
 
