@@ -1,3 +1,4 @@
+AtomTypeManipulator	org.openscience.cdk.tools.manipulator	standard
 CDKAtomTypeMatcher	org.openscience.cdk.atomtype	core
 CDKHydrogenAdder	org.openscience.cdk.tools	valencycheck
 CircularFingerprinter	org.openscience.cdk.fingerprint	fingerprint
@@ -29,11 +30,13 @@ IteratingSDFReader	org.openscience.cdk.io.iterator	ctab
 MDLRXNReader	org.openscience.cdk.io	ctab
 MDLV2000Writer	org.openscience.cdk.io	ctab
 ModelBuilder3D	org.openscience.cdk.modeling.builder3d	builder3d
+Mol2Format	org.openscience.cdk.io.formats	ioformats
 MolecularFormulaManipulator	org.openscience.cdk.tools.manipulator	formula
 PDBReader	org.openscience.cdk.io	pdb
 RebondTool	org.openscience.cdk.graph.rebond	standard
 SilentChemObjectBuilder	org.openscience.cdk.silent	silent
 SmilesGenerator	org.openscience.cdk.smiles	smiles
 StructureDiagramGenerator	org.openscience.cdk.layout	sdg
+SybylAtomTypeMatcher	org.openscience.cdk.atomtype	atomtype
 UniversalIsomorphismTester	org.openscience.cdk.isomorphism	standard
 XMLIsotopeFactory	org.openscience.cdk.config	extra
