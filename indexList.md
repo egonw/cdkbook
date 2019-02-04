@@ -34,6 +34,7 @@ geometry [stereo](stereo.md#tp1)<br />
 graph theory [cheminfo](cheminfo.md#tp9)<br />
 group [missing](missing.md#tp4)<br />
 heavy atoms [ctr](ctr.md#tp1)<br />
+hybridization [atomtype](atomtype.md#tp2)<br />
 IAtom [atomsbonds](atomsbonds.md#tp1) [atomsbonds](atomsbonds.md#tp2)<br />
 IAtomType [atomsbonds](atomsbonds.md#tp5)<br />
 IBond [atomsbonds](atomsbonds.md#tp10)<br />
@@ -68,6 +69,7 @@ salt [salts](salts.md#tp1)<br />
 sequence [protein](protein.md#tp5)<br />
 SMILES [cheminfo](cheminfo.md#tp8) [migration](migration.md#tp1)<br />
 superimpose [stereo](stereo.md#tp3)<br />
+Sybyl atom type [atomtype](atomtype.md#tp3)<br />
 symbol [missing](missing.md#tp2)<br />
 tetrahedral chirality [stereo](stereo.md#tp5)<br />
 unit cell [atomsbonds](atomsbonds.md#tp8)<br />

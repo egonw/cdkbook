@@ -56,6 +56,13 @@ steps forward, but it will take some time for things to iron out.
 8.4. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
 9. [Atom types](atomtype.md) <br />
 9.1. [The CDK atom type model](atomtype.md#the-cdk-atom-type-model) <br />
+9.1.1. [Hybridization Types](atomtype.md#hybridization-types) <br />
+9.2. [Atom type perception](atomtype.md#atom-type-perception) <br />
+9.2.1. [Single atoms](atomtype.md#single-atoms) <br />
+9.2.2. [Full molecules](atomtype.md#full-molecules) <br />
+9.2.3. [Configuring the Atom](atomtype.md#configuring-the-atom) <br />
+9.2.3. [No atom type perceived?!](atomtype.md#no-atom-type-perceived?!) <br />
+9.3. [Sybyl atom types](atomtype.md#sybyl-atom-types) <br />
 10. [Missing Information](missing.md) <br />
 10.1. [Element and Isotope information](missing.md#element-and-isotope-information) <br />
 10.1.1. [Elements](missing.md#elements) <br />

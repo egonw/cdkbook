@@ -224,7 +224,7 @@ The [`CDKHydrogenAdder`](http://cdk.github.io/cdk/latest/docs/api/org/openscienc
 hydrogens (see Section ??), but we will see how these can be
 converted into explicit hydrogens. 
 The hydrogen adding algorithm expects, however, that CDK atom
-types are already perceived (see Section ??).
+types are already perceived (see Section [9.2](atomtype.md#sec:atomtypePerception)).
 
 <a name="sec:implicithydrogens"></a>
 ### Implicit Hydrogens
