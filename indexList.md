@@ -17,6 +17,7 @@ complexity [cheminfo](cheminfo.md#tp11)<br />
 conformations [stereo](stereo.md#tp2)<br />
 connected atoms [atomsbonds](atomsbonds.md#tp16)<br />
 connected bonds [atomsbonds](atomsbonds.md#tp17)<br />
+connectivity layer [inchi](inchi.md#tp5)<br />
 coordinates [missing](missing.md#tp16)<br />
 covalent radii [missing](missing.md#tp10)<br />
 covalent radius [missing](missing.md#tp6)<br />
@@ -43,7 +44,9 @@ IElectronContainer [atomsbonds](atomsbonds.md#tp11) [unpairedelectrons](unpaired
 IElement [atomsbonds](atomsbonds.md#tp3)<br />
 IIsotope [atomsbonds](atomsbonds.md#tp4)<br />
 implicit hydrogens [missing](missing.md#tp13)<br />
+InChI [inchi](inchi.md#tp1)<br />
 IUPAC name [cheminfo](cheminfo.md#tp5)<br />
+JNI-InChI [inchi](inchi.md#tp2)<br />
 line notations [cheminfo](cheminfo.md#tp6)<br />
 lone pairs [unpairedelectrons](unpairedelectrons.md#tp2)<br />
 MDL RXN [reaction](reaction.md#tp4)<br />
@@ -68,10 +71,13 @@ reaction [reaction](reaction.md#tp1)<br />
 salt [salts](salts.md#tp1)<br />
 sequence [protein](protein.md#tp5)<br />
 SMILES [cheminfo](cheminfo.md#tp8) [migration](migration.md#tp1)<br />
+Standard InChI [inchi](inchi.md#tp4) [inchi](inchi.md#tp6)<br />
 superimpose [stereo](stereo.md#tp3)<br />
 Sybyl atom type [atomtype](atomtype.md#tp3)<br />
 symbol [missing](missing.md#tp2)<br />
+tautomerism [inchi](inchi.md#tp3)<br />
 tetrahedral chirality [stereo](stereo.md#tp5)<br />
+unique identifier [inchi](inchi.md#tp7)<br />
 unit cell [atomsbonds](atomsbonds.md#tp8)<br />
 unpaired electron [unpairedelectrons](unpairedelectrons.md#tp4)<br />
 van der Waals radius [missing](missing.md#tp7)<br />

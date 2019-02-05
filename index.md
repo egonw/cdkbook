@@ -78,19 +78,21 @@ steps forward, but it will take some time for things to iron out.
 11.1. [Fingerprints](substructure.md#fingerprints) <br />
 11.1.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
 11.1.2. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
-12. [Chemistry Toolkit Rosetta](ctr.md) <br />
-12.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
-12.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
-13. [Migration](migration.md) <br />
-13.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
-13.1.1. [Removed classes](migration.md#removed-classes) <br />
-13.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
-13.1.3. [Changed behavior](migration.md#changed-behavior) <br />
-13.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
-13.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
-13.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
-13.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
-13.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
+12. [InChI](inchi.md) <br />
+12.1. [Layers](inchi.md#layers) <br />
+13. [Chemistry Toolkit Rosetta](ctr.md) <br />
+13.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
+13.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
+14. [Migration](migration.md) <br />
+14.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
+14.1.1. [Removed classes](migration.md#removed-classes) <br />
+14.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
+14.1.3. [Changed behavior](migration.md#changed-behavior) <br />
+14.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
+14.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
+14.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
+14.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
+14.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
 [Index](indexList.md) <br />
 [Appendix A](appatomtypes.md) <br />
 A.1 [CDK Atom Types](appatomtypes.md#cdk-atom-types) <br />
