@@ -20,6 +20,7 @@ IElement	org.openscience.cdk.interfaces	interfaces
 IFingerprinter	org.openscience.cdk.fingerprint	core
 ILonePair	org.openscience.cdk.interfaces	interfaces
 IMonomer	org.openscience.cdk.interfaces	interfaces
+InChIGenerator	org.openscience.cdk.inchi	inchi
 IPolymer	org.openscience.cdk.interfaces	interfaces
 IReaction	org.openscience.cdk.interfaces	interfaces
 ISingleElectron	org.openscience.cdk.interfaces	interfaces

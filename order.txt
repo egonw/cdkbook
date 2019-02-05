@@ -9,5 +9,6 @@ io
 atomtype
 missing
 substructure
+inchi
 ctr
 migration
