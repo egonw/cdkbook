@@ -1,8 +1,15 @@
-// Copyright (c) 2018  Egon Willighagen <egon.willighagen@gmail.com>
+// Copyright (c) 2018-2019  Egon Willighagen <egon.willighagen@gmail.com>
 //
 // GPL v3
 
 input = args[0]
+
+cdkVersion = "??"
+def versionLines = new File("cdk.version").readLines()
+versionLines.each { String line ->
+  cdkVersion = line.trim()
+}
+
 
 bibliography = new HashMap<String,String>();
 def bibLines = new File("references.dat").readLines()
@@ -97,6 +104,8 @@ lines.each { String line ->
     srcLines.each { String srcLine -> println srcLine.replaceAll(".i.md", ".md") }
   } else if (line.contains("<references/>")) {
     println bibList
+  } else if (line.contains("<version/>")) {
+    println line.replace("<version/>", cdkVersion)
   } else if (line.startsWith("%%%")) {
     // ignore/remove this line
   } else if (line.contains("</figure>")) {
