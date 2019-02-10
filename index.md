@@ -1,25 +1,3 @@
----
-layout: default
-
-trainingMaterial:
-  "@context": http://schema.org/
-  "@type": CreativeWork
-  genre:
-    - "@type": URL
-      url: http://edamontology.org/topic_2258
-  name: Groovy Cheminformatics with the Chemistry Development Kit
-  author:
-    - "@type": Person
-      name: Egon Willighagen
-      identifier: 0000-0001-7542-0286
-  keywords: cheminformatics, groovy, Chemistry Development Kit, CDK
-  license: CC BY-SA 4.0
-  url:
-    - "@type": URL
-      url: https://egonw.github.io/cdkbook/
-  version: 2.0-6
---
-
 # Groovy Cheminformatics with the Chemistry Development Kit
 
 Edition 2.0-6
