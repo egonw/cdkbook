@@ -4,12 +4,12 @@
 The IUPAC International Chemical Identifier (<a name="tp1">InChI</a>, 
 [http://www.iupac.org/inchi/](http://www.iupac.org/inchi/)) is an identifier developed
 to provide a database-independent, unique identifier for small organic
-molecules~\cite{Stein2003}. The CDK uses the <a name="tp2">JNI-InChI</a> library by Adams
+molecules [<a href="#citeref1">1</a>]. The CDK uses the <a name="tp2">JNI-InChI</a> library by Adams
 ([http://jni-inchi.sf.net/](http://jni-inchi.sf.net/)) to provides
 a Java layer on top of the open source InChI library written in C.
 The InChI is design to be unique for molecules, and one InChI always identifies
 the same molecule, and as such is aimed to be used to look up molecules in
-databases or on the internet [<a href="#citeref1">1</a>,<a href="#citeref2">2</a>].
+databases or on the internet [<a href="#citeref2">2</a>,<a href="#citeref3">3</a>].
 
 To overcome the common problem caused by <a name="tp3">tautomerism</a> in database look up,
 the InChI applies a number of rules to determine what the possible tautomers
@@ -18,7 +18,7 @@ in a database when the less-stable tautomer ethenol was searched. Both give
 rise to the same InChI, as we will see later.
 
 First, we need to see how we can generate InChIs in the CDK. It starts with
-an \class{InChIGeneratorFactory} to create an [`InChIGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/inchi/InChIGenerator.html). This
+an `InChIGeneratorFactory` to create an [`InChIGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/inchi/InChIGenerator.html). This
 generator is then used to run the InChI software on the given molecule. The
 algorithm might fail, for various reasons, and we need to check if the
 generation succeeded too:
@@ -99,7 +99,8 @@ see shortly.
 
 ## References
 
-1. <a name="citeref1"></a>Missing
-2. <a name="citeref2"></a>Missing
+1. <a name="citeref1"></a>Stein SE, Heller SR, Tchekhovski D. An Open Standard for Chemical Structure Representation: The IUPAC Chemical Identifier. Proceedings of the International Chemical Information Conference, 2003, pp 131-143.
+2. <a name="citeref2"></a>Wohlgemuth G, Haldiya PK, Willighagen E, Kind T, Fiehn O. The Chemical Translation Service--a web-based tool to improve standardization of metabolomic reports. Bioinformatics. 2010 Oct 15;26(20):2647–8.  doi:[10.1093/BIOINFORMATICS/BTQ476](https://doi.org/10.1093/BIOINFORMATICS/BTQ476)
+3. <a name="citeref3"></a>Coles SJ, Day NE, Murray-Rust P, Rzepa HS, Zhang Y. Enhancement of the chemical semantic web through the use of InChI identifiers. Organic and Biomolecular Chemistry. 2005 Jan 1;3(10):1832.  doi:[10.1039/B502828K](https://doi.org/10.1039/B502828K)
 
 

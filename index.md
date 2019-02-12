@@ -1,29 +1,5 @@
 # Groovy Cheminformatics with the Chemistry Development Kit
 
-<script type="application/ld+json">
-{
-  "@context":"http://schema.org/",
-  "@type":"CreativeWork",
-  "about":"This text book describes how to write cheminformatics software with Groovy and the Chemistry Development Kit.",
-  "audience":[{
-    "@type":"Audience","name":"post-docs"
-  }],
-  "genre":[{
-    "@type":"URL","url":"http://edamontology.org/topic_2258"
-  }],
-  "name":"Groovy Cheminformatics with the Chemistry Development Kit",
-  "author":[{
-    "@type":"Person",
-    "name":"Egon Willighagen",
-    "identifier":"0000-0001-7542-0286"
-  }],
-  "keywords":"cheminformatics, chemoinformatics, java, Groovy, Chemistry Development Kit, CDK",
-  "license":"CC BY-SA 4.0","url":[{"@type":"URL",
-  "url":"https://egonw.github.io/cdkbook/"}],
-  "version":"1.0.2"
-}
-</script>
-
 Edition 2.0-6
 
 **Egon L. Willighagen** PhD<br />
