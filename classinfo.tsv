@@ -2,6 +2,8 @@ AtomTypeManipulator	org.openscience.cdk.tools.manipulator	standard
 CDKAtomTypeMatcher	org.openscience.cdk.atomtype	core
 CDKHydrogenAdder	org.openscience.cdk.tools	valencycheck
 CircularFingerprinter	org.openscience.cdk.fingerprint	fingerprint
+DebugChemObjectBuilder	org.openscience.cdk.debug	datadebug
+DefaultChemObjectBuilder	org.openscience.cdk	data
 DescriptorEngine	org.openscience.cdk.qsar	qsarmolecular
 Elements	org.openscience.cdk.config	core
 Fingerprinter	org.openscience.cdk.fingerprint	standard

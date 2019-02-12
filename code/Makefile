@@ -43,3 +43,7 @@ allScriptsCompiled: ${CODEFILES}
 	@if [ -e *.png ]; then mogrify -trim *.png ; fi
 	@if [ -e *.png ]; then mv *.png ../images/generated/. ; fi
 	@groovy postprocess $<
+
+DebugBuilder.datadebug.out: DebugBuilder.out
+	tail -392 DebugBuilder.out | head -15 > DebugBuilder.datadebug.out
+

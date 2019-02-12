@@ -5,6 +5,7 @@ stereo
 salts
 unpairedelectrons
 chemobject
+builders
 io
 atomtype
 missing
