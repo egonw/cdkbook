@@ -3,12 +3,12 @@
 The IUPAC International Chemical Identifier (<topic>InChI</topic>, 
 [http://www.iupac.org/inchi/](http://www.iupac.org/inchi/)) is an identifier developed
 to provide a database-independent, unique identifier for small organic
-molecules~\cite{Stein2003}. The CDK uses the <topic>JNI-InChI</topic> library by Adams
+molecules [<cite>Stein2003</cite>]. The CDK uses the <topic>JNI-InChI</topic> library by Adams
 ([http://jni-inchi.sf.net/](http://jni-inchi.sf.net/)) to provides
 a Java layer on top of the open source InChI library written in C.
 The InChI is design to be unique for molecules, and one InChI always identifies
 the same molecule, and as such is aimed to be used to look up molecules in
-databases or on the internet [<cite>Wohlgemuth2010</cite>,<cite>Coles2005</cite>].
+databases or on the internet [<cite>Q27062596</cite>,<cite>Q28133283</cite>].
 
 To overcome the common problem caused by <topic>tautomerism</topic> in database look up,
 the InChI applies a number of rules to determine what the possible tautomers
@@ -17,7 +17,7 @@ in a database when the less-stable tautomer ethenol was searched. Both give
 rise to the same InChI, as we will see later.
 
 First, we need to see how we can generate InChIs in the CDK. It starts with
-an \class{InChIGeneratorFactory} to create an <class>InChIGenerator</class>. This
+an <class>InChIGeneratorFactory</class> to create an <class>InChIGenerator</class>. This
 generator is then used to run the InChI software on the given molecule. The
 algorithm might fail, for various reasons, and we need to check if the
 generation succeeded too:
