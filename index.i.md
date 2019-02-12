@@ -19,10 +19,7 @@
   }],
   "keywords":"cheminformatics, chemoinformatics, java, Groovy, Chemistry Development Kit, CDK",
   "license":"CC BY-SA 4.0",
-  "url":[{
-    "@type":"URL",
-    "url":"https://egonw.github.io/cdkbook/"
-  }],
+  "url": "https://egonw.github.io/cdkbook/",
   "version":"<version/>-6"
 }
 </script>
