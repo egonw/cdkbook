@@ -43,7 +43,7 @@ ICrystal [salts](salts.md#tp3)<br />
 IElectronContainer [atomsbonds](atomsbonds.md#tp11) [unpairedelectrons](unpairedelectrons.md#tp1)<br />
 IElement [atomsbonds](atomsbonds.md#tp3)<br />
 IIsotope [atomsbonds](atomsbonds.md#tp4)<br />
-implicit hydrogens [missing](missing.md#tp13)<br />
+implicit hydrogens [missing](missing.md#tp13) [properties](properties.md#tp2)<br />
 InChI [inchi](inchi.md#tp1)<br />
 IUPAC name [cheminfo](cheminfo.md#tp5)<br />
 JNI-InChI [inchi](inchi.md#tp2)<br />
@@ -54,6 +54,7 @@ metabolomics [missing](missing.md#tp18)<br />
 missing hydrogens [missing](missing.md#tp12)<br />
 molecular fingerprints [substructure](substructure.md#tp1)<br />
 molecular formula [atomsbonds](atomsbonds.md#tp18) [missing](missing.md#tp17)<br />
+molecular mass [properties](properties.md#tp1)<br />
 molecule [atomsbonds](atomsbonds.md#tp15)<br />
 monoisotopic mass [missing](missing.md#tp9)<br />
 notional coordinates [atomsbonds](atomsbonds.md#tp9)<br />
@@ -77,6 +78,8 @@ Sybyl atom type [atomtype](atomtype.md#tp3)<br />
 symbol [missing](missing.md#tp2)<br />
 tautomerism [inchi](inchi.md#tp3)<br />
 tetrahedral chirality [stereo](stereo.md#tp5)<br />
+Total Polar Surface Area [properties](properties.md#tp3)<br />
+TPSA [properties](properties.md#tp4)<br />
 unique identifier [inchi](inchi.md#tp7)<br />
 unit cell [atomsbonds](atomsbonds.md#tp8)<br />
 unpaired electron [unpairedelectrons](unpairedelectrons.md#tp4)<br />

@@ -18,7 +18,7 @@ in a database when the less-stable tautomer ethenol was searched. Both give
 rise to the same InChI, as we will see later.
 
 First, we need to see how we can generate InChIs in the CDK. It starts with
-an `InChIGeneratorFactory` to create an [`InChIGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/inchi/InChIGenerator.html). This
+an [`InChIGeneratorFactory`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/inchi/InChIGeneratorFactory.html) to create an [`InChIGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/inchi/InChIGenerator.html). This
 generator is then used to run the InChI software on the given molecule. The
 algorithm might fail, for various reasons, and we need to check if the
 generation succeeded too:
