@@ -37,7 +37,7 @@ for (atomicNumber in 1..maxAtomicNumber) {
 The full version of the above script lists all (natural) isotopes
 with an abundance of more than 0.1:
 
-<html>
+<table>
 <tr>
 <td><b>atomic number</b></td>
 <td><b>element symbol</b></td>
@@ -587,4 +587,4 @@ with an abundance of more than 0.1:
 <tr><td>235</td><td>0.72</td><td>235.0439299</td></tr>
 <td><td></td><td></td><td></td></tr>
 <tr><td>238</td><td>99.2745</td><td>238.0507882</td></tr>
-</html>
+</table>
