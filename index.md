@@ -127,3 +127,6 @@ steps forward, but it will take some time for things to iron out.
 [Appendix A](appatomtypes.md) <br />
 A.1 [CDK Atom Types](appatomtypes.md#cdk-atom-types) <br />
 A.2 [Sybyl Atom Types](appatomtypes.md#sybyl-atom-types) <br />
+[Appendix B](appisotopes.md) <br />
+B.1 [Isotope List](appisotopes.md) <br />
+
