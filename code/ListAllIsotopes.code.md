@@ -28,7 +28,7 @@ for (atomicNumber in 1..maxAtomicNumber) {
         "</td>"
       )
      } else {
-       output.append("<td><td></td><td></td><td></td>")
+       output.append("<td></td><td></td><td></td>")
      }
       output.append(
         "<td>" +
