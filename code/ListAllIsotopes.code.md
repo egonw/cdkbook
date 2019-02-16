@@ -19,23 +19,25 @@ for (atomicNumber in 1..maxAtomicNumber) {
  firstIsotope = true
   for (isotope in isotopes) {
     if (isotope.naturalAbundance > 0.1) {
+     output.append("<tr>")
      if (firstIsotope) {
       output.append(
-        "<tr><td>" +
+        "<td>" +
         atomicNumber + "</td><td>" +
         element.symbol + "</td><td>" +
-        "</td></tr>\n"
+        "</td>"
       )
      } else {
-       output.append("<td><td></td><td></td><td></td></tr>\n")
+       output.append("<td><td></td><td></td><td></td>")
      }
       output.append(
-        "<tr><td>" +
+        "<td>" +
         isotope.massNumber + "</td><td>" +
         isotope.naturalAbundance + "</td><td>" +
         isotope.exactMass +
-        "</td></tr>\n"
+        "</td>"
       )
+     output.append("</tr>\n");
    firstIsotope = false
     }
   }
