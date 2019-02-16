@@ -23,12 +23,12 @@ for (atomicNumber in 1..maxAtomicNumber) {
      if (firstIsotope) {
       output.append(
         "<td>" +
-        atomicNumber + "</td><td>" +
-        element.symbol + "</td><td>" +
+          atomicNumber + "</td><td>" +
+          element.symbol +
         "</td>"
       )
      } else {
-       output.append("<td></td><td></td><td></td>")
+       output.append("<td></td><td></td>")
      }
       output.append(
         "<td>" +
