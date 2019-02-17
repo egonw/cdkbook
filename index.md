@@ -45,6 +45,7 @@ steps forward, but it will take some time for things to iron out.
 1. [Introduction](introduction.md) <br />
 2. [Cheminformatics](cheminfo.md) <br />
 2.1. [Molecular Representations](cheminfo.md#molecular-representations) <br />
+2.2. [Chemical Graphs](cheminfo.md#chemical-graphs) <br />
 3. [Atoms, Bonds and Molecules](atomsbonds.md) <br />
 3.1. [Atoms](atomsbonds.md#atoms) <br />
 3.1.1. [IElement](atomsbonds.md#ielement) <br />

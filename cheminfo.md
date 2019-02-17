@@ -101,7 +101,7 @@ data analyses and in property databases, and give more details on the use
 of quantum chemistry as representation. The sections following these
 discuss the need and use of numerical representations.
 
-\section{Chemical Graphs}
+## Chemical Graphs
 
 Graph-based representations are popular because they represent
 chemical structures in a rather intuitive way, although simplistic:
@@ -121,7 +121,7 @@ generate canonical SMILES has never been published and cannot generally be used
 as unique molecular identifier.
 
 <a name="fig:benzene"></a>
-![](images/benzoCompounds.png)
+![](images/benzoCompounds.svg)
 <br />**Figure 2.2**: 2D diagrams of the two possible resonance structures of a compound with a phenyl ring. Both diagrams refer to the same compounds, but the depicted graph representations are not identical.
 
 The use of these line notations and the substructure searching has allowed setting
