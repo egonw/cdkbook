@@ -82,6 +82,98 @@ and the required computing power. Approximations can be made to reduce the
 <topic>complexity</topic> of the calculations, leading to semi-empirical methods like MNDO and
 AM1. These methods are faster but less accurate at the same time.
 
+Force fields provide even faster energy calculations based on 3D conformations. <!-- <topic>force field</topic> -->
+They use a representation of molecules where atomic coordinates are complemented
+by rules that approximate the
+energy of the system based on contributions from interactions between two, three
+and four atoms (bond, angle and <topic>torsion</topic> interactions). The contributions are
+based on physical laws where the parameters are derived from
+experimentally determined molecular properties. While not as accurate as quantum
+chemistry, it is much faster and allows to analyze much larger systems, like
+protein structures, crystal structures and dynamical chemical processes.
+The accuracy strongly depends on the parametrization of the rules that
+approximate the interactions. Force fields have the disadvantage that this
+\topic{parametrization} has to be repeated for each new class of molecules and type of
+molecular system.
+
+The next two sections discuss applications of graph-based representations in
+data analyses and in property databases, and give more details on the use
+of quantum chemistry as representation. The sections following these
+discuss the need and use of numerical representations.
+
+\section{Chemical Graphs}
+
+Graph-based representations are popular because they represent
+chemical structures in a rather intuitive way, although simplistic:
+molecules are atoms held together by bonds, and certain atom groups (functional
+groups) give rise to certain molecular properties. For example, an acid group
+reduces the pK<sub>a</sub> of the molecule and makes the molecule react with an amine.
+Searching a functional group in a molecule corresponds to finding a
+subgraph in the chemical graph [<cite>Ray1957</cite>,<cite>Q55934414</cite>],
+when the molecule is considered a graph where atoms are vertices and bond edges.
+
+The <topic>chemical graph</topic> also allows the use of canonization methods, such as the Morgan
+algorithm [<cite>Q28837925</cite>]. Using these methods, line notations can be developed which are unique
+for a molecule, making the look-up of molecular structures in databases much
+easier. The Wiswesser Line Notation is one of such  notations, but nowadays the
+SMILES line notation is most used. However, the canonization algorithm used to
+generate canonical SMILES has never been published and cannot generally be used
+as unique molecular identifier.
+
+<figure label="benzene" caption="2D diagrams of the two possible resonance structures of a compound with a phenyl ring. Both diagrams refer to the same compounds, but the depicted graph representations are not identical.">
+![](images/benzoCompounds.png) <br />
+</figure>
+
+The use of these line notations and the substructure searching has allowed setting
+up <topic>databases</topic> with molecular structures and their properties. For example,
+the PDB database contains crystal structures of
+proteins, nucleic acids and their complexes with ligands [<cite>Q28186592</cite>].
+Other databases contain physical properties [<cite>Linstrom2001</cite>[, <sup>13</sup>C and <sup>1</sup>H
+NMR [<cite>Q28843132</cite>], and IR spectra [<cite>Yamamoto1988</cite>].
+The <topic>Chemical Abstracts Service</topic> (<topic>CAS</topic>) maintains a substance database with millions of chemical
+substances extracted from literature. In 2008 this number increased by about
+4000 entries each year. However, only for a fraction of these compounds more
+information is available in other
+curated databases. For example, the <topic>Cambridge Structural Database</topic>
+(<topic>CSD</topic>) had 400 thousand registered compounds (~1.3%) with associated crystal
+structures in 2008, and that number increases by only
+30 thousand structures each year [<cite>Q29039683</cite>]. Moreover, the
+increase in information in literature is estimated at even 1~million new compounds
+per year from more than 700 thousand articles in chemistry-related literature [<cite>Q36662828</cite>].
+In addition to these proprietary databases, open-access databases have emerged,
+such as PubChem [<cite>Austin2004</cite>] and ZINC [<cite>Irwin2005</cite>].
+
+These chemical graph-based databases have found many applications, such as systems for synthesis
+planning, where reactions are represented as changes in
+the molecular graph when going from reactant to the product side [<cite>Blair1974</cite>].
+An example of
+such a tool is the Organic Chemical Simulation of Syntheses (OCSS) [<cite>Corey1969</cite>],
+which mimics the process of retro-synthetic synthesis planning. This has led to a number of
+computer-assisted synthesis design (CASD) systems, such as the LHASA system,
+noteworthy because it used a large knowledge base extracted from
+literature [<cite>Corey1972</cite>].
+
+
+Another important application of chemical graphs is the use in structure
+generation, which fulfills a crucial role in <topic>computer-aided structure elucidation</topic> (<topic>CASE</topic>).
+DENDRAL is an example CASE system that elucidated molecular structures using
+mass spectra [<cite>Lederberg1987</cite>].  It derived graph constraints from the input
+spectrum and the molecular formula, and then generated possible
+structures, each of which was evaluated by comparing a predicted spectrum with
+the experimental one. The best spectral match was proposed as elucidated structure.
+The same approach is used for NMR-based CASE, where, in addition to the structure
+generation, graph theory is used to describe molecular fragments using alphanumeric
+codes, of which the HOSE code [<cite>Q28837939</cite>] is still widely used. Correlation
+of these codes with chemical shifts provides a cheap but effective method for
+predicting NMR spectra.
+
+However, while the application of graph theory in chemistry has shown to be
+quite powerful, it is unable to reflect to full chemistry that can be found in
+molecules. Consider the benzene derivative diagrams shown in
+Figure <xref>fig:benzene</xref>. The two diagrams show non-identical graphs, but refer
+to the same molecular compound; the only difference is that of the resonance
+structures of the phenylic ring.
+
 
 ## References
 
