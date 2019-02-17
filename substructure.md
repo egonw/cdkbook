@@ -126,7 +126,7 @@ classification [<a href="#citeref2">2</a>], and databases like BRENDA [<a href="
 
 ### MACCS Fingerprints
 
-One substructure-based fingerprinter is the `MACCSFingerprinter`
+One substructure-based fingerprinter is the [`MACCSFingerprinter`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/fingerprint/MACCSFingerprinter.html)
 which partly implements the MACSS fingerprint specification [1]. The
 substructures are defined as SMARTS substructure specifications,
 inherited from RDKit ([http://rdkit.org/](http://rdkit.org/)). For this fingerprint it is required the implicit hydrogen

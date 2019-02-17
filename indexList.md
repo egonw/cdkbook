@@ -36,6 +36,7 @@ ECFP [substructure](substructure.md#tp2)<br />
 electronegativity [missing](missing.md#tp8)<br />
 electrons [atomsbonds](atomsbonds.md#tp14)<br />
 ethanol [atomsbonds](atomsbonds.md#tp12)<br />
+exception [descriptor](descriptor.md#tp5)<br />
 explicit hydrogens [missing](missing.md#tp14)<br />
 FCFP [substructure](substructure.md#tp3)<br />
 force field [cheminfo](cheminfo.md#tp12)<br />
@@ -61,18 +62,21 @@ lone pairs [unpairedelectrons](unpairedelectrons.md#tp2)<br />
 MDL RXN [reaction](reaction.md#tp4)<br />
 metabolomics [missing](missing.md#tp18)<br />
 missing hydrogens [missing](missing.md#tp12)<br />
+molecular descriptors [descriptor](descriptor.md#tp2)<br />
 molecular fingerprints [substructure](substructure.md#tp1)<br />
 molecular formula [atomsbonds](atomsbonds.md#tp18) [missing](missing.md#tp17)<br />
 molecular mass [properties](properties.md#tp1)<br />
 molecule [atomsbonds](atomsbonds.md#tp15)<br />
+moment of inertia [descriptor](descriptor.md#tp6)<br />
 monoisotopic mass [missing](missing.md#tp9)<br />
 notional coordinates [atomsbonds](atomsbonds.md#tp9)<br />
+parameters [descriptor](descriptor.md#tp4)<br />
 PDB files [protein](protein.md#tp3)<br />
 periodic table [missing](missing.md#tp3)<br />
 period [missing](missing.md#tp5)<br />
 products [reaction](reaction.md#tp3)<br />
 protein [protein](protein.md#tp1)<br />
-QSAR [cheminfo](cheminfo.md#tp3)<br />
+QSAR [cheminfo](cheminfo.md#tp3) [descriptor](descriptor.md#tp1)<br />
 QSPR [cheminfo](cheminfo.md#tp4)<br />
 quantum chemical descriptors [cheminfo](cheminfo.md#tp10)<br />
 radical [unpairedelectrons](unpairedelectrons.md#tp5)<br />
@@ -81,6 +85,7 @@ reaction [reaction](reaction.md#tp1)<br />
 salt [salts](salts.md#tp1)<br />
 sequence [protein](protein.md#tp5)<br />
 SMILES [cheminfo](cheminfo.md#tp8) [migration](migration.md#tp1)<br />
+specification [descriptor](descriptor.md#tp3)<br />
 Standard InChI [inchi](inchi.md#tp4) [inchi](inchi.md#tp6)<br />
 superimpose [stereo](stereo.md#tp3)<br />
 Sybyl atom type [atomtype](atomtype.md#tp3)<br />
