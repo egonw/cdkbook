@@ -9,11 +9,17 @@ atom types [atomtype](atomtype.md#tp1)<br />
 benzene [atomsbonds](atomsbonds.md#tp13)<br />
 boiling points [cheminfo](cheminfo.md#tp2)<br />
 bond orders [missing](missing.md#tp11)<br />
+Cambridge Structural Database [cheminfo](cheminfo.md#tp18)<br />
+CAS [cheminfo](cheminfo.md#tp17)<br />
+CASE [cheminfo](cheminfo.md#tp21)<br />
+Chemical Abstracts Service [cheminfo](cheminfo.md#tp16)<br />
 chemical format [io](io.md#tp1)<br />
+chemical graph [cheminfo](cheminfo.md#tp14)<br />
 cheminformatics [cheminfo](cheminfo.md#tp1)<br />
 chiral atom [stereo](stereo.md#tp6)<br />
 clockwise [stereo](stereo.md#tp7)<br />
 complexity [cheminfo](cheminfo.md#tp11)<br />
+computer-aided structure elucidation [cheminfo](cheminfo.md#tp20)<br />
 conformations [stereo](stereo.md#tp2)<br />
 connected atoms [atomsbonds](atomsbonds.md#tp16)<br />
 connected bonds [atomsbonds](atomsbonds.md#tp17)<br />
@@ -23,6 +29,8 @@ covalent radii [missing](missing.md#tp10)<br />
 covalent radius [missing](missing.md#tp6)<br />
 crambin [protein](protein.md#tp4)<br />
 crystal [salts](salts.md#tp2)<br />
+CSD [cheminfo](cheminfo.md#tp19)<br />
+databases [cheminfo](cheminfo.md#tp15)<br />
 DNA [protein](protein.md#tp2)<br />
 ECFP [substructure](substructure.md#tp2)<br />
 electronegativity [missing](missing.md#tp8)<br />
@@ -30,6 +38,7 @@ electrons [atomsbonds](atomsbonds.md#tp14)<br />
 ethanol [atomsbonds](atomsbonds.md#tp12)<br />
 explicit hydrogens [missing](missing.md#tp14)<br />
 FCFP [substructure](substructure.md#tp3)<br />
+force field [cheminfo](cheminfo.md#tp12)<br />
 Gaussian input file [io](io.md#tp2)<br />
 geometry [stereo](stereo.md#tp1)<br />
 graph theory [cheminfo](cheminfo.md#tp9)<br />
@@ -78,6 +87,7 @@ Sybyl atom type [atomtype](atomtype.md#tp3)<br />
 symbol [missing](missing.md#tp2)<br />
 tautomerism [inchi](inchi.md#tp3)<br />
 tetrahedral chirality [stereo](stereo.md#tp5)<br />
+torsion [cheminfo](cheminfo.md#tp13)<br />
 Total Polar Surface Area [properties](properties.md#tp3)<br />
 TPSA [properties](properties.md#tp4)<br />
 unique identifier [inchi](inchi.md#tp7)<br />
