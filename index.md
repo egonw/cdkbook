@@ -20,12 +20,12 @@
   "keywords":"cheminformatics, chemoinformatics, java, Groovy, Chemistry Development Kit, CDK",
   "license":"CC BY-SA 4.0",
   "url": "https://egonw.github.io/cdkbook/",
-  "version":"2.0-6"
+  "version":"2.0-7"
 }
 </script>
 
 
-Edition 2.0-6
+Edition 2.0-7
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
@@ -121,28 +121,32 @@ steps forward, but it will take some time for things to iron out.
 13.1. [Fingerprints](substructure.md#fingerprints) <br />
 13.1.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
 13.1.2. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
-14. [InChI](inchi.md) <br />
-14.1. [Layers](inchi.md#layers) <br />
-15. [Chemistry Toolkit Rosetta](ctr.md) <br />
-15.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
-15.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
-16. [Migration](migration.md) <br />
-16.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
-16.1.1. [Removed classes](migration.md#removed-classes) <br />
-16.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
-16.1.3. [Changed behavior](migration.md#changed-behavior) <br />
-16.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
-16.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
-16.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
-16.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
-16.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
-17. [Molecular Descriptors](descriptor.md) <br />
-17.1. [Descriptors and Specifications](descriptor.md#descriptors-and-specifications) <br />
-17.1.1. [IImplementationSpecification](descriptor.md#iimplementationspecification) <br />
-17.2. [IDescriptor](descriptor.md#idescriptor) <br />
-17. [IMolecularDescriptor](descriptor.md) <br />
-17.3. [IDescriptorResult](descriptor.md#idescriptorresult) <br />
-17.4. [Counting Nitrogens and Oxygens](descriptor.md#counting-nitrogens-and-oxygens) <br />
+14. [Molecular Properties](properties.md) <br />
+14.1. [Molecular Mass](properties.md#molecular-mass) <br />
+14.1.1. [Implicit Hydrogens](properties.md#implicit-hydrogens) <br />
+14.2. [Total Polar Surface Area](properties.md#total-polar-surface-area) <br />
+15. [Molecular Descriptors](descriptor.md) <br />
+15.1. [Descriptors and Specifications](descriptor.md#descriptors-and-specifications) <br />
+15.1.1. [IImplementationSpecification](descriptor.md#iimplementationspecification) <br />
+15.2. [IDescriptor](descriptor.md#idescriptor) <br />
+15. [IMolecularDescriptor](descriptor.md) <br />
+15.3. [IDescriptorResult](descriptor.md#idescriptorresult) <br />
+15.4. [Counting Nitrogens and Oxygens](descriptor.md#counting-nitrogens-and-oxygens) <br />
+16. [InChI](inchi.md) <br />
+16.1. [Layers](inchi.md#layers) <br />
+17. [Chemistry Toolkit Rosetta](ctr.md) <br />
+17.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
+17.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
+18. [Migration](migration.md) <br />
+18.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
+18.1.1. [Removed classes](migration.md#removed-classes) <br />
+18.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
+18.1.3. [Changed behavior](migration.md#changed-behavior) <br />
+18.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
+18.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
+18.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
+18.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
+18.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
 [Index](indexList.md) <br />
 [Appendix A](appatomtypes.md) <br />
 A.1 [CDK Atom Types](appatomtypes.md#cdk-atom-types) <br />

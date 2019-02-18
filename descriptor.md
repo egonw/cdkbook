@@ -180,11 +180,11 @@ java.lang.Boolean -> true
 With this information about the descriptor now clear, it is time to look at a descriptor
 value calculation. A molecular descriptor in the CDK is symbolized by the
 [`IMolecularDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/IMolecularDescriptor.html) interface, which extends the [`IDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/IDescriptor.html) interface,
-as shown in Figure [17.1](#fig:descriptorInheritance).
+as shown in Figure [15.1](#fig:descriptorInheritance).
 
 <a name="fig:descriptorInheritance"></a>
 ![](images/descriptor.png)
-<br />**Figure 17.1**: The IDescriptor interface has a few derived interfaces, but only IMolecularDescriptor is shown here.
+<br />**Figure 15.1**: The IDescriptor interface has a few derived interfaces, but only IMolecularDescriptor is shown here.
 
 The relevant method now is the `calculate(IAtomContainer)` method, which returns
 a [`DescriptorValue`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/DescriptorValue.html). This class is returned rather than a double, because descriptors
@@ -266,14 +266,14 @@ Calculated values: 7
 ```
 
 The [`IDescriptorResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/IDescriptorResult.html) interface is currently implemented by various classes,
-outlined in Figure [17.2](#fig:descriptorResults). Each of the classes has a slightly different
+outlined in Figure [15.2](#fig:descriptorResults). Each of the classes has a slightly different
 API to get the actual values. The [`IntegerResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/IntegerResult.html), [`DoubleResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/DoubleResult.html),
 and [`BooleanResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/BooleanResult.html) classes have the methods `intValue()`,
 `doubleValue()`, and `booleanValue()` respectively.
 
 <a name="fig:descriptorResults"></a>
 ![](images/descriptorResults.png)
-<br />**Figure 17.2**: The IDescriptorResults interface has several implementation, each wrapping calculated descriptor values.
+<br />**Figure 15.2**: The IDescriptorResults interface has several implementation, each wrapping calculated descriptor values.
 
 The two array variants, [`IntegerArrayResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/IntegerArrayResult.html) and [`DoubleArrayResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/DoubleArrayResult.html),
 work slightly different, and both provide a `get(int)` method to iterate over all
