@@ -9,7 +9,11 @@ def versionLines = new File("cdk.version").readLines()
 versionLines.each { String line ->
   cdkVersion = line.trim()
 }
-
+minorVersion = "?"
+versionLines = new File("minor.version").readLines()
+versionLines.each { String line ->
+  minorVersion = line.trim()
+}
 
 bibliography = new HashMap<String,String>();
 def bibLines = new File("references.dat").readLines()
@@ -106,6 +110,7 @@ lines.each { String line ->
     println bibList
   } else if (line.contains("<version/>")) {
     println line.replace("<version/>", cdkVersion)
+                .replace("<minor/>", minorVersion)
   } else if (line.startsWith("%%%")) {
     // ignore/remove this line
   } else if (line.contains("</figure>")) {

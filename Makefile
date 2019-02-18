@@ -19,6 +19,9 @@ clean:
 cdk.version: README.md
 	@grep "^\[Edition" README.md | cut -d' ' -f2 | cut -d'-' -f1 > cdk.version
 
+minor.version: README.md
+	@grep "^\[Edition" README.md | cut -d' ' -f2 | cut -d'-' -f2 | cut -d']' -f1 > minor.version
+
 sections.txt: order.txt ${SOURCES}
 	@groovy findSections.groovy > sections.txt
 

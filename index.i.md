@@ -20,12 +20,12 @@
   "keywords":"cheminformatics, chemoinformatics, java, Groovy, Chemistry Development Kit, CDK",
   "license":"CC BY-SA 4.0",
   "url": "https://egonw.github.io/cdkbook/",
-  "version":"<version/>-6"
+  "version":"<version/>-<minor/>"
 }
 </script>
 
 
-Edition <version/>-6
+Edition <version/>-<minor/>
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
