@@ -17,10 +17,12 @@ def basedir = new File(folder)
 files = basedir.listFiles().grep(~/.*i.md$/)
 files.each { file ->
   file.eachLine { line ->
-    while (line.contains("<class>")) {
-      classStart = line.indexOf("<class>")
+    while (line.contains("<class")) {
+      classStart = line.indexOf("<class")
       classEnd = line.indexOf("</class>")
-      def classname = line.substring(classStart+7, classEnd)
+      classXML = line.substring(classStart, classEnd+8)
+      def classInstruction = new XmlSlurper().parseText(classXML)
+      classname = classInstruction.text()
       if (!classname.isEmpty()) {
         println "${classname}"
       }

@@ -13,3 +13,4 @@ substructure
 inchi
 ctr
 migration
+descriptor

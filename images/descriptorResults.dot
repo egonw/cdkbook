@@ -1,0 +1,18 @@
+digraph {
+
+  rankdir= RL;
+
+  booleanresult -> idescriptorresult;
+  doublearrayresult -> idescriptorresult;
+  doubleresult -> idescriptorresult;
+  integerarrayresult -> idescriptorresult;
+  integerresult -> idescriptorresult;
+
+  booleanresult [shape=box,label="BooleanResult"];
+  doublearrayresult [shape=box,label="DoubleArrayResult"];
+  doubleresult [shape=box,label="DoubleResult"];
+  integerarrayresult [shape=box,label="IntegerArrayResult"];
+  integerresult [shape=box,label="IntegerResult"];
+  idescriptorresult [shape=box,label="IDescriptorResult"];
+
+}

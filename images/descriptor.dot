@@ -1,0 +1,10 @@
+digraph {
+
+  rankdir= BT;
+
+  imoleculardescriptor -> idescriptor;
+
+  imoleculardescriptor [shape=box,label="IMolecularDescriptor"];
+  idescriptor [shape=box,label="IDescriptor"];
+
+}
