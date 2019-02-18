@@ -11,7 +11,8 @@ atomtype
 graph
 missing
 substructure
+properties
+descriptor
 inchi
 ctr
 migration
-descriptor
