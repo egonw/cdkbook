@@ -10,6 +10,8 @@ benzene [atomsbonds](atomsbonds.md#tp13)<br />
 boiling points [cheminfo](cheminfo.md#tp2)<br />
 bond orders [missing](missing.md#tp11)<br />
 Cambridge Structural Database [cheminfo](cheminfo.md#tp18)<br />
+canonicalization [graph](graph.md#tp12)<br />
+canonical SMILES [graph](graph.md#tp13)<br />
 CAS [cheminfo](cheminfo.md#tp17)<br />
 CASE [cheminfo](cheminfo.md#tp21)<br />
 Chemical Abstracts Service [cheminfo](cheminfo.md#tp16)<br />
@@ -39,9 +41,13 @@ ethanol [atomsbonds](atomsbonds.md#tp12)<br />
 exception [descriptor](descriptor.md#tp5)<br />
 explicit hydrogens [missing](missing.md#tp14)<br />
 FCFP [substructure](substructure.md#tp3)<br />
+Figueras algorithm [graph](graph.md#tp8)<br />
+Floyd's algorithm [graph](graph.md#tp11)<br />
 force field [cheminfo](cheminfo.md#tp12)<br />
 Gaussian input file [io](io.md#tp2)<br />
 geometry [stereo](stereo.md#tp1)<br />
+graph [graph](graph.md#tp1)<br />
+graph matrices [graph](graph.md#tp10)<br />
 graph theory [cheminfo](cheminfo.md#tp9)<br />
 group [missing](missing.md#tp4)<br />
 heavy atoms [ctr](ctr.md#tp1)<br />
@@ -54,7 +60,8 @@ IElectronContainer [atomsbonds](atomsbonds.md#tp11) [unpairedelectrons](unpaired
 IElement [atomsbonds](atomsbonds.md#tp3)<br />
 IIsotope [atomsbonds](atomsbonds.md#tp4)<br />
 implicit hydrogens [missing](missing.md#tp13) [properties](properties.md#tp2)<br />
-InChI [inchi](inchi.md#tp1)<br />
+InChI atom numbers [graph](graph.md#tp16)<br />
+InChI [graph](graph.md#tp15) [inchi](inchi.md#tp1)<br />
 IUPAC name [cheminfo](cheminfo.md#tp5)<br />
 JNI-InChI [inchi](inchi.md#tp2)<br />
 line notations [cheminfo](cheminfo.md#tp6)<br />
@@ -69,8 +76,10 @@ molecular mass [properties](properties.md#tp1)<br />
 molecule [atomsbonds](atomsbonds.md#tp15)<br />
 moment of inertia [descriptor](descriptor.md#tp6)<br />
 monoisotopic mass [missing](missing.md#tp9)<br />
+Morgan atom numbers [graph](graph.md#tp14)<br />
 notional coordinates [atomsbonds](atomsbonds.md#tp9)<br />
 parameters [descriptor](descriptor.md#tp4)<br />
+partitioning [graph](graph.md#tp2)<br />
 PDB files [protein](protein.md#tp3)<br />
 periodic table [missing](missing.md#tp3)<br />
 period [missing](missing.md#tp5)<br />
@@ -82,10 +91,16 @@ quantum chemical descriptors [cheminfo](cheminfo.md#tp10)<br />
 radical [unpairedelectrons](unpairedelectrons.md#tp5)<br />
 reactants [reaction](reaction.md#tp2)<br />
 reaction [reaction](reaction.md#tp1)<br />
+ring bonds [graph](graph.md#tp4)<br />
+ring detection [graph](graph.md#tp5)<br />
+rings [graph](graph.md#tp9)<br />
 salt [salts](salts.md#tp1)<br />
 sequence [protein](protein.md#tp5)<br />
+Smallest Set of Smallest Rings [graph](graph.md#tp6)<br />
 SMILES [cheminfo](cheminfo.md#tp8) [migration](migration.md#tp1)<br />
+spanning tree [graph](graph.md#tp3)<br />
 specification [descriptor](descriptor.md#tp3)<br />
+SSSR [graph](graph.md#tp7)<br />
 Standard InChI [inchi](inchi.md#tp4) [inchi](inchi.md#tp6)<br />
 superimpose [stereo](stereo.md#tp3)<br />
 Sybyl atom type [atomtype](atomtype.md#tp3)<br />

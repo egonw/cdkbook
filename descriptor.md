@@ -180,11 +180,11 @@ java.lang.Boolean -> true
 With this information about the descriptor now clear, it is time to look at a descriptor
 value calculation. A molecular descriptor in the CDK is symbolized by the
 [`IMolecularDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/IMolecularDescriptor.html) interface, which extends the [`IDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/IDescriptor.html) interface,
-as shown in Figure ??.
+as shown in Figure [17.1](#fig:descriptorInheritance).
 
 <a name="fig:descriptorInheritance"></a>
 ![](images/descriptor.png)
-<br />**Figure null.1**: The IDescriptor interface has a few derived interfaces, but only IMolecularDescriptor is shown here.
+<br />**Figure 17.1**: The IDescriptor interface has a few derived interfaces, but only IMolecularDescriptor is shown here.
 
 The relevant method now is the `calculate(IAtomContainer)` method, which returns
 a [`DescriptorValue`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/DescriptorValue.html). This class is returned rather than a double, because descriptors
@@ -266,14 +266,14 @@ Calculated values: 7
 ```
 
 The [`IDescriptorResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/IDescriptorResult.html) interface is currently implemented by various classes,
-outlined in Figure ??. Each of the classes has a slightly different
+outlined in Figure [17.2](#fig:descriptorResults). Each of the classes has a slightly different
 API to get the actual values. The [`IntegerResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/IntegerResult.html), [`DoubleResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/DoubleResult.html),
 and [`BooleanResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/BooleanResult.html) classes have the methods `intValue()`,
 `doubleValue()`, and `booleanValue()` respectively.
 
 <a name="fig:descriptorResults"></a>
 ![](images/descriptorResults.png)
-<br />**Figure null.2**: The IDescriptorResults interface has several implementation, each wrapping calculated descriptor values.
+<br />**Figure 17.2**: The IDescriptorResults interface has several implementation, each wrapping calculated descriptor values.
 
 The two array variants, [`IntegerArrayResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/IntegerArrayResult.html) and [`DoubleArrayResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/DoubleArrayResult.html),
 work slightly different, and both provide a `get(int)` method to iterate over all
@@ -333,6 +333,6 @@ the case for all descriptors, but many take this approach.
 2. <a name="citeref2"></a>Steinbeck C, Hoppe C, Hoppe C, Kuhn S, Floris M, Guha R, et al. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Current Pharmaceutical Design [Internet]. 2006 Jun 1;12(17):2111–20. Available from: https://cdk.github.io/cdk-paper-2/ doi:[10.2174/138161206777585274](https://doi.org/10.2174/138161206777585274)
 3. <a name="citeref3"></a>Missing
 4. <a name="citeref4"></a>Missing
-5. <a name="citeref5"></a>Missing
+5. <a name="citeref5"></a>[https://stackoverflow.com/questions/9363550/how-to-prevent-getting-a-groovy-boolean-in-an-object-array](https://stackoverflow.com/questions/9363550/how-to-prevent-getting-a-groovy-boolean-in-an-object-array)
 
 

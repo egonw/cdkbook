@@ -210,11 +210,11 @@ fbot = new FixBondOrdersTool()
 pyrrole = fbot.kekuliseAromaticRings(pyrrole)
 ```
 
-This results in the image given in Figure [11.1](#fig:pyrrole).
+This results in the image given in Figure [12.1](#fig:pyrrole).
 
 <a name="fig:pyrrole"></a>
 ![](code/generated/FixPyrroleBondOrders)
-<br />**Figure 11.1**: 2D diagram of pyrrole.
+<br />**Figure 12.1**: 2D diagram of pyrrole.
 
 <a name="sec:missinghydrogens"></a>
 ## Missing Hydrogens
