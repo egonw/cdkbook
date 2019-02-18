@@ -1,3 +1,5 @@
+AdjacencyMatrix	org.openscience.cdk.graph.matrix	core
+AllRingsFinder	org.openscience.cdk.ringsearch	standard
 AromaticAtomsCountDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 AtomContainerManipulator	org.openscience.cdk.tools.manipulator	standard
 AtomCountDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
@@ -6,6 +8,7 @@ BooleanResult	org.openscience.cdk.qsar.result	standard
 CDKAtomTypeMatcher	org.openscience.cdk.atomtype	core
 CDKHydrogenAdder	org.openscience.cdk.tools	valencycheck
 CircularFingerprinter	org.openscience.cdk.fingerprint	fingerprint
+ConnectivityChecker	org.openscience.cdk.graph	standard
 DebugChemObjectBuilder	org.openscience.cdk.debug	datadebug
 DefaultChemObjectBuilder	org.openscience.cdk	data
 DescriptorEngine	org.openscience.cdk.qsar	qsarmolecular
@@ -17,6 +20,7 @@ Fingerprinter	org.openscience.cdk.fingerprint	standard
 HybridizationFingerprinter	org.openscience.cdk.fingerprint	standard
 IAtom	org.openscience.cdk.interfaces	interfaces
 IAtomContainer	org.openscience.cdk.interfaces	interfaces
+IAtomContainerSet	org.openscience.cdk.interfaces	interfaces
 IBioPolymer	org.openscience.cdk.interfaces	interfaces
 IBitFingerprint	org.openscience.cdk.fingerprint	core
 IBond	org.openscience.cdk.interfaces	interfaces
@@ -35,6 +39,7 @@ IMolecularDescriptor	org.openscience.cdk.qsar	qsar
 IMonomer	org.openscience.cdk.interfaces	interfaces
 InChIGenerator	org.openscience.cdk.inchi	inchi
 InChIGeneratorFactory	org.openscience.cdk.inchi	inchi
+InChINumbersTools	org.openscience.cdk.graph.invariant	inchi
 IntegerArrayResult	org.openscience.cdk.qsar.result	standard
 IntegerResult	org.openscience.cdk.qsar.result	standard
 IPolymer	org.openscience.cdk.interfaces	interfaces
@@ -56,5 +61,6 @@ SilentChemObjectBuilder	org.openscience.cdk.silent	silent
 SmilesGenerator	org.openscience.cdk.smiles	smiles
 StructureDiagramGenerator	org.openscience.cdk.layout	sdg
 SybylAtomTypeMatcher	org.openscience.cdk.atomtype	atomtype
+TopologicalMatrix	org.openscience.cdk.graph.matrix	qsarmolecular
 UniversalIsomorphismTester	org.openscience.cdk.isomorphism	standard
 XMLIsotopeFactory	org.openscience.cdk.config	extra

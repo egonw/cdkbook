@@ -8,6 +8,7 @@ chemobject
 builders
 io
 atomtype
+graph
 missing
 substructure
 inchi
