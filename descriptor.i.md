@@ -124,7 +124,7 @@ us:
 
 <out>AromaticAtomCountDescriptorParams</out>
 
-# IMolecularDescriptor
+## IMolecularDescriptor
 
 With this information about the descriptor now clear, it is time to look at a descriptor
 value calculation. A molecular descriptor in the CDK is symbolized by the
