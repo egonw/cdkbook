@@ -129,9 +129,9 @@ steps forward, but it will take some time for things to iron out.
 15.1. [Descriptors and Specifications](descriptor.md#descriptors-and-specifications) <br />
 15.1.1. [IImplementationSpecification](descriptor.md#iimplementationspecification) <br />
 15.2. [IDescriptor](descriptor.md#idescriptor) <br />
-15. [IMolecularDescriptor](descriptor.md) <br />
-15.3. [IDescriptorResult](descriptor.md#idescriptorresult) <br />
-15.4. [Counting Nitrogens and Oxygens](descriptor.md#counting-nitrogens-and-oxygens) <br />
+15.3. [IMolecularDescriptor](descriptor.md#imoleculardescriptor) <br />
+15.4. [IDescriptorResult](descriptor.md#idescriptorresult) <br />
+15.5. [Counting Nitrogens and Oxygens](descriptor.md#counting-nitrogens-and-oxygens) <br />
 16. [InChI](inchi.md) <br />
 16.1. [Layers](inchi.md#layers) <br />
 17. [Chemistry Toolkit Rosetta](ctr.md) <br />
