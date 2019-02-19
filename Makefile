@@ -11,7 +11,7 @@ TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md \
 
 SUBDIRS := code
 
-all: cdk.version ${SUBDIRS} classinfo.tsv scriptcount.tex ${TARGETS}
+all: cdk.version ${SUBDIRS} classinfo.tsv scriptcount.tex references.dat ${TARGETS}
 
 clean:
 	@rm -f ${TARGETS} scriptcount.tex cdk.version
@@ -60,7 +60,7 @@ scriptcount.tex: code/scriptCount.tex
 code/scriptCount.tex:
 	@cd code; make scriptCount.tex
 
-%.md : %.i.md createMarkdown.groovy references.dat topics.tsv toc.txt figures.txt
+%.md : %.i.md createMarkdown.groovy
 	@echo "Creating $@"
 	@groovy createMarkdown.groovy $< > $@
 
