@@ -16,3 +16,4 @@ descriptor
 inchi
 ctr
 migration
+appmoldescs
