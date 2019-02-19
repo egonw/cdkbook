@@ -10,9 +10,9 @@ is used for the other descriptor types:
 
 <table>
 <tr>
-  <td>Class</td>
-  <td>Descriptors</td>
-<tr>
+  <td><b>Class</b></td>
+  <td><b>Descriptors</b></td>
+</tr>
 <in>moldescriptorlist.md</in>
 </table>
 
@@ -21,9 +21,9 @@ is used for the other descriptor types:
 
 <table>
 <tr>
-  <td>Class</td>
-  <td>Descriptors</td>
-<tr>
+  <td><b>Class</b></td>
+  <td><b>Descriptors</b></td>
+</tr>
 <in>atomdescriptorlist.md</in>
 </table>
 
@@ -32,9 +32,9 @@ is used for the other descriptor types:
 
 <table>
 <tr>
-  <td>Class</td>
-  <td>Descriptors</td>
-<tr>
+  <td><b>Class</b></td>
+  <td><b>Descriptors</b></td>
+</tr>
 <in>pairdescriptorlist.md</in>
 </table>
 
@@ -43,9 +43,9 @@ is used for the other descriptor types:
 
 <table>
 <tr>
-  <td>Class</td>
-  <td>Descriptors</td>
-<tr>
+  <td><b>Class</b></td>
+  <td><b>Descriptors</b></td>
+</tr>
 <in>bonddescriptorlist.md</in>
 </table>
 
@@ -54,9 +54,9 @@ is used for the other descriptor types:
 
 <table>
 <tr>
-  <td>Class</td>
-  <td>Descriptors</td>
-<tr>
+  <td><b>Class</b></td>
+  <td><b>Descriptors</b></td>
+</tr>
 <in>proteindescriptorlist.md</in>
 </table>
 
