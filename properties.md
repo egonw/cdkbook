@@ -89,6 +89,6 @@ TPSA of benzene: 0.0
 
 ## References
 
-1. <a name="citeref1"></a>Missing
-2. <a name="citeref2"></a>Missing
+1. <a name="citeref1"></a>Guha R, Howard MT, Hutchison GR, Murray-Rust P, Rzepa HS, Steinbeck C, et al. The Blue Obelisk-interoperability in chemical informatics. Journal of Chemical Information and Modeling. 2006 Feb 22;46(3):991–8.  doi:[10.1021/CI050400B](https://doi.org/10.1021/CI050400B)
+2. <a name="citeref2"></a>Ertl P, Rohde B, Selzer P. Fast Calculation of Molecular Polar Surface Area as a Sum of Fragment-Based Contributions and Its Application to the Prediction of Drug Transport Properties. Journal of Medicinal Chemistry. 2000 Jan 1;43(20):3714–7.  doi:[10.1021/JM000942E](https://doi.org/10.1021/JM000942E)
 
