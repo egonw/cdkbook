@@ -29,7 +29,7 @@ In this case, you can also use the <class>AtomContainerManipulator</class>:
 <code>CalculateMolecularWeightShort</code>
 
 The element masses are calculated from the accurate isotope masses and natural
-abundances defined in the Blue Obelisk Data Repository [<cite>Guha2006</cite>].
+abundances defined in the Blue Obelisk Data Repository [<cite>Q27062363</cite>].
 
 ### Implicit Hydrogens
 
@@ -41,7 +41,7 @@ code will not be sufficient. Instead, your code should look like:
 <section level="##" label="tpsa">Total Polar Surface Area</section>
 
 Another properties that frequently returns in cheminformatics is the <topic>Total Polar Surface Area</topic>
-(<topic>TPSA</topic>). The code in the CDK uses an algorithm published by Ertl in 2000 [<cite>Ertl2000</cite>].
+(<topic>TPSA</topic>). The code in the CDK uses an algorithm published by Ertl in 2000 [<cite>Q28842810</cite>].
 Here too, the descriptor API is used, so that the code is quite similar to that for the logP
 calculation:
 

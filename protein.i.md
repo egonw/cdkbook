@@ -15,13 +15,13 @@ which extends the <class>IAtomContainer</class> interface.
 ## Protein From File
 
 One straightforward way to create protein and DNA structures is to read them from
-PDB files [<cite>Henrick2008</cite>]. Chapter XX explains how files are read in general. For <topic>PDB files</topic>,
+PDB files [<cite>Q24650571</cite>]. Chapter XX explains how files are read in general. For <topic>PDB files</topic>,
 the <class>PDBReader</class> should be used. A code example showing how to use this reader
 is given by Script XX.
 
 Of course, we can also read PDB files from a local disc. The results are read into
 a <class>IChemFile</class>. from which the first IAtomContainer is the IBioPolymer. For example,
-we can read <topic>crambin</topic> [<cite>Teeter1979</cite>]:
+we can read <topic>crambin</topic> [<cite>Q34206190</cite>]:
 
 <code>ProteinFromFile</code>
 

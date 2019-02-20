@@ -1,5 +1,6 @@
 Stein2003=1. Stein SE, Heller SR, Tchekhovski D. An Open Standard for Chemical Structure Representation: The IUPAC Chemical Identifier. Proceedings of the International Chemical Information Conference, 2003, pp 131-143.
 so:groovyBoolean=1. [https://stackoverflow.com/questions/9363550/how-to-prevent-getting-a-groovy-boolean-in-an-object-array](https://stackoverflow.com/questions/9363550/how-to-prevent-getting-a-groovy-boolean-in-an-object-array)
-varargs][https://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html](https://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html)
-silentbuilder=E. Willighagen, Data, Nonotify, or Silent?, [http://chem-bla-ics.blogspot.com/2011/07/data-nonotify-or-silent.html](http://chem-bla-ics.blogspot.com/2011/07/data-nonotify-or-silent.html).
-Linstrom2001=P. J. Linstrom, W. G. Mallard, NIST Chemistry WebBook; NIST Standard Reference Database No. 69, Gaithersburg MD, 2001
+varargs=1. [https://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html](https://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html)
+silentbuilder=1. Willighagen E, Data, Nonotify, or Silent?, [http://chem-bla-ics.blogspot.com/2011/07/data-nonotify-or-silent.html](http://chem-bla-ics.blogspot.com/2011/07/data-nonotify-or-silent.html)
+Linstrom2001=1. Linstrom JL, Mallard WG. NIST Chemistry WebBook; NIST Standard Reference Database No. 69, Gaithersburg MD, 2001
+OpenEyeSSSR=1. OpenEye, Smallest Set of Smallest Rings (SSSR) Considered Harmful, [http://www.eyesopen.com/docs/toolkits/current/html/OEChem\_TK-python/ring.html\#smallest-set-of-smallest-rings-sssr-considered-harmful](http://www.eyesopen.com/docs/toolkits/current/html/OEChem\_TK-python/ring.html\#smallest-set-of-smallest-rings-sssr-considered-harmful)

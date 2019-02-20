@@ -50,8 +50,8 @@ Without providing a full review of all ring detection algorithms, this section d
 algorithms for <topic>ring detection</topic>. The first two are alternative
 implementations of the <topic>Smallest Set of Smallest Rings</topic> (<topic>SSSR</topic>) concept. While argued to have limited
 usefulness if not harmful [<cite>OpenEyeSSSR</cite>], the CDK implements two algorithms: the
-<topic>Figueras algorithm</topic> [<cite>Figueras1996</cite>], and an improved algorithm addressing limitations of
-the first [<cite>Berger2004</cite>].
+<topic>Figueras algorithm</topic> [<cite>Q28837947</cite>], and an improved algorithm addressing limitations of
+the first [<cite>Q61780124</cite>].
 The key limitation is that the resulting set is not unique. Depending on the initial conditions,
 alternative sets may result for the same structure, particularly for structures with bridgehead
 atoms. However, on the bright side, it does give some indication on the number of rings in a structure.
@@ -68,7 +68,7 @@ For example, adamantane has multiple SSSRs. The trick of the SSSR algorithm is t
 set of rings that cover all ring atoms.
 
 The CDK implements two algorithms, both are found in the `cdk.ringsearch` package. The
-first is the algorithm developed by Figureas [<cite>Figueras1996</cite>] for which the
+first is the algorithm developed by Figureas [<cite>Q28837947</cite>] for which the
 <class>FiguerasSSSRFinder</class> class can be used:
 
 <code>FiguerasSSSR</code>
@@ -78,7 +78,7 @@ Which tells us the number of smallest rings for azulene:
 <out>FiguerasSSSR</out>
 
 However, because of this algorithm's limitations in finding a correct SSSR set for some corner
-case structure, the following alternative method by Berger \textit{et al.} [<cite>Berger2004</cite>] is
+case structure, the following alternative method by Berger \textit{et al.} [<cite>Q61780124</cite>] is
 recommended:
 
 <code>SSSR</code>
@@ -90,7 +90,7 @@ Which calculates the same number of rings for this compound:
 ### All Rings
 
 If you are interesting in all possible rings, you can use the <class>AllRingsFinder</class> class, which
-implements an algorithm by Hanser \textit{et al.} [<cite>Hanser1996</cite>]:
+implements an algorithm by Hanser \textit{et al.} [<cite>Q28837943</cite>]:
 
 <code>FindAllRings</code>
 
@@ -154,7 +154,7 @@ The distance matrix describes the number of bonds on has to traverse
 to get from one atom to another. Therefore, it has zeros on the diagonal
 and non-zero values at all other locations. Matrix elements for
 neighboring atoms are 1 and others are larger. The CDK uses
-<topic>Floyd's algorithm</topic> to calculate this matrix [<cite>Floyd1962</cite>],
+<topic>Floyd's algorithm</topic> to calculate this matrix [<cite>Q56170978</cite>],
 which is exposed via the <class>TopologicalMatrix</class> class:
 
 <code>DistanceMatrix</code>
@@ -176,7 +176,7 @@ atoms in a chemical graph.
 ### Morgan Atom Numbers
 
 Morgan published an algorithm in 1965 to assign numbers <!-- <topic>Morgan atom numbers</topic> -->
-to vertices in the chemical graph [<cite>Morgan1965</cite>].
+to vertices in the chemical graph [<cite>Q28837925</cite>].
 The algorithm does not take into account the element symbols
 associated with those vertices, and it only based on the connectivity.
 Therefore, we see the same number of symmetry related atoms, even if they have
