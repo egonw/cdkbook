@@ -153,7 +153,6 @@ computer-assisted synthesis design (CASD) systems, such as the LHASA system,
 noteworthy because it used a large knowledge base extracted from
 literature [<a href="#citeref17">17</a>].
 
-
 Another important application of chemical graphs is the use in structure
 generation, which fulfills a crucial role in <a name="tp20">computer-aided structure elucidation</a> (<a name="tp21">CASE</a>).
 DENDRAL is an example CASE system that elucidated molecular structures using
@@ -180,20 +179,20 @@ structures of the phenylic ring.
 1. <a name="citeref1"></a>Wiener H. Correlation of Heats of Isomerization, and Differences in Heats of Vaporization of Isomers, Among the Paraffin Hydrocarbons. Journal of the American Chemical Society. 1947 Jan 1;69(11):2636–8.  doi:[10.1021/JA01203A022](https://doi.org/10.1021/JA01203A022)
 2. <a name="citeref2"></a>Wiswesser WJ. How the WLN began in 1949 and how it might be in 1999. Journal of Chemical Information and Modeling. 1982 May 1;22(2):88–93.  doi:[10.1021/CI00034A005](https://doi.org/10.1021/CI00034A005)
 3. <a name="citeref3"></a>Weininger D. SMILES, a chemical language and information system. 1. Introduction to methodology and encoding rules. Journal of Chemical Information and Modeling [Internet]. 1988 Feb 1;28(1):31–6. Available from: http://organica1.org/seminario/weininger88.pdf doi:[10.1021/CI00057A005](https://doi.org/10.1021/CI00057A005)
-4. <a name="citeref4"></a>Missing
+4. <a name="citeref4"></a>LC R, RA K. Finding Chemical Records by Digital Computers. Science. 1957 Oct 1;126(3278):814–9.  doi:[10.1126/SCIENCE.126.3278.814](https://doi.org/10.1126/SCIENCE.126.3278.814)
 5. <a name="citeref5"></a>Ullmann JR. An Algorithm for Subgraph Isomorphism. Journal of the ACM. 1976 Jan 1;23(1):31–42.  doi:[10.1145/321921.321925](https://doi.org/10.1145/321921.321925)
 6. <a name="citeref6"></a>Morgan HL. The Generation of a Unique Machine Description for Chemical Structures-A Technique Developed at Chemical Abstracts Service. Journal of Chemical Documentation. 1965 Jan 1;5(2):107–13.  doi:[10.1021/C160017A018](https://doi.org/10.1021/C160017A018)
 7. <a name="citeref7"></a>Berman HM, Henrick K, Nakamura H. Announcing the worldwide Protein Data Bank. Nature structural biology. 2003 Jan 1;10(12):980.  doi:[10.1038/NSB1203-980](https://doi.org/10.1038/NSB1203-980)
-8. <a name="citeref8"></a>Missing
+8. <a name="citeref8"></a>Linstrom JL, Mallard WG. NIST Chemistry WebBook; NIST Standard Reference Database No. 69, Gaithersburg MD, 2001
 9. <a name="citeref9"></a>Steinbeck C, Kuhn S. NMRShiftDB – compound identification and structure elucidation support through a free community-built web database. Phytochemistry. 2004 Jan 1;65(19):2711–7.  doi:[10.1016/J.PHYTOCHEM.2004.08.027](https://doi.org/10.1016/J.PHYTOCHEM.2004.08.027)
-10. <a name="citeref10"></a>Missing
+10. <a name="citeref10"></a>YAMAMOTO O, SOMENO K, WASADA N, HIRAISHI J, HAYAMIZU K, TANABE K, et al. An integrated spectral data base system including IR, MS, 1H-NMR, 13C-NMR, ESR and Raman spectra. Analytical Sciences. 1988 Jan 1;4(3):233–9.  doi:[10.2116/ANALSCI.4.233](https://doi.org/10.2116/ANALSCI.4.233)
 11. <a name="citeref11"></a>Allen FH, FH A. The Cambridge Structural Database: a quarter of a million crystal structures and rising. Acta Crystallographica Section B: Structural Science. 2002 May 29;58(3):380–8.  doi:[10.1107/S0108768102003890](https://doi.org/10.1107/S0108768102003890)
 12. <a name="citeref12"></a>Engel T. Basic overview of chemoinformatics. Journal of Chemical Information and Modeling. 2006 Nov 1;46(6):2267–77.  doi:[10.1021/CI600234Z](https://doi.org/10.1021/CI600234Z)
-13. <a name="citeref13"></a>Missing
-14. <a name="citeref14"></a>Missing
-15. <a name="citeref15"></a>Missing
-16. <a name="citeref16"></a>Missing
-17. <a name="citeref17"></a>Missing
-18. <a name="citeref18"></a>Missing
+13. <a name="citeref13"></a>Austin CP, Brady LS, Insel TR, Collins F. NIH Molecular Libraries Initiative. Science. 2004 Nov 1;306(5699):1138–9.  doi:[10.1126/SCIENCE.1105511](https://doi.org/10.1126/SCIENCE.1105511)
+14. <a name="citeref14"></a>Irwin JJ, Shoichet BK. ZINC--a free database of commercially available compounds for virtual screening. Journal of Chemical Information and Modeling. 2005 Jan 1;45(1):177–82.  doi:[10.1021/CI049714+](https://doi.org/10.1021/CI049714+)
+15. <a name="citeref15"></a>Blair J, Gasteiger J, Gillespie C, Gillespie PD, Ugi I. Representation of the constitutional and stereochemical features of chemical systems in the computer assisted design of syntheses. Tetrahedron. 1974 Jan 1;30(13):1845–59.  doi:[10.1016/S0040-4020(01)97318-1](https://doi.org/10.1016/S0040-4020(01)97318-1)
+16. <a name="citeref16"></a>Corey EJ, Wipke WT. Computer-Assisted Design of Complex Organic Syntheses. Science. 1969 Oct 10;166(3902):178–92.  doi:[10.1126/SCIENCE.166.3902.178](https://doi.org/10.1126/SCIENCE.166.3902.178)
+17. <a name="citeref17"></a>Corey EJ, Wipke WT, Cramer RD, Howe WJ. Computer-assisted synthetic analysis. Facile man-machine communication of chemical structure by interactive computer graphics. Journal of the American Chemical Society. 1972 Jan 1;94(2):421–30.  doi:[10.1021/JA00757A020](https://doi.org/10.1021/JA00757A020)
+18. <a name="citeref18"></a>Lederberg J. How DENDRAL was conceived and born. 1987 Jan 1;5–19.  doi:[10.1145/41526.41528](https://doi.org/10.1145/41526.41528)
 19. <a name="citeref19"></a>Bremser W. HOSE — a novel substructure code. Analytica Chimica Acta. 1978 Jan 1;103(4):355–65.  doi:[10.1016/S0003-2670(01)83100-7](https://doi.org/10.1016/S0003-2670(01)83100-7)
 
