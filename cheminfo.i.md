@@ -109,7 +109,7 @@ molecules are atoms held together by bonds, and certain atom groups (functional
 groups) give rise to certain molecular properties. For example, an acid group
 reduces the pK<sub>a</sub> of the molecule and makes the molecule react with an amine.
 Searching a functional group in a molecule corresponds to finding a
-subgraph in the chemical graph [<cite>Ray1957</cite>,<cite>Q55934414</cite>],
+subgraph in the chemical graph [<cite>Q39811432</cite>,<cite>Q55934414</cite>],
 when the molecule is considered a graph where atoms are vertices and bond edges.
 
 The <topic>chemical graph</topic> also allows the use of canonization methods, such as the Morgan
@@ -129,7 +129,7 @@ up <topic>databases</topic> with molecular structures and their properties. For 
 the PDB database contains crystal structures of
 proteins, nucleic acids and their complexes with ligands [<cite>Q28186592</cite>].
 Other databases contain physical properties [<cite>Linstrom2001</cite>[, <sup>13</sup>C and <sup>1</sup>H
-NMR [<cite>Q28843132</cite>], and IR spectra [<cite>Yamamoto1988</cite>].
+NMR [<cite>Q28843132</cite>], and IR spectra [<cite>Q61779181</cite>].
 The <topic>Chemical Abstracts Service</topic> (<topic>CAS</topic>) maintains a substance database with millions of chemical
 substances extracted from literature. In 2008 this number increased by about
 4000 entries each year. However, only for a fraction of these compounds more
@@ -141,23 +141,22 @@ structures in 2008, and that number increases by only
 increase in information in literature is estimated at even 1~million new compounds
 per year from more than 700 thousand articles in chemistry-related literature [<cite>Q36662828</cite>].
 In addition to these proprietary databases, open-access databases have emerged,
-such as PubChem [<cite>Austin2004</cite>] and ZINC [<cite>Irwin2005</cite>].
+such as PubChem [<cite>Q31127242</cite>] and ZINC [<cite>Q27656255</cite>].
 
 These chemical graph-based databases have found many applications, such as systems for synthesis
 planning, where reactions are represented as changes in
-the molecular graph when going from reactant to the product side [<cite>Blair1974</cite>].
+the molecular graph when going from reactant to the product side [<cite>Q61779373</cite>].
 An example of
-such a tool is the Organic Chemical Simulation of Syntheses (OCSS) [<cite>Corey1969</cite>],
+such a tool is the Organic Chemical Simulation of Syntheses (OCSS) [<cite>Q61779901</cite>],
 which mimics the process of retro-synthetic synthesis planning. This has led to a number of
 computer-assisted synthesis design (CASD) systems, such as the LHASA system,
 noteworthy because it used a large knowledge base extracted from
-literature [<cite>Corey1972</cite>].
-
+literature [<cite>Q61779905</cite>].
 
 Another important application of chemical graphs is the use in structure
 generation, which fulfills a crucial role in <topic>computer-aided structure elucidation</topic> (<topic>CASE</topic>).
 DENDRAL is an example CASE system that elucidated molecular structures using
-mass spectra [<cite>Lederberg1987</cite>].  It derived graph constraints from the input
+mass spectra [<cite>Q61779940</cite>].  It derived graph constraints from the input
 spectrum and the molecular formula, and then generated possible
 structures, each of which was evaluated by comparing a predicted spectrum with
 the experimental one. The best spectral match was proposed as elucidated structure.
