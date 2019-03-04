@@ -42,7 +42,6 @@ InChIGeneratorFactory	org.openscience.cdk.inchi	inchi
 InChINumbersTools	org.openscience.cdk.graph.invariant	inchi
 IntegerArrayResult	org.openscience.cdk.qsar.result	standard
 IntegerResult	org.openscience.cdk.qsar.result	standard
-IPolymer	org.openscience.cdk.interfaces	interfaces
 IReaction	org.openscience.cdk.interfaces	interfaces
 ISingleElectron	org.openscience.cdk.interfaces	interfaces
 IsotopeFactory	org.openscience.cdk.config	core

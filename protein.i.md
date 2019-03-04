@@ -6,11 +6,11 @@ organic molecules, and the <class>IAtomContainer</class> can simply be used. The
 for <topic>DNA</topic> strands. However, there is more extensive support for protein and
 DNA in the CDK, and this chapter will outline some of that.
 The core interface is the <class>IBioPolymer</class> interface, which is derived from an
-IAtomContainer. Figure XX shows its hierarchy.
+IAtomContainer. Figure <xref>proteinClass</xref> shows its hierarchy.
 
+<figure label="proteinClass" caption="The IBioPolymer interface extends the IPolymer interface, which extends the IAtomContainer interface.">
 ![](images/biopolymer.png) <br />
-Figure XX: The <class>IBioPolymer</class> interface extends the <class>IPolymer</class> interface,
-which extends the <class>IAtomContainer</class> interface.
+</figure>
 
 ## Protein From File
 
@@ -66,7 +66,7 @@ The full script has some hidden code to only list the first few monomers:
 
 The <class>IStrand</class> and <class>IMonomer</class> interfaces provide functionality to access
 specific properties, but also extend the `IAtomContainer` interface, as depicted
-in Figure XX. Both provide access to a name for the entity as
+in Figure <xref>strandmonomerClass</xref>. Both provide access to a name for the entity as
 well as a type:
 
 <code>BioNameType</code>
@@ -75,9 +75,9 @@ Using these methods, we get some additional information about the strands and mo
 
 <out>BioNameType</out>
 
+<figure label="strandmonomerClass" caption="The IStrand and IMonomer interfaces extend the IAtomContainer interface.">
 ![](images/strandmonomer.png) <br />
-Figure XX: The <class>IStrand</class> and <class>IMonomer</class> interfaces extend the
-<class>IAtomContainer</class> interface.
+</figure>
 
 ## References
 

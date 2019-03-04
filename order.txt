@@ -4,6 +4,7 @@ atomsbonds
 stereo
 salts
 unpairedelectrons
+protein
 chemobject
 builders
 io
