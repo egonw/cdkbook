@@ -5,6 +5,7 @@ stereo
 salts
 unpairedelectrons
 protein
+reaction
 chemobject
 builders
 io
