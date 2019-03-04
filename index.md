@@ -67,90 +67,104 @@ steps forward, but it will take some time for things to iron out.
 6. [Paired and unpaired electrons](unpairedelectrons.md) <br />
 6.1. [Lone Pairs](unpairedelectrons.md#lone-pairs) <br />
 6.2. [Unpaired electrons](unpairedelectrons.md#unpaired-electrons) <br />
-7. [From IChemObject to IChemFile](chemobject.md) <br />
-7.1. [IAtomContainerSet](chemobject.md#iatomcontainerset) <br />
-7.2. [IReactionSet and IRingSet](chemobject.md#ireactionset-and-iringset) <br />
-7.3. [IChemModel](chemobject.md#ichemmodel) <br />
-7.4. [IChemSequence](chemobject.md#ichemsequence) <br />
-7.5. [IChemFile](chemobject.md#ichemfile) <br />
-8. [IChemObjectBuilders](builders.md) <br />
-8.1. [Implementations](builders.md#implementations) <br />
-8.1.1. [The Default Builder](builders.md#the-default-builder) <br />
-8.1.2. [The Debug Builder](builders.md#the-debug-builder) <br />
-8.1.3. [The Silent Builder](builders.md#the-silent-builder) <br />
-9. [Input/Output](io.md) <br />
-9.1. [File Format Detection](io.md#file-format-detection) <br />
-9.1.1. [Custom format matchers](io.md#custom-format-matchers) <br />
-9.2. [Reading from Readers and InputStreams](io.md#reading-from-readers-and-inputstreams) <br />
-9.3. [Customizing the Output](io.md#customizing-the-output) <br />
-9.3.1. [Setting Properties](io.md#setting-properties) <br />
-9.4. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
-10. [Atom types](atomtype.md) <br />
-10.1. [The CDK atom type model](atomtype.md#the-cdk-atom-type-model) <br />
-10.1.1. [Hybridization Types](atomtype.md#hybridization-types) <br />
-10.2. [Atom type perception](atomtype.md#atom-type-perception) <br />
-10.2.1. [Single atoms](atomtype.md#single-atoms) <br />
-10.2.2. [Full molecules](atomtype.md#full-molecules) <br />
-10.2.3. [Configuring the Atom](atomtype.md#configuring-the-atom) <br />
-10.2.3. [No atom type perceived?!](atomtype.md#no-atom-type-perceived?!) <br />
-10.3. [Sybyl atom types](atomtype.md#sybyl-atom-types) <br />
-11. [Graph Properties](graph.md) <br />
-11.1. [Partitioning](graph.md#partitioning) <br />
-11.2. [Spanning Tree](graph.md#spanning-tree) <br />
-11.3. [Ring counts](graph.md#ring-counts) <br />
-11.3.1. [Smallest Rings](graph.md#smallest-rings) <br />
-11.3.2. [All Rings](graph.md#all-rings) <br />
-11.4. [Graph matrices](graph.md#graph-matrices) <br />
-11.4.1. [Adjacency matrix](graph.md#adjacency-matrix) <br />
-11.4.2. [Distance matrix](graph.md#distance-matrix) <br />
-11.5. [Atom Numbers](graph.md#atom-numbers) <br />
-11.5.1. [Morgan Atom Numbers](graph.md#morgan-atom-numbers) <br />
-11.5.1. [InChI Atom Numbers](graph.md#inchi-atom-numbers) <br />
-12. [Missing Information](missing.md) <br />
-12.1. [Element and Isotope information](missing.md#element-and-isotope-information) <br />
-12.1.1. [Elements](missing.md#elements) <br />
-12.1.2. [Isotopes](missing.md#isotopes) <br />
-12.2. [Reconnecting Atoms](missing.md#reconnecting-atoms) <br />
-12.3. [Missing Bond Orders](missing.md#missing-bond-orders) <br />
-12.4. [Missing Hydrogens](missing.md#missing-hydrogens) <br />
-12.4.0. [Implicit Hydrogens](missing.md#implicit-hydrogens) <br />
-12.4.0. [Explicit Hydrogens](missing.md#explicit-hydrogens) <br />
-12.5. [2D Coordinates](missing.md#2d-coordinates) <br />
-12.6. [Unknown Molecular Formula](missing.md#unknown-molecular-formula) <br />
-13. [Substructure Searching](substructure.md) <br />
-13.1. [Fingerprints](substructure.md#fingerprints) <br />
-13.1.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
-13.1.2. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
-14. [Molecular Properties](properties.md) <br />
-14.1. [Molecular Mass](properties.md#molecular-mass) <br />
-14.1.1. [Implicit Hydrogens](properties.md#implicit-hydrogens) <br />
-14.2. [Total Polar Surface Area](properties.md#total-polar-surface-area) <br />
-15. [Molecular Descriptors](descriptor.md) <br />
-15.1. [Descriptors and Specifications](descriptor.md#descriptors-and-specifications) <br />
-15.1.1. [IImplementationSpecification](descriptor.md#iimplementationspecification) <br />
-15.2. [IDescriptor](descriptor.md#idescriptor) <br />
-15.3. [IMolecularDescriptor](descriptor.md#imoleculardescriptor) <br />
-15.4. [IDescriptorResult](descriptor.md#idescriptorresult) <br />
-15.5. [Counting Nitrogens and Oxygens](descriptor.md#counting-nitrogens-and-oxygens) <br />
-16. [InChI](inchi.md) <br />
-16.1. [Layers](inchi.md#layers) <br />
-17. [Chemistry Toolkit Rosetta](ctr.md) <br />
-17.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
-17.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
-18. [Migration](migration.md) <br />
-18.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
-18.1.1. [Removed classes](migration.md#removed-classes) <br />
-18.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
-18.1.3. [Changed behavior](migration.md#changed-behavior) <br />
-18.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
-18.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
-18.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
-18.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
-18.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
+7. [Protein and DNA](protein.md) <br />
+7.1. [Protein From File](protein.md#protein-from-file) <br />
+7.2. [Protein From Sequence](protein.md#protein-from-sequence) <br />
+7.3. [Strands and Monomers](protein.md#strands-and-monomers) <br />
+8. [Reactions](reaction.md) <br />
+8. [A single reaction](reaction.md) <br />
+8.1. [Reaction from File](reaction.md#reaction-from-file) <br />
+8.1.1. [MDL RXN files](reaction.md#mdl-rxn-files) <br />
+8.2. [CMLReact files](reaction.md#cmlreact-files) <br />
+9. [From IChemObject to IChemFile](chemobject.md) <br />
+9.1. [IAtomContainerSet](chemobject.md#iatomcontainerset) <br />
+9.2. [IReactionSet and IRingSet](chemobject.md#ireactionset-and-iringset) <br />
+9.3. [IChemModel](chemobject.md#ichemmodel) <br />
+9.4. [IChemSequence](chemobject.md#ichemsequence) <br />
+9.5. [IChemFile](chemobject.md#ichemfile) <br />
+10. [IChemObjectBuilders](builders.md) <br />
+10.1. [Implementations](builders.md#implementations) <br />
+10.1.1. [The Default Builder](builders.md#the-default-builder) <br />
+10.1.2. [The Debug Builder](builders.md#the-debug-builder) <br />
+10.1.3. [The Silent Builder](builders.md#the-silent-builder) <br />
+11. [Input/Output](io.md) <br />
+11.1. [File Format Detection](io.md#file-format-detection) <br />
+11.1.1. [Custom format matchers](io.md#custom-format-matchers) <br />
+11.2. [Reading from Readers and InputStreams](io.md#reading-from-readers-and-inputstreams) <br />
+11.3. [Customizing the Output](io.md#customizing-the-output) <br />
+11.3.1. [Setting Properties](io.md#setting-properties) <br />
+11.4. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
+12. [Atom types](atomtype.md) <br />
+12.1. [The CDK atom type model](atomtype.md#the-cdk-atom-type-model) <br />
+12.1.1. [Hybridization Types](atomtype.md#hybridization-types) <br />
+12.2. [Atom type perception](atomtype.md#atom-type-perception) <br />
+12.2.1. [Single atoms](atomtype.md#single-atoms) <br />
+12.2.2. [Full molecules](atomtype.md#full-molecules) <br />
+12.2.3. [Configuring the Atom](atomtype.md#configuring-the-atom) <br />
+12.2.3. [No atom type perceived?!](atomtype.md#no-atom-type-perceived?!) <br />
+12.3. [Sybyl atom types](atomtype.md#sybyl-atom-types) <br />
+13. [Graph Properties](graph.md) <br />
+13.1. [Partitioning](graph.md#partitioning) <br />
+13.2. [Spanning Tree](graph.md#spanning-tree) <br />
+13.3. [Ring counts](graph.md#ring-counts) <br />
+13.3.1. [Smallest Rings](graph.md#smallest-rings) <br />
+13.3.2. [All Rings](graph.md#all-rings) <br />
+13.4. [Graph matrices](graph.md#graph-matrices) <br />
+13.4.1. [Adjacency matrix](graph.md#adjacency-matrix) <br />
+13.4.2. [Distance matrix](graph.md#distance-matrix) <br />
+13.5. [Atom Numbers](graph.md#atom-numbers) <br />
+13.5.1. [Morgan Atom Numbers](graph.md#morgan-atom-numbers) <br />
+13.5.1. [InChI Atom Numbers](graph.md#inchi-atom-numbers) <br />
+14. [Missing Information](missing.md) <br />
+14.1. [Element and Isotope information](missing.md#element-and-isotope-information) <br />
+14.1.1. [Elements](missing.md#elements) <br />
+14.1.2. [Isotopes](missing.md#isotopes) <br />
+14.2. [Reconnecting Atoms](missing.md#reconnecting-atoms) <br />
+14.3. [Missing Bond Orders](missing.md#missing-bond-orders) <br />
+14.4. [Missing Hydrogens](missing.md#missing-hydrogens) <br />
+14.4.0. [Implicit Hydrogens](missing.md#implicit-hydrogens) <br />
+14.4.0. [Explicit Hydrogens](missing.md#explicit-hydrogens) <br />
+14.5. [2D Coordinates](missing.md#2d-coordinates) <br />
+14.6. [Unknown Molecular Formula](missing.md#unknown-molecular-formula) <br />
+15. [Substructure Searching](substructure.md) <br />
+15.1. [Fingerprints](substructure.md#fingerprints) <br />
+15.1.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
+15.1.2. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
+16. [Molecular Properties](properties.md) <br />
+16.1. [Molecular Mass](properties.md#molecular-mass) <br />
+16.1.1. [Implicit Hydrogens](properties.md#implicit-hydrogens) <br />
+16.2. [Total Polar Surface Area](properties.md#total-polar-surface-area) <br />
+17. [Molecular Descriptors](descriptor.md) <br />
+17.1. [Descriptors and Specifications](descriptor.md#descriptors-and-specifications) <br />
+17.1.1. [IImplementationSpecification](descriptor.md#iimplementationspecification) <br />
+17.2. [IDescriptor](descriptor.md#idescriptor) <br />
+17.3. [IMolecularDescriptor](descriptor.md#imoleculardescriptor) <br />
+17.4. [IDescriptorResult](descriptor.md#idescriptorresult) <br />
+17.5. [Counting Nitrogens and Oxygens](descriptor.md#counting-nitrogens-and-oxygens) <br />
+18. [InChI](inchi.md) <br />
+18.1. [Layers](inchi.md#layers) <br />
+19. [Chemistry Toolkit Rosetta](ctr.md) <br />
+19.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
+19.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
+20. [Migration](migration.md) <br />
+20.1. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
+20.1.1. [Removed classes](migration.md#removed-classes) <br />
+20.1.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
+20.1.3. [Changed behavior](migration.md#changed-behavior) <br />
+20.1.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
+20.1.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
+20.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
+20.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
+20.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
 [Index](indexList.md) <br />
 [Appendix A](appatomtypes.md) <br />
 A.1 [CDK Atom Types](appatomtypes.md#cdk-atom-types) <br />
 A.2 [Sybyl Atom Types](appatomtypes.md#sybyl-atom-types) <br />
 [Appendix B](appisotopes.md) <br />
 B.1 [Isotope List](appisotopes.md) <br />
-
+[Appendix C][appmoldescs.md) <br />
+C.1 [Molecular Descriptors](appmoldescs.md#molecular-descriptors) <br />
+C.2 [Atomic Descriptors](appmoldescs.md#atomic-descriptors) <br />
+C.3 [Atom-Pair Descriptors](appmoldescs.md#atom-pair-descriptors) <br />
+C.4 [Bond Descriptors](appmoldescs.md#bond-descriptors) <br />
+C.5 [Protein Descriptors](appmoldescs.md#protein-descriptors) <br />
