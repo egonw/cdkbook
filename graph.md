@@ -309,7 +309,7 @@ C 64
 ### InChI Atom Numbers
 
 ![](images/generated/RenderAdenineWithNumbers.png)![](images/generated/InChIAtomNumbersBenzene.png)
-<br />**Figure 11.1**: InChI atom numbers of oxazole (left) and benzene (right).
+<br />**Figure 13.1**: InChI atom numbers of oxazole (left) and benzene (right).
 
 The <a name="tp15">InChI</a> library does not have a direct method to calculate atom numbers
 from Java, but the CDK can extract these from the auxiliary layer. These numbers
@@ -383,7 +383,7 @@ The InChI atom numbers are shown in Figure ??.
 
 ## References
 
-1. <a name="citeref1"></a>Missing
+1. <a name="citeref1"></a>OpenEye, Smallest Set of Smallest Rings (SSSR) Considered Harmful, [http://www.eyesopen.com/docs/toolkits/current/html/OEChem\_TK-python/ring.html\#smallest-set-of-smallest-rings-sssr-considered-harmful](http://www.eyesopen.com/docs/toolkits/current/html/OEChem\_TK-python/ring.html\#smallest-set-of-smallest-rings-sssr-considered-harmful)
 2. <a name="citeref2"></a>Figueras J. Ring Perception Using Breadth-First Search. Journal of Chemical Information and Modeling. 1996 Jan 1;36(5):986–91.  doi:[10.1021/CI960013P](https://doi.org/10.1021/CI960013P)
 3. <a name="citeref3"></a>Berger F, Gritzmann P, de Vries S. Minimum Cycle Bases for Network Graphs. Algorithmica. 2004 May 28;40(1):51–62.  doi:[10.1007/S00453-004-1098-X](https://doi.org/10.1007/S00453-004-1098-X)
 4. <a name="citeref4"></a>Hanser T, Jauffret P, Kaufmann G. A New Algorithm for Exhaustive Ring Perception in a Molecular Graph. Journal of Chemical Information and Modeling. 1996 Jan 1;36(6):1146–52.  doi:[10.1021/CI960322F](https://doi.org/10.1021/CI960322F)

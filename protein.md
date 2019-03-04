@@ -6,11 +6,11 @@ organic molecules, and the [`IAtomContainer`](http://cdk.github.io/cdk/latest/do
 for <a name="tp2">DNA</a> strands. However, there is more extensive support for protein and
 DNA in the CDK, and this chapter will outline some of that.
 The core interface is the [`IBioPolymer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBioPolymer.html) interface, which is derived from an
-IAtomContainer. Figure XX shows its hierarchy.
+IAtomContainer. Figure [7.1](#fig:proteinClass) shows its hierarchy.
 
-![](images/biopolymer.png) <br />
-Figure XX: The [`IBioPolymer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBioPolymer.html) interface extends the [`IPolymer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IPolymer.html) interface,
-which extends the [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) interface.
+<a name="fig:proteinClass"></a>
+![](images/biopolymer.png)
+<br />**Figure 7.1**: The IBioPolymer interface extends the IPolymer interface, which extends the IAtomContainer interface.
 
 ## Protein From File
 
@@ -118,7 +118,7 @@ monomer ARGA10
 
 The [`IStrand`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IStrand.html) and [`IMonomer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IMonomer.html) interfaces provide functionality to access
 specific properties, but also extend the `IAtomContainer` interface, as depicted
-in Figure XX. Both provide access to a name for the entity as
+in Figure [7.2](#fig:strandmonomerClass). Both provide access to a name for the entity as
 well as a type:
 
 **Script** [code/BioNameType.groovy](code/BioNameType.code.md)
@@ -140,9 +140,9 @@ Monomer name: ALAA9
         type: ALA
 ```
 
-![](images/strandmonomer.png) <br />
-Figure XX: The [`IStrand`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IStrand.html) and [`IMonomer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IMonomer.html) interfaces extend the
-[`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) interface.
+<a name="fig:strandmonomerClass"></a>
+![](images/strandmonomer.png)
+<br />**Figure 7.2**: The IStrand and IMonomer interfaces extend the IAtomContainer interface.
 
 ## References
 
