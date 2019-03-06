@@ -161,8 +161,15 @@ lines.each { String line ->
       topicsXML = line.substring(topicStart, topicEnd+8)
       def topicsInstruction = new XmlSlurper().parseText(topicsXML)
       replacement = ""
-      if (topicsInstruction.@type == "class" ||
-          topicsInstruction.@type == "key") {
+      if (topicsInstruction.@type == "class") {
+        classname = topicsInstruction.text()
+        if (pkgs.containsKey(classname)) {
+          replacement = "[`${classname}`](http://cdk.github.io/cdk/latest/docs/api/" +
+            pkgs.get(classname).replace(".", "/") + "/${classname}.html)"
+        } else {
+          replacement = "`" + classname + "`"
+        }
+      } else if (topicsInstruction.@type == "key") {
         replacement = "`" + topicsInstruction.text() + "`"
       } else {
         replacement = topicsInstruction.text()
