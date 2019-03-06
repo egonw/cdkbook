@@ -562,7 +562,7 @@ for (format in formats) {
         format.readerClassName.lastIndexOf(".") + 1
       )
       output.append(
-        "### " + reader + "\n"
+        "### <topic type=\"class\">" + reader + "</topic>\n"
       )
     }
     if (format.writerClassName != null) {
@@ -570,7 +570,7 @@ for (format in formats) {
         format.writerClassName.lastIndexOf(".") + 1
       )
       output.append(
-        "### " + writer + "\n"
+        "### <topic type=\"class\">" + writer + "</topic>\n"
       )
     }
   }

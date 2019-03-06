@@ -1,6 +1,6 @@
 #  Atoms, Bonds and Molecules
 
-The basic objects in the CDK are the <a name="tp1">`IAtom`</a>, [`IBond`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html) and
+The basic objects in the CDK are the <a name="tp1">[`IAtom`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtom.html)</a>, [`IBond`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html) and
 [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) [<a href="#citeref1">1</a>].
 The name of the latter is somewhat misleading, as it contains
 not just [`IAtom`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtom.html)s but also [`IBond`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html)s. The primary use of the model is the
@@ -17,7 +17,7 @@ formal charge is currently unknown.
 
 ## Atoms
 
-The CDK interface <a name="tp2">`IAtom`</a> is the underlying data model of atoms. Creating
+The CDK interface <a name="tp2">[`IAtom`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtom.html)</a> is the underlying data model of atoms. Creating
 a new atom is fairly easy. For example, we can create an atom of element
 type carbon, as defined by the element’s atomic number that we pass as parameter
 in the constructor:
@@ -55,7 +55,7 @@ atomic number: 6
 
 ### IElement
 
-The most common property of <a name="tp3">`IElement`</a>s are their symbol and atomic
+The most common property of <a name="tp3">[`IElement`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IElement.html)</a>s are their symbol and atomic
 number. Because the `IAtom` extends the `IElement`, CDK atoms also have
 these properties. Therefore, we can set these properties for atoms
 manually too:
@@ -165,8 +165,8 @@ crystal structure functionality.
 
 ## Bonds
 
-The <a name="tp10">`IBond`</a> interface of the CDK is an interaction between two or more
-`IAtom`s, extending the <a name="tp11">`IElectronContainer`</a> interface. While the most
+The <a name="tp10">[`IBond`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html)</a> interface of the CDK is an interaction between two or more
+`IAtom`s, extending the <a name="tp11">[`IElectronContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IElectronContainer.html)</a> interface. While the most
 common application in the CDK originates from graph theory [2], it is not
 restricted to that. That said, many algorithms implemented in the CDK
 expect a graph theory based model, where each bond connects two, and
@@ -453,6 +453,6 @@ Azulene: C10H8
 
 ## References
 
-1. <a name="citeref1"></a>Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Journal of Chemical Information and Modeling. 2003 Feb 11;43(2):493–500.  doi:[10.1021/CI025584Y](https://doi.org/10.1021/CI025584Y)
-2. <a name="citeref2"></a>Balaban AT. Applications of graph theory in chemistry. Journal of Chemical Information and Modeling. 1985 Aug 1;25(3):334–43.  doi:[10.1021/CI00047A033](https://doi.org/10.1021/CI00047A033)
+1. <a name="citeref1"></a>Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Vol. 43, Journal of Chemical Information and Modeling. 2003. p. 493–500.  doi:[10.1021/CI025584Y](https://doi.org/10.1021/CI025584Y)
+2. <a name="citeref2"></a>Balaban AT. Applications of graph theory in chemistry. Vol. 25, Journal of Chemical Information and Modeling. 1985. p. 334–43.  doi:[10.1021/CI00047A033](https://doi.org/10.1021/CI00047A033)
 

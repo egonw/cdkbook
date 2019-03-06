@@ -10,7 +10,7 @@ import org.openscience.cdk.*;
 import java.util.*;
 import java.lang.reflect.Method;
 
-output = new File("../ioclasseslist.md")
+output = new File("../ioclasseslist.i.md")
 output.text = ""
 
 classes = [ ChemFile.class, AtomContainer.class ]
@@ -56,7 +56,7 @@ for (format in formats) {
         format.readerClassName.lastIndexOf(".") + 1
       )
       output.append(
-        "### " + reader + "\n"
+        "### <topic type=\"class\">" + reader + "</topic>\n"
       )
      ioClass = Class.forName(format.readerClassName).newInstance()
      output.append("This reader supports these data objects:\n")
@@ -101,7 +101,7 @@ for (format in formats) {
         format.writerClassName.lastIndexOf(".") + 1
       )
       output.append(
-        "### " + writer + "\n"
+        "### <topic type=\"class\">" + writer + "</topic>\n"
       )
      ioClass = Class.forName(format.writerClassName).newInstance()
      output.append("This writer supports these data objects:\n")
