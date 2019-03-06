@@ -162,7 +162,7 @@ A.1 [CDK Atom Types](appatomtypes.md#cdk-atom-types) <br />
 A.2 [Sybyl Atom Types](appatomtypes.md#sybyl-atom-types) <br />
 [Appendix B](appisotopes.md) <br />
 B.1 [Isotope List](appisotopes.md) <br />
-[Appendix C][appmoldescs.md) <br />
+[Appendix C](appmoldescs.md) <br />
 C.1 [Molecular Descriptors](appmoldescs.md#molecular-descriptors) <br />
 C.2 [Atomic Descriptors](appmoldescs.md#atomic-descriptors) <br />
 C.3 [Atom-Pair Descriptors](appmoldescs.md#atom-pair-descriptors) <br />
