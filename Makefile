@@ -9,7 +9,7 @@ TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md \
   migration.md unpairedelectrons.md protein.md reaction.md \
   substructure.md missing.md atomtype.md inchi.md builders.md \
   properties.md appisotopes.md descriptor.md graph.md appmoldescs.md \
-  appfileformats.md
+  appfileformats.md ioclasseslist.md
 
 SUBDIRS := code
 
