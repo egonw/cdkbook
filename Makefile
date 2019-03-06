@@ -3,12 +3,13 @@ SOURCES := io.i.md introduction.i.md cheminfo.i.md atomsbonds.i.md index.i.md \
   migration.i.md unpairedelectrons.i.md protein.i.md reaction.i.md \
   substructure.i.md missing.i.md atomtype.i.md inchi.i.md builders.i.md \
   properties.i.md appisotopes.i.md descriptor.i.md graph.i.md \
-  appmoldescs.i.md protein.i.md
+  appmoldescs.i.md protein.i.md appfileformats.i.md
 TARGETS := io.md introduction.md cheminfo.md atomsbonds.md index.md \
   chemobject.md ctr.md stereo.md indexList.md salts.md appatomtypes.md \
   migration.md unpairedelectrons.md protein.md reaction.md \
   substructure.md missing.md atomtype.md inchi.md builders.md \
-  properties.md appisotopes.md descriptor.md graph.md appmoldescs.md
+  properties.md appisotopes.md descriptor.md graph.md appmoldescs.md \
+  appfileformats.md
 
 SUBDIRS := code
 

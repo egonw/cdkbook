@@ -25,6 +25,7 @@ IBioPolymer	org.openscience.cdk.interfaces	interfaces
 IBitFingerprint	org.openscience.cdk.fingerprint	core
 IBond	org.openscience.cdk.interfaces	interfaces
 IChemFile	org.openscience.cdk.interfaces	interfaces
+IChemFormatMatcher	org.openscience.cdk.io.formats	interfaces
 IChemObject	org.openscience.cdk.interfaces	interfaces
 IChemObjectBuilder	org.openscience.cdk.interfaces	interfaces
 ICountFingerprint	org.openscience.cdk.fingerprint	core
