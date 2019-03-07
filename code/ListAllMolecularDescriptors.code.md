@@ -5,7 +5,7 @@ import org.openscience.cdk.qsar.*;
 import org.openscience.cdk.*;
 import java.util.Arrays;
 
-output = new File("../moldescriptorlist.i.md")
+output = new File("../moldescriptorlist.md")
 output.text = ""
 qsarDescriptors = this.getClass().getClassLoader()
  .getResourceAsStream("qsar-descriptors.set").text
@@ -30,7 +30,7 @@ for (IDescriptor descriptor : instances) {
    implementationTitle.lastIndexOf('.') + 1
  )
   output.append(
-    "<tr><td><class>" + implementationTitle + "</class></td><td>"
+    "<tr><td>" + implementationTitle + "</td><td>"
   )
   descriptor.descriptorNames.each { name ->
     output.append(name + " ")
