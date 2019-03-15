@@ -86,6 +86,83 @@ But besides reading XML files correctly, the support for InputStream also allows
 reading files directly from the internet and from gzipped files (see
 Section XX.
 
+## Input Validation
+
+The history of the CDK project has seen many bug reports about problems
+which in fact turned out to be problems with in the input file. While
+the general perception seems to be that because files could be written,
+the content must be consistent.
+
+However, this is a strong misconception. There are several problems
+found in chemical files in the wild. A first common problem is that the
+file is not conform the syntax of the specification. An example here
+can be that at places where a number is expected, something else is
+given; not uncommonly, this is caused by incorrect use of whitespace.
+
+A second problem is that the file looks perfectly reasonable, but that
+the software that wrote the file used conventions and extensions that
+are not supported by the reading software. A common example is the use
+of the D and T symbols, for deuterium and tritium in MDL molfiles,
+where the specification does not allow that.
+
+A third problem is that most chemical file formats do not disallow
+incorrect chemical graphs. For example, formats often allow to
+bind an atom to itself, which will cause problems when analyzing
+this graph. These problems are much more rare, though.
+
+<section level="###" label="readingModes">Reading modes</section>
+
+The <class type="topic">IChemObjectReader</class> has a feature that allows setting
+a validating mode, which has two values:
+
+<code>ReadingModes</code>
+
+returning:
+
+<out>ReadingModes</out>
+
+The `STRICT` mode follows the exact format specification. There
+`RELAXED` mode allows for a few common extensions, such as
+the support for the T and D element types. For example, let's consider
+this file:
+
+<input>code/data/t.mol</input>
+
+If we read this file with:
+
+<code>ReadStrict</code>
+
+we get this exception:
+
+<out>ReadStrict</out>
+
+However, if we read the file in `RELAXED` mode with this code:
+
+<code>ReadRelaxed</code>
+
+the files will be read as desired:
+
+<out>ReadRelaxed</out>
+
+### Validation
+
+When a file is being read in `RELAXED` mode, it is possible to get
+error messages. This functionality is provided by the
+<class type="topic">IChemObjectReaderErrorHandler</class> support in
+<class>IChemObjectReader</class>.
+For example, we can define this custom error handler:
+
+<code>CustomErrorHandler</code>
+
+and use that when reading a file:
+
+<code>ReadErrorHandler</code>
+
+we get these warnings via the handler interface:
+
+<out>ReadErrorHandler</out>
+
+
 ## Customizing the Output
 
 An interesting feature of file IO in the CDK is that it is customizable. Before
