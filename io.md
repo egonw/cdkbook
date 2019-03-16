@@ -178,6 +178,153 @@ But besides reading XML files correctly, the support for InputStream also allows
 reading files directly from the internet and from gzipped files (see
 Section XX.
 
+## Input Validation
+
+The history of the CDK project has seen many bug reports about problems
+which in fact turned out to be problems with in the input file. While
+the general perception seems to be that because files could be written,
+the content must be consistent.
+
+However, this is a strong misconception. There are several problems
+found in chemical files in the wild. A first common problem is that the
+file is not conform the syntax of the specification. An example here
+can be that at places where a number is expected, something else is
+given; not uncommonly, this is caused by incorrect use of whitespace.
+
+A second problem is that the file looks perfectly reasonable, but that
+the software that wrote the file used conventions and extensions that
+are not supported by the reading software. A common example is the use
+of the D and T symbols, for deuterium and tritium in MDL molfiles,
+where the specification does not allow that.
+
+A third problem is that most chemical file formats do not disallow
+incorrect chemical graphs. For example, formats often allow to
+bind an atom to itself, which will cause problems when analyzing
+this graph. These problems are much more rare, though.
+
+<a name="sec:readingModes"></a>
+### Reading modes
+
+The [`IChemObjectReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/IChemObjectReader.html) has a feature that allows setting
+a validating mode, which has two values:
+
+**Script** [code/ReadingModes.groovy](code/ReadingModes.code.md)
+```groovy
+IChemObjectReader.Mode.each {
+  println it
+}
+```
+
+returning:
+
+```plain
+RELAXED
+STRICT
+```
+
+The `STRICT` mode follows the exact format specification. There
+`RELAXED` mode allows for a few common extensions, such as
+the support for the T and D element types. For example, let's consider
+this file:
+
+<input>code/data/t.mol</input>
+
+If we read this file with:
+
+**Script** [code/ReadStrict.groovy](code/ReadStrict.code.md)
+```groovy
+reader = new MDLV2000Reader(
+  new File("data/t.mol").newReader(),
+  Mode.STRICT
+);
+water = reader.read(new AtomContainer());
+println "atom count: $water.atomCount"
+```
+
+we get this exception:
+
+```plain
+invalid symbol: D
+```
+
+However, if we read the file in `RELAXED` mode with this code:
+
+**Script** [code/ReadRelaxed.groovy](code/ReadRelaxed.code.md)
+```groovy
+reader = new MDLV2000Reader(
+  new File("data/t.mol").newReader(),
+  Mode.RELAXED
+);
+water = reader.read(new AtomContainer());
+println "atom count: $water.atomCount"
+```
+
+the files will be read as desired:
+
+```plain
+atom count: 3
+```
+
+### Validation
+
+When a file is being read in `RELAXED` mode, it is possible to get
+error messages. This functionality is provided by the
+[`IChemObjectReaderErrorHandler`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/IChemObjectReaderErrorHandler.html) support in
+[`IChemObjectReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/IChemObjectReader.html).
+For example, we can define this custom error handler:
+
+**Script** [code/CustomErrorHandler.groovy](code/CustomErrorHandler.code.md)
+```groovy
+class ErrorHandler
+implements IChemObjectReaderErrorHandler {
+  public void handleError(String message) {
+    println message;
+  };
+  public void handleError(String message,
+    Exception exception)
+  {
+    println message + "\n  -> " +
+            exception.getMessage();
+  };
+  public void handleError(String message,
+    int row, int colStart, int colEnd)
+  {
+    print "location: " + row + ", " + 
+          colStart + "-" + colEnd + ": ";
+    println message;
+  };
+  public void handleError(String message,
+    int row, int colStart, int colEnd,
+    Exception exception)
+  {
+    print "location: " + row + ", " +
+          colStart + "-" + colEnd + ": "
+    println message + "\n  -> " +
+            exception.getMessage()
+  };
+}
+```
+
+and use that when reading a file:
+
+**Script** [code/ReadErrorHandler.groovy](code/ReadErrorHandler.code.md)
+```groovy
+reader = new MDLV2000Reader(
+  new File("data/t.mol").newReader(),
+  Mode.RELAXED
+);
+reader.setErrorHandler(new ErrorHandler());
+water = reader.read(new AtomContainer());
+```
+
+we get these warnings via the handler interface:
+
+```plain
+```
+
+Because of an issue in version 2.0 of the CDK, the above does not show any warnings.
+This has been fixed in CDK 2.3, see [commit 547b028e17656f54a080a885a166377320b3a8ad](https://github.com/cdk/cdk/commit/547b028e17656f54a080a885a166377320b3a8ad).
+
 ## Customizing the Output
 
 An interesting feature of file IO in the CDK is that it is customizable. Before
