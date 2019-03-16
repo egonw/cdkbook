@@ -17,5 +17,5 @@ Title: org.openscience.cdk.qsar.descriptors.mole...
 Reference: http://www.blueobelisk.org/ontologies...
   /chemoinformatics-algorithms/#tpsa
 Vendor: The Chemistry Development Kit
-Identifier: 2.0
+Identifier: 2.1.1
 ```

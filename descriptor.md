@@ -82,7 +82,7 @@ Title: org.openscience.cdk.qsar.descriptors.mole...
 Reference: http://www.blueobelisk.org/ontologies...
   /chemoinformatics-algorithms/#tpsa
 Vendor: The Chemistry Development Kit
-Identifier: 2.0
+Identifier: 2.1.1
 ```
 
 The identifier values originally referred to a String which held the
@@ -210,7 +210,7 @@ The output shows us that quite some metadata is preserved:
 
 ```plain
 Specification: org.openscience.cdk.qsar.Descript...
-  orSpecification@32b260fa
+  orSpecification@67c33749
 Parameters names: [checkAromaticity]
 Parameters values: [false]
 Exception: null

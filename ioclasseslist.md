@@ -326,7 +326,7 @@ This reader has these IO settings:
   <td>Should coordinates always be read as 3D? [Default: false]</td></tr>
 <tr>
   <td>AddStereoElements</td>
-  <td>Assign stereo configurations to stereocenters utilising 2D/3D coordinates. [Default: true]</td></tr>
+  <td>Detect and create IStereoElements for the input. [Default: true]</td></tr>
 <tr>
   <td>InterpretHydrogenIsotopes</td>
   <td>Should D and T be interpreted as hydrogen isotopes? [Default: true]</td></tr>
@@ -398,7 +398,7 @@ This reader has these IO settings:
   <td>Should coordinates always be read as 3D? [Default: false]</td></tr>
 <tr>
   <td>AddStereoElements</td>
-  <td>Assign stereo configurations to stereocenters utilising 2D/3D coordinates. [Default: true]</td></tr>
+  <td>Detect and create IStereoElements for the input. [Default: true]</td></tr>
 <tr>
   <td>InterpretHydrogenIsotopes</td>
   <td>Should D and T be interpreted as hydrogen isotopes? [Default: true]</td></tr>

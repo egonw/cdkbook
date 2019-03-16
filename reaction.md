@@ -103,6 +103,8 @@ println "Products: " + reaction.products.atomContainerCount
 From there on, we can easily extract the reaction details:
 
 ```plain
+Reactants: 1
+Products: 1
 ```
 
 ## CMLReact files

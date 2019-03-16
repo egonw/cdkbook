@@ -16,4 +16,6 @@ println "Products: " + reaction.products.atomContainerCount
 ```
 **Output:**
 ```plain
+Reactants: 1
+Products: 1
 ```
