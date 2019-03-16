@@ -162,6 +162,8 @@ we get these warnings via the handler interface:
 
 <out>ReadErrorHandler</out>
 
+Because of an issue in version 2.0 of the CDK, the above does not show any warnings.
+This has been fixed in CDK 2.3, see [commit 547b028e17656f54a080a885a166377320b3a8ad](https://github.com/cdk/cdk/commit/547b028e17656f54a080a885a166377320b3a8ad).
 
 ## Customizing the Output
 
