@@ -191,7 +191,7 @@ we see this output:
 <section level="###" label="inchiatomnumbers">InChI Atom Numbers</section>
 
 <figure caption="InChI atom numbers of oxazole (left) and benzene (right).">
-![](images/generated/RenderAdenineWithNumbers.png)
+![](images/generated/RenderAdenineWithNumbers.png) <!-- <code>RenderAdenineWithNumbers</code> -->
 ![](images/generated/InChIAtomNumbersBenzene.png)
 </figure>
 
