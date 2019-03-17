@@ -309,7 +309,7 @@ C 64
 ### InChI Atom Numbers
 
 <a name="fig:inchiAtomNumbers"></a>
-![](images/generated/RenderAdenineWithNumbers.png) ![](images/generated/RenderOxazoleWithNumbers.png) ![](images/generated/InChIAtomNumbersBenzene.png)
+![](images/generated/RenderAdenineWithNumbers.png) ![](images/generated/RenderOxazole.png) ![](images/generated/InChIAtomNumbersBenzene.png)
 <br />**Figure 13.1**: InChI atom numbers of adenine (left), oxazole (middle), and benzene (right).
 
 The <a name="tp15">InChI</a> library does not have a direct method to calculate atom numbers
