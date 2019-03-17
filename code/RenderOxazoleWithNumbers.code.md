@@ -45,6 +45,7 @@ List<IGenerator> generators = new ArrayList<IGenerator>();
 generators.add(new BasicSceneGenerator());
 generators.add(new BasicBondGenerator());
 generators.add(new BasicAtomGenerator());
+generators.add(new AtomNumberGenerator());
 // the renderer needs to have a toolkit-specific font manager
 AtomContainerRenderer renderer =
   new AtomContainerRenderer(generators, new AWTFontManager());
