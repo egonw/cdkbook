@@ -18,3 +18,7 @@ descriptor
 inchi
 ctr
 migration
+appatomtypes
+appisotopes
+appmoldescs
+appfileformats

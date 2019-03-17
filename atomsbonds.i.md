@@ -74,7 +74,7 @@ giving:
 
 <out>IsotopeGetProperties</out>
 
-Appendix B lists all isotopes defined in the CDK with a natural
+Appendix <xref>isotopes</xref> lists all isotopes defined in the CDK with a natural
 abundance of more then 0.1.
 
 

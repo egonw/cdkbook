@@ -28,8 +28,13 @@ chapterCounters = new HashMap<String,String>();
 chapterCounter = 0
 def chapterLines = new File("order.txt").readLines()
 chapterLines.each { String line ->
-  chapterCounter++
-  chapterCounters.put(line, "" + chapterCounter)
+  if (line.startsWith("app")) {
+    appendixCounter++
+    chapterCounters.put(line, (char)(64+appendixCounter))
+  } else {
+    chapterCounter++
+    chapterCounters.put(line, "" + chapterCounter)
+  }
 }
 
 figureChapters = new HashMap<String,String>();

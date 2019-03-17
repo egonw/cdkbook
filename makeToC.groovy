@@ -10,6 +10,7 @@ def chapterCounter = 0
 
 chapters = "order.txt"
 new File(chapters).eachLine { chapter ->
+  if (chapter.startsWith("app")) return;
   chapterCounter++
   file = "${chapter}.i.md"
   sectionCounter = 0

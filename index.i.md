@@ -55,3 +55,5 @@ C.2 [Atomic Descriptors](appmoldescs.i.md#atomic-descriptors) <br />
 C.3 [Atom-Pair Descriptors](appmoldescs.i.md#atom-pair-descriptors) <br />
 C.4 [Bond Descriptors](appmoldescs.i.md#bond-descriptors) <br />
 C.5 [Protein Descriptors](appmoldescs.i.md#protein-descriptors) <br />
+[Appendix D](appfileformats.i.md) <br />
+D.1 [Readers and Writers](appfileformats.i.md#the-readers-and-writers) <br />

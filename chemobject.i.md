@@ -96,7 +96,7 @@ And the method that returns an `Iterable`:
 
 And to rule them all, there is the `IChemFile`. This class represents the
 CDK concept of a chemical file. It was design to be able to hold all the chemistry
-present in an arbitraty chemical file format (see Appendix D).
+present in an arbitraty chemical file format (see Appendix <xref>fileformats</xref>).
 This is why so many readers in the CDK support reading of `IChemFile`s.
 
 Because many files contain complementary information, a `IChemFile` supports
