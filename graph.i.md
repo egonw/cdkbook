@@ -190,7 +190,7 @@ we see this output:
 
 <section level="###" label="inchiatomnumbers">InChI Atom Numbers</section>
 
-<figure caption="InChI atom numbers of oxazole (left) and benzene (right).">
+<figure label="inchiAtomNumbers" caption="InChI atom numbers of oxazole (left) and benzene (right).">
 ![](images/generated/RenderAdenineWithNumbers.png) <!-- <code>RenderAdenineWithNumbers</code> -->
 ![](images/generated/InChIAtomNumbersBenzene.png)
 </figure>
@@ -215,7 +215,7 @@ benzene to still be uniquely identified:
 
 which outputs:
 
-<code>InChIAtomNumbersBenzene</code>
+<out>InChIAtomNumbersBenzene</out>
 
 The InChI atom numbers are shown in Figure <xref>fig:inchiAtomNumbers</xref>.
 
