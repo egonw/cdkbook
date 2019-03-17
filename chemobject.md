@@ -152,7 +152,7 @@ for (model in sequence.chemModels()) {
 
 And to rule them all, there is the `IChemFile`. This class represents the
 CDK concept of a chemical file. It was design to be able to hold all the chemistry
-present in an arbitraty chemical file format (see Appendix D).
+present in an arbitraty chemical file format (see Appendix [D.1](appfileformats.md#sec:fileformats)).
 This is why so many readers in the CDK support reading of `IChemFile`s.
 
 Because many files contain complementary information, a `IChemFile` supports

@@ -308,8 +308,9 @@ C 64
 <a name="sec:inchiatomnumbers"></a>
 ### InChI Atom Numbers
 
-![](images/generated/RenderAdenineWithNumbers.png)![](images/generated/InChIAtomNumbersBenzene.png)
-<br />**Figure 13.1**: InChI atom numbers of oxazole (left) and benzene (right).
+<a name="fig:inchiAtomNumbers"></a>
+![](images/generated/RenderAdenineWithNumbers.png) ![](images/generated/RenderOxazoleWithNumbers.png) ![](images/generated/InChIAtomNumbersBenzene.png)
+<br />**Figure 13.1**: InChI atom numbers of adenine (left), oxazole (middle), and benzene (right).
 
 The <a name="tp15">InChI</a> library does not have a direct method to calculate atom numbers
 from Java, but the CDK can extract these from the auxiliary layer. These numbers
@@ -363,20 +364,13 @@ for (i in 0..(benzene.atomCount-1)) {
 
 which outputs:
 
-**Script** [code/InChIAtomNumbersBenzene.groovy](code/InChIAtomNumbersBenzene.code.md)
-```groovy
-benzene = MoleculeFactory.makeBenzene();
-long[] numbers =
-  InChINumbersTools.getNumbers(
-    benzene
-  );
-for (i in 0..(benzene.atomCount-1)) {
-  atom = benzene.getAtom(i)
-  atom.setProperty(
-    "AtomNumber",
-    "" + numbers[i]
-  )
-}
+```plain
+C 1
+C 2
+C 4
+C 6
+C 5
+C 3
 ```
 
 The InChI atom numbers are shown in Figure ??.

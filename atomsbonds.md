@@ -112,7 +112,7 @@ Natural abundance: 1.07
 Exact mass: 13.00335484
 ```
 
-Appendix B lists all isotopes defined in the CDK with a natural
+Appendix [B](appisotopes.md#sec:isotopes) lists all isotopes defined in the CDK with a natural
 abundance of more then 0.1.
 
 
