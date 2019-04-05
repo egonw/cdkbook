@@ -378,10 +378,10 @@ The InChI atom numbers are shown in Figure ??.
 ## References
 
 1. <a name="citeref1"></a>OpenEye, Smallest Set of Smallest Rings (SSSR) Considered Harmful, [http://www.eyesopen.com/docs/toolkits/current/html/OEChem\_TK-python/ring.html\#smallest-set-of-smallest-rings-sssr-considered-harmful](http://www.eyesopen.com/docs/toolkits/current/html/OEChem\_TK-python/ring.html\#smallest-set-of-smallest-rings-sssr-considered-harmful)
-2. <a name="citeref2"></a>Figueras J. Ring Perception Using Breadth-First Search. Vol. 36, Journal of Chemical Information and Modeling. 1996. p. 986–91.  doi:[10.1021/CI960013P](https://doi.org/10.1021/CI960013P)
-3. <a name="citeref3"></a>Berger F, Gritzmann P, de Vries S. Minimum Cycle Bases for Network Graphs. Vol. 40, Algorithmica. 2004. p. 51–62.  doi:[10.1007/S00453-004-1098-X](https://doi.org/10.1007/S00453-004-1098-X)
-4. <a name="citeref4"></a>Hanser Th, Jauffret Ph, Kaufmann G. A New Algorithm for Exhaustive Ring Perception in a Molecular Graph. Vol. 36, Journal of Chemical Information and Modeling. 1996. p. 1146–52.  doi:[10.1021/CI960322F](https://doi.org/10.1021/CI960322F)
-5. <a name="citeref5"></a>Floyd RW. Algorithm 97: Shortest path. Vol. 5, Communications of the ACM. 1962. p. 345.  doi:[10.1145/367766.368168](https://doi.org/10.1145/367766.368168)
-6. <a name="citeref6"></a>Morgan HL. The Generation of a Unique Machine Description for Chemical Structures-A Technique Developed at Chemical Abstracts Service. Vol. 5, Journal of Chemical Documentation. 1965. p. 107–13.  doi:[10.1021/C160017A018](https://doi.org/10.1021/C160017A018)
+2. <a name="citeref2"></a>Figueras J. Ring Perception Using Breadth-First Search. Journal of Chemical Information and Modeling. 1996 Jan 1;36(5):986–91.  doi:[10.1021/CI960013P](https://doi.org/10.1021/CI960013P)
+3. <a name="citeref3"></a>Berger F, Gritzmann P, de Vries S. Minimum Cycle Bases for Network Graphs. Algorithmica. 2004 May 28;40(1):51–62.  doi:[10.1007/S00453-004-1098-X](https://doi.org/10.1007/S00453-004-1098-X)
+4. <a name="citeref4"></a>Hanser Th, Jauffret Ph, Kaufmann G. A New Algorithm for Exhaustive Ring Perception in a Molecular Graph. Journal of Chemical Information and Modeling. 1996 Jan 1;36(6):1146–52.  doi:[10.1021/CI960322F](https://doi.org/10.1021/CI960322F)
+5. <a name="citeref5"></a>Floyd RW. Algorithm 97: Shortest path. Communications of the ACM. 1962 Jun 1;5(6):345.  doi:[10.1145/367766.368168](https://doi.org/10.1145/367766.368168)
+6. <a name="citeref6"></a>Morgan HL. The Generation of a Unique Machine Description for Chemical Structures-A Technique Developed at Chemical Abstracts Service. Journal of Chemical Documentation. 1965 Jan 1;5(2):107–13.  doi:[10.1021/C160017A018](https://doi.org/10.1021/C160017A018)
 
 

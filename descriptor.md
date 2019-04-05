@@ -113,7 +113,7 @@ The CDK descriptor API differs from other tools in that it structures descriptor
 around the algorithms that calculate them. Therefore, each descriptor returns one
 or more descriptor values. The first methods lists the descriptor value names, and
 it should be noted that those are specifically for the used <a name="tp4">parameters</a>, as we will
-see later. The default descriptor value names are listed in Appendix ??.
+see later. The default descriptor value names are listed in Appendix [C.5](appmoldescs.md#sec:moldescs:mol).
 
 The next two methods, `getParameterNames()` and `getParameterType(String name)`,
 allow us to discover which parameters a particular descriptor has, if any. For example,
@@ -128,7 +128,7 @@ descriptor.parameterNames.each { name ->
 }
 ```
 
-which tells us how we can tune the descriptor calculation (see also Section ??):
+which tells us how we can tune the descriptor calculation (see also Section [17.5](#sec:noCount)):
 
 ```plain
 elementName -> java.lang.String
@@ -180,7 +180,7 @@ java.lang.Boolean -> true
 With this information about the descriptor now clear, it is time to look at a descriptor
 value calculation. A molecular descriptor in the CDK is symbolized by the
 [`IMolecularDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/IMolecularDescriptor.html) interface, which extends the [`IDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/IDescriptor.html) interface,
-as shown in Figure [16.1](#fig:descriptorInheritance).
+as shown in Figure [17.1](#fig:descriptorInheritance).
 
 <a name="fig:descriptorInheritance"></a>
 ![](images/descriptor.png)
@@ -246,7 +246,7 @@ org.openscience.cdk.exception.CDKException: Mole...
 
 With all this context described, it is time to look at the actual calculated values. It was
 already noted that a molecular descriptor implementation in the CDK returns one or more values,
-each of which can be of a varying type. Indeed, if we look at Appendix ??
+each of which can be of a varying type. Indeed, if we look at Appendix [C.5](appmoldescs.md#sec:moldescs:mol)
 we see that some descriptors return one numerical value, while others return many values.
 It should also be noted, that depending on parameter values set, the actual number of
 calculated numbers can vary!
@@ -266,7 +266,7 @@ Calculated values: 7
 ```
 
 The [`IDescriptorResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/IDescriptorResult.html) interface is currently implemented by various classes,
-outlined in Figure [16.2](#fig:descriptorResults). Each of the classes has a slightly different
+outlined in Figure [17.2](#fig:descriptorResults). Each of the classes has a slightly different
 API to get the actual values. The [`IntegerResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/IntegerResult.html), [`DoubleResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/DoubleResult.html),
 and [`BooleanResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/BooleanResult.html) classes have the methods `intValue()`,
 `doubleValue()`, and `booleanValue()` respectively.
@@ -330,9 +330,9 @@ the case for all descriptors, but many take this approach.
 ## References
 
 1. <a name="citeref1"></a>Wikberg J, Eklund M, Willighagen E, Spjuth O, Lapins M, Engkvist O, et al. Introduction to Pharmaceutical Bioinformatics. 2018. 
-2. <a name="citeref2"></a>Steinbeck C, Hoppe C, Hoppe C, Kuhn S, Floris M, Guha R, et al. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics [Internet]. Vol. 12, Current Pharmaceutical Design. 2006. p. 2111–20. Available from: https://cdk.github.io/cdk-paper-2/ doi:[10.2174/138161206777585274](https://doi.org/10.2174/138161206777585274)
-3. <a name="citeref3"></a>Guha R, Howard MT, Hutchison GR, Murray-Rust P, Rzepa HS, Steinbeck C, et al. The Blue Obelisk-interoperability in chemical informatics. Vol. 46, Journal of Chemical Information and Modeling. 2006. p. 991–8.  doi:[10.1021/CI050400B](https://doi.org/10.1021/CI050400B)
-4. <a name="citeref4"></a>Spjuth O, Willighagen E, Guha R, Eklund M, Wikberg J. Towards interoperable and reproducible QSAR analyses: Exchange of datasets. Vol. 2, Journal of Cheminformatics. 2010. p. 5.  doi:[10.1186/1758-2946-2-5](https://doi.org/10.1186/1758-2946-2-5)
+2. <a name="citeref2"></a>Steinbeck C, Hoppe C, Hoppe C, Kuhn S, Floris M, Guha R, et al. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Current Pharmaceutical Design [Internet]. 2006 Jun 1;12(17):2111–20. Available from: https://cdk.github.io/cdk-paper-2/ doi:[10.2174/138161206777585274](https://doi.org/10.2174/138161206777585274)
+3. <a name="citeref3"></a>Guha R, Howard MT, Hutchison GR, Murray-Rust P, Rzepa HS, Steinbeck C, et al. The Blue Obelisk-interoperability in chemical informatics. Journal of Chemical Information and Modeling. 2006 Feb 22;46(3):991–8.  doi:[10.1021/CI050400B](https://doi.org/10.1021/CI050400B)
+4. <a name="citeref4"></a>Spjuth O, Willighagen E, Guha R, Eklund M, Wikberg J. Towards interoperable and reproducible QSAR analyses: Exchange of datasets. Journal of Cheminformatics. 2010 Jan 1;2(1):5.  doi:[10.1186/1758-2946-2-5](https://doi.org/10.1186/1758-2946-2-5)
 5. <a name="citeref5"></a>[https://stackoverflow.com/questions/9363550/how-to-prevent-getting-a-groovy-boolean-in-an-object-array](https://stackoverflow.com/questions/9363550/how-to-prevent-getting-a-groovy-boolean-in-an-object-array)
 
 

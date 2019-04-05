@@ -10,7 +10,7 @@ An atom type is a concept to describe certain properties of the atom. For
 example, force fields use atom types to describe geometrical and interaction
 properties of the atoms in a molecule. Within such formalism, a sp<sup>3</sup> carbon
 is a carbon with four neighbors organized in a tetrahedral coordination,
-as depicted in Figure [11.1](#fig:methane).
+as depicted in Figure [12.1](#fig:methane).
 
 <a name="fig:methane"></a>
 ![](images/methane.png)
@@ -89,7 +89,7 @@ A full list of CDK atom types is given in a table in Appendix ??.
 The CDK knows about various <a name="tp2">hybridization</a> types. Hybridizations
 are linear combinations of atomic orbitals and typically used to
 explain the orientation of atoms attached to the central atom.
-For example, Figure [11.1](#fig:methane) showed one possible
+For example, Figure [12.1](#fig:methane) showed one possible
 hybridization, sp<sup>3</sup>.
 
 The list of supported hybridization types can be listed with:
@@ -311,5 +311,5 @@ A full list of Sybyl atom types is given in a table in Appendix ??.
 
 ## References
 
-1. <a name="citeref1"></a>Clark M, Cramer RD, Van Opdenbosch N. Validation of the general purpose tripos 5.2 force field. Vol. 10, Journal of Computational Chemistry. 1989. p. 982–1012.  doi:[10.1002/JCC.540100804](https://doi.org/10.1002/JCC.540100804)
+1. <a name="citeref1"></a>Clark M, Cramer RD, Van Opdenbosch N. Validation of the general purpose tripos 5.2 force field. Journal of Computational Chemistry. 1989 Jan 1;10(8):982–1012.  doi:[10.1002/JCC.540100804](https://doi.org/10.1002/JCC.540100804)
 

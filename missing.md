@@ -210,7 +210,7 @@ fbot = new FixBondOrdersTool()
 pyrrole = fbot.kekuliseAromaticRings(pyrrole)
 ```
 
-This results in the image given in Figure [13.1](#fig:pyrrole).
+This results in the image given in Figure [14.1](#fig:pyrrole).
 
 <a name="fig:pyrrole"></a>
 ![](code/generated/FixPyrroleBondOrders)
@@ -224,7 +224,7 @@ The [`CDKHydrogenAdder`](http://cdk.github.io/cdk/latest/docs/api/org/openscienc
 hydrogens (see Section ??), but we will see how these can be
 converted into explicit hydrogens. 
 The hydrogen adding algorithm expects, however, that CDK atom
-types are already perceived (see Section [10.2](atomtype.md#sec:atomtypePerception)).
+types are already perceived (see Section [12.2](atomtype.md#sec:atomtypePerception)).
 
 <a name="sec:implicithydrogens"></a>
 ### Implicit Hydrogens
@@ -405,7 +405,7 @@ Generator addressed this gap [<a href="#citeref2">2</a>].
 
 ## References
 
-1. <a name="citeref1"></a>Rojas-Cherto M, Kasper PT, Willighagen E, Vreeken RJ, Hankemeier T, Reijmers TH. Elemental composition determination based on MSn. Vol. 27, Bioinformatics. 2011. p. 2376–83.  doi:[10.1093/BIOINFORMATICS/BTR409](https://doi.org/10.1093/BIOINFORMATICS/BTR409)
-2. <a name="citeref2"></a>Peironcely JE, Rojas-Chertó M, Fichera D, Reijmers T, Reijmers T, Coulier L, et al. OMG: Open Molecule Generator. Vol. 4, Journal of Cheminformatics. 2012. p. 21.  doi:[10.1186/1758-2946-4-21](https://doi.org/10.1186/1758-2946-4-21)
+1. <a name="citeref1"></a>Rojas-Cherto M, Kasper PT, Willighagen E, Vreeken RJ, Hankemeier T, Reijmers TH. Elemental composition determination based on MSn. Bioinformatics. 2011 Jul 14;27(17):2376–83.  doi:[10.1093/BIOINFORMATICS/BTR409](https://doi.org/10.1093/BIOINFORMATICS/BTR409)
+2. <a name="citeref2"></a>Peironcely JE, Rojas-Chertó M, Fichera D, Reijmers T, Reijmers T, Coulier L, et al. OMG: Open Molecule Generator. Journal of Cheminformatics. 2012 Sep 17;4(1):21.  doi:[10.1186/1758-2946-4-21](https://doi.org/10.1186/1758-2946-4-21)
 
 

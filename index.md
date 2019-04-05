@@ -91,9 +91,12 @@ steps forward, but it will take some time for things to iron out.
 11.1. [File Format Detection](io.md#file-format-detection) <br />
 11.1.1. [Custom format matchers](io.md#custom-format-matchers) <br />
 11.2. [Reading from Readers and InputStreams](io.md#reading-from-readers-and-inputstreams) <br />
-11.3. [Customizing the Output](io.md#customizing-the-output) <br />
-11.3.1. [Setting Properties](io.md#setting-properties) <br />
-11.4. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
+11.3. [Input Validation](io.md#input-validation) <br />
+11.3.0. [Reading modes](io.md#reading-modes) <br />
+11.3.1. [Validation](io.md#validation) <br />
+11.4. [Customizing the Output](io.md#customizing-the-output) <br />
+11.4.1. [Setting Properties](io.md#setting-properties) <br />
+11.5. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
 12. [Atom types](atomtype.md) <br />
 12.1. [The CDK atom type model](atomtype.md#the-cdk-atom-type-model) <br />
 12.1.1. [Hybridization Types](atomtype.md#hybridization-types) <br />
@@ -168,3 +171,5 @@ C.2 [Atomic Descriptors](appmoldescs.md#atomic-descriptors) <br />
 C.3 [Atom-Pair Descriptors](appmoldescs.md#atom-pair-descriptors) <br />
 C.4 [Bond Descriptors](appmoldescs.md#bond-descriptors) <br />
 C.5 [Protein Descriptors](appmoldescs.md#protein-descriptors) <br />
+[Appendix D](appfileformats.md) <br />
+D.1 [Readers and Writers](appfileformats.md#the-readers-and-writers) <br />

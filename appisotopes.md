@@ -3,7 +3,7 @@
 
 The table listed in this Appendix is generated with the following
 code, listing all six properties of CDK atom types, as outlined
-in Section [10.1](atomtype.md#sec:cdkatomtype). Abundances and exact masses are
+in Section [12.1](atomtype.md#sec:cdkatomtype). Abundances and exact masses are
 inherited from the BODR project, which contains
 values extracted from IUPAC recommendations.
 

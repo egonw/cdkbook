@@ -453,6 +453,6 @@ Azulene: C10H8
 
 ## References
 
-1. <a name="citeref1"></a>Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Vol. 43, Journal of Chemical Information and Modeling. 2003. p. 493–500.  doi:[10.1021/CI025584Y](https://doi.org/10.1021/CI025584Y)
-2. <a name="citeref2"></a>Balaban AT. Applications of graph theory in chemistry. Vol. 25, Journal of Chemical Information and Modeling. 1985. p. 334–43.  doi:[10.1021/CI00047A033](https://doi.org/10.1021/CI00047A033)
+1. <a name="citeref1"></a>Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Journal of Chemical Information and Modeling. 2003 Feb 11;43(2):493–500.  doi:[10.1021/CI025584Y](https://doi.org/10.1021/CI025584Y)
+2. <a name="citeref2"></a>Balaban AT. Applications of graph theory in chemistry. Journal of Chemical Information and Modeling. 1985 Aug 1;25(3):334–43.  doi:[10.1021/CI00047A033](https://doi.org/10.1021/CI00047A033)
 
