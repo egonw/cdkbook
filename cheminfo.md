@@ -173,6 +173,65 @@ Figure [2.2](#fig:benzene). The two diagrams show non-identical graphs, but refe
 to the same molecular compound; the only difference is that of the resonance
 structures of the phenylic ring.
 
+Organometallic compounds are excellent examples of another class of molecules that
+are difficult to represent using chemical graphs:
+they involve complex delocalized bonding systems. Ferrocene, shown in <!-- <a name="tp22">ferrocene}</a> -->
+Figure [2.3](#fig:ferrocene), is an organometallic compound where two cyclopentadienyl
+fragments are bound to the iron. No classical two electron bonds can be drawn between
+the iron and any of the carbons; instead, the two six-electron π-systems of the
+cyclopentadienyl rings that bind to the iron. In the nineties several alternative
+approaches have been suggested to address this
+problem [<a href="#citeref20">20</a>,<a href="#citeref21">21</a>,<a href="#citeref22">22</a>].
+
+<a name="fig:ferrocene"></a>
+![](images/Ferrocene-2D.png)
+<br />**Figure 2.3**: 2D diagram of ferrocene, which, like all organometallic compounds, is difficult to represent with classical chemoinformatics approaches.
+
+# Quantum Chemistry
+
+Quantum mechanics offers an alternative to chemical graphs as representation of
+molecular species. Early in the 20th century it was discovered that it can
+accurately describe chemical and physical properties of molecules.
+
+Quantum chemistry takes advantage of the knowledge that electrons are not randomly <!-- <a name="tp23">quantum chemistry</a>
+distributed around the nuclei to which they are bound. Instead, their motion can
+be accurately described by a wave model, due to the fact that any particle both
+behaves as particle as well as a wave function. Now, molecular properties, or any
+chemical or physical property in general, can be calculated
+by solving the Schrödinger equation.
+
+This leads to the exact electronic structure of the matter under study, from which
+any property can be calculated in arbitrary accuracy. After development of this
+theoretical method it was even claimed everything in chemistry was now understood;
+Dirac wrote [<a href="#citeref23">23</a>]:
+
+<ul><i>
+The underlying physical laws necessary for the mathematical theory of a large part
+of physics and the whole of chemistry are thus completely known, and the difficulty
+is only that the exact application of these laws leads to equations much too
+complicated to be soluble.
+</i></ul>
+
+Indeed, since the quantum mechanical description of matter is a function of all
+electrons and all nuclei *and* their interactions, the complexity scales
+rather unfortunately with the number of atoms `N`. Several approximations can be
+made to reduce the mathematical <a name="tp24">complexity</a>, but the calculations still
+scale as `N^4`, or even `N^8` for more precise calculations [<a href="#citeref24">24</a>]. 
+This means that the calculation for a molecule
+twice as large as ethanol, takes 16 up to 256 times as long. A small biochemically
+relevant molecule, e.g. nonane-4,6-dione, with only three times as many atoms, takes
+81 up to 6561 times as long. Nevertheless, properties of even more complex molecules can
+now be calculated within hours or days. However, for current practices, like virtual screening,
+this is practically infinitely long. When going beyond small molecules, such as
+reaction mechanisms, and protein binding, the calculations become impossible.
+
+Because neither chemical graph and quantum chemistry are practically useful for
+the much-needed prediction of physical, chemical and biological properties, 
+many other representations of molecules and molecular systems have been developed.
+The following section discusses a class of numerical representations, which are
+often based on graph or quantum chemical representations, but focused to capturing
+molecular information relevant to the data analyzed or modeled.
+
 
 ## References
 
@@ -195,4 +254,9 @@ structures of the phenylic ring.
 17. <a name="citeref17"></a>Corey EJ, Wipke WT, Cramer RD, Howe WJ. Computer-assisted synthetic analysis. Facile man-machine communication of chemical structure by interactive computer graphics. Journal of the American Chemical Society. 1972 Jan 1;94(2):421–30.  doi:[10.1021/JA00757A020](https://doi.org/10.1021/JA00757A020)
 18. <a name="citeref18"></a>Lederberg J. How DENDRAL was conceived and born. 1987 Jan 1;5–19.  doi:[10.1145/41526.41528](https://doi.org/10.1145/41526.41528)
 19. <a name="citeref19"></a>Bremser W. HOSE — a novel substructure code. Analytica Chimica Acta. 1978 Jan 1;103(4):355–65.  doi:[10.1016/S0003-2670(01)83100-7](https://doi.org/10.1016/S0003-2670(01)83100-7)
+20. <a name="citeref20"></a>Dietz A. Yet Another Representation of Molecular Structure. Journal of Chemical Information and Modeling. 1995 Sep 1;35(5):787–802.  doi:[10.1021/CI00027A001](https://doi.org/10.1021/CI00027A001)
+21. <a name="citeref21"></a>Konstantinova EV, Skorobogatov VA. Molecular Hypergraphs: The New Representation of Nonclassical Molecular Structures with Polycentric Delocalized Bonds. Journal of Chemical Information and Modeling. 1995 May 1;35(3):472–8.  doi:[10.1021/CI00025A015](https://doi.org/10.1021/CI00025A015)
+22. <a name="citeref22"></a>Bauerschmidt S, Gasteiger J. Overcoming the Limitations of a Connection Table Description: A Universal Representation of Chemical Species. Journal of Chemical Information and Modeling. 1997 Jan 1;37(4):705–14.  doi:[10.1021/CI9704423](https://doi.org/10.1021/CI9704423)
+23. <a name="citeref23"></a>Dirac PAM. Quantum Mechanics of Many-Electron Systems. Proceedings of the Royal Society A. 1929 Apr 6;123(792):714–33.  doi:[10.1098/RSPA.1929.0094](https://doi.org/10.1098/RSPA.1929.0094)
+24. <a name="citeref24"></a>Missing
 

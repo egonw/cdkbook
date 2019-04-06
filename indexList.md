@@ -29,7 +29,7 @@ CIFReader [ioclasseslist](ioclasseslist.md#tp10)<br />
 clockwise [stereo](stereo.md#tp7)<br />
 CMLReader [ioclasseslist](ioclasseslist.md#tp6)<br />
 CMLWriter [ioclasseslist](ioclasseslist.md#tp7)<br />
-complexity [cheminfo](cheminfo.md#tp11)<br />
+complexity [cheminfo](cheminfo.md#tp11) [cheminfo](cheminfo.md#tp24)<br />
 computer-aided structure elucidation [cheminfo](cheminfo.md#tp20)<br />
 conformations [stereo](stereo.md#tp2)<br />
 connected atoms [atomsbonds](atomsbonds.md#tp16)<br />
@@ -53,6 +53,7 @@ ethanol [atomsbonds](atomsbonds.md#tp12)<br />
 exception [descriptor](descriptor.md#tp5)<br />
 explicit hydrogens [missing](missing.md#tp14)<br />
 FCFP [substructure](substructure.md#tp3)<br />
+ferrocene} [cheminfo](cheminfo.md#tp22)<br />
 Figueras algorithm [graph](graph.md#tp8)<br />
 Floyd's algorithm [graph](graph.md#tp12)<br />
 force field [cheminfo](cheminfo.md#tp12)<br />
@@ -128,6 +129,7 @@ PubChem [io](io.md#tp2)<br />
 QSAR [cheminfo](cheminfo.md#tp3) [descriptor](descriptor.md#tp1)<br />
 QSPR [cheminfo](cheminfo.md#tp4)<br />
 quantum chemical descriptors [cheminfo](cheminfo.md#tp10)<br />
+quantum chemistry [cheminfo](cheminfo.md#tp23)<br />
 radical [unpairedelectrons](unpairedelectrons.md#tp5)<br />
 reactants [reaction](reaction.md#tp2)<br />
 reaction [reaction](reaction.md#tp1)<br />
