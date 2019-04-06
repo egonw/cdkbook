@@ -209,7 +209,7 @@ are found in the `cdk.graph.matrix` package.
 
 ### Adjacency matrix
 
-The `adjacency matrix` describes which atoms are connected via a covalent
+The <a name="tp11">adjacency matrix</a> describes which atoms are connected via a covalent
 bond. All matrix elements that link to bonded atoms are 1, and those matrix
 elements for disconnected atoms are 0. In mathematical terms, the adjacency matrix `A` is defined as:
 
@@ -246,7 +246,7 @@ The distance matrix describes the number of bonds on has to traverse
 to get from one atom to another. Therefore, it has zeros on the diagonal
 and non-zero values at all other locations. Matrix elements for
 neighboring atoms are 1 and others are larger. The CDK uses
-<a name="tp11">Floyd's algorithm</a> to calculate this matrix [<a href="#citeref5">5</a>],
+<a name="tp12">Floyd's algorithm</a> to calculate this matrix [<a href="#citeref5">5</a>],
 which is exposed via the [`TopologicalMatrix`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/graph/matrix/TopologicalMatrix.html) class:
 
 **Script** [code/DistanceMatrix.groovy](code/DistanceMatrix.code.md)
@@ -268,14 +268,14 @@ For the ethanoic acid used earlier, the resulting matrix looks like:
 Another important aspect of the chemical graph, is that the graph uniquely
 places atoms in the molecule. That is, the graphs allows us to uniquely
 identify, and therefore, number atoms in the molecule. This is an important
-aspect of cheminformatics, and the concept behind <a name="tp12">canonicalization</a>, such
-as used to create <a name="tp13">canonical SMILES</a>. The InChI library (see Chapter ??)
+aspect of cheminformatics, and the concept behind <a name="tp13">canonicalization</a>, such
+as used to create <a name="tp14">canonical SMILES</a>. The InChI library (see Chapter [18](inchi.md#sec:inchi))
 implements such an algorithm, and we can use it to assign unique integers to all
 atoms in a chemical graph.
 
 ### Morgan Atom Numbers
 
-Morgan published an algorithm in 1965 to assign numbers <!-- <a name="tp14">Morgan atom numbers</a> -->
+Morgan published an algorithm in 1965 to assign numbers <!-- <a name="tp15">Morgan atom numbers</a> -->
 to vertices in the chemical graph [<a href="#citeref6">6</a>].
 The algorithm does not take into account the element symbols
 associated with those vertices, and it only based on the connectivity.
@@ -312,10 +312,10 @@ C 64
 ![](images/generated/RenderAdenineWithNumbers.png) ![](images/generated/RenderOxazole.png) ![](images/generated/InChIAtomNumbersBenzene.png)
 <br />**Figure 13.1**: InChI atom numbers of adenine (left), oxazole (middle), and benzene (right).
 
-The <a name="tp15">InChI</a> library does not have a direct method to calculate atom numbers
+The <a name="tp16">InChI</a> library does not have a direct method to calculate atom numbers
 from Java, but the CDK can extract these from the auxiliary layer. These numbers
 are those listed in the bond layer, but to use these in the CDK molecule class,
-we need to mapping of the <a name="tp16">InChI atom numbers</a> This method
+we need to mapping of the <a name="tp17">InChI atom numbers</a> This method
 is made available via the [`InChINumbersTools`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/graph/invariant/InChINumbersTools.html) class:
 
 **Script** [code/InChIAtomNumbers.groovy](code/InChIAtomNumbers.code.md)

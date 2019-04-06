@@ -3,7 +3,9 @@
 
 2D coordinates [atomsbonds](atomsbonds.md#tp6) [missing](missing.md#tp15)<br />
 3D coordinates [atomsbonds](atomsbonds.md#tp7)<br />
+adjacency matrix [graph](graph.md#tp11)<br />
 anti-clockwise [stereo](stereo.md#tp8)<br />
+aromaticity [properties](properties.md#tp5)<br />
 ASN.1 [io](io.md#tp3)<br />
 atomic number [missing](missing.md#tp1)<br />
 atom types [atomtype](atomtype.md#tp1)<br />
@@ -11,8 +13,8 @@ benzene [atomsbonds](atomsbonds.md#tp13)<br />
 boiling points [cheminfo](cheminfo.md#tp2)<br />
 bond orders [missing](missing.md#tp11)<br />
 Cambridge Structural Database [cheminfo](cheminfo.md#tp18)<br />
-canonicalization [graph](graph.md#tp12)<br />
-canonical SMILES [graph](graph.md#tp13)<br />
+canonicalization [graph](graph.md#tp13)<br />
+canonical SMILES [graph](graph.md#tp14)<br />
 CAS [cheminfo](cheminfo.md#tp17)<br />
 CASE [cheminfo](cheminfo.md#tp21)<br />
 CDKOWLReader [ioclasseslist](ioclasseslist.md#tp1)<br />
@@ -52,7 +54,7 @@ exception [descriptor](descriptor.md#tp5)<br />
 explicit hydrogens [missing](missing.md#tp14)<br />
 FCFP [substructure](substructure.md#tp3)<br />
 Figueras algorithm [graph](graph.md#tp8)<br />
-Floyd's algorithm [graph](graph.md#tp11)<br />
+Floyd's algorithm [graph](graph.md#tp12)<br />
 force field [cheminfo](cheminfo.md#tp12)<br />
 GamessReader [ioclasseslist](ioclasseslist.md#tp11)<br />
 Gaussian03Reader [ioclasseslist](ioclasseslist.md#tp12)<br />
@@ -78,12 +80,13 @@ IElectronContainer [atomsbonds](atomsbonds.md#tp11) [unpairedelectrons](unpaired
 IElement [atomsbonds](atomsbonds.md#tp3)<br />
 IIsotope [atomsbonds](atomsbonds.md#tp4)<br />
 implicit hydrogens [missing](missing.md#tp13) [properties](properties.md#tp2)<br />
-InChI atom numbers [graph](graph.md#tp16)<br />
-InChI [graph](graph.md#tp15) [inchi](inchi.md#tp1)<br />
+InChI atom numbers [graph](graph.md#tp17)<br />
+InChI [graph](graph.md#tp16) [inchi](inchi.md#tp1)<br />
 INChIPlainTextReader [ioclasseslist](ioclasseslist.md#tp19)<br />
 INChIReader [ioclasseslist](ioclasseslist.md#tp20)<br />
 IUPAC name [cheminfo](cheminfo.md#tp5)<br />
 JNI-InChI [inchi](inchi.md#tp2)<br />
+line notation [io](io.md#tp7)<br />
 line notations [cheminfo](cheminfo.md#tp6)<br />
 lone pairs [unpairedelectrons](unpairedelectrons.md#tp2)<br />
 MDLReader [ioclasseslist](ioclasseslist.md#tp22)<br />
@@ -104,8 +107,9 @@ molecular mass [properties](properties.md#tp1)<br />
 molecule [atomsbonds](atomsbonds.md#tp15)<br />
 moment of inertia [descriptor](descriptor.md#tp6)<br />
 monoisotopic mass [missing](missing.md#tp9)<br />
-Morgan atom numbers [graph](graph.md#tp14)<br />
+Morgan atom numbers [graph](graph.md#tp15)<br />
 notional coordinates [atomsbonds](atomsbonds.md#tp9)<br />
+OpenSMILES [io](io.md#tp11)<br />
 parameters [descriptor](descriptor.md#tp4)<br />
 partitioning [graph](graph.md#tp2)<br />
 PCCompoundASNReader [ioclasseslist](ioclasseslist.md#tp34)<br />
@@ -139,7 +143,7 @@ sequence [protein](protein.md#tp5)<br />
 ShelXReader [ioclasseslist](ioclasseslist.md#tp39)<br />
 ShelXWriter [ioclasseslist](ioclasseslist.md#tp40)<br />
 Smallest Set of Smallest Rings [graph](graph.md#tp6)<br />
-SMILES [cheminfo](cheminfo.md#tp8) [migration](migration.md#tp1)<br />
+SMILES [cheminfo](cheminfo.md#tp8) [io](io.md#tp10) [migration](migration.md#tp1)<br />
 SMILESReader [ioclasseslist](ioclasseslist.md#tp37)<br />
 SMILESWriter [ioclasseslist](ioclasseslist.md#tp38)<br />
 spanning tree [graph](graph.md#tp3)<br />
@@ -148,6 +152,7 @@ SSSR [graph](graph.md#tp7)<br />
 Standard InChI [inchi](inchi.md#tp4) [inchi](inchi.md#tp6)<br />
 superimpose [stereo](stereo.md#tp3)<br />
 Sybyl atom type [atomtype](atomtype.md#tp3)<br />
+Sybyl Line Notation [io](io.md#tp9)<br />
 symbol [missing](missing.md#tp2)<br />
 tautomerism [inchi](inchi.md#tp3)<br />
 tetrahedral chirality [stereo](stereo.md#tp5)<br />
@@ -161,7 +166,7 @@ van der Waals radius [missing](missing.md#tp7)<br />
 VASPReader [ioclasseslist](ioclasseslist.md#tp43)<br />
 water [unpairedelectrons](unpairedelectrons.md#tp3)<br />
 wedge bonds [stereo](stereo.md#tp4)<br />
-Wiswesser Line Notation [cheminfo](cheminfo.md#tp7)<br />
+Wiswesser Line Notation [cheminfo](cheminfo.md#tp7) [io](io.md#tp8)<br />
 XYZReader [ioclasseslist](ioclasseslist.md#tp44)<br />
 XYZWriter [ioclasseslist](ioclasseslist.md#tp45)<br />
 ZMatrixReader [ioclasseslist](ioclasseslist.md#tp46)

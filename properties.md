@@ -87,6 +87,40 @@ TPSA of oxazone: 21.59
 TPSA of benzene: 0.0
 ```
 
+<a name="sec:aromaticity"></a>
+## Aromaticity
+
+I am not fond of the <a name="tp5">aromaticity</a> concept; first of all, because there is no universal definition.
+Most cheminformatics toolkits have different definitions of aromaticity, and so does the CDK.
+If a compound is aromatic, and if so, which atoms and bonds are involved in an aromatic system
+are not easily defined. Ultimately, it is the delocalization energies that has a large influence
+on this, which are hard to reproduce with heuristic rules in chemical graph theory-based
+algorithms.
+
+The CDK now implements various models, all accessible via the [`Aromaticity`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/aromaticity/Aromaticity.html) class.
+The models are parameterized: what rings are taken into account, and how many electrons do
+various atoms contribute. The combination of these two aspect explains most of the differences
+in aromaticity as calculated with various cheminformatics libraries. The CDK can calculate
+most of them by selecting the right [`ElectronDonation`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/aromaticity/ElectronDonation.html) and [`CycleFinder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/graph/CycleFinder.html):
+
+**Script** [code/AromaticityDemo.groovy](code/AromaticityDemo.code.md)
+```groovy
+model       = ElectronDonation.daylight();
+cycles      = Cycles.or(Cycles.all(), Cycles.all(6));
+aromaticity = new Aromaticity(model, cycles);
+aromaticity.apply(mol);
+notAromatic = aromaticity.findBonds(mol).isEmpty()
+println "benzene is " +
+  (notAromatic ? "not " : "") + "aromatic."
+```
+
+which tells us that
+
+```plain
+benzene is aromatic.
+```
+
+
 ## References
 
 1. <a name="citeref1"></a>Guha R, Howard MT, Hutchison GR, Murray-Rust P, Rzepa HS, Steinbeck C, et al. The Blue Obelisk-interoperability in chemical informatics. Journal of Chemical Information and Modeling. 2006 Feb 22;46(3):991–8.  doi:[10.1021/CI050400B](https://doi.org/10.1021/CI050400B)

@@ -663,8 +663,69 @@ This results in this source code:
 
 ```
 
+<a name="sec:lineNotations"></a>
+## Line Notations
+
+Another common input mechanism in cheminformatics is the <a name="tp7">line notation</a>.
+Several line notations have been proposed, including the <a name="tp8">Wiswesser Line Notation</a>
+(WLN) [<a href="#citeref3">3</a>] and the <a name="tp9">Sybyl Line Notation</a> (SLN) [<a href="#citeref4">4</a>],
+but the most popular is <a name="tp10">SMILES</a> [<a href="#citeref5">5</a>]. There is a Open Standard around
+this format called <a name="tp11">OpenSMILES</a>, available at [http://www.opensmiles.org/](http://www.opensmiles.org/).
+
+### SMILES
+
+The CDK can both read and write SMILES, or at least a significant subset of the
+line notation. You can parse a SMILES into a IAtomContainer with the
+[`SmilesParser`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/smiles/SmilesParser.html). The constructor of the parser takes an [`IChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObjectBuilder.html) (see Section [10](builders.md#sec:builders))
+because it needs to know what CDK interface implementation it must use to create
+classes. This example uses the [`DefaultChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/DefaultChemObjectBuilder.html):
+
+**Script** [code/ReadSMILES.groovy](code/ReadSMILES.code.md)
+```groovy
+sp = new SmilesParser(
+  DefaultChemObjectBuilder.getInstance()
+)
+mol = sp.parseSmiles("CC(=O)OC1=CC=CC=C1C(=O)O")
+println "Aspirin has ${mol.atomCount} atoms."
+```
+
+Telling us the number of (non-hydrogen) atoms in aspirin:
+
+```plain
+Aspirin has 13 atoms.
+```
+
+Writing of SMILES goes in a similar way. But I do like to point out that by default
+the `SMILESGenerator` does not use the convention to use lower case element
+symbols for aromatic atoms. To trigger that, you should use the
+`setUseAromaticityFlag` method:
+
+**Script** [code/WriteSMILES.groovy](code/WriteSMILES.code.md)
+```groovy
+mol = MoleculeFactory.makePhenylAmine()
+generator = SmilesGenerator.generic()
+smiles = generator.createSMILES(mol)
+println "Ph-NH2 -> $smiles"
+generator = SmilesGenerator.generic().aromatic()
+smiles = generator.createSMILES(mol)
+println "Ph-NH2 -> $smiles"
+```
+
+showing the different output without and with that option set:
+
+```plain
+Ph-NH2 -> C1(=CC=CC=C1)N
+Ph-NH2 -> c1(ccccc1)N
+```
+
+Of course, this does require that aromaticity has been perceived, as explained
+in Section ??.
+
 ## References
 
 1. <a name="citeref1"></a>Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the Worldwide Web. 1. Basic Principles. Journal of Chemical Information and Modeling. 1999 Jan 1;39(6):928–42.  doi:[10.1021/CI990052B](https://doi.org/10.1021/CI990052B)
 2. <a name="citeref2"></a>Willighagen E. Processing CML conventions in Java. Internet Journal of Chemistry [Internet]. 2001 Jan 1;4:4. Available from: https://zenodo.org/record/1495470 doi:[10.5281/zenodo.1495470](https://doi.org/10.5281/zenodo.1495470)
+3. <a name="citeref3"></a>Wiswesser WJ. How the WLN began in 1949 and how it might be in 1999. Journal of Chemical Information and Modeling. 1982 May 1;22(2):88–93.  doi:[10.1021/CI00034A005](https://doi.org/10.1021/CI00034A005)
+4. <a name="citeref4"></a>Homer RW, Swanson J, Jilek RJ, Hurst T, Clark RD. SYBYL line notation (SLN): a single notation to represent chemical structures, queries, reactions, and virtual libraries. Journal of Chemical Information and Modeling. 2008 Dec 1;48(12):2294–307.  doi:[10.1021/CI7004687](https://doi.org/10.1021/CI7004687)
+5. <a name="citeref5"></a>Weininger D. SMILES, a chemical language and information system. 1. Introduction to methodology and encoding rules. Journal of Chemical Information and Modeling [Internet]. 1988 Feb 1;28(1):31–6. Available from: http://organica1.org/seminario/weininger88.pdf doi:[10.1021/CI00057A005](https://doi.org/10.1021/CI00057A005)
 
