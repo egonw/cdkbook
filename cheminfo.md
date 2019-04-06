@@ -187,7 +187,7 @@ problem [<a href="#citeref20">20</a>,<a href="#citeref21">21</a>,<a href="#citer
 ![](images/Ferrocene-2D.png)
 <br />**Figure 2.3**: 2D diagram of ferrocene, which, like all organometallic compounds, is difficult to represent with classical chemoinformatics approaches.
 
-# Quantum Chemistry
+## Quantum Chemistry
 
 Quantum mechanics offers an alternative to chemical graphs as representation of
 molecular species. Early in the 20th century it was discovered that it can
