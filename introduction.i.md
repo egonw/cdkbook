@@ -31,12 +31,6 @@ assumes some basic computer knowledge. This book is about learning how to
 perform cheminformatics tasks using the CDK. But to keep the required
 knowledge to a minimum, the examples will be pretty verbose.
 
-Moreover, at the end of the book you can find an appendix containing a keyword
-list, where each keyword reflects some cheminformatics concept, linking to
-to matching CDK class or method that provides related functionality. As such,
-a secondary goal of this book is to serve as reference material for more
-experienced CDK developers.
-
 ## References
 
 <references/>
