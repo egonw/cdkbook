@@ -57,7 +57,7 @@ recommendations, and <a name="tp6">line notations</a> such as the
 <a name="tp7">Wiswesser Line Notation</a> [<a href="#citeref2">2</a>] and the
 <a name="tp8">SMILES</a> [<a href="#citeref3">3</a>],
 are examples for standardized conventions
-for labeling molecules (see Section ??).
+for labeling molecules (see Section [11.7](io.md#sec:lineNotations)).
 In addition, these representations do not include
 information on the 3D conformation.
 
@@ -169,7 +169,7 @@ predicting NMR spectra.
 However, while the application of graph theory in chemistry has shown to be
 quite powerful, it is unable to reflect to full chemistry that can be found in
 molecules. Consider the benzene derivative diagrams shown in
-Figure ??. The two diagrams show non-identical graphs, but refer
+Figure [2.2](#fig:benzene). The two diagrams show non-identical graphs, but refer
 to the same molecular compound; the only difference is that of the resonance
 structures of the phenylic ring.
 
