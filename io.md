@@ -227,6 +227,7 @@ The `STRICT` mode follows the exact format specification. There
 the support for the T and D element types. For example, let's consider
 this file:
 
+```plain
 
   CDK
 
@@ -238,6 +239,7 @@ this file:
   1  3  1  0  0  0  0
 M  ISO   2   2   2   3   3
 M  END
+```
 
 If we read this file with:
 
