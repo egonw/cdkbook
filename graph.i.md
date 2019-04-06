@@ -131,7 +131,7 @@ are found in the `cdk.graph.matrix` package.
 
 ### Adjacency matrix
 
-The <class>adjacency matrix</class> describes which atoms are connected via a covalent
+The <topic>adjacency matrix</topic> describes which atoms are connected via a covalent
 bond. All matrix elements that link to bonded atoms are 1, and those matrix
 elements for disconnected atoms are 0. In mathematical terms, the adjacency matrix `A` is defined as:
 
@@ -169,7 +169,7 @@ Another important aspect of the chemical graph, is that the graph uniquely
 places atoms in the molecule. That is, the graphs allows us to uniquely
 identify, and therefore, number atoms in the molecule. This is an important
 aspect of cheminformatics, and the concept behind <topic>canonicalization</topic>, such
-as used to create <topic>canonical SMILES</topic>. The InChI library (see Chapter <xref>ch:inchi</xref>)
+as used to create <topic>canonical SMILES</topic>. The InChI library (see Chapter <xref>inchi</xref>)
 implements such an algorithm, and we can use it to assign unique integers to all
 atoms in a chemical graph.
 

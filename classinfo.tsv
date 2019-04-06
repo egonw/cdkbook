@@ -6,6 +6,7 @@ AminoAcidCountDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarprot
 APolDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 AromaticAtomsCountDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 AromaticBondsCountDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
+Aromaticity	org.openscience.cdk.aromaticity	standard
 AtomContainerManipulator	org.openscience.cdk.tools.manipulator	standard
 AtomCountDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 AtomTypeManipulator	org.openscience.cdk.tools.manipulator	standard
@@ -27,6 +28,7 @@ ChiPathDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 CircularFingerprinter	org.openscience.cdk.fingerprint	fingerprint
 ConnectivityChecker	org.openscience.cdk.graph	standard
 CPSADescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
+CycleFinder	org.openscience.cdk.graph	core
 DebugChemObjectBuilder	org.openscience.cdk.debug	datadebug
 DefaultChemObjectBuilder	org.openscience.cdk	data
 DescriptorEngine	org.openscience.cdk.qsar	qsarmolecular
@@ -34,6 +36,7 @@ DescriptorValue	org.openscience.cdk.qsar	standard
 DoubleArrayResult	org.openscience.cdk.qsar.result	standard
 DoubleResult	org.openscience.cdk.qsar.result	standard
 EccentricConnectivityIndexDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
+ElectronDonation	org.openscience.cdk.aromaticity	standard
 Elements	org.openscience.cdk.config	core
 Fingerprinter	org.openscience.cdk.fingerprint	standard
 FMFDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
@@ -99,6 +102,7 @@ RotatableBondsCountDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsa
 RuleOfFiveDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 SilentChemObjectBuilder	org.openscience.cdk.silent	silent
 SmilesGenerator	org.openscience.cdk.smiles	smiles
+SmilesParser	org.openscience.cdk.smiles	smiles
 StructureDiagramGenerator	org.openscience.cdk.layout	sdg
 SybylAtomTypeMatcher	org.openscience.cdk.atomtype	atomtype
 TopologicalMatrix	org.openscience.cdk.graph.matrix	qsarmolecular

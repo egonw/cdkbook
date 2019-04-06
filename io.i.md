@@ -84,7 +84,31 @@ a file easily from a string with a `StringReader`
 
 But besides reading XML files correctly, the support for InputStream also allows
 reading files directly from the internet and from gzipped files (see
-Section XX.
+Section <xref>gzip</xref>.
+
+<section level="###" label="domoicacid">Example: Downloading Domoic Acid from PubChem</section>
+
+As an example, below will follow a small script that takes a
+<topic>PubChem</topic> compound
+identifier (CID) and downloads the corresponding <topic>ASN.1</topic> XML file, parses it and
+counts the number of atoms:
+
+<code>PubChemDownload</code>
+
+It reports:
+
+<out>PubChemDownload</out>
+
+PubChem ASN.1 files come with an extensive list of molecular properties. These
+are stored as properties on the molecule object and can be retrieved using the
+`getProperties()` method, or, using the Groovy bean formalism:
+
+<code>PubChemDownloadProperties</code>
+
+which lists the properties for the earlier downloaded domoic acid:
+
+<out>PubChemDownloadProperties</out>
+
 
 ## Input Validation
 
@@ -165,6 +189,14 @@ we get these warnings via the handler interface:
 Because of an issue in version 2.0 of the CDK, the above does not show any warnings.
 This has been fixed in CDK 2.3, see [commit 547b028e17656f54a080a885a166377320b3a8ad](https://github.com/cdk/cdk/commit/547b028e17656f54a080a885a166377320b3a8ad).
 
+<section level="##" label="gzip">Gzipped files</section>
+
+Some remote databases <topic>gzip</topic> their data files to reduce download sized.
+The Protein Brookhaven Database (<topic>PDB</topic>) is such a database. Fortunately, Java
+has a simple API to work with gzipped files, using the <class>GZIPInputStream</class>:
+
+<code>PDBCoordinateExtraction</code>
+
 ## Customizing the Output
 
 An interesting feature of file IO in the CDK is that it is customizable. Before
@@ -216,10 +248,10 @@ the `content` to the created Gaussian Input file.
 ## Example: creating unit tests for atom type perception
 
 We saw earlier an example for reading files directly from PubChem
-(see Section XX).
+(see Section <xref>domoicacid</xref>).
 This can be conveniently used to create `CDK source code`, for example,
 for use in unit tests for the atom type perception code (see
-Section XX). But because we do not want
+Section <xref>atomtypePerception</xref>). But because we do not want
 2D and 3D coordinates being set in the source code, we disable those
 options:
 
@@ -228,6 +260,42 @@ options:
 This results in this source code:
 
 <out>AtomTypeUnitTest</out>
+
+<section level="##" label="lineNotations">Line Notations</section>
+
+Another common input mechanism in cheminformatics is the <topic>line notation</topic>.
+Several line notations have been proposed, including the <topic>Wiswesser Line Notation</topic>
+(WLN) [<cite>Q29042322</cite>] and the <topic>Sybyl Line Notation</topic> (SLN) [<cite>Q30853915</cite>],
+but the most popular is <topic>SMILES</topic> [<cite>Q28090714</cite>]. There is a Open Standard around
+this format called <topic>OpenSMILES</topic>, available at [http://www.opensmiles.org/](http://www.opensmiles.org/).
+
+### SMILES
+
+The CDK can both read and write SMILES, or at least a significant subset of the
+line notation. You can parse a SMILES into a IAtomContainer with the
+<class>SmilesParser</class>. The constructor of the parser takes an <class>IChemObjectBuilder</class> (see Section <xref>builders</xref>)
+because it needs to know what CDK interface implementation it must use to create
+classes. This example uses the <class>DefaultChemObjectBuilder</class>:
+
+<code>ReadSMILES</code>
+
+Telling us the number of (non-hydrogen) atoms in aspirin:
+
+<out>ReadSMILES</out>
+
+Writing of SMILES goes in a similar way. But I do like to point out that by default
+the <class>SMILESGenerator</class> does not use the convention to use lower case element
+symbols for aromatic atoms. To trigger that, you should use the
+`setUseAromaticityFlag` method:
+
+<code>WriteSMILES</code>
+
+showing the different output without and with that option set:
+
+<out>WriteSMILES</out>
+
+Of course, this does require that aromaticity has been perceived, as explained
+in Section <xref>aromaticity</xref>.
 
 ## References
 

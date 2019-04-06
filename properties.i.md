@@ -51,6 +51,28 @@ which returns:
 
 <out>TPSA</out>
 
+<section level="##" label="aromaticity">Aromaticity</section>
+
+I am not fond of the <topic>aromaticity</topic> concept; first of all, because there is no universal definition.
+Most cheminformatics toolkits have different definitions of aromaticity, and so does the CDK.
+If a compound is aromatic, and if so, which atoms and bonds are involved in an aromatic system
+are not easily defined. Ultimately, it is the delocalization energies that has a large influence
+on this, which are hard to reproduce with heuristic rules in chemical graph theory-based
+algorithms.
+
+The CDK now implements various models, all accessible via the <class>Aromaticity</class> class.
+The models are parameterized: what rings are taken into account, and how many electrons do
+various atoms contribute. The combination of these two aspect explains most of the differences
+in aromaticity as calculated with various cheminformatics libraries. The CDK can calculate
+most of them by selecting the right <class>ElectronDonation</class> and <class>CycleFinder</class>:
+
+<code>AromaticityDemo</code>
+
+which tells us that
+
+<out>AromaticityDemo</out>
+
+
 ## References
 
 <references/>
