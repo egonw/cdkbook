@@ -169,7 +169,7 @@ predicting NMR spectra.
 However, while the application of graph theory in chemistry has shown to be
 quite powerful, it is unable to reflect to full chemistry that can be found in
 molecules. Consider the benzene derivative diagrams shown in
-Figure <xref>fig:benzene</xref>. The two diagrams show non-identical graphs, but refer
+Figure <xref>benzene</xref>. The two diagrams show non-identical graphs, but refer
 to the same molecular compound; the only difference is that of the resonance
 structures of the phenylic ring.
 
