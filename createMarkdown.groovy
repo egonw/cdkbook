@@ -26,6 +26,7 @@ bibLines.each { String line ->
 
 chapterCounters = new HashMap<String,String>();
 chapterCounter = 0
+appendixCounter = 0
 def chapterLines = new File("order.txt").readLines()
 chapterLines.each { String line ->
   if (line.startsWith("app")) {
