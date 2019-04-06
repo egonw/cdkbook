@@ -173,6 +173,65 @@ Figure <xref>benzene</xref>. The two diagrams show non-identical graphs, but ref
 to the same molecular compound; the only difference is that of the resonance
 structures of the phenylic ring.
 
+Organometallic compounds are excellent examples of another class of molecules that
+are difficult to represent using chemical graphs:
+they involve complex delocalized bonding systems. Ferrocene, shown in <!-- <topic>ferrocene}</topic> -->
+Figure <xref>ferrocene</xref>, is an organometallic compound where two cyclopentadienyl
+fragments are bound to the iron. No classical two electron bonds can be drawn between
+the iron and any of the carbons; instead, the two six-electron π-systems of the
+cyclopentadienyl rings that bind to the iron. In the nineties several alternative
+approaches have been suggested to address this
+problem [<cite>Q62926016</cite>,<cite>Q62926155</cite>,<cite>Q28837846</cite>].
+
+<figure label="ferrocene" caption="2D diagram of ferrocene, which, like all organometallic compounds, is difficult to represent with classical chemoinformatics approaches.">
+![](images/Ferrocene-2D.png) <br />
+</figure>
+
+# Quantum Chemistry
+
+Quantum mechanics offers an alternative to chemical graphs as representation of
+molecular species. Early in the 20th century it was discovered that it can
+accurately describe chemical and physical properties of molecules.
+
+Quantum chemistry takes advantage of the knowledge that electrons are not randomly <!-- <topic>quantum chemistry</topic>
+distributed around the nuclei to which they are bound. Instead, their motion can
+be accurately described by a wave model, due to the fact that any particle both
+behaves as particle as well as a wave function. Now, molecular properties, or any
+chemical or physical property in general, can be calculated
+by solving the Schrödinger equation.
+
+This leads to the exact electronic structure of the matter under study, from which
+any property can be calculated in arbitrary accuracy. After development of this
+theoretical method it was even claimed everything in chemistry was now understood;
+Dirac wrote [<cite>Q55880270</cite>]:
+
+<ul><i>
+The underlying physical laws necessary for the mathematical theory of a large part
+of physics and the whole of chemistry are thus completely known, and the difficulty
+is only that the exact application of these laws leads to equations much too
+complicated to be soluble.
+</i></ul>
+
+Indeed, since the quantum mechanical description of matter is a function of all
+electrons and all nuclei *and* their interactions, the complexity scales
+rather unfortunately with the number of atoms `N`. Several approximations can be
+made to reduce the mathematical <topic>complexity</topic>, but the calculations still
+scale as `N^4`, or even `N^8` for more precise calculations [<cite>Goodman1998</cite>]. 
+This means that the calculation for a molecule
+twice as large as ethanol, takes 16 up to 256 times as long. A small biochemically
+relevant molecule, e.g. nonane-4,6-dione, with only three times as many atoms, takes
+81 up to 6561 times as long. Nevertheless, properties of even more complex molecules can
+now be calculated within hours or days. However, for current practices, like virtual screening,
+this is practically infinitely long. When going beyond small molecules, such as
+reaction mechanisms, and protein binding, the calculations become impossible.
+
+Because neither chemical graph and quantum chemistry are practically useful for
+the much-needed prediction of physical, chemical and biological properties, 
+many other representations of molecules and molecular systems have been developed.
+The following section discusses a class of numerical representations, which are
+often based on graph or quantum chemical representations, but focused to capturing
+molecular information relevant to the data analyzed or modeled.
+
 
 ## References
 
