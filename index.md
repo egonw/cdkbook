@@ -91,12 +91,16 @@ steps forward, but it will take some time for things to iron out.
 11.1. [File Format Detection](io.md#file-format-detection) <br />
 11.1.1. [Custom format matchers](io.md#custom-format-matchers) <br />
 11.2. [Reading from Readers and InputStreams](io.md#reading-from-readers-and-inputstreams) <br />
+11.2.0. [Example: Downloading Domoic Acid from PubChem](io.md#example:-downloading-domoic-acid-from-pubchem) <br />
 11.3. [Input Validation](io.md#input-validation) <br />
 11.3.0. [Reading modes](io.md#reading-modes) <br />
 11.3.1. [Validation](io.md#validation) <br />
-11.4. [Customizing the Output](io.md#customizing-the-output) <br />
-11.4.1. [Setting Properties](io.md#setting-properties) <br />
-11.5. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
+11.4. [Gzipped files](io.md#gzipped-files) <br />
+11.5. [Customizing the Output](io.md#customizing-the-output) <br />
+11.5.1. [Setting Properties](io.md#setting-properties) <br />
+11.6. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
+11.7. [Line Notations](io.md#line-notations) <br />
+11.7.1. [SMILES](io.md#smiles) <br />
 12. [Atom types](atomtype.md) <br />
 12.1. [The CDK atom type model](atomtype.md#the-cdk-atom-type-model) <br />
 12.1.1. [Hybridization Types](atomtype.md#hybridization-types) <br />
@@ -137,6 +141,7 @@ steps forward, but it will take some time for things to iron out.
 16.1. [Molecular Mass](properties.md#molecular-mass) <br />
 16.1.1. [Implicit Hydrogens](properties.md#implicit-hydrogens) <br />
 16.2. [Total Polar Surface Area](properties.md#total-polar-surface-area) <br />
+16.3. [Aromaticity](properties.md#aromaticity) <br />
 17. [Molecular Descriptors](descriptor.md) <br />
 17.1. [Descriptors and Specifications](descriptor.md#descriptors-and-specifications) <br />
 17.1.1. [IImplementationSpecification](descriptor.md#iimplementationspecification) <br />
