@@ -6,13 +6,13 @@ Readers of this book will probably know what the
 (CDK) is: *An Open-Source Java Library for Chemo- and
 Bioinformatics* [<a href="#citeref1">1</a>]. While the CDK project was founded in
 2000, the code base originates from the groundbreaking open source
-cheminformatics work Christoph Steinbeck started in 1997 with the
+cheminformatics work [Christoph Steinbeck](https://en.wikipedia.org/wiki/Christoph_Steinbeck) started in 1997 with the
 [JChemPaint](https://jchempaint.github.io/) [<a href="#citeref2">2</a>] and CompChem projects.
 
 This book is not about those past projects, however; it is about the CDK as it is
 now. It has evolved enormously over the past 10 years, and got more and more
 functionality [<a href="#citeref3">3</a>,<a href="#citeref4">4</a>], thanx to the many contributors
-(see the Author List). Moreover, by now, the CDK has shown its
+(see the [Author List](https://github.com/cdk/cdk/blob/master/AUTHORS.txt)). Moreover, by now, the CDK has shown its
 role in many cheminformatics and bioinformatics fields, and you will find that
 this book cites many scientific papers that use the CDK.
 
@@ -31,12 +31,6 @@ you know what atoms are, how they are connected by chemical bonds, and it
 assumes some basic computer knowledge. This book is about learning how to
 perform cheminformatics tasks using the CDK. But to keep the required
 knowledge to a minimum, the examples will be pretty verbose.
-
-Moreover, at the end of the book you can find an appendix containing a keyword
-list, where each keyword reflects some cheminformatics concept, linking to
-to matching CDK class or method that provides related functionality. As such,
-a secondary goal of this book is to serve as reference material for more
-experienced CDK developers.
 
 ## References
 

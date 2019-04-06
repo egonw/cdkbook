@@ -176,7 +176,95 @@ println "Atom count: $mol.atomCount"
 
 But besides reading XML files correctly, the support for InputStream also allows
 reading files directly from the internet and from gzipped files (see
-Section XX.
+Section [11.4](#sec:gzip).
+
+<a name="sec:domoicacid"></a>
+### Example: Downloading Domoic Acid from PubChem
+
+As an example, below will follow a small script that takes a
+<a name="tp2">PubChem</a> compound
+identifier (CID) and downloads the corresponding <a name="tp3">ASN.1</a> XML file, parses it and
+counts the number of atoms:
+
+**Script** [code/PubChemDownload.groovy](code/PubChemDownload.code.md)
+```groovy
+cid = 5282253
+reader = new PCCompoundXMLReader(
+  new URL(
+    "https://pubchem.ncbi.nlm.nih.gov/summary/" +
+    "summary.cgi?cid=$cid&disopt=SaveXML"
+  ).newInputStream()
+)
+mol = reader.read(new AtomContainer())
+println "CID: " + mol.getProperty("PubChem CID")
+println "Atom count: $mol.atomCount"
+```
+
+It reports:
+
+```plain
+CID: 5282253
+Atom count: 43
+```
+
+PubChem ASN.1 files come with an extensive list of molecular properties. These
+are stored as properties on the molecule object and can be retrieved using the
+`getProperties()` method, or, using the Groovy bean formalism:
+
+**Script** [code/PubChemDownloadProperties.groovy](code/PubChemDownloadProperties.code.md)
+```groovy
+mol.properties.each {
+  line = "" + it
+  println line
+}
+```
+
+which lists the properties for the earlier downloaded domoic acid:
+
+```plain
+PubChem CID=5282253
+Compound Complexity=510
+Fingerprint (SubStructure Keys)=00000371E0723800...
+  0000000000000000000000000001600000000000000000...
+  00000000000000001E00100800000D28C18004020802C0...
+  0200880220D208000000002000000808818800080A0012...
+  00812004400004D000988003BC7F020E80000000000000...
+  000000000000000000000000000000
+IUPAC Name (Allowed)=(2~{S},3~{S},4~{S})-3-(carb...
+  oxymethyl)-4-[(1~{Z},3~{E},5~{R})-5-carboxy-1-...
+  methyl-hexa-1,3-dienyl]pyrrolidine-2-carboxyli...
+  c acid
+IUPAC Name (CAS-like Style)=(2~{S},3~{S},4~{S})-...
+  4-[(2~{Z},4~{E},6~{R})-6-carboxyhepta-2,4-dien...
+  -2-yl]-3-(carboxymethyl)-2-pyrrolidinecarboxyl...
+  ic acid
+IUPAC Name (Preferred)=(2~{S},3~{S},4~{S})-4-[(2...
+  ~{Z},4~{E},6~{R})-6-carboxyhepta-2,4-dien-2-yl...
+  ]-3-(carboxymethyl)pyrrolidine-2-carboxylic acid
+IUPAC Name (Systematic)=(2~{S},3~{S},4~{S})-3-(2...
+  -hydroxy-2-oxoethyl)-4-[(2~{Z},4~{E},6~{R})-6-...
+  methyl-7-oxidanyl-7-oxidanylidene-hepta-2,4-di...
+  en-2-yl]pyrrolidine-2-carboxylic acid
+IUPAC Name (Traditional)=(2~{S},3~{S},4~{S})-3-(...
+  carboxymethyl)-4-[(1~{Z},3~{E},5~{R})-5-carbox...
+  y-1-methyl-hexa-1,3-dienyl]proline
+InChI (Standard)=InChI=1S/C15H21NO6/c1-8(4-3-5-9...
+  (2)14(19)20)11-7-16-13(15(21)22)10(11)6-12(17)...
+  18/h3-5,9-11,13,16H,6-7H2,1-2H3,(H,17,18)(H,19...
+  ,20)(H,21,22)/b5-3+,8-4-/t9-,10+,11-,13+/m1/s1
+InChIKey (Standard)=VZFRNCSOCOPNDB-AOKDLOFSSA-N
+Log P (XLogP3-AA)=-1.3
+Mass (Exact)=311.137
+Molecular Formula=C15H21NO6
+Molecular Weight=311.334
+SMILES (Canonical)=CC(C=CC=C(C)C1CNC(C1CC(=O)O)C...
+  (=O)O)C(=O)O
+SMILES (Isomeric)=C[C@H](/C=C/C=C(/C)\textbacksl...
+  ash[C@H]1CN[C@@H]([C@H]1CC(=O)O)C(=O)O)C(=O)O
+Topological (Polar Surface Area)=124
+Weight (MonoIsotopic)=311.137
+```
+
 
 ## Input Validation
 
@@ -337,11 +425,38 @@ we get these warnings via the handler interface:
 Because of an issue in version 2.0 of the CDK, the above does not show any warnings.
 This has been fixed in CDK 2.3, see [commit 547b028e17656f54a080a885a166377320b3a8ad](https://github.com/cdk/cdk/commit/547b028e17656f54a080a885a166377320b3a8ad).
 
+<a name="sec:gzip"></a>
+## Gzipped files
+
+Some remote databases <a name="tp4">gzip</a> their data files to reduce download sized.
+The Protein Brookhaven Database (<a name="tp5">PDB</a>) is such a database. Fortunately, Java
+has a simple API to work with gzipped files, using the `GZIPInputStream`:
+
+**Script** [code/PDBCoordinateExtraction.groovy](code/PDBCoordinateExtraction.code.md)
+```groovy
+reader = new PDBReader(
+  new GZIPInputStream(
+    new URL(
+      "http://files.rcsb.org/download/1CRN.pdb.gz"
+    ).openStream()
+  )
+);
+crambin = reader.read(new ChemFile());
+for (container in
+     ChemFileManipulator.getAllAtomContainers(
+       crambin
+     )) {
+  for (atom in container.atoms()) {
+    println atom.point3d;
+  }
+}
+```
+
 ## Customizing the Output
 
 An interesting feature of file IO in the CDK is that it is customizable. Before
 I will give all the details, let's start with a simple example: creating a
-<a name="tp2">Gaussian input file</a> for optimizing the structure of methane,
+<a name="tp6">Gaussian input file</a> for optimizing the structure of methane,
 and let's start with an XYZ file, that is, with `methane.xyz`:
 
 ```
@@ -458,10 +573,10 @@ the `content` to the created Gaussian Input file.
 ## Example: creating unit tests for atom type perception
 
 We saw earlier an example for reading files directly from PubChem
-(see Section XX).
+(see Section [11.2.1](#sec:domoicacid)).
 This can be conveniently used to create `CDK source code`, for example,
 for use in unit tests for the atom type perception code (see
-Section XX). But because we do not want
+Section [12.2](atomtype.md#sec:atomtypePerception)). But because we do not want
 2D and 3D coordinates being set in the source code, we disable those
 options:
 
