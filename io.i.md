@@ -126,7 +126,7 @@ The `STRICT` mode follows the exact format specification. There
 the support for the T and D element types. For example, let's consider
 this file:
 
-<input>code/data/t.mol</input>
+<in type="verbatim">code/data/t.mol</in>
 
 If we read this file with:
 
