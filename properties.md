@@ -123,10 +123,8 @@ Furthermore, if you wish to know which bonds are aromatic, the same class can be
 
 **Script** [code/AromaticBonds.groovy](code/AromaticBonds.code.md)
 ```groovy
-model       = ElectronDonation.daylight();
-cycles      = Cycles.or(Cycles.all(), Cycles.all(6));
-aromaticity = new Aromaticity(model, cycles);
-count = aromaticity.findBonds(mol).size()
+aromaticBonds = aromaticity.findBonds(mol)
+count = aromaticBonds.size()
 println "benzene has " + count + " aromatic bonds."
 ```
 

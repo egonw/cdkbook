@@ -15,7 +15,9 @@ mol = sp.parseSmiles("c1ccccc1")
 model       = ElectronDonation.daylight();
 cycles      = Cycles.or(Cycles.all(), Cycles.all(6));
 aromaticity = new Aromaticity(model, cycles);
-count = aromaticity.findBonds(mol).size()
+
+aromaticBonds = aromaticity.findBonds(mol)
+count = aromaticBonds.size()
 println "benzene has " + count + " aromatic bonds."
 ```
 **Output:**
