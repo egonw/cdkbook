@@ -252,9 +252,6 @@ or chemical graph features, such as the fingerprint descriptor. Both of them
 have a fixed length and are numeric. Several programs are now
 available that can calculate these molecular descriptors, including Dragon,
 JOELib [<cite>Wegner2006</cite>] and the CDK [<cite>Q27061829</cite>,<cite>Q27065423</cite>].
-The next chapter gives an overview of commonly used and recently introduced
-descriptors, and discusses the use of them for molecular systems with
-intermolecular interactions are important too.
 
 <figure label="cicm" caption="While both fields aim at increasing our knowledge about chemistry, chemometrics has traditionally focused on extracting information from analytical data (darker green area), where chemoinformatics focused on structural information of molecules (blue-ish area). Molecular chemometrics (light green area) takes approaches from both to study properties of molecules and molecular systems.">
 ![](images/rodeDraad.png) <br />
