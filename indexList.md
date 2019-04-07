@@ -24,11 +24,14 @@ Chemical Abstracts Service [cheminfo](cheminfo.md#tp16)<br />
 chemical format [io](io.md#tp1)<br />
 chemical graph [cheminfo](cheminfo.md#tp14)<br />
 cheminformatics [cheminfo](cheminfo.md#tp1)<br />
+chemometrics [cheminfo](cheminfo.md#tp31)<br />
 chiral atom [stereo](stereo.md#tp6)<br />
 CIFReader [ioclasseslist](ioclasseslist.md#tp10)<br />
+classification methods [cheminfo](cheminfo.md#tp35)<br />
 clockwise [stereo](stereo.md#tp7)<br />
 CMLReader [ioclasseslist](ioclasseslist.md#tp6)<br />
 CMLWriter [ioclasseslist](ioclasseslist.md#tp7)<br />
+collinearity [cheminfo](cheminfo.md#tp33)<br />
 complexity [cheminfo](cheminfo.md#tp11) [cheminfo](cheminfo.md#tp24)<br />
 computer-aided structure elucidation [cheminfo](cheminfo.md#tp20)<br />
 conformations [stereo](stereo.md#tp2)<br />
@@ -101,7 +104,7 @@ metabolomics [missing](missing.md#tp18)<br />
 missing hydrogens [missing](missing.md#tp12)<br />
 Mol2Reader [ioclasseslist](ioclasseslist.md#tp29)<br />
 Mol2Writer [ioclasseslist](ioclasseslist.md#tp30)<br />
-molecular descriptors [descriptor](descriptor.md#tp2)<br />
+molecular descriptors [cheminfo](cheminfo.md#tp30) [descriptor](descriptor.md#tp2)<br />
 molecular fingerprints [substructure](substructure.md#tp1)<br />
 molecular formula [atomsbonds](atomsbonds.md#tp18) [missing](missing.md#tp17)<br />
 molecular mass [properties](properties.md#tp1)<br />
@@ -109,10 +112,14 @@ molecule [atomsbonds](atomsbonds.md#tp15)<br />
 moment of inertia [descriptor](descriptor.md#tp6)<br />
 monoisotopic mass [missing](missing.md#tp9)<br />
 Morgan atom numbers [graph](graph.md#tp15)<br />
+multivariate regression [cheminfo](cheminfo.md#tp34)<br />
 notional coordinates [atomsbonds](atomsbonds.md#tp9)<br />
+numerical representations [cheminfo](cheminfo.md#tp29)<br />
 OpenSMILES [io](io.md#tp11)<br />
 parameters [descriptor](descriptor.md#tp4)<br />
+partial least squares [cheminfo](cheminfo.md#tp25)<br />
 partitioning [graph](graph.md#tp2)<br />
+PCA [cheminfo](cheminfo.md#tp28)<br />
 PCCompoundASNReader [ioclasseslist](ioclasseslist.md#tp34)<br />
 PCCompoundXMLReader [ioclasseslist](ioclasseslist.md#tp35)<br />
 PCSubstanceXMLReader [ioclasseslist](ioclasseslist.md#tp36)<br />
@@ -122,7 +129,9 @@ PDBReader [ioclasseslist](ioclasseslist.md#tp32)<br />
 PDBWriter [ioclasseslist](ioclasseslist.md#tp33)<br />
 periodic table [missing](missing.md#tp3)<br />
 period [missing](missing.md#tp5)<br />
+PLS [cheminfo](cheminfo.md#tp26)<br />
 PMPReader [ioclasseslist](ioclasseslist.md#tp31)<br />
+principal component analysis [cheminfo](cheminfo.md#tp27)<br />
 products [reaction](reaction.md#tp3)<br />
 protein [protein](protein.md#tp1)<br />
 PubChem [io](io.md#tp2)<br />
@@ -152,6 +161,7 @@ spanning tree [graph](graph.md#tp3)<br />
 specification [descriptor](descriptor.md#tp3)<br />
 SSSR [graph](graph.md#tp7)<br />
 Standard InChI [inchi](inchi.md#tp4) [inchi](inchi.md#tp6)<br />
+statistical methods [cheminfo](cheminfo.md#tp32)<br />
 superimpose [stereo](stereo.md#tp3)<br />
 Sybyl atom type [atomtype](atomtype.md#tp3)<br />
 Sybyl Line Notation [io](io.md#tp9)<br />

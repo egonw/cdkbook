@@ -232,6 +232,63 @@ The following section discusses a class of numerical representations, which are
 often based on graph or quantum chemical representations, but focused to capturing
 molecular information relevant to the data analyzed or modeled.
 
+## Numerical Representations
+
+One major problem is common to chemical graph and quantum chemistry
+representations when it comes to data analysis: their length
+depends on the size of the molecular system. Most statistical modeling methods,
+like <a name="tp25">partial least squares</a> (<a name="tp26">PLS</a>) [<a href="#citeref25">25</a>,<a href="#citeref26">26</a>] and
+<a name="tp27">principal component analysis</a> (<a name="tp28">PCA</a>),
+require a fixed length representation independent of the size of the molecular
+system. Moreover, these methods expect that variables have the same meaning
+for all molecules. Additionally, many methods
+require the representation to be numerical, such as PLS; notable exceptions
+are the decision tree and random forest methods.
+
+Many <a name="tp29">numerical representations</a> for molecules, called <a name="tp30">molecular descriptors</a>, have been
+developed [<a href="#citeref27">27</a>]; examples includes descriptors which include quantum chemical
+features, such as the highest-occupied-molecular-orbital descriptor,
+or chemical graph features, such as the fingerprint descriptor. Both of them
+have a fixed length and are numeric. Several programs are now
+available that can calculate these molecular descriptors, including Dragon,
+JOELib [<a href="#citeref28">28</a>] and the CDK [<a href="#citeref29">29</a>,<a href="#citeref30">30</a>].
+The next chapter gives an overview of commonly used and recently introduced
+descriptors, and discusses the use of them for molecular systems with
+intermolecular interactions are important too.
+
+<a name="fig:cicm"></a>
+![](images/rodeDraad.png)
+<br />**Figure 2.4**: While both fields aim at increasing our knowledge about chemistry, chemometrics has traditionally focused on extracting information from analytical data (darker green area), where chemoinformatics focused on structural information of molecules (blue-ish area). Molecular chemometrics (light green area) takes approaches from both to study properties of molecules and molecular systems.
+
+## Chemometrics
+
+The use of these uniform-length representations has the advantage that the broad
+range of multivariate, statistical methods used in <a name="tp31">chemometrics</a> can be applied.
+Chemometrics is traditionally described as *the application of
+mathematical and statistical methods to chemical measurements.* [<a href="#citeref31">31</a>].
+Typical topics in chemometrics, therefore, are (multivariate) calibration, signal
+processing, experimental designs, statistics, and pattern recognition [<a href="#citeref32">32</a>].
+Data mining and modeling of analytical data has led to a rich field, where mathematical
+and <a name="tp32">statistical methods</a> are used to analyze the chemical data. The nature of the analytical data,
+however, such as the high <a name="tp33">collinearity</a> in NIR and IR spectra, has led to
+extensive study of <a name="tp34">multivariate regression</a> and <a name="tp35">classification methods</a>.
+These chemometrical methods turn out to have great value when used with numerical
+representations of molecular systems.
+
+While chemometrics focuses on the statistical analysis of mostly multivariate
+chemical data, chemoinformatics generally uses the chemical graph as principal
+representation of molecular data. The previous section has shown that both
+complement each other when dealing with the understanding and prediction
+of properties of molecular systems (see Figure [2.4](#fig:cicm)).
+Bridging the gap between representation of molecular structures or systems
+composed of molecular structures, and statistical and data mining methods, has
+shown to be an interesting area of research [<a href="#citeref33">33</a>,<a href="#citeref34">34</a>,<a href="#citeref35">35</a>].
+
+A growing number of studies, however, use methodologies from both fields to
+study relationships between molecular and intermolecular information and
+properties of those systems. This book focuses on how the Chemistry Development
+Kit supports this multidisciplenaire research.
+
 
 ## References
 
@@ -258,5 +315,16 @@ molecular information relevant to the data analyzed or modeled.
 21. <a name="citeref21"></a>Konstantinova EV, Skorobogatov VA. Molecular Hypergraphs: The New Representation of Nonclassical Molecular Structures with Polycentric Delocalized Bonds. Journal of Chemical Information and Modeling. 1995 May 1;35(3):472–8.  doi:[10.1021/CI00025A015](https://doi.org/10.1021/CI00025A015)
 22. <a name="citeref22"></a>Bauerschmidt S, Gasteiger J. Overcoming the Limitations of a Connection Table Description: A Universal Representation of Chemical Species. Journal of Chemical Information and Modeling. 1997 Jan 1;37(4):705–14.  doi:[10.1021/CI9704423](https://doi.org/10.1021/CI9704423)
 23. <a name="citeref23"></a>Dirac PAM. Quantum Mechanics of Many-Electron Systems. Proceedings of the Royal Society A. 1929 Apr 6;123(792):714–33.  doi:[10.1098/RSPA.1929.0094](https://doi.org/10.1098/RSPA.1929.0094)
-24. <a name="citeref24"></a>Missing
+24. <a name="citeref24"></a>Goodman JM. Chemical Applications of Molecular Modeling. Royal Society of Chemistry; 2002. 
+25. <a name="citeref25"></a>Geladi P, Kowalski BR. Partial least-squares regression: a tutorial. Analytica Chimica Acta. 1986 Jan 1;185:1–17.  doi:[10.1016/0003-2670(86)80028-9](https://doi.org/10.1016/0003-2670(86)80028-9)
+26. <a name="citeref26"></a>de Jong S. SIMPLS: An alternative approach to partial least squares regression. Chemometrics and Intelligent Laboratory Systems. 1993 Jan 1;18(3):251–63.  doi:[10.1016/0169-7439(93)85002-X](https://doi.org/10.1016/0169-7439(93)85002-X)
+27. <a name="citeref27"></a>Todeschini R, Consonni V. Handbook of Molecular Descriptors. 2000.  doi:[10.1002/9783527613106](https://doi.org/10.1002/9783527613106)
+28. <a name="citeref28"></a>J. K. Wegner, PhD thesis, Eberhard-Karls-Universität Tübingen, Tübingen, Germany, 2006
+29. <a name="citeref29"></a>Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Journal of Chemical Information and Modeling. 2003 Feb 11;43(2):493–500.  doi:[10.1021/CI025584Y](https://doi.org/10.1021/CI025584Y)
+30. <a name="citeref30"></a>Steinbeck C, Hoppe C, Hoppe C, Kuhn S, Floris M, Guha R, et al. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Current Pharmaceutical Design [Internet]. 2006 Jun 1;12(17):2111–20. Available from: https://cdk.github.io/cdk-paper-2/ doi:[10.2174/138161206777585274](https://doi.org/10.2174/138161206777585274)
+31. <a name="citeref31"></a>Kowalski BR. Chemometrics. Analytical Chemistry. 1980 Jan 1;52(5):112–22.  doi:[10.1021/AC50055A016](https://doi.org/10.1021/AC50055A016)
+32. <a name="citeref32"></a>Lavine BK. Chemometrics. Analytical Chemistry. 2000 Jan 1;72(12):91–8.  doi:[10.1021/A1000016X](https://doi.org/10.1021/A1000016X)
+33. <a name="citeref33"></a>Buydens LMC, Reijmers TH, Beckers MLM, Wehrens R. Molecular data-mining: a challenge for chemometrics. Chemometrics and Intelligent Laboratory Systems. 1999 Jan 1;49(2):121–33.  doi:[10.1016/S0169-7439(99)00039-8](https://doi.org/10.1016/S0169-7439(99)00039-8)
+34. <a name="citeref34"></a>Wehrens R, Gelder R de, Kemperman GJ, Zwanenburg B, Buydens LMC. Molecular challenges in modern chemometrics. Analytica Chimica Acta. 1999 Jan 1;400(1–3):413–24.  doi:[10.1016/S0003-2670(99)00621-2](https://doi.org/10.1016/S0003-2670(99)00621-2)
+35. <a name="citeref35"></a>Willighagen E, Wehrens R, Buydens L. Molecular Chemometrics. Critical Reviews in Analytical Chemistry. 2006 Jan 1;36(3–4):189–98.  doi:[10.1080/10408340600969601](https://doi.org/10.1080/10408340600969601)
 
