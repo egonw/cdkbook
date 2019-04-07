@@ -14,7 +14,6 @@ model       = ElectronDonation.daylight();
 cycles      = Cycles.or(Cycles.all(), Cycles.all(6));
 aromaticity = new Aromaticity(model, cycles);
 
-aromaticity.apply(mol);
-notAromatic = aromaticity.findBonds(mol).isEmpty()
+aromatic = aromaticity.apply(mol);
 println "benzene is " +
-  (notAromatic ? "not " : "") + "aromatic."
+  (aromatic ? "" : "not ") + "aromatic."

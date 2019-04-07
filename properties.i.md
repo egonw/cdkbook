@@ -72,6 +72,14 @@ which tells us that
 
 <out>AromaticityDemo</out>
 
+Furthermore, if you wish to know which bonds are aromatic, the same class can be used:
+
+<code>AromaticBonds</code>
+
+which reports the aromatic bonds:
+
+<out>AromaticBonds</out>
+
 
 ## References
 
