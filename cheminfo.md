@@ -2,7 +2,7 @@
 # Cheminformatics
 
 *Note: this chapter is an evolved version of a chapter of [my PhD
-thesis](https://tools.wmflabs.org/scholia/work/Q25713029).*
+thesis](https://tools.wmflabs.org/scholia/work/Q25713029) [<a href="#citeref1">1</a>]. *
 
 While the purpose of this book is not to educate in <a name="tp1">cheminformatics</a> (see Chapter [1](introduction.md#sec:intro)),
 this chapter provides minimal information about the representation of molecules and molecular systems.
@@ -16,7 +16,7 @@ Many different representations have been developed, each capturing different
 bits of information about the molecular system under study. Unfortunately,
 in many cases it is unclear which part of the information is essential for a
 certain application. For example, although the <a name="tp2">boiling points</a> correlates well
-with the number of carbon atoms in a homologous series of alkanes [<a href="#citeref1">1</a>]
+with the number of carbon atoms in a homologous series of alkanes [<a href="#citeref2">2</a>]
 (see Figure [2.1](#fig:bp:alkanes)), the
 carbon count descriptor is not generally useful for
 predicting other properties, or even the same property for a more diverse set
@@ -54,8 +54,8 @@ name and the 2D drawing of the molecule. They identify the molecule of interest,
 but cannot be used for machine processing. To prevent ambiguities,
 conventions describing how molecules should be named and drawn are needed. <a name="tp5">IUPAC name</a>
 recommendations, and <a name="tp6">line notations</a> such as the
-<a name="tp7">Wiswesser Line Notation</a> [<a href="#citeref2">2</a>] and the
-<a name="tp8">SMILES</a> [<a href="#citeref3">3</a>],
+<a name="tp7">Wiswesser Line Notation</a> [<a href="#citeref3">3</a>] and the
+<a name="tp8">SMILES</a> [<a href="#citeref4">4</a>],
 are examples for standardized conventions
 for labeling molecules (see Section [11.7](io.md#sec:lineNotations)).
 In addition, these representations do not include
@@ -109,11 +109,11 @@ molecules are atoms held together by bonds, and certain atom groups (functional
 groups) give rise to certain molecular properties. For example, an acid group
 reduces the pK<sub>a</sub> of the molecule and makes the molecule react with an amine.
 Searching a functional group in a molecule corresponds to finding a
-subgraph in the chemical graph [<a href="#citeref4">4</a>,<a href="#citeref5">5</a>],
+subgraph in the chemical graph [<a href="#citeref5">5</a>,<a href="#citeref6">6</a>],
 when the molecule is considered a graph where atoms are vertices and bond edges.
 
 The <a name="tp14">chemical graph</a> also allows the use of canonization methods, such as the Morgan
-algorithm [<a href="#citeref6">6</a>]. Using these methods, line notations can be developed which are unique
+algorithm [<a href="#citeref7">7</a>]. Using these methods, line notations can be developed which are unique
 for a molecule, making the look-up of molecular structures in databases much
 easier. The Wiswesser Line Notation is one of such  notations, but nowadays the
 SMILES line notation is most used. However, the canonization algorithm used to
@@ -127,9 +127,9 @@ as unique molecular identifier.
 The use of these line notations and the substructure searching has allowed setting
 up <a name="tp15">databases</a> with molecular structures and their properties. For example,
 the PDB database contains crystal structures of
-proteins, nucleic acids and their complexes with ligands [<a href="#citeref7">7</a>].
-Other databases contain physical properties [<a href="#citeref8">8</a>[, <sup>13</sup>C and <sup>1</sup>H
-NMR [<a href="#citeref9">9</a>], and IR spectra [<a href="#citeref10">10</a>].
+proteins, nucleic acids and their complexes with ligands [<a href="#citeref8">8</a>].
+Other databases contain physical properties [<a href="#citeref9">9</a>[, <sup>13</sup>C and <sup>1</sup>H
+NMR [<a href="#citeref10">10</a>], and IR spectra [<a href="#citeref11">11</a>].
 The <a name="tp16">Chemical Abstracts Service</a> (<a name="tp17">CAS</a>) maintains a substance database with millions of chemical
 substances extracted from literature. In 2008 this number increased by about
 4000 entries each year. However, only for a fraction of these compounds more
@@ -137,32 +137,32 @@ information is available in other
 curated databases. For example, the <a name="tp18">Cambridge Structural Database</a>
 (<a name="tp19">CSD</a>) had 400 thousand registered compounds (~1.3%) with associated crystal
 structures in 2008, and that number increases by only
-30 thousand structures each year [<a href="#citeref11">11</a>]. Moreover, the
+30 thousand structures each year [<a href="#citeref12">12</a>]. Moreover, the
 increase in information in literature is estimated at even 1~million new compounds
-per year from more than 700 thousand articles in chemistry-related literature [<a href="#citeref12">12</a>].
+per year from more than 700 thousand articles in chemistry-related literature [<a href="#citeref13">13</a>].
 In addition to these proprietary databases, open-access databases have emerged,
-such as PubChem [<a href="#citeref13">13</a>] and ZINC [<a href="#citeref14">14</a>].
+such as PubChem [<a href="#citeref14">14</a>] and ZINC [<a href="#citeref15">15</a>].
 
 These chemical graph-based databases have found many applications, such as systems for synthesis
 planning, where reactions are represented as changes in
-the molecular graph when going from reactant to the product side [<a href="#citeref15">15</a>].
+the molecular graph when going from reactant to the product side [<a href="#citeref16">16</a>].
 An example of
-such a tool is the Organic Chemical Simulation of Syntheses (OCSS) [<a href="#citeref16">16</a>],
+such a tool is the Organic Chemical Simulation of Syntheses (OCSS) [<a href="#citeref17">17</a>],
 which mimics the process of retro-synthetic synthesis planning. This has led to a number of
 computer-assisted synthesis design (CASD) systems, such as the LHASA system,
 noteworthy because it used a large knowledge base extracted from
-literature [<a href="#citeref17">17</a>].
+literature [<a href="#citeref18">18</a>].
 
 Another important application of chemical graphs is the use in structure
 generation, which fulfills a crucial role in <a name="tp20">computer-aided structure elucidation</a> (<a name="tp21">CASE</a>).
 DENDRAL is an example CASE system that elucidated molecular structures using
-mass spectra [<a href="#citeref18">18</a>].  It derived graph constraints from the input
+mass spectra [<a href="#citeref19">19</a>].  It derived graph constraints from the input
 spectrum and the molecular formula, and then generated possible
 structures, each of which was evaluated by comparing a predicted spectrum with
 the experimental one. The best spectral match was proposed as elucidated structure.
 The same approach is used for NMR-based CASE, where, in addition to the structure
 generation, graph theory is used to describe molecular fragments using alphanumeric
-codes, of which the HOSE code [<a href="#citeref19">19</a>] is still widely used. Correlation
+codes, of which the HOSE code [<a href="#citeref20">20</a>] is still widely used. Correlation
 of these codes with chemical shifts provides a cheap but effective method for
 predicting NMR spectra.
 
@@ -181,7 +181,7 @@ fragments are bound to the iron. No classical two electron bonds can be drawn be
 the iron and any of the carbons; instead, the two six-electron π-systems of the
 cyclopentadienyl rings that bind to the iron. In the nineties several alternative
 approaches have been suggested to address this
-problem [<a href="#citeref20">20</a>,<a href="#citeref21">21</a>,<a href="#citeref22">22</a>].
+problem [<a href="#citeref21">21</a>,<a href="#citeref22">22</a>,<a href="#citeref23">23</a>].
 
 <a name="fig:ferrocene"></a>
 ![](images/Ferrocene-2D.png)
@@ -203,7 +203,7 @@ by solving the Schrödinger equation.
 This leads to the exact electronic structure of the matter under study, from which
 any property can be calculated in arbitrary accuracy. After development of this
 theoretical method it was even claimed everything in chemistry was now understood;
-Dirac wrote [<a href="#citeref23">23</a>]:
+Dirac wrote [<a href="#citeref24">24</a>]:
 
 <ul><i>
 The underlying physical laws necessary for the mathematical theory of a large part
@@ -216,7 +216,7 @@ Indeed, since the quantum mechanical description of matter is a function of all
 electrons and all nuclei *and* their interactions, the complexity scales
 rather unfortunately with the number of atoms `N`. Several approximations can be
 made to reduce the mathematical <a name="tp24">complexity</a>, but the calculations still
-scale as `N^4`, or even `N^8` for more precise calculations [<a href="#citeref24">24</a>]. 
+scale as `N^4`, or even `N^8` for more precise calculations [<a href="#citeref25">25</a>]. 
 This means that the calculation for a molecule
 twice as large as ethanol, takes 16 up to 256 times as long. A small biochemically
 relevant molecule, e.g. nonane-4,6-dione, with only three times as many atoms, takes
@@ -237,7 +237,7 @@ molecular information relevant to the data analyzed or modeled.
 One major problem is common to chemical graph and quantum chemistry
 representations when it comes to data analysis: their length
 depends on the size of the molecular system. Most statistical modeling methods,
-like <a name="tp25">partial least squares</a> (<a name="tp26">PLS</a>) [<a href="#citeref25">25</a>,<a href="#citeref26">26</a>] and
+like <a name="tp25">partial least squares</a> (<a name="tp26">PLS</a>) [<a href="#citeref26">26</a>,<a href="#citeref27">27</a>] and
 <a name="tp27">principal component analysis</a> (<a name="tp28">PCA</a>),
 require a fixed length representation independent of the size of the molecular
 system. Moreover, these methods expect that variables have the same meaning
@@ -246,15 +246,12 @@ require the representation to be numerical, such as PLS; notable exceptions
 are the decision tree and random forest methods.
 
 Many <a name="tp29">numerical representations</a> for molecules, called <a name="tp30">molecular descriptors</a>, have been
-developed [<a href="#citeref27">27</a>]; examples includes descriptors which include quantum chemical
+developed [<a href="#citeref28">28</a>]; examples includes descriptors which include quantum chemical
 features, such as the highest-occupied-molecular-orbital descriptor,
 or chemical graph features, such as the fingerprint descriptor. Both of them
 have a fixed length and are numeric. Several programs are now
 available that can calculate these molecular descriptors, including Dragon,
-JOELib [<a href="#citeref28">28</a>] and the CDK [<a href="#citeref29">29</a>,<a href="#citeref30">30</a>].
-The next chapter gives an overview of commonly used and recently introduced
-descriptors, and discusses the use of them for molecular systems with
-intermolecular interactions are important too.
+JOELib [<a href="#citeref29">29</a>] and the CDK [<a href="#citeref30">30</a>,<a href="#citeref31">31</a>].
 
 <a name="fig:cicm"></a>
 ![](images/rodeDraad.png)
@@ -265,9 +262,9 @@ intermolecular interactions are important too.
 The use of these uniform-length representations has the advantage that the broad
 range of multivariate, statistical methods used in <a name="tp31">chemometrics</a> can be applied.
 Chemometrics is traditionally described as *the application of
-mathematical and statistical methods to chemical measurements.* [<a href="#citeref31">31</a>].
+mathematical and statistical methods to chemical measurements.* [<a href="#citeref32">32</a>].
 Typical topics in chemometrics, therefore, are (multivariate) calibration, signal
-processing, experimental designs, statistics, and pattern recognition [<a href="#citeref32">32</a>].
+processing, experimental designs, statistics, and pattern recognition [<a href="#citeref33">33</a>].
 Data mining and modeling of analytical data has led to a rich field, where mathematical
 and <a name="tp32">statistical methods</a> are used to analyze the chemical data. The nature of the analytical data,
 however, such as the high <a name="tp33">collinearity</a> in NIR and IR spectra, has led to
@@ -282,7 +279,7 @@ complement each other when dealing with the understanding and prediction
 of properties of molecular systems (see Figure [2.4](#fig:cicm)).
 Bridging the gap between representation of molecular structures or systems
 composed of molecular structures, and statistical and data mining methods, has
-shown to be an interesting area of research [<a href="#citeref33">33</a>,<a href="#citeref34">34</a>,<a href="#citeref35">35</a>].
+shown to be an interesting area of research [<a href="#citeref34">34</a>,<a href="#citeref35">35</a>,<a href="#citeref36">36</a>].
 
 A growing number of studies, however, use methodologies from both fields to
 study relationships between molecular and intermolecular information and
@@ -292,39 +289,40 @@ Kit supports this multidisciplenaire research.
 
 ## References
 
-1. <a name="citeref1"></a>Wiener H. Correlation of Heats of Isomerization, and Differences in Heats of Vaporization of Isomers, Among the Paraffin Hydrocarbons. Journal of the American Chemical Society. 1947 Jan 1;69(11):2636–8.  doi:[10.1021/JA01203A022](https://doi.org/10.1021/JA01203A022)
-2. <a name="citeref2"></a>Wiswesser WJ. How the WLN began in 1949 and how it might be in 1999. Journal of Chemical Information and Modeling. 1982 May 1;22(2):88–93.  doi:[10.1021/CI00034A005](https://doi.org/10.1021/CI00034A005)
-3. <a name="citeref3"></a>Weininger D. SMILES, a chemical language and information system. 1. Introduction to methodology and encoding rules. Journal of Chemical Information and Modeling [Internet]. 1988 Feb 1;28(1):31–6. Available from: http://organica1.org/seminario/weininger88.pdf doi:[10.1021/CI00057A005](https://doi.org/10.1021/CI00057A005)
-4. <a name="citeref4"></a>LC R, RA K. Finding Chemical Records by Digital Computers. Science. 1957 Oct 1;126(3278):814–9.  doi:[10.1126/SCIENCE.126.3278.814](https://doi.org/10.1126/SCIENCE.126.3278.814)
-5. <a name="citeref5"></a>Ullmann JR. An Algorithm for Subgraph Isomorphism. Journal of the ACM. 1976 Jan 1;23(1):31–42.  doi:[10.1145/321921.321925](https://doi.org/10.1145/321921.321925)
-6. <a name="citeref6"></a>Morgan HL. The Generation of a Unique Machine Description for Chemical Structures-A Technique Developed at Chemical Abstracts Service. Journal of Chemical Documentation. 1965 Jan 1;5(2):107–13.  doi:[10.1021/C160017A018](https://doi.org/10.1021/C160017A018)
-7. <a name="citeref7"></a>Berman HM, Henrick K, Nakamura H. Announcing the worldwide Protein Data Bank. Nature structural biology. 2003 Jan 1;10(12):980.  doi:[10.1038/NSB1203-980](https://doi.org/10.1038/NSB1203-980)
-8. <a name="citeref8"></a>Linstrom JL, Mallard WG. NIST Chemistry WebBook; NIST Standard Reference Database No. 69, Gaithersburg MD, 2001
-9. <a name="citeref9"></a>Steinbeck C, Kuhn S. NMRShiftDB – compound identification and structure elucidation support through a free community-built web database. Phytochemistry. 2004 Jan 1;65(19):2711–7.  doi:[10.1016/J.PHYTOCHEM.2004.08.027](https://doi.org/10.1016/J.PHYTOCHEM.2004.08.027)
-10. <a name="citeref10"></a>YAMAMOTO O, SOMENO K, WASADA N, HIRAISHI J, HAYAMIZU K, TANABE K, et al. An integrated spectral data base system including IR, MS, 1H-NMR, 13C-NMR, ESR and Raman spectra. Analytical Sciences. 1988 Jan 1;4(3):233–9.  doi:[10.2116/ANALSCI.4.233](https://doi.org/10.2116/ANALSCI.4.233)
-11. <a name="citeref11"></a>Allen FH, FH A. The Cambridge Structural Database: a quarter of a million crystal structures and rising. Acta Crystallographica Section B: Structural Science. 2002 May 29;58(3):380–8.  doi:[10.1107/S0108768102003890](https://doi.org/10.1107/S0108768102003890)
-12. <a name="citeref12"></a>Engel T. Basic overview of chemoinformatics. Journal of Chemical Information and Modeling. 2006 Nov 1;46(6):2267–77.  doi:[10.1021/CI600234Z](https://doi.org/10.1021/CI600234Z)
-13. <a name="citeref13"></a>Austin CP, Brady LS, Insel TR, Collins F. NIH Molecular Libraries Initiative. Science. 2004 Nov 1;306(5699):1138–9.  doi:[10.1126/SCIENCE.1105511](https://doi.org/10.1126/SCIENCE.1105511)
-14. <a name="citeref14"></a>Irwin JJ, Shoichet BK. ZINC--a free database of commercially available compounds for virtual screening. Journal of Chemical Information and Modeling. 2005 Jan 1;45(1):177–82.  doi:[10.1021/CI049714+](https://doi.org/10.1021/CI049714+)
-15. <a name="citeref15"></a>Blair J, Gasteiger J, Gillespie C, Gillespie PD, Ugi I. Representation of the constitutional and stereochemical features of chemical systems in the computer assisted design of syntheses. Tetrahedron. 1974 Jan 1;30(13):1845–59.  doi:[10.1016/S0040-4020(01)97318-1](https://doi.org/10.1016/S0040-4020(01)97318-1)
-16. <a name="citeref16"></a>Corey EJ, Wipke WT. Computer-Assisted Design of Complex Organic Syntheses. Science. 1969 Oct 10;166(3902):178–92.  doi:[10.1126/SCIENCE.166.3902.178](https://doi.org/10.1126/SCIENCE.166.3902.178)
-17. <a name="citeref17"></a>Corey EJ, Wipke WT, Cramer RD, Howe WJ. Computer-assisted synthetic analysis. Facile man-machine communication of chemical structure by interactive computer graphics. Journal of the American Chemical Society. 1972 Jan 1;94(2):421–30.  doi:[10.1021/JA00757A020](https://doi.org/10.1021/JA00757A020)
-18. <a name="citeref18"></a>Lederberg J. How DENDRAL was conceived and born. 1987 Jan 1;5–19.  doi:[10.1145/41526.41528](https://doi.org/10.1145/41526.41528)
-19. <a name="citeref19"></a>Bremser W. HOSE — a novel substructure code. Analytica Chimica Acta. 1978 Jan 1;103(4):355–65.  doi:[10.1016/S0003-2670(01)83100-7](https://doi.org/10.1016/S0003-2670(01)83100-7)
-20. <a name="citeref20"></a>Dietz A. Yet Another Representation of Molecular Structure. Journal of Chemical Information and Modeling. 1995 Sep 1;35(5):787–802.  doi:[10.1021/CI00027A001](https://doi.org/10.1021/CI00027A001)
-21. <a name="citeref21"></a>Konstantinova EV, Skorobogatov VA. Molecular Hypergraphs: The New Representation of Nonclassical Molecular Structures with Polycentric Delocalized Bonds. Journal of Chemical Information and Modeling. 1995 May 1;35(3):472–8.  doi:[10.1021/CI00025A015](https://doi.org/10.1021/CI00025A015)
-22. <a name="citeref22"></a>Bauerschmidt S, Gasteiger J. Overcoming the Limitations of a Connection Table Description: A Universal Representation of Chemical Species. Journal of Chemical Information and Modeling. 1997 Jan 1;37(4):705–14.  doi:[10.1021/CI9704423](https://doi.org/10.1021/CI9704423)
-23. <a name="citeref23"></a>Dirac PAM. Quantum Mechanics of Many-Electron Systems. Proceedings of the Royal Society A. 1929 Apr 6;123(792):714–33.  doi:[10.1098/RSPA.1929.0094](https://doi.org/10.1098/RSPA.1929.0094)
-24. <a name="citeref24"></a>Goodman JM. Chemical Applications of Molecular Modeling. Royal Society of Chemistry; 2002. 
-25. <a name="citeref25"></a>Geladi P, Kowalski BR. Partial least-squares regression: a tutorial. Analytica Chimica Acta. 1986 Jan 1;185:1–17.  doi:[10.1016/0003-2670(86)80028-9](https://doi.org/10.1016/0003-2670(86)80028-9)
-26. <a name="citeref26"></a>de Jong S. SIMPLS: An alternative approach to partial least squares regression. Chemometrics and Intelligent Laboratory Systems. 1993 Jan 1;18(3):251–63.  doi:[10.1016/0169-7439(93)85002-X](https://doi.org/10.1016/0169-7439(93)85002-X)
-27. <a name="citeref27"></a>Todeschini R, Consonni V. Handbook of Molecular Descriptors. 2000.  doi:[10.1002/9783527613106](https://doi.org/10.1002/9783527613106)
-28. <a name="citeref28"></a>J. K. Wegner, PhD thesis, Eberhard-Karls-Universität Tübingen, Tübingen, Germany, 2006
-29. <a name="citeref29"></a>Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Journal of Chemical Information and Modeling. 2003 Feb 11;43(2):493–500.  doi:[10.1021/CI025584Y](https://doi.org/10.1021/CI025584Y)
-30. <a name="citeref30"></a>Steinbeck C, Hoppe C, Hoppe C, Kuhn S, Floris M, Guha R, et al. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Current Pharmaceutical Design [Internet]. 2006 Jun 1;12(17):2111–20. Available from: https://cdk.github.io/cdk-paper-2/ doi:[10.2174/138161206777585274](https://doi.org/10.2174/138161206777585274)
-31. <a name="citeref31"></a>Kowalski BR. Chemometrics. Analytical Chemistry. 1980 Jan 1;52(5):112–22.  doi:[10.1021/AC50055A016](https://doi.org/10.1021/AC50055A016)
-32. <a name="citeref32"></a>Lavine BK. Chemometrics. Analytical Chemistry. 2000 Jan 1;72(12):91–8.  doi:[10.1021/A1000016X](https://doi.org/10.1021/A1000016X)
-33. <a name="citeref33"></a>Buydens LMC, Reijmers TH, Beckers MLM, Wehrens R. Molecular data-mining: a challenge for chemometrics. Chemometrics and Intelligent Laboratory Systems. 1999 Jan 1;49(2):121–33.  doi:[10.1016/S0169-7439(99)00039-8](https://doi.org/10.1016/S0169-7439(99)00039-8)
-34. <a name="citeref34"></a>Wehrens R, Gelder R de, Kemperman GJ, Zwanenburg B, Buydens LMC. Molecular challenges in modern chemometrics. Analytica Chimica Acta. 1999 Jan 1;400(1–3):413–24.  doi:[10.1016/S0003-2670(99)00621-2](https://doi.org/10.1016/S0003-2670(99)00621-2)
-35. <a name="citeref35"></a>Willighagen E, Wehrens R, Buydens L. Molecular Chemometrics. Critical Reviews in Analytical Chemistry. 2006 Jan 1;36(3–4):189–98.  doi:[10.1080/10408340600969601](https://doi.org/10.1080/10408340600969601)
+1. <a name="citeref1"></a>Willighagen E. Representation of Molecules and Molecular Systems in Data Analysis and Modeling [Internet]. 2008. Available from: http://repository.ubn.ru.nl/handle/2066/72267
+2. <a name="citeref2"></a>Wiener H. Correlation of Heats of Isomerization, and Differences in Heats of Vaporization of Isomers, Among the Paraffin Hydrocarbons. Journal of the American Chemical Society. 1947 Jan 1;69(11):2636–8.  doi:[10.1021/JA01203A022](https://doi.org/10.1021/JA01203A022)
+3. <a name="citeref3"></a>Wiswesser WJ. How the WLN began in 1949 and how it might be in 1999. Journal of Chemical Information and Modeling. 1982 May 1;22(2):88–93.  doi:[10.1021/CI00034A005](https://doi.org/10.1021/CI00034A005)
+4. <a name="citeref4"></a>Weininger D. SMILES, a chemical language and information system. 1. Introduction to methodology and encoding rules. Journal of Chemical Information and Modeling [Internet]. 1988 Feb 1;28(1):31–6. Available from: http://organica1.org/seminario/weininger88.pdf doi:[10.1021/CI00057A005](https://doi.org/10.1021/CI00057A005)
+5. <a name="citeref5"></a>LC R, RA K. Finding Chemical Records by Digital Computers. Science. 1957 Oct 1;126(3278):814–9.  doi:[10.1126/SCIENCE.126.3278.814](https://doi.org/10.1126/SCIENCE.126.3278.814)
+6. <a name="citeref6"></a>Ullmann JR. An Algorithm for Subgraph Isomorphism. Journal of the ACM. 1976 Jan 1;23(1):31–42.  doi:[10.1145/321921.321925](https://doi.org/10.1145/321921.321925)
+7. <a name="citeref7"></a>Morgan HL. The Generation of a Unique Machine Description for Chemical Structures-A Technique Developed at Chemical Abstracts Service. Journal of Chemical Documentation. 1965 Jan 1;5(2):107–13.  doi:[10.1021/C160017A018](https://doi.org/10.1021/C160017A018)
+8. <a name="citeref8"></a>Berman HM, Henrick K, Nakamura H. Announcing the worldwide Protein Data Bank. Nature structural biology. 2003 Jan 1;10(12):980.  doi:[10.1038/NSB1203-980](https://doi.org/10.1038/NSB1203-980)
+9. <a name="citeref9"></a>Linstrom JL, Mallard WG. NIST Chemistry WebBook; NIST Standard Reference Database No. 69, Gaithersburg MD, 2001
+10. <a name="citeref10"></a>Steinbeck C, Kuhn S. NMRShiftDB – compound identification and structure elucidation support through a free community-built web database. Phytochemistry. 2004 Jan 1;65(19):2711–7.  doi:[10.1016/J.PHYTOCHEM.2004.08.027](https://doi.org/10.1016/J.PHYTOCHEM.2004.08.027)
+11. <a name="citeref11"></a>YAMAMOTO O, SOMENO K, WASADA N, HIRAISHI J, HAYAMIZU K, TANABE K, et al. An integrated spectral data base system including IR, MS, 1H-NMR, 13C-NMR, ESR and Raman spectra. Analytical Sciences. 1988 Jan 1;4(3):233–9.  doi:[10.2116/ANALSCI.4.233](https://doi.org/10.2116/ANALSCI.4.233)
+12. <a name="citeref12"></a>Allen FH, FH A. The Cambridge Structural Database: a quarter of a million crystal structures and rising. Acta Crystallographica Section B: Structural Science. 2002 May 29;58(3):380–8.  doi:[10.1107/S0108768102003890](https://doi.org/10.1107/S0108768102003890)
+13. <a name="citeref13"></a>Engel T. Basic overview of chemoinformatics. Journal of Chemical Information and Modeling. 2006 Nov 1;46(6):2267–77.  doi:[10.1021/CI600234Z](https://doi.org/10.1021/CI600234Z)
+14. <a name="citeref14"></a>Austin CP, Brady LS, Insel TR, Collins F. NIH Molecular Libraries Initiative. Science. 2004 Nov 1;306(5699):1138–9.  doi:[10.1126/SCIENCE.1105511](https://doi.org/10.1126/SCIENCE.1105511)
+15. <a name="citeref15"></a>Irwin JJ, Shoichet BK. ZINC--a free database of commercially available compounds for virtual screening. Journal of Chemical Information and Modeling. 2005 Jan 1;45(1):177–82.  doi:[10.1021/CI049714+](https://doi.org/10.1021/CI049714+)
+16. <a name="citeref16"></a>Blair J, Gasteiger J, Gillespie C, Gillespie PD, Ugi I. Representation of the constitutional and stereochemical features of chemical systems in the computer assisted design of syntheses. Tetrahedron. 1974 Jan 1;30(13):1845–59.  doi:[10.1016/S0040-4020(01)97318-1](https://doi.org/10.1016/S0040-4020(01)97318-1)
+17. <a name="citeref17"></a>Corey EJ, Wipke WT. Computer-Assisted Design of Complex Organic Syntheses. Science. 1969 Oct 10;166(3902):178–92.  doi:[10.1126/SCIENCE.166.3902.178](https://doi.org/10.1126/SCIENCE.166.3902.178)
+18. <a name="citeref18"></a>Corey EJ, Wipke WT, Cramer RD, Howe WJ. Computer-assisted synthetic analysis. Facile man-machine communication of chemical structure by interactive computer graphics. Journal of the American Chemical Society. 1972 Jan 1;94(2):421–30.  doi:[10.1021/JA00757A020](https://doi.org/10.1021/JA00757A020)
+19. <a name="citeref19"></a>Lederberg J. How DENDRAL was conceived and born. 1987 Jan 1;5–19.  doi:[10.1145/41526.41528](https://doi.org/10.1145/41526.41528)
+20. <a name="citeref20"></a>Bremser W. HOSE — a novel substructure code. Analytica Chimica Acta. 1978 Jan 1;103(4):355–65.  doi:[10.1016/S0003-2670(01)83100-7](https://doi.org/10.1016/S0003-2670(01)83100-7)
+21. <a name="citeref21"></a>Dietz A. Yet Another Representation of Molecular Structure. Journal of Chemical Information and Modeling. 1995 Sep 1;35(5):787–802.  doi:[10.1021/CI00027A001](https://doi.org/10.1021/CI00027A001)
+22. <a name="citeref22"></a>Konstantinova EV, Skorobogatov VA. Molecular Hypergraphs: The New Representation of Nonclassical Molecular Structures with Polycentric Delocalized Bonds. Journal of Chemical Information and Modeling. 1995 May 1;35(3):472–8.  doi:[10.1021/CI00025A015](https://doi.org/10.1021/CI00025A015)
+23. <a name="citeref23"></a>Bauerschmidt S, Gasteiger J. Overcoming the Limitations of a Connection Table Description: A Universal Representation of Chemical Species. Journal of Chemical Information and Modeling. 1997 Jan 1;37(4):705–14.  doi:[10.1021/CI9704423](https://doi.org/10.1021/CI9704423)
+24. <a name="citeref24"></a>Dirac PAM. Quantum Mechanics of Many-Electron Systems. Proceedings of the Royal Society A. 1929 Apr 6;123(792):714–33.  doi:[10.1098/RSPA.1929.0094](https://doi.org/10.1098/RSPA.1929.0094)
+25. <a name="citeref25"></a>Goodman JM. Chemical Applications of Molecular Modeling. Royal Society of Chemistry; 2002. 
+26. <a name="citeref26"></a>Geladi P, Kowalski BR. Partial least-squares regression: a tutorial. Analytica Chimica Acta. 1986 Jan 1;185:1–17.  doi:[10.1016/0003-2670(86)80028-9](https://doi.org/10.1016/0003-2670(86)80028-9)
+27. <a name="citeref27"></a>de Jong S. SIMPLS: An alternative approach to partial least squares regression. Chemometrics and Intelligent Laboratory Systems. 1993 Jan 1;18(3):251–63.  doi:[10.1016/0169-7439(93)85002-X](https://doi.org/10.1016/0169-7439(93)85002-X)
+28. <a name="citeref28"></a>Todeschini R, Consonni V. Handbook of Molecular Descriptors. 2000.  doi:[10.1002/9783527613106](https://doi.org/10.1002/9783527613106)
+29. <a name="citeref29"></a>J. K. Wegner, PhD thesis, Eberhard-Karls-Universität Tübingen, Tübingen, Germany, 2006
+30. <a name="citeref30"></a>Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Journal of Chemical Information and Modeling. 2003 Feb 11;43(2):493–500.  doi:[10.1021/CI025584Y](https://doi.org/10.1021/CI025584Y)
+31. <a name="citeref31"></a>Steinbeck C, Hoppe C, Hoppe C, Kuhn S, Floris M, Guha R, et al. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Current Pharmaceutical Design [Internet]. 2006 Jun 1;12(17):2111–20. Available from: https://cdk.github.io/cdk-paper-2/ doi:[10.2174/138161206777585274](https://doi.org/10.2174/138161206777585274)
+32. <a name="citeref32"></a>Kowalski BR. Chemometrics. Analytical Chemistry. 1980 Jan 1;52(5):112–22.  doi:[10.1021/AC50055A016](https://doi.org/10.1021/AC50055A016)
+33. <a name="citeref33"></a>Lavine BK. Chemometrics. Analytical Chemistry. 2000 Jan 1;72(12):91–8.  doi:[10.1021/A1000016X](https://doi.org/10.1021/A1000016X)
+34. <a name="citeref34"></a>Buydens LMC, Reijmers TH, Beckers MLM, Wehrens R. Molecular data-mining: a challenge for chemometrics. Chemometrics and Intelligent Laboratory Systems. 1999 Jan 1;49(2):121–33.  doi:[10.1016/S0169-7439(99)00039-8](https://doi.org/10.1016/S0169-7439(99)00039-8)
+35. <a name="citeref35"></a>Wehrens R, Gelder R de, Kemperman GJ, Zwanenburg B, Buydens LMC. Molecular challenges in modern chemometrics. Analytica Chimica Acta. 1999 Jan 1;400(1–3):413–24.  doi:[10.1016/S0003-2670(99)00621-2](https://doi.org/10.1016/S0003-2670(99)00621-2)
+36. <a name="citeref36"></a>Willighagen E, Wehrens R, Buydens L. Molecular Chemometrics. Critical Reviews in Analytical Chemistry. 2006 Jan 1;36(3–4):189–98.  doi:[10.1080/10408340600969601](https://doi.org/10.1080/10408340600969601)
 
