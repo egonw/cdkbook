@@ -35,7 +35,7 @@ figures.txt: order.txt ${SOURCES}
 	@echo "Indexing the figures"
 	@groovy findFigures.groovy > figures.txt
 
-toc.txt: order.txt ${SOURCES}
+toc.txt: makeToC.groovy order.txt ${SOURCES}
 	@echo "Making the ToC"
 	@groovy makeToC.groovy > toc.txt
 
@@ -70,6 +70,10 @@ scriptcount.tex: code/scriptCount.tex
 
 code/scriptCount.tex:
 	@cd code; make scriptCount.tex
+
+index.md: index.i.md toc.txt createMarkdown.groovy
+	@echo "Creating $@"
+	@groovy createMarkdown.groovy index.i.md > index.md
 
 %.md : %.i.md createMarkdown.groovy references.dat
 	@echo "Creating $@"
