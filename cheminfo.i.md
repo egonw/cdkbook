@@ -187,7 +187,7 @@ problem [<cite>Q62926016</cite>,<cite>Q62926155</cite>,<cite>Q28837846</cite>].
 ![](images/Ferrocene-2D.png) <br />
 </figure>
 
-# Quantum Chemistry
+## Quantum Chemistry
 
 Quantum mechanics offers an alternative to chemical graphs as representation of
 molecular species. Early in the 20th century it was discovered that it can
@@ -216,7 +216,7 @@ Indeed, since the quantum mechanical description of matter is a function of all
 electrons and all nuclei *and* their interactions, the complexity scales
 rather unfortunately with the number of atoms `N`. Several approximations can be
 made to reduce the mathematical <topic>complexity</topic>, but the calculations still
-scale as `N^4`, or even `N^8` for more precise calculations [<cite>Goodman1998</cite>]. 
+scale as `N^4`, or even `N^8` for more precise calculations [<cite>Q62927888</cite>]. 
 This means that the calculation for a molecule
 twice as large as ethanol, takes 16 up to 256 times as long. A small biochemically
 relevant molecule, e.g. nonane-4,6-dione, with only three times as many atoms, takes
@@ -231,6 +231,63 @@ many other representations of molecules and molecular systems have been develope
 The following section discusses a class of numerical representations, which are
 often based on graph or quantum chemical representations, but focused to capturing
 molecular information relevant to the data analyzed or modeled.
+
+## Numerical Representations
+
+One major problem is common to chemical graph and quantum chemistry
+representations when it comes to data analysis: their length
+depends on the size of the molecular system. Most statistical modeling methods,
+like <topic>partial least squares</topic> (<topic>PLS</topic>) [<cite>Q56112883</cite>,<cite>Q56454405</cite>] and
+<topic>principal component analysis</topic> (<topic>PCA</topic>),
+require a fixed length representation independent of the size of the molecular
+system. Moreover, these methods expect that variables have the same meaning
+for all molecules. Additionally, many methods
+require the representation to be numerical, such as PLS; notable exceptions
+are the decision tree and random forest methods.
+
+Many <topic>numerical representations</topic> for molecules, called <topic>molecular descriptors</topic>, have been
+developed [<cite>Q62968825</cite>]; examples includes descriptors which include quantum chemical
+features, such as the highest-occupied-molecular-orbital descriptor,
+or chemical graph features, such as the fingerprint descriptor. Both of them
+have a fixed length and are numeric. Several programs are now
+available that can calculate these molecular descriptors, including Dragon,
+JOELib [<cite>Wegner2006</cite>] and the CDK [<cite>Q27061829</cite>,<cite>Q27065423</cite>].
+The next chapter gives an overview of commonly used and recently introduced
+descriptors, and discusses the use of them for molecular systems with
+intermolecular interactions are important too.
+
+<figure label="cicm" caption="While both fields aim at increasing our knowledge about chemistry, chemometrics has traditionally focused on extracting information from analytical data (darker green area), where chemoinformatics focused on structural information of molecules (blue-ish area). Molecular chemometrics (light green area) takes approaches from both to study properties of molecules and molecular systems.">
+![](images/rodeDraad.png) <br />
+</figure>
+
+## Chemometrics
+
+The use of these uniform-length representations has the advantage that the broad
+range of multivariate, statistical methods used in <topic>chemometrics</topic> can be applied.
+Chemometrics is traditionally described as *the application of
+mathematical and statistical methods to chemical measurements.* [<cite>Q62969352</cite>].
+Typical topics in chemometrics, therefore, are (multivariate) calibration, signal
+processing, experimental designs, statistics, and pattern recognition [<cite>Q62969354</cite>].
+Data mining and modeling of analytical data has led to a rich field, where mathematical
+and <topic>statistical methods</topic> are used to analyze the chemical data. The nature of the analytical data,
+however, such as the high <topic>collinearity</topic> in NIR and IR spectra, has led to
+extensive study of <topic>multivariate regression</topic> and <topic>classification methods</topic>.
+These chemometrical methods turn out to have great value when used with numerical
+representations of molecular systems.
+
+While chemometrics focuses on the statistical analysis of mostly multivariate
+chemical data, chemoinformatics generally uses the chemical graph as principal
+representation of molecular data. The previous section has shown that both
+complement each other when dealing with the understanding and prediction
+of properties of molecular systems (see Figure <xref>cicm</xref>).
+Bridging the gap between representation of molecular structures or systems
+composed of molecular structures, and statistical and data mining methods, has
+shown to be an interesting area of research [<cite>Q61649587</cite>,<cite>Q57836257</cite>,<cite>Q27134682</cite>].
+
+A growing number of studies, however, use methodologies from both fields to
+study relationships between molecular and intermolecular information and
+properties of those systems. This book focuses on how the Chemistry Development
+Kit supports this multidisciplenaire research.
 
 
 ## References
