@@ -4,7 +4,7 @@ Reactions are fundamental events in chemistry, biochemistry, and thus in life. A
 toolkit cannot do without a <a name="tp1">reaction</a> framework. This chapter will outline the reaction data model present
 in the CDK. It will first outline the core data interfaces, and how they can be used.
 
-# A single reaction
+## A single reaction
 
 A single reaction consists of reacting chemical and the products of the reaction. Optionally, a reaction
 can be catalyzed. This idea is captured in the [`IReaction`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IReaction.html) interface, which directly extends the

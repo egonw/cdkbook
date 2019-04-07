@@ -75,10 +75,10 @@ steps forward, but it will take some time for things to iron out.
 7.2. [Protein From Sequence](protein.md#protein-from-sequence) <br />
 7.3. [Strands and Monomers](protein.md#strands-and-monomers) <br />
 8. [Reactions](reaction.md) <br />
-8. [A single reaction](reaction.md) <br />
-8.1. [Reaction from File](reaction.md#reaction-from-file) <br />
-8.1.1. [MDL RXN files](reaction.md#mdl-rxn-files) <br />
-8.2. [CMLReact files](reaction.md#cmlreact-files) <br />
+8.1. [A single reaction](reaction.md#a-single-reaction) <br />
+8.2. [Reaction from File](reaction.md#reaction-from-file) <br />
+8.2.1. [MDL RXN files](reaction.md#mdl-rxn-files) <br />
+8.3. [CMLReact files](reaction.md#cmlreact-files) <br />
 9. [From IChemObject to IChemFile](chemobject.md) <br />
 9.1. [IAtomContainerSet](chemobject.md#iatomcontainerset) <br />
 9.2. [IReactionSet and IRingSet](chemobject.md#ireactionset-and-iringset) <br />
