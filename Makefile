@@ -28,12 +28,15 @@ minor.version: README.md
 	@grep "^\[Edition" README.md | cut -d' ' -f2 | cut -d'-' -f2 | cut -d']' -f1 > minor.version
 
 sections.txt: order.txt ${SOURCES}
+	@echo "Indexing the sections"
 	@groovy findSections.groovy > sections.txt
 
 figures.txt: order.txt ${SOURCES}
+	@echo "Indexing the figures"
 	@groovy findFigures.groovy > figures.txt
 
 toc.txt: order.txt ${SOURCES}
+	@echo "Making the ToC"
 	@groovy makeToC.groovy > toc.txt
 
 classinfo.tsv: classes.lst updateClassInfo.groovy
@@ -47,12 +50,15 @@ classes.lst: ${SOURCES} findClasses.groovy foo.sh
 	@mv classes.lst2 classes.lst
 
 indexList.i.md: topics.tsv makeIndex.groovy
+	@echo "Making the index"
 	@groovy makeIndex.groovy > indexList.i.md
 
 topics.tsv: ${SOURCES} findTopics.groovy
+	@echo "Extracting the topics"
 	@groovy findTopics.groovy . | sort > topics.tsv
 
 references.qids: findCitations.groovy
+	@echo "Finding the citations"
 	@groovy findCitations.groovy . | grep "^Q" | sort | uniq > references.qids
 
 references.dat: references.qids references.js references.extra.dat
