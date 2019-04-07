@@ -1,7 +1,7 @@
 <section level="#" label="cheminfo">Cheminformatics</section>
 
 *Note: this chapter is an evolved version of a chapter of [my PhD
-thesis](https://tools.wmflabs.org/scholia/work/Q25713029).*
+thesis](https://tools.wmflabs.org/scholia/work/Q25713029) [<cite>Q25713029</cite>]. *
 
 While the purpose of this book is not to educate in <topic>cheminformatics</topic> (see Chapter <xref>intro</xref>),
 this chapter provides minimal information about the representation of molecules and molecular systems.
