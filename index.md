@@ -94,10 +94,10 @@ steps forward, but it will take some time for things to iron out.
 11.1. [File Format Detection](io.md#file-format-detection) <br />
 11.1.1. [Custom format matchers](io.md#custom-format-matchers) <br />
 11.2. [Reading from Readers and InputStreams](io.md#reading-from-readers-and-inputstreams) <br />
-11.2.0. [Example: Downloading Domoic Acid from PubChem](io.md#example:-downloading-domoic-acid-from-pubchem) <br />
+11.2.1. [Example: Downloading Domoic Acid from PubChem](io.md#example:-downloading-domoic-acid-from-pubchem) <br />
 11.3. [Input Validation](io.md#input-validation) <br />
-11.3.0. [Reading modes](io.md#reading-modes) <br />
-11.3.1. [Validation](io.md#validation) <br />
+11.3.1. [Reading modes](io.md#reading-modes) <br />
+11.3.2. [Validation](io.md#validation) <br />
 11.4. [Gzipped files](io.md#gzipped-files) <br />
 11.5. [Customizing the Output](io.md#customizing-the-output) <br />
 11.5.1. [Setting Properties](io.md#setting-properties) <br />
@@ -111,7 +111,7 @@ steps forward, but it will take some time for things to iron out.
 12.2.1. [Single atoms](atomtype.md#single-atoms) <br />
 12.2.2. [Full molecules](atomtype.md#full-molecules) <br />
 12.2.3. [Configuring the Atom](atomtype.md#configuring-the-atom) <br />
-12.2.3. [No atom type perceived?!](atomtype.md#no-atom-type-perceived?!) <br />
+12.2.4. [No atom type perceived?!](atomtype.md#no-atom-type-perceived?!) <br />
 12.3. [Sybyl atom types](atomtype.md#sybyl-atom-types) <br />
 13. [Graph Properties](graph.md) <br />
 13.1. [Partitioning](graph.md#partitioning) <br />
@@ -124,7 +124,7 @@ steps forward, but it will take some time for things to iron out.
 13.4.2. [Distance matrix](graph.md#distance-matrix) <br />
 13.5. [Atom Numbers](graph.md#atom-numbers) <br />
 13.5.1. [Morgan Atom Numbers](graph.md#morgan-atom-numbers) <br />
-13.5.1. [InChI Atom Numbers](graph.md#inchi-atom-numbers) <br />
+13.5.2. [InChI Atom Numbers](graph.md#inchi-atom-numbers) <br />
 14. [Missing Information](missing.md) <br />
 14.1. [Element and Isotope information](missing.md#element-and-isotope-information) <br />
 14.1.1. [Elements](missing.md#elements) <br />
@@ -132,8 +132,8 @@ steps forward, but it will take some time for things to iron out.
 14.2. [Reconnecting Atoms](missing.md#reconnecting-atoms) <br />
 14.3. [Missing Bond Orders](missing.md#missing-bond-orders) <br />
 14.4. [Missing Hydrogens](missing.md#missing-hydrogens) <br />
-14.4.0. [Implicit Hydrogens](missing.md#implicit-hydrogens) <br />
-14.4.0. [Explicit Hydrogens](missing.md#explicit-hydrogens) <br />
+14.4.1. [Implicit Hydrogens](missing.md#implicit-hydrogens) <br />
+14.4.2. [Explicit Hydrogens](missing.md#explicit-hydrogens) <br />
 14.5. [2D Coordinates](missing.md#2d-coordinates) <br />
 14.6. [Unknown Molecular Formula](missing.md#unknown-molecular-formula) <br />
 15. [Substructure Searching](substructure.md) <br />
