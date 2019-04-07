@@ -108,16 +108,32 @@ most of them by selecting the right [`ElectronDonation`](http://cdk.github.io/cd
 model       = ElectronDonation.daylight();
 cycles      = Cycles.or(Cycles.all(), Cycles.all(6));
 aromaticity = new Aromaticity(model, cycles);
-aromaticity.apply(mol);
-notAromatic = aromaticity.findBonds(mol).isEmpty()
+aromatic = aromaticity.apply(mol);
 println "benzene is " +
-  (notAromatic ? "not " : "") + "aromatic."
+  (aromatic ? "" : "not ") + "aromatic."
 ```
 
 which tells us that
 
 ```plain
 benzene is aromatic.
+```
+
+Furthermore, if you wish to know which bonds are aromatic, the same class can be used:
+
+**Script** [code/AromaticBonds.groovy](code/AromaticBonds.code.md)
+```groovy
+model       = ElectronDonation.daylight();
+cycles      = Cycles.or(Cycles.all(), Cycles.all(6));
+aromaticity = new Aromaticity(model, cycles);
+count = aromaticity.findBonds(mol).size()
+println "benzene has " + count + " aromatic bonds."
+```
+
+which reports the aromatic bonds:
+
+```plain
+benzene has 6 aromatic bonds.
 ```
 
 

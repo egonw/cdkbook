@@ -1,4 +1,4 @@
-# AromaticityDemo.groovy
+# AromaticBonds.groovy
 **Source code:**
 ```groovy
 import org.openscience.cdk.interfaces.*;
@@ -15,11 +15,10 @@ mol = sp.parseSmiles("c1ccccc1")
 model       = ElectronDonation.daylight();
 cycles      = Cycles.or(Cycles.all(), Cycles.all(6));
 aromaticity = new Aromaticity(model, cycles);
-aromatic = aromaticity.apply(mol);
-println "benzene is " +
-  (aromatic ? "" : "not ") + "aromatic."
+count = aromaticity.findBonds(mol).size()
+println "benzene has " + count + " aromatic bonds."
 ```
 **Output:**
 ```plain
-benzene is aromatic.
+benzene has 6 aromatic bonds.
 ```
