@@ -1,3 +1,4 @@
+<a name="sec:stereo"></a>
 # Stereochemistry
 
 An intrinsic property of molecular structures is the 3D organization of the atoms,
@@ -17,6 +18,7 @@ are used to associate them with an atom or a bond. This is particularly the
 case for the two most common sources of stereochemistry: tetrahedral chirality,
 and double bond stereochemistry.
 
+<a name="sec:stereo:bond"></a>
 ## Stereochemistry in a flat world
 
 Two dimensions drawings allow for depicting of three dimensional stereochemistry.

@@ -6,8 +6,8 @@ it is a general container, and this is exactly what we need for disconnected
 structures like salts and molecular crystal structures.
 
 Functionality to determine if the content of an IAtomContainer is
-connected, you can use the `ConnectivityChecker`, as explained in
-Section XXX.
+connected, you can use the [`ConnectivityChecker`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/graph/ConnectivityChecker.html), as explained in
+Section [13.1](graph.md#sec:partitioning).
 
 ## Salts
 
@@ -32,10 +32,11 @@ salt.addAtom(chloride);
 If you prefer a single `IAtomContainer` to only contain connected
 atoms, instead of unbound atoms as in this salt example, you can
 partition them into two or more new containers, as explained in
-Section XX.
+Section [13.1](graph.md#sec:partitioning).
 
-![](images/crystal.png) <br />
-**Figure**: The `ICrystal` interface extends the `IAtomContainer` interface.
+<a name="fig:crystalInheritance"></a>
+![](images/crystal.png)
+<br />**Figure 5.1**: The `ICrystal` interface extends the `IAtomContainer` interface.
 
 ## Crystals
 
@@ -43,7 +44,7 @@ Of course, the representation given in the previous section
 is a very basic model for sodium chloride. A <a name="tp2">crystal</a>
 structure would perhaps be a more accurate description of what you
 like to represent. In this case, the <a name="tp3">`ICrystal`</a> subclass of
-the `IAtomContainer` can be used (see Figure `):
+the `IAtomContainer` can be used (see Figure [5.1](#fig:crystalInheritance)):
 
 **Script** [code/SaltCrystal.groovy](code/SaltCrystal.code.md)
 ```groovy
@@ -80,8 +81,5 @@ chloride.setFractionalPoint3d(
 salt.addAtom(sodium);
 salt.addAtom(chloride);
 ```
-
-## References
-
 
 

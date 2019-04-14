@@ -122,7 +122,7 @@ Atom types are an important concept in cheminformatics. They describe
 some basic facts about that particular atom in some particular
 configuration. These properties are used in many cheminformatics algorithms,
 including adding hydrogens to hydrogen-depleted chemical graphs (see
-Section 14.4.1) and force fields. Chapter 12 provides much more detail
+Section [14.4.1](missing.md#sec:implicithydrogens)) and force fields. Chapter [12](atomtype.md#sec:atomtype) provides much more detail
 on the atom type infrastructure in the CDK library, and, for example,
 details how atom types can be perceived, and how atom type information
 is set for atoms.
@@ -266,7 +266,7 @@ Bond order UNSET has 0 electrons
  
 ### Bond stereochemistry
 
-The `IBond.setStereo()` method is discussed in Section 4.1.
+The `IBond.setStereo()` method is discussed in Section [4.1](stereo.md#sec:stereo:bond).
 
 <a name="sec:molecules"></a>
 ## Molecules
