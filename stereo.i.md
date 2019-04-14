@@ -1,4 +1,4 @@
-# Stereochemistry
+<section level="#" label="stereo">Stereochemistry</section>
 
 An intrinsic property of molecular structures is the 3D organization of the atoms,
 resulting in a unique <topic type="key">geometry</topic>. If we change the position of an atom, we get a
@@ -17,7 +17,7 @@ are used to associate them with an atom or a bond. This is particularly the
 case for the two most common sources of stereochemistry: tetrahedral chirality,
 and double bond stereochemistry.
 
-## Stereochemistry in a flat world
+<section level="##" label="stereo:bond">Stereochemistry in a flat world</section>
 
 Two dimensions drawings allow for depicting of three dimensional stereochemistry.
 It is not good at that, particular using <topic>wedge bonds</topic>, as us chemists typically

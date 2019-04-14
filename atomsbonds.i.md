@@ -84,7 +84,7 @@ Atom types are an important concept in cheminformatics. They describe
 some basic facts about that particular atom in some particular
 configuration. These properties are used in many cheminformatics algorithms,
 including adding hydrogens to hydrogen-depleted chemical graphs (see
-Section 14.4.1) and force fields. Chapter 12 provides much more detail
+Section <xref>implicithydrogens</xref>) and force fields. Chapter <xref>atomtype</xref> provides much more detail
 on the atom type infrastructure in the CDK library, and, for example,
 details how atom types can be perceived, and how atom type information
 is set for atoms.
@@ -112,7 +112,7 @@ crystal structure functionality.
 
 The <topic type="class">IBond</topic> interface of the CDK is an interaction between two or more
 `IAtom`s, extending the <topic type="class">IElectronContainer</topic> interface. While the most
-common application in the CDK originates from graph theory [2], it is not
+common application in the CDK originates from graph theory [<cite>Q37988904</cite>], it is not
 restricted to that. That said, many algorithms implemented in the CDK
 expect a graph theory based model, where each bond connects two, and
 not more, atoms.
@@ -153,7 +153,7 @@ showing us the default implementation:
  
 ### Bond stereochemistry
 
-The `IBond.setStereo()` method is discussed in Section 4.1.
+The `IBond.setStereo()` method is discussed in Section <xref>stereo:bond</xref>.
 
 <section level="##" label="molecules">Molecules</section>
 
