@@ -32,7 +32,7 @@ There are matching get methods to access all <topic>reactants</topic> and <topic
 
 <code>ReactionGetters</code>
 
-This scripts takes advantage of the <class>MolecularFormulaManipulator</class> class (see Section XXX)
+This scripts takes advantage of the <class>MolecularFormulaManipulator</class> class (see Section <xref>molecularFormula</xref>)
 and outputs the molecular formula of the reactants and products:
 
 <out>ReactionGetters</out>
@@ -41,7 +41,7 @@ and outputs the molecular formula of the reactants and products:
 
 There are a few file formats that can store reaction. This short paragraph will give some quick pointers
 which these are, and how files in that format can be read into a data model. The full IO details are
-presented in Chapter XX.
+presented in Chapter <xref>io</xref>.
 
 ### MDL RXN files
 

@@ -235,7 +235,7 @@ which outputs:
 
 <out>ConnectedBonds</out>
 
-<section lavel="##" label="molecularFormula">Molecular Formula</section>
+<section level="##" label="molecularFormula">Molecular Formula</section>
 
 Getting the <topic>molecular formula</topic> of a molecule and returning that as a String
 is both done with the <class>MolecularFormulaManipulator</class> class:

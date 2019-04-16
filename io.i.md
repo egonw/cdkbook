@@ -1,4 +1,4 @@
-# Input/Output
+<section level="#" label="io">Input/Output</section>
 
 The CDK has functionality for extracting information from files in many
 different file formats. Unfortunately, hardly ever the full format

@@ -17,12 +17,11 @@ molecular. The CDK simply refers to the holder as
 <topic>IElectronContainer</topic>s, and has several subinterfaces
 for bonds (<class>IBond</class>), lone pairs (<class>ILonePair</class>),
 and unpaired electrons (<class>ISingleElectron</class>), as
-shown in Figure XX.
+shown in Figure <xref>ecInheritance</xref>.
 
+<figure label="ecInheritance" caption="The `IBond`, `ILonePair`, and `ISingleElectron` interfaces all extend the `IElectronContainer` interface."
 ![](images/electronContainerInheritance.png)
-Figure XX: The <class>IBond</class>, <class>ILonePair</class>, and <class>ISingleElectron</class>
-interfaces all extend the <class>IElectronContainer</class> interface.
-
+</figure>
 
 ## Lone Pairs
 
