@@ -61,7 +61,6 @@ IChemObjectReaderErrorHandler	org.openscience.cdk.io	interfaces
 ICountFingerprint	org.openscience.cdk.fingerprint	core
 IDescriptor	org.openscience.cdk.qsar	qsar
 IDescriptorResult	org.openscience.cdk.qsar.result	standard
-IElectronContainer	org.openscience.cdk.interfaces	interfaces
 IElement	org.openscience.cdk.interfaces	interfaces
 IFingerprinter	org.openscience.cdk.fingerprint	core
 IImplementationSpecification	org.openscience.cdk	standard

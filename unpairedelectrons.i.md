@@ -19,7 +19,7 @@ for bonds (<class>IBond</class>), lone pairs (<class>ILonePair</class>),
 and unpaired electrons (<class>ISingleElectron</class>), as
 shown in Figure <xref>ecInheritance</xref>.
 
-<figure label="ecInheritance" caption="The `IBond`, `ILonePair`, and `ISingleElectron` interfaces all extend the `IElectronContainer` interface."
+<figure label="ecInheritance" caption="The `IBond`, `ILonePair`, and `ISingleElectron` interfaces all extend the `IElectronContainer` interface.">
 ![](images/electronContainerInheritance.png)
 </figure>
 
