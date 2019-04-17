@@ -17,12 +17,11 @@ molecular. The CDK simply refers to the holder as
 <a name="tp1">IElectronContainer</a>s, and has several subinterfaces
 for bonds ([`IBond`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html)), lone pairs ([`ILonePair`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/ILonePair.html)),
 and unpaired electrons ([`ISingleElectron`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/ISingleElectron.html)), as
-shown in Figure XX.
+shown in Figure [6.1](#fig:ecInheritance).
 
+<a name="fig:ecInheritance"></a>
 ![](images/electronContainerInheritance.png)
-Figure XX: The [`IBond`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html), [`ILonePair`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/ILonePair.html), and [`ISingleElectron`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/ISingleElectron.html)
-interfaces all extend the [`IElectronContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IElectronContainer.html) interface.
-
+<br />**Figure 6.1**: The `IBond`, `ILonePair`, and `ISingleElectron` interfaces all extend the `IElectronContainer` interface.
 
 ## Lone Pairs
 

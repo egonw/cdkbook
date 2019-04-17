@@ -1,3 +1,4 @@
+<a name="sec:io"></a>
 # Input/Output
 
 The CDK has functionality for extracting information from files in many

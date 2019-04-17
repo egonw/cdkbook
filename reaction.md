@@ -65,7 +65,7 @@ for (product in reaction.products.atomContainers()) {
 }
 ```
 
-This scripts takes advantage of the [`MolecularFormulaManipulator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/manipulator/MolecularFormulaManipulator.html) class (see Section XXX)
+This scripts takes advantage of the [`MolecularFormulaManipulator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/manipulator/MolecularFormulaManipulator.html) class (see Section [3.4](atomsbonds.md#sec:molecularFormula))
 and outputs the molecular formula of the reactants and products:
 
 ```plain
@@ -80,7 +80,7 @@ H2O
 
 There are a few file formats that can store reaction. This short paragraph will give some quick pointers
 which these are, and how files in that format can be read into a data model. The full IO details are
-presented in Chapter XX.
+presented in Chapter [11](io.md#sec:io).
 
 ### MDL RXN files
 

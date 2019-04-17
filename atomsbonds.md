@@ -166,7 +166,7 @@ crystal structure functionality.
 ## Bonds
 
 The <a name="tp10">[`IBond`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html)</a> interface of the CDK is an interaction between two or more
-`IAtom`s, extending the <a name="tp11">[`IElectronContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IElectronContainer.html)</a> interface. While the most
+`IAtom`s, extending the <a name="tp11">`IElectronContainer`</a> interface. While the most
 common application in the CDK originates from graph theory [2], it is not
 restricted to that. That said, many algorithms implemented in the CDK
 expect a graph theory based model, where each bond connects two, and
@@ -431,7 +431,7 @@ O has bond(s) SINGLE
 ```
 
 <a name="sec:molecularFormula"></a>
- Molecular Formula
+## Molecular Formula
 
 Getting the <a name="tp18">molecular formula</a> of a molecule and returning that as a String
 is both done with the [`MolecularFormulaManipulator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/manipulator/MolecularFormulaManipulator.html) class:

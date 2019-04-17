@@ -15,7 +15,7 @@ IAtomContainer. Figure [7.1](#fig:proteinClass) shows its hierarchy.
 ## Protein From File
 
 One straightforward way to create protein and DNA structures is to read them from
-PDB files [<a href="#citeref1">1</a>]. Chapter XX explains how files are read in general. For <a name="tp3">PDB files</a>,
+PDB files [<a href="#citeref1">1</a>]. Chapter [11](io.md#sec:io) explains how files are read in general. For <a name="tp3">PDB files</a>,
 the [`PDBReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/PDBReader.html) should be used. A code example showing how to use this reader
 is given by Script XX.
 
