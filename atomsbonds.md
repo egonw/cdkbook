@@ -451,6 +451,195 @@ giving:
 Azulene: C10H8
 ```
 
+<a name="sec:hydrogens"></a>
+## Implicit and Explicit Hydrogens
+
+The CDK has two concepts for hydrogens:
+*implicit hydrogens* and *explicit hydrogens*. Explicit
+hydrogens are hydrogens that are separate vertices on the chemical graph.
+Implicit hydrogens, however, are not, and are attributes of
+existing vertices.
+
+<a name="fig:methaneImExplicit"></a>
+![](images/generated/MethaneImplicit.png) ![](images/generated/MethaneExplicit.png)
+<br />**Figure 3.1**: Methane with implicit (left) and explicit (right) hydrogens.
+<!-- <code>MethaneImplicit</code> -->
+<!-- <code>MethaneExplicit</code> -->
+
+For example, if we represent methane as
+a chemical graph, we can define either a hydrogen-depleted
+chemical graph with a single carbon atom and zero bonds, or
+a graph with one carbon and four hydrogen atoms, and four
+bonds connecting the hydrogens to the central carbon. In the latter
+case, the hydrogens are explicit, while in the former case we
+can add those four hydrogens as implicit hydrogens on these
+carbon.
+
+The first option in CDK code looks like:
+
+**Script** [code/HydrogenDepletedGraph.groovy](code/HydrogenDepletedGraph.code.md)
+```groovy
+molecule = new AtomContainer();
+carbon = new Atom(Elements.CARBON);
+carbon.setImplicitHydrogenCount(4);
+molecule.addAtom(carbon);
+```
+
+while the alternative look like:
+
+**Script** [code/HydrogenExplicitGraph.groovy](code/HydrogenExplicitGraph.code.md)
+```groovy
+molecule = new AtomContainer();
+carbon = new Atom(Elements.CARBON);
+molecule.addAtom(carbon);
+for (int i=1; i<=4; i++) {
+  hydrogen = new Atom(Elements.HYDROGEN);
+  molecule.addAtom(hydrogen);
+  molecule.addBond(0, i, IBond.Order.SINGLE);
+}
+```
+
+Section [14.4](missing.md#sec:missinghydrogens) describes how hydrogens can
+be added programmatically.
+
+<a name="sec:chemobjects"></a>
+## Chemical Objects
+\label{sec:chemobjects}
+
+Another interface that must be introduced is the `IChemOject`
+as it plays an key role in the CDK data model. Almost all interfaces
+used in the data model inherit from this interface. The [`IChemObject`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObject.html)
+interface provides a bit of basic functionality, including support
+for object identifiers, properties, and flags.
+
+For example. <a name="tp19">identifiers</a> are set and retrieved with the `setID()` and
+`getID()` methods:
+
+**Script** [code/ChemObjectIdentifiers.groovy](code/ChemObjectIdentifiers.code.md)
+```groovy
+butane = new AtomContainer();
+butane.setID("cdkbook000000001")
+print "ID: " + butane.getID()
+```
+
+If you have more than one identifier, or other <a name="tp20">properties</a> you like to
+associate with objects, you can use the `setProperty()` and
+`getProperty()` methods:
+
+**Script** [code/ChemObjectProperties.groovy](code/ChemObjectProperties.code.md)
+```groovy
+butane = new AtomContainer();
+butane.setProperty(
+  "InChI", "InChI=1/C4H10/c1-3-4-2/h3-4H2,1-2H3"
+)
+print "InChI: " + butane.getProperty("InChI")
+```
+
+For example, we can use this approach to assign labels to atoms, such as in this
+example from substructure searching (see Chapter ??):
+
+**Script** [code/AtomLabels.groovy](code/AtomLabels.code.md)
+```groovy
+butane = MoleculeFactory.makeAlkane(4);
+butane.atoms().each { atom ->
+  atom.setProperty("Label", "Molecule")
+}
+ccc = MoleculeFactory.makeAlkane(3);
+ccc.atoms().each { atom ->
+  atom.setProperty("Label", "Substructure")
+}
+```
+
+The [`CDKConstants`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/CDKConstants.html) class provides a few constants for common properties:
+
+**Script** [code/CDKConstantsProperties.groovy](code/CDKConstantsProperties.code.md)
+```groovy
+println "Title: " + 
+  aspirin.getProperty(CDKConstants.TITLE)
+println "InChI: " +
+  aspirin.getProperty(CDKConstants.INCHI)
+println "SMILES: " +
+  aspirin.getProperty(CDKConstants.SMILES)
+println "CAS registry number: " +
+  aspirin.getProperty(CDKConstants.CASRN)
+println "COMMENT: " +
+  aspirin.getProperty(CDKConstants.COMMENT)
+println "NAMES: " +
+  aspirin.getProperty(CDKConstants.NAMES)
+```
+
+outputting:
+
+```plain
+Title: aspirin
+InChI: InChI=1/C9H8O4/c1-6(10)13-8-5-3-2-4-7(8)9...
+  (11)12/h2-5H,1H3,(H,11,12)
+SMILES: CC(=O)Oc1ccccc1C(=O)O
+CAS registry number: 50-78-2
+COMMENT: Against headaches.
+NAMES: 2-(acetyloxy)benzoic acid
+```
+
+A third characteristic of the [`IChemObject`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObject.html) interface is the concept of
+<a name="tp21">flags</a>. Flags are used in the CDK to indicate, for example, if
+an atom or bond is aromatic (see Script XX)
+or if an atom is part of a ring:
+
+**Script** [code/RingBond.groovy](code/RingBond.code.md)
+```groovy
+benzene = MoleculeFactory.makeBenzene();
+benzene.bonds().each { bond ->
+  bond.setFlag(CDKConstants.ISINRING, true)
+  println "Is ring bond: " +
+    bond.getFlag(CDKConstants.ISINRING)
+}
+```
+
+The next section talks about the CDK data class for \topic{rings}.
+
+<a name="sec:rings"></a>
+## Rings
+
+One important aspect of molecules is rings, partly because rings can show
+interesting chemical phenomena. For example, if the number of FIXME electrons
+is right, then the ring will become aromatic, as we commonly observer in
+phenyl rings, such as in benzene. But, cheminformatics has many other
+aspects where one like to know about those rings. For example, 2D coordinate
+generator (see Section [14.5](missing.md#sec:layout)) requires algorithms to know what
+the rings are in a molecule.
+
+<a name="fig:ring"></a>
+![](images/rings.png)
+<br />**Figure 3.2**: The `IRing` interface extends the `IAtomContainer` interface and is used to hold information about rings.
+
+Section [13.2](graph.md#sec:spanningtree) explains what functionality the CDK has to
+determine a bond takes part in a ring system. Here, we just introduce the
+[`IRing`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IRing.html) interface, which extends the more general `IAtomContainer`
+as shown in Figure [3.2](#fig:ring). Practically, there is nothing much to
+say about the IRing interface. One method it adds, is to get the size of the
+ring:
+
+**Script** [code/RingExample.groovy](code/RingExample.code.md)
+```groovy
+IRing ring = new Ring(5, "C")
+println "Ring size: " + ring.getRingSize()
+println "Ring atoms: " + ring.getAtomCount()
+println "Ring bonds: " + ring.getBondCount()
+```
+
+But this should be by definition the same as the number as atoms and bonds:
+
+```plain
+Ring size: 5
+Ring atoms: 5
+Ring bonds: 5
+```
+
+An overview of three algorithms to find rings in atom containers is provided
+in Section [13.3](graph.md#sec:ringsearch). Additionally, you may also be interested
+in ring sets, explained in Section ??.
+
+
 ## References
 
 1. <a name="citeref1"></a>Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Journal of Chemical Information and Modeling. 2003 Feb 11;43(2):493–500.  doi:[10.1021/CI025584Y](https://doi.org/10.1021/CI025584Y)

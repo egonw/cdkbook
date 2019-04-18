@@ -58,6 +58,7 @@ explicit hydrogens [missing](missing.md#tp14)<br />
 FCFP [substructure](substructure.md#tp3)<br />
 ferrocene} [cheminfo](cheminfo.md#tp22)<br />
 Figueras algorithm [graph](graph.md#tp8)<br />
+flags [atomsbonds](atomsbonds.md#tp21)<br />
 Floyd's algorithm [graph](graph.md#tp12)<br />
 force field [cheminfo](cheminfo.md#tp12)<br />
 GamessReader [ioclasseslist](ioclasseslist.md#tp11)<br />
@@ -80,6 +81,7 @@ IAtom [atomsbonds](atomsbonds.md#tp1) [atomsbonds](atomsbonds.md#tp2)<br />
 IAtomType [atomsbonds](atomsbonds.md#tp5)<br />
 IBond [atomsbonds](atomsbonds.md#tp10)<br />
 ICrystal [salts](salts.md#tp3)<br />
+identifiers [atomsbonds](atomsbonds.md#tp19)<br />
 IElectronContainer [atomsbonds](atomsbonds.md#tp11) [unpairedelectrons](unpairedelectrons.md#tp1)<br />
 IElement [atomsbonds](atomsbonds.md#tp3)<br />
 IIsotope [atomsbonds](atomsbonds.md#tp4)<br />
@@ -133,6 +135,7 @@ PLS [cheminfo](cheminfo.md#tp26)<br />
 PMPReader [ioclasseslist](ioclasseslist.md#tp31)<br />
 principal component analysis [cheminfo](cheminfo.md#tp27)<br />
 products [reaction](reaction.md#tp3)<br />
+properties [atomsbonds](atomsbonds.md#tp20)<br />
 protein [protein](protein.md#tp1)<br />
 PubChem [io](io.md#tp2)<br />
 QSAR [cheminfo](cheminfo.md#tp3) [descriptor](descriptor.md#tp1)<br />

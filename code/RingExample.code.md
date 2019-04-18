@@ -1,0 +1,17 @@
+# RingExample.groovy
+**Source code:**
+```groovy
+import org.openscience.cdk.interfaces.IRing;
+import org.openscience.cdk.*;
+
+IRing ring = new Ring(5, "C")
+println "Ring size: " + ring.getRingSize()
+println "Ring atoms: " + ring.getAtomCount()
+println "Ring bonds: " + ring.getBondCount()
+```
+**Output:**
+```plain
+Ring size: 5
+Ring atoms: 5
+Ring bonds: 5
+```
