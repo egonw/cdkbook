@@ -246,6 +246,115 @@ giving:
 
 <out>MFGeneration</out>
 
+<section level="##" label="hydrogens">Implicit and Explicit Hydrogens</section>
+
+The CDK has two concepts for hydrogens:
+*implicit hydrogens* and *explicit hydrogens*. Explicit
+hydrogens are hydrogens that are separate vertices on the chemical graph.
+Implicit hydrogens, however, are not, and are attributes of
+existing vertices.
+
+<figure label="methaneImExplicit" caption="Methane with implicit (left) and explicit (right) hydrogens.">
+![](images/generated/MethaneImplicit.png) <br />
+![](images/generated/MethaneExplicit.png) <br />
+</figure>
+<!-- <code>MethaneImplicit</code> -->
+<!-- <code>MethaneExplicit</code> -->
+
+For example, if we represent methane as
+a chemical graph, we can define either a hydrogen-depleted
+chemical graph with a single carbon atom and zero bonds, or
+a graph with one carbon and four hydrogen atoms, and four
+bonds connecting the hydrogens to the central carbon. In the latter
+case, the hydrogens are explicit, while in the former case we
+can add those four hydrogens as implicit hydrogens on these
+carbon.
+
+The first option in CDK code looks like:
+
+<code>HydrogenDepletedGraph</code>
+
+while the alternative look like:
+
+<code>HydrogenExplicitGraph</code>
+
+Section <xref>missinghydrogens</xref> describes how hydrogens can
+be added programmatically.
+
+<section level="##" label="chemobjects">Chemical Objects</section>
+\label{sec:chemobjects}
+
+Another interface that must be introduced is the <class>IChemOject</class>
+as it plays an key role in the CDK data model. Almost all interfaces
+used in the data model inherit from this interface. The <class>IChemObject</class>
+interface provides a bit of basic functionality, including support
+for object identifiers, properties, and flags.
+
+For example. <topic>identifiers</topic> are set and retrieved with the `setID()` and
+`getID()` methods:
+
+<code>ChemObjectIdentifiers</code>
+
+If you have more than one identifier, or other <topic>properties</topic> you like to
+associate with objects, you can use the `setProperty()` and
+`getProperty()` methods:
+
+<code>ChemObjectProperties</code>
+
+For example, we can use this approach to assign labels to atoms, such as in this
+example from substructure searching (see Chapter <xref>substructure</xref>):
+
+<code>AtomLabels</code>
+
+The <class>CDKConstants</class> class provides a few constants for common properties:
+
+<code>CDKConstantsProperties</code>
+
+outputting:
+
+<out>CDKConstantsProperties</out>
+
+A third characteristic of the <class>IChemObject</class> interface is the concept of
+<topic>flags</topic>. Flags are used in the CDK to indicate, for example, if
+an atom or bond is aromatic (see Script XX)
+or if an atom is part of a ring:
+
+<code>RingBond</code>
+
+The next section talks about the CDK data class for \topic{rings}.
+
+<section level="##" label="rings">Rings</section>
+
+One important aspect of molecules is rings, partly because rings can show
+interesting chemical phenomena. For example, if the number of FIXME electrons
+is right, then the ring will become aromatic, as we commonly observer in
+phenyl rings, such as in benzene. But, cheminformatics has many other
+aspects where one like to know about those rings. For example, 2D coordinate
+generator (see Section <xref>layout</xref>) requires algorithms to know what
+the rings are in a molecule.
+
+<figure label="ring" caption="The `IRing` interface extends the `IAtomContainer` interface and is used to hold information about rings.">
+![](images/rings.png)
+</figure>
+
+Section <xref>spanningtree</xref> explains what functionality the CDK has to
+determine a bond takes part in a ring system. Here, we just introduce the
+<class>IRing</class> interface, which extends the more general `IAtomContainer`
+as shown in Figure <xref>ring</xref>. Practically, there is nothing much to
+say about the IRing interface. One method it adds, is to get the size of the
+ring:
+
+<code>RingExample</code>
+
+But this should be by definition the same as the number as atoms and bonds:
+
+<out>RingExample</out>
+
+An overview of three algorithms to find rings in atom containers is provided
+in Section <xref>ringsearch</xref>. Additionally, you may also be interested
+in ring sets, explained in Section <xref>reactionandringsets</xref>.
+
+
 ## References
 
 <references/>

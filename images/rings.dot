@@ -1,0 +1,10 @@
+digraph {
+
+  rankdir= BT;
+
+  iring -> iatomcontainer;
+
+  iring [shape=box,label="IRing"];
+  iatomcontainer [shape=box,label="IAtomContainer"];
+
+}

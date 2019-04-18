@@ -20,6 +20,7 @@ BooleanResult	org.openscience.cdk.qsar.result	standard
 BPolDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 CarbonTypesDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 CDKAtomTypeMatcher	org.openscience.cdk.atomtype	core
+CDKConstants	org.openscience.cdk	core
 CDKHydrogenAdder	org.openscience.cdk.tools	valencycheck
 ChiChainDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 ChiClusterDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
@@ -73,6 +74,7 @@ InChINumbersTools	org.openscience.cdk.graph.invariant	inchi
 IntegerArrayResult	org.openscience.cdk.qsar.result	standard
 IntegerResult	org.openscience.cdk.qsar.result	standard
 IReaction	org.openscience.cdk.interfaces	interfaces
+IRing	org.openscience.cdk.interfaces	interfaces
 ISingleElectron	org.openscience.cdk.interfaces	interfaces
 IsotopeFactory	org.openscience.cdk.config	core
 Isotopes	org.openscience.cdk.config	core
