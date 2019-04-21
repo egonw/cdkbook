@@ -112,7 +112,3 @@ And the approach using the `Iterable` looks like:
 
 <code>ChemFileLooping</code>
 
-## References
-
-<references/>
-
