@@ -82,7 +82,7 @@ lone pairs    : 3
 pi bonds      : 0
 ```
 
-A full list of CDK atom types is given in a table in Appendix ??.
+A full list of CDK atom types is given in a table in Appendix [A](appatomtypes.md#sec:atomtypeapp).
 
 ### Hybridization Types
 
@@ -159,8 +159,8 @@ Atom type: C.sp3
 Because atom type perception requires the notion of ring systems, with each
 atom type being perceived individually, using the above approach
 ring detection must be done each time the atom type is perceived for each
-atom\footnote{Theoretically, this information can be cached, but there
-currently is no suitable solution for this in the CDK.}. Therefore,
+atom. Theoretically, this information can be cached, but there
+currently is no suitable solution for this in the CDK. Therefore,
 perceiving atom types for all atoms in a molecule can be done more
 efficiently with the following code:
 
@@ -216,9 +216,9 @@ the library only knows about a few of them.
 However, another reason why the method can return X, is that the input
 passed is incorrect. In fact, this is one primary application of the CDK
 atom type perception: to identify errors in the input. An example erroneous
-input is the below, uncharged NH$_4$. If it is attempted to perceive an
+input is the below, uncharged NH<sub>4</sub>. If it is attempted to perceive an
 atom type for this nitrogen, then the `findMatchingAtomType` method
-will in fact return \code{X}, as intended:
+will in fact return `X`, as intended:
 
 **Script** [code/UnchargedNitrogenPerception.groovy](code/UnchargedNitrogenPerception.code.md)
 ```groovy
@@ -307,7 +307,7 @@ This will give you the Sybyl atom type for carbon in methane:
 Atom type: C.3
 ```
 
-A full list of Sybyl atom types is given in a table in Appendix ??.
+A full list of Sybyl atom types is given in a table in Appendix [A.2](appatomtypes.md#sec:sybyltypes).
 
 ## References
 

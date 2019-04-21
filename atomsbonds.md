@@ -504,7 +504,6 @@ be added programmatically.
 
 <a name="sec:chemobjects"></a>
 ## Chemical Objects
-\label{sec:chemobjects}
 
 Another interface that must be introduced is the `IChemOject`
 as it plays an key role in the CDK data model. Almost all interfaces

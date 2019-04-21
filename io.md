@@ -177,7 +177,7 @@ println "Atom count: $mol.atomCount"
 
 But besides reading XML files correctly, the support for InputStream also allows
 reading files directly from the internet and from gzipped files (see
-Section [11.4](#sec:gzip).
+Section [11.4](#sec:gzip)).
 
 <a name="sec:domoicacid"></a>
 ### Example: Downloading Domoic Acid from PubChem

@@ -1,8 +1,9 @@
+<a name="sec:atomtypeapp"></a>
 # Atom Type Lists
 
 The table listed in this Appendix is generated with the following
 code, listing all six properties of CDK atom types, as outlined
-in Section XX:
+in Section [12.1](atomtype.md#sec:cdkatomtype):
 
 **Script** [code/ListAllCDKAtomTypes.groovy](code/ListAllCDKAtomTypes.code.md)
 ```groovy
@@ -326,6 +327,7 @@ factory = AtomTypeFactory.getInstance(
 <tr><td>Zn</td><td>Zn</td><td>0</td><td>2</td><td></td><td></td><td>0</td></tr>
 </table>
 
+<a name="sec:sybyltypes"></a>
 ## Sybyl Atom Types
 
 <table>

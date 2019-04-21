@@ -119,6 +119,7 @@ println "Monoisotopic mass: " +
 
 XYZ files do not have bond information, and may look like:
 
+```plain
 5
 methane
 C  0.25700 -0.36300  0.00000
@@ -126,6 +127,7 @@ H  0.25700  0.72700  0.00000
 H  0.77100 -0.72700  0.89000
 H  0.77100 -0.72700 -0.89000
 H -0.77100 -0.72700  0.00000
+```
 
 Fortunately, we can reasonably assume bonds to have a certain length, and
 reasonably understand how many connections and atom can have at most. Then,
@@ -213,7 +215,7 @@ pyrrole = fbot.kekuliseAromaticRings(pyrrole)
 This results in the image given in Figure [14.1](#fig:pyrrole).
 
 <a name="fig:pyrrole"></a>
-![](code/generated/FixPyrroleBondOrders)
+![](code/generated/FixPyrroleBondOrders.png)
 <br />**Figure 14.1**: 2D diagram of pyrrole.
 
 <a name="sec:missinghydrogens"></a>
@@ -221,7 +223,7 @@ This results in the image given in Figure [14.1](#fig:pyrrole).
 
 The [`CDKHydrogenAdder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/CDKHydrogenAdder.html) class can be used to add
 <a name="tp12">missing hydrogens</a>. The algorithm itself adds implicit
-hydrogens (see Section ??), but we will see how these can be
+hydrogens (see Section [3.5](atomsbonds.md#sec:hydrogens)), but we will see how these can be
 converted into explicit hydrogens. 
 The hydrogen adding algorithm expects, however, that CDK atom
 types are already perceived (see Section [12.2](atomtype.md#sec:atomtypePerception)).

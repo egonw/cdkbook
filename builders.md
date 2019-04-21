@@ -41,7 +41,7 @@ molecule.addBond(builder.newInstance(
 This example shows the two key methods. The first important method is
 the `getInstance()` to get an singleton instance of a particular builder.
 Later in this chapter the available builders are introduced. The second
-method, \code{newInstance()}, is the method to create new data structures.
+method, `newInstance()`, is the method to create new data structures.
 In fact, there is only one such `newInstance()` method, and it uses
 the Java varargs pattern [<a href="#citeref1">1</a>] to create the right object. Only requirement
 is that the first parameter is the `Class` for which an instance

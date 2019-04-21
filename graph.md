@@ -3,7 +3,7 @@
 Graph theory is the most common representation in cheminformatics, and with
 quantum mechanics, rule the informatics side of chemistry. The molecular graph
 follow <a name="tp1">graph</a> theory and defines atoms as molecules and bonds as edge between to
-atoms. This is by far the only option, and the IBond allows for more complex
+atoms. This is by far the only option, and the `IBond` allows for more complex
 representations, but we will focus on the molecular graph in this chapter.
 
 <a name="sec:partitioning"></a>
@@ -131,7 +131,7 @@ Number of rings: 2
 ```
 
 However, because of this algorithm's limitations in finding a correct SSSR set for some corner
-case structure, the following alternative method by Berger \textit{et al.} [3] is
+case structure, the following alternative method by Berger *et al.* [3] is
 recommended:
 
 **Script** [code/SSSR.groovy](code/SSSR.code.md)
@@ -149,7 +149,7 @@ Number of rings: 2
 ### All Rings
 
 If you are interesting in all possible rings, you can use the [`AllRingsFinder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/ringsearch/AllRingsFinder.html) class, which
-implements an algorithm by Hanser \textit{et al.} [<a href="#citeref4">4</a>]:
+implements an algorithm by Hanser *et al.* [<a href="#citeref4">4</a>]:
 
 **Script** [code/FindAllRings.groovy](code/FindAllRings.code.md)
 ```groovy
@@ -373,7 +373,7 @@ C 5
 C 3
 ```
 
-The InChI atom numbers are shown in Figure ??.
+The InChI atom numbers are shown in Figure [13.1](#fig:inchiAtomNumbers).
 
 ## References
 
