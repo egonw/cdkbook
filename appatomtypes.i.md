@@ -1,8 +1,8 @@
-# Atom Type Lists
+<section level="#" label="atomtypeapp">Atom Type Lists</section>
 
 The table listed in this Appendix is generated with the following
 code, listing all six properties of CDK atom types, as outlined
-in Section XX:
+in Section <xref>cdkatomtype</xref>:
 
 <code>ListAllCDKAtomTypes</code>
 
@@ -26,7 +26,7 @@ to code to load the proper atom type list:
 <in>atomtypelist.md</in>
 </table>
 
-## Sybyl Atom Types
+<section level="##" label="sybyltypes">Sybyl Atom Types</section>
 
 <table>
 <tr>

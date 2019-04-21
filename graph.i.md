@@ -3,7 +3,7 @@
 Graph theory is the most common representation in cheminformatics, and with
 quantum mechanics, rule the informatics side of chemistry. The molecular graph
 follow <topic>graph</topic> theory and defines atoms as molecules and bonds as edge between to
-atoms. This is by far the only option, and the IBond allows for more complex
+atoms. This is by far the only option, and the `IBond` allows for more complex
 representations, but we will focus on the molecular graph in this chapter.
 
 <section label="partitioning" level="##">Partitioning</section>
@@ -78,7 +78,7 @@ Which tells us the number of smallest rings for azulene:
 <out>FiguerasSSSR</out>
 
 However, because of this algorithm's limitations in finding a correct SSSR set for some corner
-case structure, the following alternative method by Berger \textit{et al.} [<cite>Q61780124</cite>] is
+case structure, the following alternative method by Berger *et al.* [<cite>Q61780124</cite>] is
 recommended:
 
 <code>SSSR</code>
@@ -90,7 +90,7 @@ Which calculates the same number of rings for this compound:
 ### All Rings
 
 If you are interesting in all possible rings, you can use the <class>AllRingsFinder</class> class, which
-implements an algorithm by Hanser \textit{et al.} [<cite>Q28837943</cite>]:
+implements an algorithm by Hanser *et al.* [<cite>Q28837943</cite>]:
 
 <code>FindAllRings</code>
 
@@ -218,7 +218,7 @@ which outputs:
 
 <out>InChIAtomNumbersBenzene</out>
 
-The InChI atom numbers are shown in Figure <xref>fig:inchiAtomNumbers</xref>.
+The InChI atom numbers are shown in Figure <xref>inchiAtomNumbers</xref>.
 
 ## References
 

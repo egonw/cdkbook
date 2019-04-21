@@ -58,7 +58,7 @@ The output for ethanol looks like:
 
 XYZ files do not have bond information, and may look like:
 
-<in>code/data/methane.xyz</in>
+<in type="verbatim">code/data/methane.xyz</in>
 
 Fortunately, we can reasonably assume bonds to have a certain length, and
 reasonably understand how many connections and atom can have at most. Then,
@@ -110,7 +110,7 @@ when reading SMILES, for example for pyrrole:
 This results in the image given in Figure <xref>pyrrole</xref>.
 
 <figure label="pyrrole" caption="2D diagram of pyrrole.">
-![](code/generated/FixPyrroleBondOrders)
+![](code/generated/FixPyrroleBondOrders.png)
 </figure>
 
 <section level="##" label="missinghydrogens">Missing Hydrogens</section>

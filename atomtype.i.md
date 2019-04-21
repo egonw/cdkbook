@@ -45,7 +45,7 @@ And for the oxygen in hydroxide (`C.minus`), it would give:
 
 <out>HydroxideOxygenProperties</out>
 
-A full list of CDK atom types is given in a table in Appendix <xref>atomtypes</xref>.
+A full list of CDK atom types is given in a table in Appendix <xref>atomtypeapp</xref>.
 
 ### Hybridization Types
 
@@ -92,8 +92,8 @@ This reports the perceived atom type for the carbon:
 Because atom type perception requires the notion of ring systems, with each
 atom type being perceived individually, using the above approach
 ring detection must be done each time the atom type is perceived for each
-atom\footnote{Theoretically, this information can be cached, but there
-currently is no suitable solution for this in the CDK.}. Therefore,
+atom. Theoretically, this information can be cached, but there
+currently is no suitable solution for this in the CDK. Therefore,
 perceiving atom types for all atoms in a molecule can be done more
 efficiently with the following code:
 
@@ -123,7 +123,7 @@ There are several reasons why atom types cannot be perceived, including:
 * the input is wrong, and
 * the CDK is wrong.
 
-The CDK library had knowledge about a lot of atoms types (see Appendix <xref>atomtypes</xref>),
+The CDK library had knowledge about a lot of atoms types (see Appendix <xref>atomtypesapp</xref>),
 but there are still gaps. It might be that the CDK simply does not know about an
 atom type that is present in your input. This can particularly be expected when
 using elements other than the typical 'organic chemistry' elements like
@@ -133,9 +133,9 @@ the library only knows about a few of them.
 However, another reason why the method can return X, is that the input
 passed is incorrect. In fact, this is one primary application of the CDK
 atom type perception: to identify errors in the input. An example erroneous
-input is the below, uncharged NH$_4$. If it is attempted to perceive an
+input is the below, uncharged NH<sub>4</sub>. If it is attempted to perceive an
 atom type for this nitrogen, then the `findMatchingAtomType` method
-will in fact return \code{X}, as intended:
+will in fact return `X`, as intended:
 
 <code>UnchargedNitrogenPerception</code>
 
@@ -176,7 +176,7 @@ This will give you the Sybyl atom type for carbon in methane:
 
 <out>SybylAtomTypePerception</out>
 
-A full list of Sybyl atom types is given in a table in Appendix <xref>app:atomtypes</xref>.
+A full list of Sybyl atom types is given in a table in Appendix <xref>sybyltypes</xref>.
 
 ## References
 

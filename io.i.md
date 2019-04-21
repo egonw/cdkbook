@@ -84,7 +84,7 @@ a file easily from a string with a `StringReader`
 
 But besides reading XML files correctly, the support for InputStream also allows
 reading files directly from the internet and from gzipped files (see
-Section <xref>gzip</xref>.
+Section <xref>gzip</xref>).
 
 <section level="###" label="domoicacid">Example: Downloading Domoic Acid from PubChem</section>
 

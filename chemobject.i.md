@@ -6,13 +6,13 @@ such as `IReaction`. But there are many more data structure interfaces used
 by the CDK, and this chapter will give an overview of what is available.
 
 All these data interfaces have one interface in common:
-`IChemObject`, which we already briefly saw in Section 3.5.
+`IChemObject`, which we already briefly saw in Section <xref>chemobjects</xref>.
 The core `IChemObject` interface itself, extends another core, though commonly
 hidden, interface: `ICDKObject`.
 The roles of these two classes are to provide basic functionality needed by the
 library: the `ICDKObject` interface provides the `getBuilder()` method
 which returns a `IChemObjectBuilder` that is used to create new chemical objects
-(see Chapter 10).
+(see Chapter <xref>builders</xref>).
 This method is split out from `IChemObject` because some classes are required
 to return a builder, but not provide the full set of fields that `IChemObject`
 does.

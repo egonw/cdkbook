@@ -282,7 +282,6 @@ Section <xref>missinghydrogens</xref> describes how hydrogens can
 be added programmatically.
 
 <section level="##" label="chemobjects">Chemical Objects</section>
-\label{sec:chemobjects}
 
 Another interface that must be introduced is the <class>IChemOject</class>
 as it plays an key role in the CDK data model. Almost all interfaces
