@@ -53,7 +53,7 @@ layer, most layers start with a lower case character, as is visible in the
 hydrogen layer, indicated by the (*/h*).
 
 Another important thing to note is that hydrogens are not explicitly
-defined in the connection table (see Section ??).
+defined in the connection table (see Section [3.5](atomsbonds.md#sec:hydrogens)).
 Therefore, the InChI for methane does not have a connectivity layer,
 but formic acid, *mierezuur* in Dutch, does (*/c2-1-3*):
 

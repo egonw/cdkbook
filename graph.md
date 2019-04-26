@@ -382,6 +382,6 @@ The InChI atom numbers are shown in Figure [13.1](#fig:inchiAtomNumbers).
 3. <a name="citeref3"></a>Berger F, Gritzmann P, de Vries S. Minimum Cycle Bases for Network Graphs. Algorithmica. 2004 May 28;40(1):51–62.  doi:[10.1007/S00453-004-1098-X](https://doi.org/10.1007/S00453-004-1098-X)
 4. <a name="citeref4"></a>Hanser Th, Jauffret Ph, Kaufmann G. A New Algorithm for Exhaustive Ring Perception in a Molecular Graph. Journal of Chemical Information and Modeling. 1996 Jan 1;36(6):1146–52.  doi:[10.1021/CI960322F](https://doi.org/10.1021/CI960322F)
 5. <a name="citeref5"></a>Floyd RW. Algorithm 97: Shortest path. Communications of the ACM. 1962 Jun 1;5(6):345.  doi:[10.1145/367766.368168](https://doi.org/10.1145/367766.368168)
-6. <a name="citeref6"></a>Morgan HL. The Generation of a Unique Machine Description for Chemical Structures-A Technique Developed at Chemical Abstracts Service. Journal of Chemical Documentation. 1965 Jan 1;5(2):107–13.  doi:[10.1021/C160017A018](https://doi.org/10.1021/C160017A018)
+6. <a name="citeref6"></a>Morgan HL. The Generation of a Unique Machine Description for Chemical Structures-A Technique Developed at Chemical Abstracts Service. Journal of Chemical Documentation. 1965 May 1;5(2):107–13.  doi:[10.1021/C160017A018](https://doi.org/10.1021/C160017A018)
 
 
