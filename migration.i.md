@@ -55,7 +55,7 @@ for all atoms.
 Some classes and methods have the same API, but have slightly different
 behavior as before. For example, the <class>SmilesGenerator</class> now requires
 that all atoms have implicit hydrogen counts set. This can be done with
-the <class>CDKHydrogenAdder</class> as explained in Section XX.
+the <class>CDKHydrogenAdder</class> as explained in Section <xref>missinghydrogens</xref>.
 
 ### Constructors that now require a builder
 
@@ -79,13 +79,13 @@ needs it for its data structure for the matching.
 #### ModelBuilder3D
 
 The `getInstance()` method of the <class>ModelBuilder3D</class> class now also
-requires a <class>IChemObjectBuilder</class>. See Section XX.
+requires a <class>IChemObjectBuilder</class>.
 
 #### CDKAtomTypeMatcher
 
 A significant change in the <class>CDKAtomTypeMatcher</class> behavior is that it now
 returns a special 'X' atom type when no atom type could be perceived.
-See Section XX.
+See Section <xref>atomtypePerception</xref>.
 
 ### Static methods that are no longer
 
