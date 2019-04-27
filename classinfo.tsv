@@ -79,6 +79,7 @@ ISingleElectron	org.openscience.cdk.interfaces	interfaces
 IsotopeFactory	org.openscience.cdk.config	core
 Isotopes	org.openscience.cdk.config	core
 IStrand	org.openscience.cdk.interfaces	interfaces
+IteratingPCCompoundXMLReader	org.openscience.cdk.io.iterator	io
 IteratingSDFReader	org.openscience.cdk.io.iterator	ctab
 KappaShapeIndicesDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 KierHallSmartsDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular

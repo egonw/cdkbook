@@ -197,6 +197,43 @@ has a simple API to work with gzipped files, using the <class>GZIPInputStream</c
 
 <code>PDBCoordinateExtraction</code>
 
+## Iterating Readers
+
+By default, the CDK readers read structures into memory. This is fine when it
+is a relatively small model. It no longer works for large files, such as 1GB
+<topic>MDL SD files</topic> [<cite>Q27783587</cite>]. To allow processing of
+such large files, the CDK can take
+advantage from the fact that these SD files are basically a concatenation of
+MDL molfiles. Therefore, one can use an iterating reader to process each
+individual molecule one by one.
+
+<section level="###" label="sdfiles">MDL SD files</section>
+
+MDL SD files can be processed using the <class>IteratingSDFReader</class>, for
+example, to generate a SMILES for each structure:
+
+<code>IteratingSDFReaderDemo</code>
+
+Which outputs the molecular formula for the three entries in the file:
+
+<out>IteratingSDFReaderDemo</out>
+
+<section level="###" label="pubchemfiles">PubChem Compounds XML files</section>
+
+Similarly, PubChem Compounds XML files can be processed taking advantage
+of a XML pull library, which is nicely hidden behind the same iterator
+interface as used for parsing MDL SD files. Iterating over a set
+of compounds is fairly straightforward with the
+<class>IteratingPCCompoundXMLReader</class> class:
+
+<code>PubChemCompoundsXMLDemo</code>
+
+Which outputs the molecular formula for the three entries in the
+`aceticAcids38.xml` file:
+
+<out>PubChemCompoundsXMLDemo</out>
+
+
 ## Customizing the Output
 
 An interesting feature of file IO in the CDK is that it is customizable. Before
