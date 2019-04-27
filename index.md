@@ -171,7 +171,9 @@ steps forward, but it will take some time for things to iron out.
 20.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
 20.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
 20.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
+
 [Index](indexList.md) <br />
+
 [Appendix A](appatomtypes.md) <br />
 A.1 [CDK Atom Types](appatomtypes.md#cdk-atom-types) <br />
 A.2 [Sybyl Atom Types](appatomtypes.md#sybyl-atom-types) <br />
