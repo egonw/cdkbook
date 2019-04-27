@@ -43,7 +43,9 @@ steps forward, but it will take some time for things to iron out.
 ## Contents
 
 <toc>toc.txt</toc>
+
 [Index](indexList.i.md) <br />
+
 [Appendix A](appatomtypes.i.md) <br />
 A.1 [CDK Atom Types](appatomtypes.i.md#cdk-atom-types) <br />
 A.2 [Sybyl Atom Types](appatomtypes.i.md#sybyl-atom-types) <br />
