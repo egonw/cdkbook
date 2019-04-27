@@ -57,7 +57,7 @@ recommendations, and <a name="tp6">line notations</a> such as the
 <a name="tp7">Wiswesser Line Notation</a> [<a href="#citeref3">3</a>] and the
 <a name="tp8">SMILES</a> [<a href="#citeref4">4</a>],
 are examples for standardized conventions
-for labeling molecules (see Section [11.7](io.md#sec:lineNotations)).
+for labeling molecules (see Section [11.8](io.md#sec:lineNotations)).
 In addition, these representations do not include
 information on the 3D conformation.
 

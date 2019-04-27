@@ -103,11 +103,14 @@ steps forward, but it will take some time for things to iron out.
 11.3.1. [Reading modes](io.md#reading-modes) <br />
 11.3.2. [Validation](io.md#validation) <br />
 11.4. [Gzipped files](io.md#gzipped-files) <br />
-11.5. [Customizing the Output](io.md#customizing-the-output) <br />
-11.5.1. [Setting Properties](io.md#setting-properties) <br />
-11.6. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
-11.7. [Line Notations](io.md#line-notations) <br />
-11.7.1. [SMILES](io.md#smiles) <br />
+11.5. [Iterating Readers](io.md#iterating-readers) <br />
+11.5.1. [MDL SD files](io.md#mdl-sd-files) <br />
+11.5.2. [PubChem Compounds XML files](io.md#pubchem-compounds-xml-files) <br />
+11.6. [Customizing the Output](io.md#customizing-the-output) <br />
+11.6.1. [Setting Properties](io.md#setting-properties) <br />
+11.7. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
+11.8. [Line Notations](io.md#line-notations) <br />
+11.8.1. [SMILES](io.md#smiles) <br />
 12. [Atom types](atomtype.md) <br />
 12.1. [The CDK atom type model](atomtype.md#the-cdk-atom-type-model) <br />
 12.1.1. [Hybridization Types](atomtype.md#hybridization-types) <br />
@@ -171,6 +174,7 @@ steps forward, but it will take some time for things to iron out.
 20.1.6. [IsotopeFactory](migration.md#isotopefactory) <br />
 20.1.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
 20.1.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
+20.1.9. [Aromaticity calculations](migration.md#aromaticity-calculations) <br />
 
 [Index](indexList.md) <br />
 

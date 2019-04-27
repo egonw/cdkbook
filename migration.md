@@ -55,7 +55,7 @@ for all atoms.
 Some classes and methods have the same API, but have slightly different
 behavior as before. For example, the [`SmilesGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/smiles/SmilesGenerator.html) now requires
 that all atoms have implicit hydrogen counts set. This can be done with
-the [`CDKHydrogenAdder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/CDKHydrogenAdder.html) as explained in Section XX.
+the [`CDKHydrogenAdder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/CDKHydrogenAdder.html) as explained in Section [14.4](missing.md#sec:missinghydrogens).
 
 ### Constructors that now require a builder
 
@@ -79,13 +79,13 @@ needs it for its data structure for the matching.
 #### ModelBuilder3D
 
 The `getInstance()` method of the [`ModelBuilder3D`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/modeling/builder3d/ModelBuilder3D.html) class now also
-requires a [`IChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObjectBuilder.html). See Section XX.
+requires a [`IChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObjectBuilder.html).
 
 #### CDKAtomTypeMatcher
 
 A significant change in the [`CDKAtomTypeMatcher`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/atomtype/CDKAtomTypeMatcher.html) behavior is that it now
 returns a special 'X' atom type when no atom type could be perceived.
-See Section XX.
+See Section [12.2](atomtype.md#sec:atomtypePerception).
 
 ### Static methods that are no longer
 
@@ -193,6 +193,10 @@ generator = SmilesGenerator.generic().aromatic()
 smiles = generator.createSMILES(mol)
 println "$smiles"
 ```
+
+### Aromaticity calculations
+
+Aromaticity is differently calculated now, see Section [16.3](properties.md#sec:aromaticity).
 
 ## References
 

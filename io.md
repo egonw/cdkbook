@@ -423,7 +423,7 @@ we get these warnings via the handler interface:
 ```plain
 ```
 
-Because of an issue in version 2.0 of the CDK, the above does not show any warnings.
+Because of an issue in version 2.2 of the CDK, the above does not show any warnings.
 This has been fixed in CDK 2.3, see [commit 547b028e17656f54a080a885a166377320b3a8ad](https://github.com/cdk/cdk/commit/547b028e17656f54a080a885a166377320b3a8ad).
 
 <a name="sec:gzip"></a>
@@ -453,11 +453,83 @@ for (container in
 }
 ```
 
+## Iterating Readers
+
+By default, the CDK readers read structures into memory. This is fine when it
+is a relatively small model. It no longer works for large files, such as 1GB
+<a name="tp6">MDL SD files</a> [<a href="#citeref3">3</a>]. To allow processing of
+such large files, the CDK can take
+advantage from the fact that these SD files are basically a concatenation of
+MDL molfiles. Therefore, one can use an iterating reader to process each
+individual molecule one by one.
+
+<a name="sec:sdfiles"></a>
+### MDL SD files
+
+MDL SD files can be processed using the [`IteratingSDFReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/iterator/IteratingSDFReader.html), for
+example, to generate a SMILES for each structure:
+
+**Script** [code/IteratingSDFReaderDemo.groovy](code/IteratingSDFReaderDemo.code.md)
+```groovy
+iterator = new IteratingSDFReader(
+  new File("data/test6.sdf").newReader(),
+  DefaultChemObjectBuilder.getInstance()
+)
+while (iterator.hasNext()) {
+  IAtomContainer mol = iterator.next()
+  formula = MolecularFormulaManipulator
+    .getMolecularFormula(mol)
+  println MolecularFormulaManipulator
+    .getString(formula)
+}
+```
+
+Which outputs the molecular formula for the three entries in the file:
+
+```plain
+C19H24Br2N2O6
+C20H24N2O5S
+C17H22N2O6S
+```
+
+<a name="sec:pubchemfiles"></a>
+### PubChem Compounds XML files
+
+Similarly, PubChem Compounds XML files can be processed taking advantage
+of a XML pull library, which is nicely hidden behind the same iterator
+interface as used for parsing MDL SD files. Iterating over a set
+of compounds is fairly straightforward with the
+[`IteratingPCCompoundXMLReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/iterator/IteratingPCCompoundXMLReader.html) class:
+
+**Script** [code/PubChemCompoundsXMLDemo.groovy](code/PubChemCompoundsXMLDemo.code.md)
+```groovy
+iterator = new IteratingPCCompoundXMLReader(
+  new File("data/aceticAcids38.xml").newReader(),
+  DefaultChemObjectBuilder.getInstance()
+)
+while (iterator.hasNext()) {
+  IAtomContainer mol = iterator.next()
+  formula = MolecularFormulaManipulator
+    .getMolecularFormula(mol)
+  println MolecularFormulaManipulator.getString(formula)
+}
+```
+
+Which outputs the molecular formula for the three entries in the
+`aceticAcids38.xml` file:
+
+```plain
+C2H4O2
+[C2H3O2]-
+[C2H3HgO2]+
+```
+
+
 ## Customizing the Output
 
 An interesting feature of file IO in the CDK is that it is customizable. Before
 I will give all the details, let's start with a simple example: creating a
-<a name="tp6">Gaussian input file</a> for optimizing the structure of methane,
+<a name="tp7">Gaussian input file</a> for optimizing the structure of methane,
 and let's start with an XYZ file, that is, with `methane.xyz`:
 
 ```
@@ -667,11 +739,11 @@ This results in this source code:
 <a name="sec:lineNotations"></a>
 ## Line Notations
 
-Another common input mechanism in cheminformatics is the <a name="tp7">line notation</a>.
-Several line notations have been proposed, including the <a name="tp8">Wiswesser Line Notation</a>
-(WLN) [<a href="#citeref3">3</a>] and the <a name="tp9">Sybyl Line Notation</a> (SLN) [<a href="#citeref4">4</a>],
-but the most popular is <a name="tp10">SMILES</a> [<a href="#citeref5">5</a>]. There is a Open Standard around
-this format called <a name="tp11">OpenSMILES</a>, available at [http://www.opensmiles.org/](http://www.opensmiles.org/).
+Another common input mechanism in cheminformatics is the <a name="tp8">line notation</a>.
+Several line notations have been proposed, including the <a name="tp9">Wiswesser Line Notation</a>
+(WLN) [<a href="#citeref4">4</a>] and the <a name="tp10">Sybyl Line Notation</a> (SLN) [<a href="#citeref5">5</a>],
+but the most popular is <a name="tp11">SMILES</a> [<a href="#citeref6">6</a>]. There is a Open Standard around
+this format called <a name="tp12">OpenSMILES</a>, available at [http://www.opensmiles.org/](http://www.opensmiles.org/).
 
 ### SMILES
 
@@ -726,7 +798,8 @@ in Section [16.3](properties.md#sec:aromaticity).
 
 1. <a name="citeref1"></a>Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the Worldwide Web. 1. Basic Principles. Journal of Chemical Information and Modeling. 1999 Nov 1;39(6):928–42.  doi:[10.1021/CI990052B](https://doi.org/10.1021/CI990052B) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/CI990052B))
 2. <a name="citeref2"></a>Willighagen E. Processing CML conventions in Java. Internet Journal of Chemistry [Internet]. 2001 Jan 1;4:4. Available from: https://zenodo.org/record/1495470 doi:[10.5281/zenodo.1495470](https://doi.org/10.5281/zenodo.1495470) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.5281/zenodo.1495470))
-3. <a name="citeref3"></a>Wiswesser WJ. How the WLN began in 1949 and how it might be in 1999. Journal of Chemical Information and Modeling. 1982 May 1;22(2):88–93.  doi:[10.1021/CI00034A005](https://doi.org/10.1021/CI00034A005) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/CI00034A005))
-4. <a name="citeref4"></a>Homer RW, Swanson J, Jilek RJ, Hurst T, Clark RD. SYBYL line notation (SLN): a single notation to represent chemical structures, queries, reactions, and virtual libraries. Journal of Chemical Information and Modeling. 2008 Dec 1;48(12):2294–307.  doi:[10.1021/CI7004687](https://doi.org/10.1021/CI7004687) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/CI7004687))
-5. <a name="citeref5"></a>Weininger D. SMILES, a chemical language and information system. 1. Introduction to methodology and encoding rules. Journal of Chemical Information and Modeling [Internet]. 1988 Feb 1;28(1):31–6. Available from: http://organica1.org/seminario/weininger88.pdf doi:[10.1021/CI00057A005](https://doi.org/10.1021/CI00057A005) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/CI00057A005))
+3. <a name="citeref3"></a>Dalby A, Nourse JG, Hounshell WD, Gushurst AKI, Grier DL, Leland BA, et al. Description of several chemical structure file formats used by computer programs developed at Molecular Design Limited. Journal of Chemical Information and Modeling. 1992 May 1;32(3):244–55.  doi:[10.1021/CI00007A012](https://doi.org/10.1021/CI00007A012) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/CI00007A012))
+4. <a name="citeref4"></a>Wiswesser WJ. How the WLN began in 1949 and how it might be in 1999. Journal of Chemical Information and Modeling. 1982 May 1;22(2):88–93.  doi:[10.1021/CI00034A005](https://doi.org/10.1021/CI00034A005) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/CI00034A005))
+5. <a name="citeref5"></a>Homer RW, Swanson J, Jilek RJ, Hurst T, Clark RD. SYBYL line notation (SLN): a single notation to represent chemical structures, queries, reactions, and virtual libraries. Journal of Chemical Information and Modeling. 2008 Dec 1;48(12):2294–307.  doi:[10.1021/CI7004687](https://doi.org/10.1021/CI7004687) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/CI7004687))
+6. <a name="citeref6"></a>Weininger D. SMILES, a chemical language and information system. 1. Introduction to methodology and encoding rules. Journal of Chemical Information and Modeling [Internet]. 1988 Feb 1;28(1):31–6. Available from: http://organica1.org/seminario/weininger88.pdf doi:[10.1021/CI00057A005](https://doi.org/10.1021/CI00057A005) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/CI00057A005))
 
