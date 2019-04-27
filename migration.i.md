@@ -152,6 +152,10 @@ use instead:
 
 <code>AromaticSMILES</code>
 
+### Aromaticity calculations
+
+Aromaticity is differently calculated now, see Section <xref>aromaticity</xref>.
+
 ## References
 
 <references/>
