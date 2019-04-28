@@ -150,8 +150,10 @@ steps forward, but it will take some time for things to iron out.
 16. [Molecular Properties](properties.md) <br />
 16.1. [Molecular Mass](properties.md#molecular-mass) <br />
 16.1.1. [Implicit Hydrogens](properties.md#implicit-hydrogens) <br />
-16.2. [Total Polar Surface Area](properties.md#total-polar-surface-area) <br />
-16.3. [Aromaticity](properties.md#aromaticity) <br />
+16.2. [LogP](properties.md#logp) <br />
+16.3. [Total Polar Surface Area](properties.md#total-polar-surface-area) <br />
+16.4. [Van der Waals Volume](properties.md#van-der-waals-volume) <br />
+16.5. [Aromaticity](properties.md#aromaticity) <br />
 17. [Molecular Descriptors](descriptor.md) <br />
 17.1. [Descriptors and Specifications](descriptor.md#descriptors-and-specifications) <br />
 17.1.1. [IImplementationSpecification](descriptor.md#iimplementationspecification) <br />

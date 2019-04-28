@@ -792,7 +792,7 @@ Ph-NH2 -> c1(ccccc1)N
 ```
 
 Of course, this does require that aromaticity has been perceived, as explained
-in Section [16.3](properties.md#sec:aromaticity).
+in Section [16.5](properties.md#sec:aromaticity).
 
 ## References
 

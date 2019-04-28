@@ -196,7 +196,7 @@ println "$smiles"
 
 ### Aromaticity calculations
 
-Aromaticity is differently calculated now, see Section [16.3](properties.md#sec:aromaticity).
+Aromaticity is differently calculated now, see Section [16.5](properties.md#sec:aromaticity).
 
 ## References
 

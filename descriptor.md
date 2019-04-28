@@ -8,8 +8,7 @@ from a badly scaling algorithm. Instead, approaches using the chemical graph
 as a core representation are less accurate, but much more faster.
 
 Quantitative Structure-Activity Relationship (<a name="tp1">QSAR</a>) modeling uses this latter
-approach to predict molecular properties. For example, the logP calculation
-done in Section ?? is using this approach. QSAR
+approach to predict molecular properties. QSAR
 approaches commonly use <a name="tp2">molecular descriptors</a> which numerically
 describe molecular allowing statistical methods to correlate these descriptors
 to end points, such as the logP property. A far more detailed explanation
@@ -35,8 +34,8 @@ parameterizable implementations: one descriptor instance that can calculate
 the number of carbons, but also the number of nitrogens. After all,
 we do not want too much code replication.
 
-Therefore, the CDK has two core interfaces: IDescriptor and
-IImplementationSpecification [<a href="#citeref2">2</a>]. The first is an actual
+Therefore, the CDK has two core interfaces: [`IDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/IDescriptor.html) and
+[`IImplementationSpecification`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/IImplementationSpecification.html) [<a href="#citeref2">2</a>]. The first is an actual
 descriptor instance,
 parameterized to calculate particular output. The second links this
 descriptor to a formal specification, outlined in the Blue Obelisk
@@ -62,7 +61,7 @@ allowing one to mix descriptor calculation by various tools and to keep
 track of what value came from what vendor.
 
 For example, we can inspect these field values for the TPSA descriptor
-(see Section ??):
+(see Section [16.3](properties.md#sec:tpsa)):
 
 **Script** [code/TPSASpecs.groovy](code/TPSASpecs.code.md)
 ```groovy
@@ -290,13 +289,21 @@ for (i in 0..(value.length()-1)) {
 
 This returns us all inertia values, and note that the index starts at zero:
 
-\codeout{DoubleArrayGetValue}
+```plain
+0 3.1955750763324886
+1 3.1945914391012566
+2 3.1941764686200322
+3 1.0003079070516474
+4 1.0004378617544136
+5 1.0001299147011136
+6 1.1190669469245764
+```
 
 <a name="sec:noCount"></a>
 ## Counting Nitrogens and Oxygens
 
 Now that we know how the general API works, we can calculate custom descriptors, say the
-nitrogenCount and oxygenCount. We reuse the [`AtomCountDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/descriptors/molecular/AtomCountDescriptor.html) for that, and
+`nitrogenCount` and `oxygenCount`. We reuse the [`AtomCountDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/descriptors/molecular/AtomCountDescriptor.html) for that, and
 set the parameter:
 
 **Script** [code/SpecificAtomCountDescriptor.groovy](code/SpecificAtomCountDescriptor.code.md)

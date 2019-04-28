@@ -5,7 +5,7 @@
 3D coordinates [atomsbonds](atomsbonds.md#tp7)<br />
 adjacency matrix [graph](graph.md#tp11)<br />
 anti-clockwise [stereo](stereo.md#tp8)<br />
-aromaticity [properties](properties.md#tp5)<br />
+aromaticity [properties](properties.md#tp10)<br />
 ASN.1 [io](io.md#tp3)<br />
 atomic number [missing](missing.md#tp1)<br />
 atom types [atomtype](atomtype.md#tp1)<br />
@@ -94,6 +94,7 @@ IUPAC name [cheminfo](cheminfo.md#tp5)<br />
 JNI-InChI [inchi](inchi.md#tp2)<br />
 line notation [io](io.md#tp8)<br />
 line notations [cheminfo](cheminfo.md#tp6)<br />
+LogP [properties](properties.md#tp4)<br />
 lone pairs [unpairedelectrons](unpairedelectrons.md#tp2)<br />
 MDLReader [ioclasseslist](ioclasseslist.md#tp22)<br />
 MDL RXN [reaction](reaction.md#tp4)<br />
@@ -111,6 +112,7 @@ molecular descriptors [cheminfo](cheminfo.md#tp30) [descriptor](descriptor.md#tp
 molecular fingerprints [substructure](substructure.md#tp1)<br />
 molecular formula [atomsbonds](atomsbonds.md#tp18) [missing](missing.md#tp17)<br />
 molecular mass [properties](properties.md#tp1)<br />
+molecular volume [properties](properties.md#tp8)<br />
 molecule [atomsbonds](atomsbonds.md#tp15)<br />
 moment of inertia [descriptor](descriptor.md#tp6)<br />
 monoisotopic mass [missing](missing.md#tp9)<br />
@@ -121,6 +123,7 @@ numerical representations [cheminfo](cheminfo.md#tp29)<br />
 OpenSMILES [io](io.md#tp12)<br />
 parameters [descriptor](descriptor.md#tp4)<br />
 partial least squares [cheminfo](cheminfo.md#tp25)<br />
+partition coefficient [properties](properties.md#tp3)<br />
 partitioning [graph](graph.md#tp2)<br />
 PCA [cheminfo](cheminfo.md#tp28)<br />
 PCCompoundASNReader [ioclasseslist](ioclasseslist.md#tp34)<br />
@@ -173,16 +176,18 @@ symbol [missing](missing.md#tp2)<br />
 tautomerism [inchi](inchi.md#tp3)<br />
 tetrahedral chirality [stereo](stereo.md#tp5)<br />
 torsion [cheminfo](cheminfo.md#tp13)<br />
-Total Polar Surface Area [properties](properties.md#tp3)<br />
-TPSA [properties](properties.md#tp4)<br />
+Total Polar Surface Area [properties](properties.md#tp6)<br />
+TPSA [properties](properties.md#tp7)<br />
 unique identifier [inchi](inchi.md#tp7)<br />
 unit cell [atomsbonds](atomsbonds.md#tp8)<br />
 unpaired electron [unpairedelectrons](unpairedelectrons.md#tp4)<br />
 van der Waals radius [missing](missing.md#tp7)<br />
+van der waals volume [properties](properties.md#tp9)<br />
 VASPReader [ioclasseslist](ioclasseslist.md#tp43)<br />
 water [unpairedelectrons](unpairedelectrons.md#tp3)<br />
 wedge bonds [stereo](stereo.md#tp4)<br />
 Wiswesser Line Notation [cheminfo](cheminfo.md#tp7) [io](io.md#tp9)<br />
+XLogP [properties](properties.md#tp5)<br />
 XYZReader [ioclasseslist](ioclasseslist.md#tp44)<br />
 XYZWriter [ioclasseslist](ioclasseslist.md#tp45)<br />
 ZMatrixReader [ioclasseslist](ioclasseslist.md#tp46)
