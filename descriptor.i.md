@@ -8,8 +8,7 @@ from a badly scaling algorithm. Instead, approaches using the chemical graph
 as a core representation are less accurate, but much more faster.
 
 Quantitative Structure-Activity Relationship (<topic>QSAR</topic>) modeling uses this latter
-approach to predict molecular properties. For example, the logP calculation
-done in Section <xref>properties:logp</xref> is using this approach. QSAR
+approach to predict molecular properties. QSAR
 approaches commonly use <topic>molecular descriptors</topic> which numerically
 describe molecular allowing statistical methods to correlate these descriptors
 to end points, such as the logP property. A far more detailed explanation
@@ -35,8 +34,8 @@ parameterizable implementations: one descriptor instance that can calculate
 the number of carbons, but also the number of nitrogens. After all,
 we do not want too much code replication.
 
-Therefore, the CDK has two core interfaces: IDescriptor and
-IImplementationSpecification [<cite>Q27065423</cite>]. The first is an actual
+Therefore, the CDK has two core interfaces: <class>IDescriptor</class> and
+<class>IImplementationSpecification</class> [<cite>Q27065423</cite>]. The first is an actual
 descriptor instance,
 parameterized to calculate particular output. The second links this
 descriptor to a formal specification, outlined in the Blue Obelisk
@@ -62,7 +61,7 @@ allowing one to mix descriptor calculation by various tools and to keep
 track of what value came from what vendor.
 
 For example, we can inspect these field values for the TPSA descriptor
-(see Section <xref>sec:tpsa</xref>):
+(see Section <xref>tpsa</xref>):
 
 <code>TPSASpecs</code>
 
@@ -198,12 +197,12 @@ look like:
 
 This returns us all inertia values, and note that the index starts at zero:
 
-\codeout{DoubleArrayGetValue}
+<out>DoubleArrayGetValue</out>
 
 <section level="##" label="noCount">Counting Nitrogens and Oxygens</section>
 
 Now that we know how the general API works, we can calculate custom descriptors, say the
-nitrogenCount and oxygenCount. We reuse the <class>AtomCountDescriptor</class> for that, and
+`nitrogenCount` and `oxygenCount`. We reuse the <class>AtomCountDescriptor</class> for that, and
 set the parameter:
 
 <code>SpecificAtomCountDescriptor</code>

@@ -111,6 +111,7 @@ TopologicalMatrix	org.openscience.cdk.graph.matrix	qsarmolecular
 TPSADescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 UniversalIsomorphismTester	org.openscience.cdk.isomorphism	standard
 VABCDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
+VABCVolume	org.openscience.cdk.geometry.volume	standard
 VAdjMaDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 WeightDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
 WeightedPathDescriptor	org.openscience.cdk.qsar.descriptors.molecular	qsarmolecular
