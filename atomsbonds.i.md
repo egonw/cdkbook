@@ -35,12 +35,16 @@ carbon <class>IElement</class>, conveniently provided by the <class>Elements</cl
 <code>CreateAtom2</code>
 
 A CDK atom has many properties, many of them inherited from the `IElement`,
-`IIsotope` and `IAtomType` interfaces. Figure 3.1 shows the interface
+`IIsotope` and `IAtomType` interfaces. Figure <xref>atomInheritance</xref> shows the interface
 inheritance specified by the CDK data model.
 
 These constructors will set the atomic number of the atom:
 
 <out>CreateAtom2</out>
+
+<figure label="atomInheritance" caption="The `IAtom` interface extends the `IAtomType` interface, which extends the `IIsotope` interface, which, in turn, extends the `IElement` interface.">
+![](images/atomInheritance.png)
+</figure>
 
 ### IElement
 

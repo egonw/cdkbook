@@ -1,0 +1,14 @@
+digraph {
+
+  rankdir= BT;
+
+  iatom -> iatomtype;
+  iatomtype -> iisotope;
+  iisotope -> ielement;
+
+  iatom [shape=box,label="IAtom"];
+  iatomtype [shape=box,label="IAtomType"];
+  iisotope [shape=box,label="IIsotope"];
+  ielement [shape=box,label="IElement"];
+
+}
