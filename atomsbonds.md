@@ -44,7 +44,7 @@ IAtom atom = new Atom(Elements.CARBON);
 ```
 
 A CDK atom has many properties, many of them inherited from the `IElement`,
-`IIsotope` and `IAtomType` interfaces. Figure 3.1 shows the interface
+`IIsotope` and `IAtomType` interfaces. Figure [3.1](#fig:atomInheritance) shows the interface
 inheritance specified by the CDK data model.
 
 These constructors will set the atomic number of the atom:
@@ -52,6 +52,10 @@ These constructors will set the atomic number of the atom:
 ```plain
 atomic number: 6
 ```
+
+<a name="fig:atomInheritance"></a>
+![](images/atomInheritance.png)
+<br />**Figure 3.1**: The `IAtom` interface extends the `IAtomType` interface, which extends the `IIsotope` interface, which, in turn, extends the `IElement` interface.
 
 ### IElement
 
@@ -462,7 +466,7 @@ existing vertices.
 
 <a name="fig:methaneImExplicit"></a>
 ![](images/generated/MethaneImplicit.png) ![](images/generated/MethaneExplicit.png)
-<br />**Figure 3.1**: Methane with implicit (left) and explicit (right) hydrogens.
+<br />**Figure 3.2**: Methane with implicit (left) and explicit (right) hydrogens.
 <!-- <code>MethaneImplicit</code> -->
 <!-- <code>MethaneExplicit</code> -->
 
@@ -609,12 +613,12 @@ the rings are in a molecule.
 
 <a name="fig:ring"></a>
 ![](images/rings.png)
-<br />**Figure 3.2**: The `IRing` interface extends the `IAtomContainer` interface and is used to hold information about rings.
+<br />**Figure 3.3**: The `IRing` interface extends the `IAtomContainer` interface and is used to hold information about rings.
 
 Section [13.2](graph.md#sec:spanningtree) explains what functionality the CDK has to
 determine a bond takes part in a ring system. Here, we just introduce the
 [`IRing`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IRing.html) interface, which extends the more general `IAtomContainer`
-as shown in Figure [3.2](#fig:ring). Practically, there is nothing much to
+as shown in Figure [3.3](#fig:ring). Practically, there is nothing much to
 say about the IRing interface. One method it adds, is to get the size of the
 ring:
 
