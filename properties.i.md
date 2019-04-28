@@ -1,13 +1,13 @@
 # Molecular Properties
 
 Cheminformatics is about molecular properties and chemistry in general the field
-of finding chemicals with new properties. Prof. Gasteiger in 2006 gave a
-lecture at Cologne University where he expressed this view. It stuck around. We keep
+of finding chemicals with new properties. [Prof. Gasteiger](https://tools.wmflabs.org/scholia/author/Q109081)
+in 2006 gave a lecture at Cologne University where he expressed this view. It stuck around. We keep
 databases to store those properties, and we develop methods to predict and understand
 those properties. Prediction is important for one reason: there are too many
 chemical structures and we cannot experimentally measure the properties for all
 of them. The number of molecules is often said to be relevant to drug discovery is in
-the order of $10^{60}$. The largest current databases have less than $10^{8}$
+the order of 10<sup>60</sup>. The largest current databases have less than 10<sup>8</sup>
 structures. That means that prediction of properties for the vast majority
 of molecules will remain relevant for the foreseeable future.
 
@@ -38,6 +38,29 @@ code will not be sufficient. Instead, your code should look like:
 
 <code>CalculateMolecularWeightImplicitHydrogens</code>
 
+
+<section level="##" label="properties:logp">LogP</section>
+
+The <topic>partition coefficient</topic> describes how a molecular structure distributes
+itself over two immiscible solvents. The logarithm of the partition coefficient (<topic>LogP</topic>) between
+octanol and water is often used in cheminformatics to describe hydrophobicity [<cite>Q55954394</cite>,<cite>Q63367539</cite>].
+Wikipedia gives [this equation](http://en.wikipedia.org/wiki/Partition_coefficient).
+This equation assumes that the solute is neutral, which may involve changing the pH of the water.
+
+The CDK has implemented an algorithm based on the <topic>XLogP</topic> algorithm [<cite>Q28842968</cite>,<cite>Q63367548</cite>]. The
+code is available via the descriptor API. It can be used to calculate the LogP for a single
+molecule. The implementation expects explicit hydrogens, so you need to add those if not
+present yet (see Section <xref>missinghydrogens</xref>). The calculation returns a <class>DoubleResult</class>
+following the descriptor API:
+
+<code>XLogP</code>
+
+which returns:
+
+<out>XLogP</out>
+
+An alternative is the more recent algorithm by Plante [<cite>Q59771351</cite>].
+
 <section level="##" label="tpsa">Total Polar Surface Area</section>
 
 Another properties that frequently returns in cheminformatics is the <topic>Total Polar Surface Area</topic>
@@ -50,6 +73,25 @@ calculation:
 which returns:
 
 <out>TPSA</out>
+
+
+## Van der Waals Volume
+
+Quite related to the TPSA discussed in the previous section, is the actual <topic>molecular volume</topic>
+itself. Zhao et al. proposed a simple, additive model to estimate the <topic>van der waals volume</topic>
+of molecules [<cite>Q47632144</cite>], though their method is restricted to molecules with only these elements:
+H, C, N, O, F, Cl, Br, I, P, S, As, B, Si, Se, and Te. The additive method is based on averaged
+volumes of the bonds, corrected for the number of rings. The bond volumes are specific for
+particular element-element combinations, which explains why their approach only works for the
+aforementioned list of elements. The full method is implemented by the <class>VABCVolume</class> class,
+which does not use the descriptor API, so that we can simply use the following method:
+
+<code>VABCVolumes</code>
+
+This code gives us the volumes of methane and ethane in cubic Ångström:
+
+<out>VABCVolumes</out>
+
 
 <section level="##" label="aromaticity">Aromaticity</section>
 
