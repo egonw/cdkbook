@@ -115,7 +115,7 @@ For example, adamantane has multiple SSSRs. The trick of the SSSR algorithm is t
 set of rings that cover all ring atoms.
 
 The CDK implements two algorithms, both are found in the `cdk.ringsearch` package. The
-first is the algorithm developed by Figureas [2] for which the
+first is the algorithm developed by Figureas [<a href="#citeref2">2</a>] for which the
 `FiguerasSSSRFinder` class can be used:
 
 **Script** [code/FiguerasSSSR.groovy](code/FiguerasSSSR.code.md)
@@ -131,7 +131,7 @@ Number of rings: 2
 ```
 
 However, because of this algorithm's limitations in finding a correct SSSR set for some corner
-case structure, the following alternative method by Berger *et al.* [3] is
+case structure, the following alternative method by Berger *et al.* [<a href="#citeref3">3</a>] is
 recommended:
 
 **Script** [code/SSSR.groovy](code/SSSR.code.md)
