@@ -111,6 +111,8 @@ steps forward, but it will take some time for things to iron out.
 11.7. [Example: creating unit tests for atom type perception](io.md#example:-creating-unit-tests-for-atom-type-perception) <br />
 11.8. [Line Notations](io.md#line-notations) <br />
 11.8.1. [SMILES](io.md#smiles) <br />
+11.9. [Recipes](io.md#recipes) <br />
+11.9.1. [MDL molfile (V2000)](io.md#mdl-molfile-(v2000)) <br />
 12. [Atom types](atomtype.md) <br />
 12.1. [The CDK atom type model](atomtype.md#the-cdk-atom-type-model) <br />
 12.1.1. [Hybridization Types](atomtype.md#hybridization-types) <br />

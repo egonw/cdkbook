@@ -794,6 +794,97 @@ Ph-NH2 -> c1(ccccc1)N
 Of course, this does require that aromaticity has been perceived, as explained
 in Section [16.5](properties.md#sec:aromaticity).
 
+## Recipes
+
+This section will list for a few formats a recipe for how to read content from those
+formats, taking into account common issues with the input.
+
+### MDL molfile (V2000)
+
+Like any file format, they support a limited number of features. For example,
+MDL files cannot represent a bond order 4, a quadruple bond.
+Other missing explicit details include hydrogens, and atom-based stereochemistry.
+Stereochemistry is wedge-bond-based, see Section ??.
+
+An example file which uses the bond order 4, is this file:
+
+```plain
+
+  CDK
+
+ 10 11  0  0  0  0  0  0  0  0999 V2000
+  208.0000  866.5142    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  175.5651  882.1340    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.5544  917.2314    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  190.0000  945.3774    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  226.0000  945.3774    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  248.4456  917.2314    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  240.4349  882.1340    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  271.3391  863.6697    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  298.4496  887.3555    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  284.3007  920.4585    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  4  0  0  0  0 
+  2  3  4  0  0  0  0 
+  3  4  4  0  0  0  0 
+  4  5  4  0  0  0  0 
+  5  6  4  0  0  0  0 
+  6  7  4  0  0  0  0 
+  7  1  4  0  0  0  0 
+  7  8  4  0  0  0  0 
+  8  9  4  0  0  0  0 
+  9 10  4  0  0  0  0 
+ 10  6  4  0  0  0  0 
+M  END
+```
+
+More recent MDL formats have become more powerful. The V3000 format can do
+much more then the V2000 format, or even the pre-V2000 format.
+
+Here's a recipe with inline comments:
+
+**Script** [code/InputMDLMolfiles.groovy](code/InputMDLMolfiles.code.md)
+```groovy
+reader = new MDLV2000Reader(
+  new File("data/azulene4.mol").newReader(),
+  Mode.RELAXED
+);
+azulene = reader.read(new AtomContainer());
+// perceive atom types
+AtomContainerManipulator
+  .percieveAtomTypesAndConfigureAtoms(
+  azulene
+)
+// add missing hydrogens
+adder.addImplicitHydrogens(azulene);
+// if bond order 4 was present,
+// deduce bond orders
+Kekulization.kekulize(azulene);
+println "Atom count: " + azulene.atomCount
+doubleBondCount = 0
+singleBondCount = 0
+for (bond in azulene.bonds()) {
+  if (bond.order == Order.DOUBLE)
+    doubleBondCount++
+  if (bond.order == Order.SINGLE) 
+    singleBondCount++
+}
+println "Single bonds: " + singleBondCount
+println "Double bonds: " + doubleBondCount
+```
+
+This code will perceive CDK atom types. These types are needed to add the missing
+hydrogens, as well as to resolve the bond order information. The input has ten atoms
+and eleven bonds, all marked with bond order 4.
+
+The result of the above post-processing is:
+
+```plain
+Atom count: 10
+Single bonds: 6
+Double bonds: 5
+```
+
+
 ## References
 
 1. <a name="citeref1"></a>Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the Worldwide Web. 1. Basic Principles. Journal of Chemical Information and Modeling. 1999 Nov 1;39(6):928–42.  doi:[10.1021/CI990052B](https://doi.org/10.1021/CI990052B) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/CI990052B))
