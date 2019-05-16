@@ -158,7 +158,8 @@ lines.each { String line ->
         }
         replacement = "<a href=\"#citeref${refCounter}\">${refCounter}</a>"
       } else {
-        replacement = Integer.valueOf(references.get(cites))
+        existingCounter = Integer.valueOf(references.get(cites))
+        replacement = "<a href=\"#citeref${existingCounter}\">${existingCounter}</a>"
       }
       line = line.substring(0, citeStart) + replacement + line.substring(citeEnd+7)
     }
