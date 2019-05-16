@@ -334,6 +334,38 @@ showing the different output without and with that option set:
 Of course, this does require that aromaticity has been perceived, as explained
 in Section <xref>aromaticity</xref>.
 
+## Recipes
+
+This section will list for a few formats a recipe for how to read content from those
+formats, taking into account common issues with the input.
+
+### MDL molfile (V2000)
+
+Like any file format, they support a limited number of features. For example,
+MDL files cannot represent a bond order 4, a quadruple bond.
+Other missing explicit details include hydrogens, and atom-based stereochemistry.
+Stereochemistry is wedge-bond-based, see Section <xref>ch:stereo:bond</xref>.
+
+An example file which uses the bond order 4, is this file:
+
+<in type="verbatim">code/data/azulene4.mol</in>
+
+More recent MDL formats have become more powerful. The V3000 format can do
+much more then the V2000 format, or even the pre-V2000 format.
+
+Here's a recipe with inline comments:
+
+<code>InputMDLMolfiles</code>
+
+This code will perceive CDK atom types. These types are needed to add the missing
+hydrogens, as well as to resolve the bond order information. The input has ten atoms
+and eleven bonds, all marked with bond order 4.
+
+The result of the above post-processing is:
+
+<out>InputMDLMolfiles</out>
+
+
 ## References
 
 <references/>
