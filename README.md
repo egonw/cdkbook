@@ -12,7 +12,7 @@ License: CC-BY-SA 4.0 International
 ## Dependencies
 
 * Groovy
-* nodejs and citation-js
+* nodejs and citation-js (see [doi:10.7717/peerj-cs.214](https://doi.org/10.7717/peerj-cs.214))
 * [CDK](https://cdk.github.io/)
 
 ## About
