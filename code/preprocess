@@ -10,6 +10,12 @@ JAVACLASS = ".javap";
 
 inFile = args[0];
 
+cdkVersion = "??"
+def versionLines = new File("../cdk.version").readLines()
+versionLines.each { String line ->
+  cdkVersion = line.trim()
+}
+
 ending = "in";
 if (inFile.endsWith(GROOVY)) {
   suffix = GROOVY;
@@ -73,6 +79,9 @@ while (line != null) {
       runWriter.write(line);
     } else if (line.contains("%CODE%")) {
       line = line.replace("%CODE%", source.toString());
+      runWriter.write(line);
+    } else if (line.contains("%CDKVERSION%")) {
+      line = line.replace("%CDKVERSION%", cdkVersion);
       runWriter.write(line);
     } else {
       runWriter.write(line+"\n");

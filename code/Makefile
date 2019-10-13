@@ -9,6 +9,8 @@ all: allScriptsCompiled scriptCount.tex
 
 CLASSPATH=cdk-${CDKVERSION}.jar:.
 
+CLASSPATH_GROOVY=.
+
 distclean: clean
 	@rm -f *.md *.out *.bsh *.java *.groovy
 
@@ -26,11 +28,11 @@ allScriptsCompiled: ${CODEFILES}
 	@groovy preprocess $<
 
 %.class : %.java
-	@javac -classpath ${CLASSPATH} $<
+	javac -classpath ${CLASSPATH} $<
 
 %.java : %.javap
 	@echo "Processing " $<
-	@groovy preprocess $<
+	@groovy -classpath ${CLASSPATH} preprocess $<
 
 %.out: %.class
 	@echo "doing $@..."
@@ -39,7 +41,7 @@ allScriptsCompiled: ${CODEFILES}
 
 %.out: %.groovy md.*.template
 	@echo "doing $@..."
-	@groovy -cp ${CLASSPATH} ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy > $@
+	@groovy -cp ${CLASSPATH_GROOVY} ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy > $@
 	@if [ -e *.png ]; then mogrify -trim *.png ; fi
 	@if [ -e *.png ]; then mv *.png ../images/generated/. ; fi
 	@groovy postprocess $<

@@ -3,6 +3,8 @@
 **Source code:**
 
 ```%SYNTAX%
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='%CDKVERSION%')
+
 %SOURCECODE%
 ```
 

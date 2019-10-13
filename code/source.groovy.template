@@ -1,2 +1,4 @@
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='%CDKVERSION%')
+
 %IMPORTS%
 %CODE%
