@@ -83,6 +83,9 @@ while (line != null) {
     } else if (line.contains("%CDKVERSION%")) {
       line = line.replace("%CDKVERSION%", cdkVersion);
       runWriter.write(line);
+    } else if (line.contains("%GRABCDK%")) {
+      line = line.replace("%GRABCDK%", "@Grab(group='org.openscience.cdk', module='cdk', version='${cdkVersion}')");
+      runWriter.write(line+"\n\n");
     } else {
       runWriter.write(line+"\n");
     }
