@@ -128,7 +128,7 @@ The use of these line notations and the substructure searching has allowed setti
 up <topic>databases</topic> with molecular structures and their properties. For example,
 the PDB database contains crystal structures of
 proteins, nucleic acids and their complexes with ligands [<cite>Q28186592</cite>].
-Other databases contain physical properties [<cite>Linstrom2001</cite>[, <sup>13</sup>C and <sup>1</sup>H
+Other databases contain physical properties [<cite>Linstrom2001</cite>], <sup>13</sup>C and <sup>1</sup>H
 NMR [<cite>Q28843132</cite>], and IR spectra [<cite>Q61779181</cite>].
 The <topic>Chemical Abstracts Service</topic> (<topic>CAS</topic>) maintains a substance database with millions of chemical
 substances extracted from literature. In 2008 this number increased by about
