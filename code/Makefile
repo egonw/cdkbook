@@ -2,7 +2,7 @@ CDKVERSION=`cat ../cdk.version`
 
 CODEFILES: \
  $(shell groovy ../findScripts.groovy .. .out) \
- SimpleFingerprintDemo.groovyl
+ SimpleFingerprintDemo.groovyl GuessSMILES.groovyl
 
 .PRECIOUS: %.java %.groovy
 
