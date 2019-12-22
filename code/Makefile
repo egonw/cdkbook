@@ -33,7 +33,7 @@ allScriptsCompiled: ${CODEFILES}
 	@groovy preprocess $<
 
 %.class : %.java
-	javac -classpath ${CLASSPATH} $<
+	@javac -classpath ${CLASSPATH} $<
 
 %.java : %.javap
 	@echo "Processing " $<
