@@ -9,6 +9,14 @@ The set of changes include changed class names. For example, the CDK 1.2
 class <class>MDLWriter</class> is now called <class>MDLV2000Writer</class> to reflect the
 V2000 version of the MDL formats.
 
+## CDK 2.0 to 2.3
+
+#### Deprecated AllRingsFinder.setTimeout()
+
+The time out in <class>AllRingsFinder</class> has been replaced by a treshold that reflects
+the percentage of PubChem for which the algorithm finishes. Use the new
+`AllRingsFinger(Treshold)` constructor, instead.
+
 ## CDK 1.4 to 2.0
 
 This section highlights the important API changes between the CDK 1.4 and
