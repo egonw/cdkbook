@@ -14,6 +14,8 @@ factory = AtomTypeFactory.getInstance(
 IAtomType[] types = factory.getAllAtomTypes();
 #Arrays.sort(types, new Comparator<IAtomType>() {
 #  public int compare(IAtomType type1, IAtomType type2) {
+#    if (type1.symbol == null) return 1
+#    if (type2.symbol == null) return -1
 #    return type1.getSymbol().compareTo(type2.getSymbol())
 #  }
 #});
