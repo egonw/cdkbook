@@ -80,7 +80,7 @@ index.md: index.i.md toc.txt createMarkdown.groovy
 	@groovy createMarkdown.groovy $< > $@
 
 install:
-	@cp ${TARGETS} live/.
+	@cp README.md ${TARGETS} live/.
 	@cp code/*.code.md live/code/.
 	@cp images/*.png live/images/.
 	@cp images/generated/*.png live/images/generated/.
