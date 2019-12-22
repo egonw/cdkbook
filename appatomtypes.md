@@ -162,7 +162,6 @@ factory = AtomTypeFactory.getInstance(
 <tr><td>H.plus</td><td>H</td><td>1</td><td>0</td><td>S</td><td>0</td><td>0</td></tr>
 <tr><td>H.minus</td><td>H</td><td>-1</td><td>0</td><td>S</td><td>0</td><td>0</td></tr>
 <tr><td>H</td><td>H</td><td>0</td><td>1</td><td>S</td><td>0</td><td>0</td></tr>
-<tr><td>X</td><td>H</td><td>0</td><td>0</td><td></td><td></td><td>0</td></tr>
 <tr><td>H.radical</td><td>H</td><td>0</td><td>0</td><td>S</td><td>0</td><td>0</td></tr>
 <tr><td>He</td><td>He</td><td>0</td><td>0</td><td>S</td><td>1</td><td>0</td></tr>
 <tr><td>Hg.minus</td><td>Hg</td><td>-1</td><td>2</td><td></td><td></td><td>0</td></tr>
@@ -325,6 +324,7 @@ factory = AtomTypeFactory.getInstance(
 <tr><td>Zn.2plus</td><td>Zn</td><td>2</td><td>2</td><td>S</td><td>0</td><td>0</td></tr>
 <tr><td>Zn.1</td><td>Zn</td><td>0</td><td>1</td><td></td><td></td><td>1</td></tr>
 <tr><td>Zn</td><td>Zn</td><td>0</td><td>2</td><td></td><td></td><td>0</td></tr>
+<tr><td>X</td><td>null</td><td>0</td><td>0</td><td></td><td></td><td>0</td></tr>
 </table>
 
 <a name="sec:sybyltypes"></a>
@@ -445,7 +445,6 @@ factory = AtomTypeFactory.getInstance(
 <tr><td>H.plus</td><td>H</td><td>1</td><td>0</td><td>S</td><td>0</td><td>0</td></tr>
 <tr><td>H.minus</td><td>H</td><td>-1</td><td>0</td><td>S</td><td>0</td><td>0</td></tr>
 <tr><td>H</td><td>H</td><td>0</td><td>1</td><td>S</td><td>0</td><td>0</td></tr>
-<tr><td>X</td><td>H</td><td>0</td><td>0</td><td></td><td></td><td>0</td></tr>
 <tr><td>H.radical</td><td>H</td><td>0</td><td>0</td><td>S</td><td>0</td><td>0</td></tr>
 <tr><td>He</td><td>He</td><td>0</td><td>0</td><td>S</td><td>1</td><td>0</td></tr>
 <tr><td>Hg.minus</td><td>Hg</td><td>-1</td><td>2</td><td></td><td></td><td>0</td></tr>
@@ -608,4 +607,5 @@ factory = AtomTypeFactory.getInstance(
 <tr><td>Zn.2plus</td><td>Zn</td><td>2</td><td>2</td><td>S</td><td>0</td><td>0</td></tr>
 <tr><td>Zn.1</td><td>Zn</td><td>0</td><td>1</td><td></td><td></td><td>1</td></tr>
 <tr><td>Zn</td><td>Zn</td><td>0</td><td>2</td><td></td><td></td><td>0</td></tr>
+<tr><td>X</td><td>null</td><td>0</td><td>0</td><td></td><td></td><td>0</td></tr>
 </table>

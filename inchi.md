@@ -34,7 +34,7 @@ if (generator.getReturnStatus() == INCHI_RET.OKAY)
 which gives the InChI for methane:
 
 ```plain
-InChI=1S/C
+InChI=1S/CH4/h1H4
 ```
 
 This snippet of code has generated us a <a name="tp4">Standard InChI</a>. To explain

@@ -283,6 +283,11 @@ for (format in formats) {
 <tr>
   <td>R</td>
   <td>M</td>
+  <td>MDL RXN V2000</td>
+</tr>
+<tr>
+  <td>R</td>
+  <td>M</td>
   <td>MDL RXN V3000</td>
 </tr>
 <tr>
@@ -922,20 +927,41 @@ This writer has these IO settings:
 <table>
 <tr><td><b>Name</b></td><td><b>Desc</b></td></tr>
 <tr>
+  <td>ProgramName</td>
+  <td>Program name to write at the top of the molfile header, should be exactly 8 characters long [Default: CDK]</td></tr>
+<tr>
   <td>ForceWriteAs2DCoordinates</td>
   <td>Should coordinates always be written as 2D? [Default: false]</td></tr>
 <tr>
   <td>WriteAromaticBondTypes</td>
   <td>Should aromatic bonds be written as bond type 4? [Default: false]</td></tr>
 <tr>
+  <td>WriteMajorIsotopes</td>
+  <td>Write atomic mass of any non-null atomic mass including major isotopes (e.g. [12]C) [Default: true]</td></tr>
+<tr>
+  <td>WriteDefaultProperties</td>
+  <td>Write trailing zero's on atom/bond property blocks even if they're not used. [Default: true]</td></tr>
+<tr>
   <td>WriteQueryFormatValencies</td>
   <td>Should valencies be written in the MDL Query format? (deprecated) [Default: false]</td></tr>
+</table>
+## MDL RXN V2000
+**Preferred Extension**: rxn
+**MIME type**: chemical/x-mdl-rxnfile
+**XML Based?**: No
+### <a name="tp25">`MDLRXNV2000Reader`</a>
+This reader supports these data objects:
+<table>
+<tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
+<tr><td>ChemFile</td><td>true</td></tr>
+<tr><td>AtomContainer</td><td>false</td></tr>
+<tr><td>Reaction</td><td>true</td></tr>
 </table>
 ## MDL RXN V3000
 **Preferred Extension**: rxn
 **MIME type**: chemical/x-mdl-rxnfile
 **XML Based?**: No
-### <a name="tp25">`MDLRXNV3000Reader`</a>
+### <a name="tp26">`MDLRXNV3000Reader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -947,7 +973,7 @@ This reader supports these data objects:
 **Preferred Extension**: rxn
 **MIME type**: chemical/x-mdl-rxnfile
 **XML Based?**: No
-### <a name="tp26">[`MDLRXNReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/MDLRXNReader.html)</a>
+### <a name="tp27">[`MDLRXNReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/MDLRXNReader.html)</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -961,7 +987,7 @@ This reader supports these data objects:
 **Preferred Extension**: sdf
 **MIME type**: chemical/x-mdl-sdfile
 **XML Based?**: No
-### <a name="tp27">`MDLV2000Reader`</a>
+### <a name="tp28">`MDLV2000Reader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -982,7 +1008,7 @@ This reader has these IO settings:
   <td>InterpretHydrogenIsotopes</td>
   <td>Should D and T be interpreted as hydrogen isotopes? [Default: true]</td></tr>
 </table>
-### <a name="tp28">`SDFWriter`</a>
+### <a name="tp29">`SDFWriter`</a>
 This writer supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -994,17 +1020,26 @@ This writer has these IO settings:
 <table>
 <tr><td><b>Name</b></td><td><b>Desc</b></td></tr>
 <tr>
-  <td>ForceWriteAs2DCoordinates</td>
-  <td>Should coordinates always be written as 2D? [Default: false]</td></tr>
-<tr>
   <td>WriteAromaticBondTypes</td>
   <td>Should aromatic bonds be written as bond type 4? [Default: false]</td></tr>
+<tr>
+  <td>WriteMajorIsotopes</td>
+  <td>Write atomic mass of any non-null atomic mass including major isotopes (e.g. [12]C) [Default: true]</td></tr>
 <tr>
   <td>writeProperties</td>
   <td>Should molecule properties be written as non-structural data [Default: true]</td></tr>
 <tr>
   <td>WriteQueryFormatValencies</td>
   <td>Should valencies be written in the MDL Query format? (deprecated) [Default: false]</td></tr>
+<tr>
+  <td>ProgramName</td>
+  <td>Program name to write at the top of the molfile header, should be exactly 8 characters long [Default: CDK]</td></tr>
+<tr>
+  <td>ForceWriteAs2DCoordinates</td>
+  <td>Should coordinates always be written as 2D? [Default: false]</td></tr>
+<tr>
+  <td>WriteDefaultProperties</td>
+  <td>Write trailing zero's on atom/bond property blocks even if they're not used. [Default: true]</td></tr>
 <tr>
   <td>writeV3000</td>
   <td>Write all records as V3000 [Default: false]</td></tr>
@@ -1013,7 +1048,7 @@ This writer has these IO settings:
 **Preferred Extension**: mol2
 **MIME type**: chemical/x-mol2
 **XML Based?**: No
-### <a name="tp29">`Mol2Reader`</a>
+### <a name="tp30">`Mol2Reader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1021,7 +1056,7 @@ This reader supports these data objects:
 <tr><td>AtomContainer</td><td>true</td></tr>
 <tr><td>Crystal</td><td>true</td></tr>
 </table>
-### <a name="tp30">`Mol2Writer`</a>
+### <a name="tp31">`Mol2Writer`</a>
 This writer supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1032,7 +1067,7 @@ This writer supports these data objects:
 ## PolyMorph Predictor (Cerius)
 **Preferred Extension**: pmp
 **XML Based?**: No
-### <a name="tp31">`PMPReader`</a>
+### <a name="tp32">`PMPReader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1044,7 +1079,7 @@ This reader supports these data objects:
 **Preferred Extension**: pdb
 **MIME type**: chemical/x-pdb
 **XML Based?**: No
-### <a name="tp32">[`PDBReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/PDBReader.html)</a>
+### <a name="tp33">[`PDBReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/PDBReader.html)</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1064,7 +1099,7 @@ This reader has these IO settings:
   <td>UseHetDictionary</td>
   <td>Should the PDBReader use the HETATM dictionary for atom types? [Default: false]</td></tr>
 </table>
-### <a name="tp33">`PDBWriter`</a>
+### <a name="tp34">`PDBWriter`</a>
 This writer supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1094,7 +1129,7 @@ This writer has these IO settings:
 ## PubChem Compound ASN
 **Preferred Extension**: asn
 **XML Based?**: No
-### <a name="tp34">`PCCompoundASNReader`</a>
+### <a name="tp35">`PCCompoundASNReader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1104,7 +1139,7 @@ This reader supports these data objects:
 ## PubChem Compound XML
 **Preferred Extension**: xml
 **XML Based?**: Yes
-### <a name="tp35">`PCCompoundXMLReader`</a>
+### <a name="tp36">`PCCompoundXMLReader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1115,7 +1150,7 @@ This reader supports these data objects:
 ## PubChem Substance XML
 **Preferred Extension**: xml
 **XML Based?**: Yes
-### <a name="tp36">`PCSubstanceXMLReader`</a>
+### <a name="tp37">`PCSubstanceXMLReader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1127,14 +1162,14 @@ This reader supports these data objects:
 **Preferred Extension**: smi
 **MIME type**: chemical/x-daylight-smiles
 **XML Based?**: No
-### <a name="tp37">`SMILESReader`</a>
+### <a name="tp38">`SMILESReader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
 <tr><td>ChemFile</td><td>true</td></tr>
 <tr><td>AtomContainer</td><td>false</td></tr>
 </table>
-### <a name="tp38">`SMILESWriter`</a>
+### <a name="tp39">`SMILESWriter`</a>
 This writer supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1154,7 +1189,7 @@ This writer has these IO settings:
 **Preferred Extension**: ins
 **MIME type**: chemical/x-shelx
 **XML Based?**: No
-### <a name="tp39">`ShelXReader`</a>
+### <a name="tp40">`ShelXReader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1162,7 +1197,7 @@ This reader supports these data objects:
 <tr><td>AtomContainer</td><td>false</td></tr>
 <tr><td>Crystal</td><td>true</td></tr>
 </table>
-### <a name="tp40">`ShelXWriter`</a>
+### <a name="tp41">`ShelXWriter`</a>
 This writer supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1174,7 +1209,7 @@ This writer supports these data objects:
 **Extensions**: [mol, rgp]
 **Preferred Extension**: mol
 **XML Based?**: No
-### <a name="tp41">`RGroupQueryReader`</a>
+### <a name="tp42">`RGroupQueryReader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1182,7 +1217,7 @@ This reader supports these data objects:
 <tr><td>AtomContainer</td><td>false</td></tr>
 <tr><td>isomorphism.matchers.RGroupQuery</td><td>true</td></tr>
 </table>
-### <a name="tp42">`RGroupQueryWriter`</a>
+### <a name="tp43">`RGroupQueryWriter`</a>
 This writer supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1192,7 +1227,7 @@ This writer supports these data objects:
 </table>
 ## VASP
 **XML Based?**: No
-### <a name="tp43">`VASPReader`</a>
+### <a name="tp44">`VASPReader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1203,14 +1238,14 @@ This reader supports these data objects:
 **Preferred Extension**: xyz
 **MIME type**: chemical/x-xyz
 **XML Based?**: No
-### <a name="tp44">`XYZReader`</a>
+### <a name="tp45">`XYZReader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
 <tr><td>ChemFile</td><td>true</td></tr>
 <tr><td>AtomContainer</td><td>false</td></tr>
 </table>
-### <a name="tp45">`XYZWriter`</a>
+### <a name="tp46">`XYZWriter`</a>
 This writer supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>
@@ -1220,7 +1255,7 @@ This writer supports these data objects:
 </table>
 ## ZMatrix
 **XML Based?**: No
-### <a name="tp46">`ZMatrixReader`</a>
+### <a name="tp47">`ZMatrixReader`</a>
 This reader supports these data objects:
 <table>
 <tr><td><b>Class</b></td><td><b>Accepted</b></td></tr>

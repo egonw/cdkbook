@@ -9,6 +9,14 @@ The set of changes include changed class names. For example, the CDK 1.2
 class `MDLWriter` is now called [`MDLV2000Writer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/MDLV2000Writer.html) to reflect the
 V2000 version of the MDL formats.
 
+## CDK 2.0 to 2.3
+
+#### Deprecated AllRingsFinder.setTimeout()
+
+The time out in [`AllRingsFinder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/ringsearch/AllRingsFinder.html) has been replaced by a treshold that reflects
+the percentage of PubChem for which the algorithm finishes. Use the new
+`AllRingsFinger(Treshold)` constructor, instead.
+
 ## CDK 1.4 to 2.0
 
 This section highlights the important API changes between the CDK 1.4 and
@@ -200,6 +208,6 @@ Aromaticity is differently calculated now, see Section [16.5](properties.md#sec:
 
 ## References
 
-1. <a name="citeref1"></a>Willighagen E, Mayfield JW, Alvarsson J, Berg A, Berg A, Carlsson L, et al. The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching. Journal of Cheminformatics. 2017 Jun 6;9(1).  doi:[10.1186/S13321-017-0220-4](https://doi.org/10.1186/S13321-017-0220-4) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1186/S13321-017-0220-4))
+1. <a name="citeref1"></a>Willighagen E, Mayfield JW, Alvarsson J, Berg A, Carlsson L, Jeliazkova N, et al. The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching. Journal of Cheminformatics. 2017 Jun 6;9(1).  doi:[10.1186/S13321-017-0220-4](https://doi.org/10.1186/S13321-017-0220-4) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1186/S13321-017-0220-4))
 
 

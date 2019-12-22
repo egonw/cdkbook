@@ -193,9 +193,8 @@ a computation will return after a certain time rather than continuing indefinate
 
 **Script** [code/FindAllRingsInLimitedTime.groovy](code/FindAllRingsInLimitedTime.code.md)
 ```groovy
-ringFinder = new AllRingsFinder()
-ringFinder.setTimeout(1000) // one second
-ringset = new AllRingsFinder().findAllRings(azulene)
+ringFinder = new AllRingsFinder(AllRingsFinder.Threshold.PubChem_99)
+ringset = ringFinder.findAllRings(azulene)
 ```
 
 ## Graph matrices

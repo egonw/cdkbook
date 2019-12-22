@@ -128,7 +128,7 @@ The use of these line notations and the substructure searching has allowed setti
 up <a name="tp15">databases</a> with molecular structures and their properties. For example,
 the PDB database contains crystal structures of
 proteins, nucleic acids and their complexes with ligands [<a href="#citeref8">8</a>].
-Other databases contain physical properties [<a href="#citeref9">9</a>[, <sup>13</sup>C and <sup>1</sup>H
+Other databases contain physical properties [<a href="#citeref9">9</a>], <sup>13</sup>C and <sup>1</sup>H
 NMR [<a href="#citeref10">10</a>], and IR spectra [<a href="#citeref11">11</a>].
 The <a name="tp16">Chemical Abstracts Service</a> (<a name="tp17">CAS</a>) maintains a substance database with millions of chemical
 substances extracted from literature. In 2008 this number increased by about
@@ -321,7 +321,7 @@ Kit supports this multidisciplenaire research.
 30. <a name="citeref30"></a>Steinbeck C, Han Y, Kuhn S, Horlacher O, Luttmann E, Luttmann E, et al. The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics. Journal of Chemical Information and Modeling. 2003 Feb 11;43(2):493–500.  doi:[10.1021/CI025584Y](https://doi.org/10.1021/CI025584Y) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/CI025584Y))
 31. <a name="citeref31"></a>Steinbeck C, Hoppe C, Hoppe C, Kuhn S, Floris M, Guha R, et al. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Current Pharmaceutical Design [Internet]. 2006 Jun 1;12(17):2111–20. Available from: https://cdk.github.io/cdk-paper-2/ doi:[10.2174/138161206777585274](https://doi.org/10.2174/138161206777585274) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.2174/138161206777585274))
 32. <a name="citeref32"></a>Kowalski BR. Chemometrics. Analytical Chemistry. 1980 Apr 1;52(5):112–22.  doi:[10.1021/AC50055A016](https://doi.org/10.1021/AC50055A016) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/AC50055A016))
-33. <a name="citeref33"></a>Lavine BK. Chemometrics. Analytical Chemistry. 2000 Jun 1;72(12):91–8.  doi:[10.1021/A1000016X](https://doi.org/10.1021/A1000016X) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/A1000016X))
+33. <a name="citeref33"></a>BK L. Chemometrics. Analytical Chemistry. 2000 Jun 1;72(12):91R-97R.  doi:[10.1021/A1000016X](https://doi.org/10.1021/A1000016X) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1021/A1000016X))
 34. <a name="citeref34"></a>Buydens LMC, Reijmers TH, Beckers MLM, Wehrens R. Molecular data-mining: a challenge for chemometrics. Chemometrics and Intelligent Laboratory Systems. 1999 Oct 1;49(2):121–33.  doi:[10.1016/S0169-7439(99)00039-8](https://doi.org/10.1016/S0169-7439(99)00039-8) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1016/S0169-7439(99)00039-8))
 35. <a name="citeref35"></a>Wehrens R, Gelder R de, Kemperman GJ, Zwanenburg B, Buydens LMC. Molecular challenges in modern chemometrics. Analytica Chimica Acta. 1999 Nov 1;400(1–3):413–24.  doi:[10.1016/S0003-2670(99)00621-2](https://doi.org/10.1016/S0003-2670(99)00621-2) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1016/S0003-2670(99)00621-2))
 36. <a name="citeref36"></a>Willighagen E, Wehrens R, Buydens L. Molecular Chemometrics. Critical Reviews in Analytical Chemistry. 2006 Dec 1;36(3–4):189–98.  doi:[10.1080/10408340600969601](https://doi.org/10.1080/10408340600969601) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1080/10408340600969601))
