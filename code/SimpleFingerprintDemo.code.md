@@ -1,6 +1,8 @@
-# SimpleFingerprintDemo.groovy
+# SimpleFingerprintDemo.groovyl
 **Source code:**
-```groovy
+```groovyl
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.templates.*;
 import org.openscience.cdk.*;

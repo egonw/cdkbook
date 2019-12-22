@@ -1,6 +1,7 @@
 # FingerprinterMigration.java
 **Source code:**
 ```java
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='%CDKVERSION%')
 import java.util.BitSet;
 import java.util.Map;
 import java.util.HashMap;

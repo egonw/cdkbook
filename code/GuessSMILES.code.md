@@ -1,6 +1,8 @@
-# GuessSMILES.groovy
+# GuessSMILES.groovyl
 **Source code:**
-```groovy
+```groovyl
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+
 import java.io.*;
 import org.openscience.cdk.io.*;
 import org.openscience.cdk.io.formats.*;

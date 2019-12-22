@@ -1,6 +1,8 @@
 # ListAllSybylAtomTypes.groovy
 **Source code:**
 ```groovy
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.config.*;
 import org.openscience.cdk.silent.*;
@@ -17,6 +19,8 @@ output.text = ""
 IAtomType[] types = factory.getAllAtomTypes();
 Arrays.sort(types, new Comparator<IAtomType>() {
   public int compare(IAtomType type1, IAtomType type2) {
+    if (type1.symbol == null) return 1
+    if (type2.symbol == null) return -1
     return type1.getSymbol().compareTo(type2.getSymbol())
   }
 });

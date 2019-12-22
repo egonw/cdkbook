@@ -1,6 +1,8 @@
 # FindAllRingsInLimitedTime.groovy
 **Source code:**
 ```groovy
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.io.*;
 import org.openscience.cdk.ringsearch.*;
@@ -13,9 +15,8 @@ reader = new MDLV2000Reader(
   Mode.STRICT
 );
 azulene = reader.read(new AtomContainer());
-ringFinder = new AllRingsFinder()
-ringFinder.setTimeout(1000) // one second
-ringset = new AllRingsFinder().findAllRings(azulene)
+ringFinder = new AllRingsFinder(AllRingsFinder.Threshold.PubChem_99)
+ringset = ringFinder.findAllRings(azulene)
 ```
 **Output:**
 ```plain

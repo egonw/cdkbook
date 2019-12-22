@@ -1,6 +1,8 @@
 # SetChemModelContent.groovy
 **Source code:**
 ```groovy
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+
 import org.openscience.cdk.*;
 model = new ChemModel()
 model.setMoleculeSet(new AtomContainerSet())

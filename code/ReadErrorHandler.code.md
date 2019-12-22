@@ -1,6 +1,8 @@
 # ReadErrorHandler.groovy
 **Source code:**
 ```groovy
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.io.*;
 import org.openscience.cdk.*;
@@ -54,4 +56,6 @@ water = reader.read(new AtomContainer());
 ```
 **Output:**
 ```plain
+location: 6, 31-33: invalid symbol: D
+location: 7, 31-33: invalid symbol: T
 ```

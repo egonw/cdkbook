@@ -1,6 +1,7 @@
 # SMILESFormatMatcher.java
 **Source code:**
 ```java
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='%CDKVERSION%')
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.io.formats.*;
 import org.openscience.cdk.io.formats.IChemFormatMatcher.MatchResult;

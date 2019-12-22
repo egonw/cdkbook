@@ -1,6 +1,8 @@
 # BondOrders.groovy
 **Source code:**
 ```groovy
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+
 import org.openscience.cdk.interfaces.*;
 
 IBond.Order.each {

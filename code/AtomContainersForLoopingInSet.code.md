@@ -1,6 +1,8 @@
 # AtomContainersForLoopingInSet.groovy
 **Source code:**
 ```groovy
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+
 import org.openscience.cdk.silent.*;
 import org.openscience.cdk.*;
 set = new AtomContainerSet()
@@ -18,6 +20,6 @@ for (i=0; i<set.getAtomContainerCount(); i++) {
 **Output:**
 ```plain
 Number of containers: 2
-container 0 has hashcode 333683827
-container 1 has hashcode 1754894440
+container 0 has hashcode 167013780
+container 1 has hashcode 2113243119
 ```
