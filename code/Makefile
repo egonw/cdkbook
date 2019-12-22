@@ -1,7 +1,8 @@
 CDKVERSION=`cat ../cdk.version`
 
 CODEFILES: \
- $(shell groovy ../findScripts.groovy .. .out)
+ $(shell groovy ../findScripts.groovy .. .out) \
+ SimpleFingerprintDemo.groovyl
 
 .PRECIOUS: %.java %.groovy
 
@@ -27,6 +28,10 @@ allScriptsCompiled: ${CODEFILES}
 	@echo "Processing " $<
 	@groovy preprocess $<
 
+%.groovyl : %.groovylin source.*.template
+	@echo "Processing " $<
+	@groovy preprocess $<
+
 %.class : %.java
 	javac -classpath ${CLASSPATH} $<
 
@@ -39,9 +44,16 @@ allScriptsCompiled: ${CODEFILES}
 	@java ${OPTIONS} -classpath ${CLASSPATH} `echo "$<" | sed -e "s/.class//"` > $@
 	@groovy postprocess $<
 
+%.out: %.groovyl md.*.template
+	@echo "doing $@..."
+	@groovy -cp ${CLASSPATH} ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy > $@
+	@if [ -e *.png ]; then mogrify -trim *.png ; fi
+	@if [ -e *.png ]; then mv *.png ../images/generated/. ; fi
+	@groovy postprocess $<
+
 %.out: %.groovy md.*.template
 	@echo "doing $@..."
-	@groovy -cp ${CLASSPATH_GROOVY} ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy > $@
+	@groovy ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy > $@
 	@if [ -e *.png ]; then mogrify -trim *.png ; fi
 	@if [ -e *.png ]; then mv *.png ../images/generated/. ; fi
 	@groovy postprocess $<

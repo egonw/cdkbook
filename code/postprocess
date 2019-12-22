@@ -6,12 +6,17 @@ import java.io.*;
 import java.util.*;
 
 GROOVY = ".groovy";
+GROOVYL = ".groovyl";
 JAVACLASS = ".class";
 
 inFile = args[0];
 
 if (inFile.endsWith(GROOVY)) {
   runSuffix = GROOVY;
+  srcSuffix = runSuffix;
+  ending = "in"
+} else if (inFile.endsWith(GROOVYL)) {
+  runSuffix = GROOVYL;
   srcSuffix = runSuffix;
   ending = "in"
 } else if (inFile.endsWith(JAVACLASS)) {

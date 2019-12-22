@@ -1,4 +1,5 @@
 *.groovy
+*.groovyl
 *.out
 *.jar
 *.md

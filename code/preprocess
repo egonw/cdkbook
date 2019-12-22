@@ -6,6 +6,7 @@ import java.io.*;
 import java.util.*;
 
 GROOVY = ".groovyin";
+GROOVYL = ".groovylin";
 JAVACLASS = ".javap";
 
 inFile = args[0];
@@ -19,6 +20,9 @@ versionLines.each { String line ->
 ending = "in";
 if (inFile.endsWith(GROOVY)) {
   suffix = GROOVY;
+  templateFile = "source.groovy.template";
+} else if (inFile.endsWith(GROOVYL)) {
+  suffix = GROOVYL;
   templateFile = "source.groovy.template";
 } else if (inFile.endsWith(JAVACLASS)) {
   suffix = JAVACLASS;
