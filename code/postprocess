@@ -15,14 +15,17 @@ if (inFile.endsWith(GROOVY)) {
   runSuffix = GROOVY;
   srcSuffix = runSuffix;
   ending = "in"
+  syntax = "groovy"
 } else if (inFile.endsWith(GROOVYL)) {
   runSuffix = GROOVYL;
   srcSuffix = runSuffix;
   ending = "in"
+  syntax = "groovy"
 } else if (inFile.endsWith(JAVACLASS)) {
   runSuffix = JAVACLASS;
   srcSuffix = ".java";
   ending = "p"
+  syntax = "java"
 } else {
   println "Unsupported processing of ${inFile}"
   System.exit(-1);
@@ -77,7 +80,7 @@ for (int type=0; type<mdTypes.size(); type++) {
         line = line.replace("%EXT%", srcExt);
         mdWriter.write(line + "\n");
       } else if (line.contains("%SYNTAX%")) {
-        line = line.replace("%SYNTAX%", srcExt);
+        line = line.replace("%SYNTAX%", syntax);
         mdWriter.write(line + "\n");
       } else if (line.contains("%SOURCECODE%")) {
         def srcLines = new File(srcFile).readLines()
