@@ -351,7 +351,7 @@ An example file which uses the bond order 4, is this file:
 <in type="verbatim">code/data/azulene4.mol</in>
 
 More recent MDL formats have become more powerful. The V3000 format can do
-much more then the V2000 format, or even the pre-V2000 format.
+much more than the V2000 format, or even the pre-V2000 format.
 
 Here's a recipe with inline comments:
 
