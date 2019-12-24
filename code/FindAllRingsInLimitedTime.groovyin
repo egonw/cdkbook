@@ -10,6 +10,5 @@
 #  Mode.STRICT
 #);
 #azulene = reader.read(new AtomContainer());
-ringFinder = new AllRingsFinder()
-ringFinder.setTimeout(1000) // one second
-ringset = new AllRingsFinder().findAllRings(azulene)
+ringFinder = new AllRingsFinder(AllRingsFinder.Threshold.PubChem_99)
+ringset = ringFinder.findAllRings(azulene)

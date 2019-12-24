@@ -79,7 +79,7 @@ giving:
 <out>IsotopeGetProperties</out>
 
 Appendix <xref>isotopes</xref> lists all isotopes defined in the CDK with a natural
-abundance of more then 0.1.
+abundance of more than 0.1.
 
 
 ### IAtomType
