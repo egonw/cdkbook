@@ -50,6 +50,18 @@ figdataLines.each { String line ->
   figureNumbers.put(data[0], data[2])
 }
 
+scriptChapters = new HashMap<String,String>();
+scriptNumbers = new HashMap<String,String>();
+def scriptdataLines = new File("scripts.txt").readLines()
+scriptdataLines.each { String line ->
+  data = line.split("\t")
+  label = data[0]
+  chapter = data[1]
+  number = data[2]
+  scriptChapters.put(data[0], data[1])
+  scriptNumbers.put(data[0], data[2])
+}
+
 sectionChapters = new HashMap<String,String>();
 sectionNumbers = new HashMap<String,String>();
 def secdataLines = new File("sections.txt").readLines()
@@ -92,8 +104,15 @@ lines.each { String line ->
     return
   } else if (line.startsWith("<code>")) {
     def instruction = new XmlSlurper().parseText(line)
-    def srcLines = new File("code/${instruction.text()}.verbatim.md").readLines()
-    srcLines.each { String srcLine -> println srcLine }
+    def scriptCode = instruction.text()
+    def srcLines = new File("code/${scriptCode}.verbatim.md").readLines()
+    srcLines.each { srcLine ->
+      if (srcLine.contains("**Script**") && scriptNumbers.containsKey(scriptCode)) {
+        scriptNumber = scriptNumbers.get(scriptCode)
+        srcLine = srcLine.replace("**Script**", "**Script ${scriptNumber}**")
+      }
+      println srcLine
+    }
   } else if (line.startsWith("<out>")) {
     def instruction = new XmlSlurper().parseText(line)
     println "```plain"

@@ -35,6 +35,10 @@ figures.txt: order.txt ${SOURCES}
 	@echo "Indexing the figures"
 	@groovy findFigures.groovy > figures.txt
 
+scripts.txt: order.txt ${SOURCES}
+	@echo "Indexing the scripts"
+	@groovy numberScripts.groovy > scripts.txt
+
 toc.txt: makeToC.groovy order.txt ${SOURCES}
 	@echo "Making the ToC"
 	@groovy makeToC.groovy > toc.txt
