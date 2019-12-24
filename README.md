@@ -1,6 +1,6 @@
 # Groovy Cheminformatics with the Chemistry Development Kit
 
-[Edition 2.3-0](https://egonw.github.io/cdkbook/)
+[Edition 2.3-1](https://egonw.github.io/cdkbook/)
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
