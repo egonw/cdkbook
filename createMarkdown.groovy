@@ -109,7 +109,7 @@ lines.each { String line ->
     srcLines.each { srcLine ->
       if (srcLine.contains("**Script**") && scriptNumbers.containsKey(scriptCode)) {
         scriptNumber = scriptNumbers.get(scriptCode)
-        srcLine = srcLine.replace("**Script**", "**Script ${scriptNumber}**")
+        srcLine = srcLine.replace("**Script**", "**<a name=\"script:${scriptCode}\">Script ${scriptNumber}</a>**")
       }
       println srcLine
     }
@@ -226,9 +226,11 @@ lines.each { String line ->
       def xrefInstruction = new XmlSlurper().parseText(xrefXML)
       xrefname = xrefInstruction.text()
       if (xrefname.startsWith("script:")) {
+        doc = ""
         xrefname = xrefname.substring(7)
-        if (scriptNumbers.containsKey(xrefname)) {
-          replacement = scriptNumbers.get(xrefname)
+        if (scriptChapters.containsKey(xrefname)) {
+          if (scriptChapters.get(xrefname) != context) doc = scriptChapters.get(xrefname) + ".md"
+          replacement = "[${scriptNumbers.get(xrefname)}](${doc}#script:${xrefname})"
         } else {
           replacement = "??"
         }
