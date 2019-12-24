@@ -585,7 +585,7 @@ NAMES: 2-(acetyloxy)benzoic acid
 
 A third characteristic of the [`IChemObject`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObject.html) interface is the concept of
 <a name="tp21">flags</a>. Flags are used in the CDK to indicate, for example, if
-an atom or bond is aromatic (see Script XX)
+an atom or bond is aromatic (see Script [3.12](#script:AromaticBond))
 or if an atom is part of a ring:
 
 **<a name="script:RingBond">Script 3.30</a>** [code/RingBond.groovy](code/RingBond.code.md)
