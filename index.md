@@ -20,12 +20,12 @@
   "keywords":"cheminformatics, chemoinformatics, java, Groovy, Chemistry Development Kit, CDK",
   "license":"CC BY-SA 4.0",
   "url": "https://egonw.github.io/cdkbook/",
-  "version":"2.3-0"
+  "version":"2.3-1"
 }
 </script>
 
 
-Edition 2.3-0
+Edition 2.3-1
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
@@ -34,11 +34,14 @@ Long time CDK developer
 
 License: CC-BY-SA 4.0 International
 
+[![DOI](https://zenodo.org/badge/163004968.svg)](https://zenodo.org/badge/latestdoi/163004968)
+
 ## Warning
 
 This book is being opensourced. This involves transforming the LaTeX source into Markdown,
 and updating all scripts to ensure all the automation works well. I have made good
-steps forward, but it will take some time for things to iron out.
+steps forward, but it will take some time for things to iron out. If you find issue,
+-please report them [here](https://github.com/egonw/cdkbook/issues).
 
 ## Contents
 
