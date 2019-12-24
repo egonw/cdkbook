@@ -17,7 +17,7 @@ IAtomContainer. Figure <xref>proteinClass</xref> shows its hierarchy.
 One straightforward way to create protein and DNA structures is to read them from
 PDB files [<cite>Q24650571</cite>]. Chapter <xref>io</xref> explains how files are read in general. For <topic>PDB files</topic>,
 the <class>PDBReader</class> should be used. A code example showing how to use this reader
-is given by Script XX.
+is given by Script <xref>script:PDBCoordinateExtraction</xref>.
 
 Of course, we can also read PDB files from a local disc. The results are read into
 a <class>IChemFile</class>. from which the first IAtomContainer is the IBioPolymer. For example,

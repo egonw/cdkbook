@@ -319,7 +319,7 @@ outputting:
 
 A third characteristic of the <class>IChemObject</class> interface is the concept of
 <topic>flags</topic>. Flags are used in the CDK to indicate, for example, if
-an atom or bond is aromatic (see Script XX)
+an atom or bond is aromatic (see Script <xref>script:AromaticBond</xref>)
 or if an atom is part of a ring:
 
 <code>RingBond</code>
