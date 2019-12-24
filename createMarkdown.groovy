@@ -225,7 +225,14 @@ lines.each { String line ->
       xrefXML = line.substring(xrefStart, xrefEnd+7)
       def xrefInstruction = new XmlSlurper().parseText(xrefXML)
       xrefname = xrefInstruction.text()
-      if (figureChapters.containsKey(xrefname)) {
+      if (xrefname.startsWith("script:")) {
+        xrefname = xrefname.substring(7)
+        if (scriptNumbers.containsKey(xrefname)) {
+          replacement = scriptNumbers.get(xrefname)
+        } else {
+          replacement = "??"
+        }
+      } else if (figureChapters.containsKey(xrefname)) {
         doc = ""
         if (figureChapters.get(xrefname) != context) doc = figureChapters.get(xrefname) + ".md"
         replacement = "[${figureNumbers.get(xrefname)}](${doc}#fig:${xrefname})"

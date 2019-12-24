@@ -214,7 +214,7 @@ provides methods for these use cases. But it should be stressed that
 these methods do only take into account explicit hydrogens (see the
 next section).
 
-Let's consider ethanol again, given in Script XX,
+Let's consider ethanol again, given in Script <xref>script:Ethanol</xref>,
 and count the number of neighbors for each atom:
 
 <code>NeighborCount</code>
