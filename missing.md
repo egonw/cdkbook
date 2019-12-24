@@ -25,7 +25,7 @@ and <a name="tp5">period</a>, <a name="tp6">covalent radius</a>
 and <a name="tp7">van der Waals radius</a>
 and Pauling <a name="tp8">electronegativity</a>:
 
-**Script** [code/ElementsDemo.groovy](code/ElementsDemo.code.md)
+**<a name="script:ElementsDemo">Script 14.1</a>** [code/ElementsDemo.groovy](code/ElementsDemo.code.md)
 ```groovy
 Elements lithium = Elements.Lithium
 println "atomic number: " + lithium.number()
@@ -56,7 +56,7 @@ information. For example, you can get all isotopes for an element or just
 the major isotope (a full list of isotopes is available from
 Appendix B:
 
-**Script** [code/HydrogenIsotopes.groovy](code/HydrogenIsotopes.code.md)
+**<a name="script:HydrogenIsotopes">Script 14.2</a>** [code/HydrogenIsotopes.groovy](code/HydrogenIsotopes.code.md)
 ```groovy
 isofac = Isotopes.getInstance();
 isotopes = isofac.getIsotopes("H");
@@ -86,7 +86,7 @@ This class is also used by the `getMajorIsotopeMass` method in the
 [`MolecularFormulaManipulator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/manipulator/MolecularFormulaManipulator.html) class to calculate the
 <a name="tp9">monoisotopic mass</a> of a molecule:
 
-**Script** [code/MonoisotopicMass.groovy](code/MonoisotopicMass.code.md)
+**<a name="script:MonoisotopicMass">Script 14.3</a>** [code/MonoisotopicMass.groovy](code/MonoisotopicMass.code.md)
 ```groovy
 molFormula = MolecularFormulaManipulator
   .getMolecularFormula(
@@ -101,7 +101,7 @@ println "Monoisotopic mass: " +
 
 The output for ethanol looks like:
 
-**Script** [code/MonoisotopicMass.groovy](code/MonoisotopicMass.code.md)
+**<a name="script:MonoisotopicMass">Script 14.3</a>** [code/MonoisotopicMass.groovy](code/MonoisotopicMass.code.md)
 ```groovy
 molFormula = MolecularFormulaManipulator
   .getMolecularFormula(
@@ -140,7 +140,7 @@ Now, the algorithm does need to know what reasonable bond lengths are, and for
 this we can use the Jmol list of <a name="tp10">covalent radii</a>, and
 we configure the atoms accordingly:
 
-**Script** [code/CovalentRadii.groovy](code/CovalentRadii.code.md)
+**<a name="script:CovalentRadii">Script 14.4</a>** [code/CovalentRadii.groovy](code/CovalentRadii.code.md)
 ```groovy
 methane = new AtomContainer();
 methane.addAtom(new Atom("C", new Point3d(0.0, 0.0, 0.0)));
@@ -170,7 +170,7 @@ H -> 0.32
 
 Then the [`RebondTool`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/graph/rebond/RebondTool.html) can be used to rebind the atoms:
 
-**Script** [code/RebondToolDemo.groovy](code/RebondToolDemo.code.md)
+**<a name="script:RebondToolDemo">Script 14.5</a>** [code/RebondToolDemo.groovy](code/RebondToolDemo.code.md)
 ```groovy
 RebondTool rebonder = new RebondTool(2.0, 0.5, 0.5);
 rebonder.rebond(methane);
@@ -203,7 +203,7 @@ that covers many common use cases.
 The method requires atom types to be perceived already, which is already done
 when reading SMILES, for example for pyrrole:
 
-**Script** [code/FixPyrroleBondOrders.groovy](code/FixPyrroleBondOrders.code.md)
+**<a name="script:FixPyrroleBondOrders">Script 14.6</a>** [code/FixPyrroleBondOrders.groovy](code/FixPyrroleBondOrders.code.md)
 ```groovy
 pyrrole = smilesParser.parseSmiles(
   "c2ccc3n([H])c1ccccc1c3(c2)"
@@ -236,7 +236,7 @@ Hydrogens that are not vertices in the molecular graph are called
 they are connected. If these values are not given, which is common in
 for example SMILES, they can be (re)calculated with:
 
-**Script** [code/MissingHydrogens.groovy](code/MissingHydrogens.code.md)
+**<a name="script:MissingHydrogens">Script 14.7</a>** [code/MissingHydrogens.groovy](code/MissingHydrogens.code.md)
 ```groovy
 adder = CDKHydrogenAdder.getInstance(
   DefaultChemObjectBuilder.getInstance()
@@ -259,7 +259,7 @@ Implicit hydrogens: 4
 These implicit hydrogens can be converted into <a name="tp14">explicit hydrogens</a>
 using the following code:
 
-**Script** [code/ExplicitHydrogens.groovy](code/ExplicitHydrogens.code.md)
+**<a name="script:ExplicitHydrogens">Script 14.8</a>** [code/ExplicitHydrogens.groovy](code/ExplicitHydrogens.code.md)
 ```groovy
 adder.addImplicitHydrogens(molecule);
 println "Atom count: $molecule.atomCount"
@@ -285,7 +285,7 @@ Another bit of information missing from the input is often <a name="tp15">2D coo
 To generate 2D <a name="tp16">coordinates</a>, the [`StructureDiagramGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/layout/StructureDiagramGenerator.html) can be
 used:
 
-**Script** [code/Layout.groovy](code/Layout.code.md)
+**<a name="script:Layout">Script 14.9</a>** [code/Layout.groovy](code/Layout.code.md)
 ```groovy
 butanol = smilesParser.parseSmiles("CCC(O)C")
 sdg = new StructureDiagramGenerator();
@@ -318,7 +318,7 @@ them to <a name="tp17">molecular formula</a>. The `MassToFormulaTool` has functi
 to determine these missing formulae. Miguel Rojas-Chertó developed this code
 for use in <a name="tp18">metabolomics</a> [<a href="#citeref1">1</a>]. Basic usage looks like:
 
-**Script** [code/MissingMF.groovy](code/MissingMF.code.md)
+**<a name="script:MissingMF">Script 14.10</a>** [code/MissingMF.groovy](code/MissingMF.code.md)
 ```groovy
 tool = new MassToFormulaTool(
   SilentChemObjectBuilder.getInstance()
@@ -377,7 +377,7 @@ CH5N6O2
 This is overcome by setting restrictions. For example, we can put restrictions on the
 number of elements we allow in the matched formulae:
 
-**Script** [code/MissingMFRestrictions.groovy](code/MissingMFRestrictions.code.md)
+**<a name="script:MissingMFRestrictions">Script 14.11</a>** [code/MissingMFRestrictions.groovy](code/MissingMFRestrictions.code.md)
 ```groovy
 MolecularFormulaRange range =
   new MolecularFormulaRange();

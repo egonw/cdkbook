@@ -32,7 +32,7 @@ is needed by the various algorithms in the CDK:
 For example, the carbon in methane, we can list these properties with
 this code:
 
-**Script** [code/CDKAtomTypeProperties.groovy](code/CDKAtomTypeProperties.code.md)
+**<a name="script:CDKAtomTypeProperties">Script 12.1</a>** [code/CDKAtomTypeProperties.groovy](code/CDKAtomTypeProperties.code.md)
 ```groovy
 factory = AtomTypeFactory.getInstance(
   "org/openscience/cdk/dict/data/cdk-atom-types.owl",
@@ -94,7 +94,7 @@ hybridization, sp<sup>3</sup>.
 
 The list of supported hybridization types can be listed with:
 
-**Script** [code/HybridizationTypes.groovy](code/HybridizationTypes.code.md)
+**<a name="script:HybridizationTypes">Script 12.4</a>** [code/HybridizationTypes.groovy](code/HybridizationTypes.code.md)
 ```groovy
 IAtomType.Hybridization.each {
   println it
@@ -135,7 +135,7 @@ perceive the type of a single atom. The former is more efficient when types
 need to be perceived for all atoms, but when the molecule only partly changed,
 it can be worthwhile to only perceive atom types for only the affected atoms:
 
-**Script** [code/AtomTypePerception.groovy](code/AtomTypePerception.code.md)
+**<a name="script:AtomTypePerception">Script 12.5</a>** [code/AtomTypePerception.groovy](code/AtomTypePerception.code.md)
 ```groovy
 molecule = new AtomContainer();
 atom = new Atom(Elements.CARBON);
@@ -164,7 +164,7 @@ currently is no suitable solution for this in the CDK. Therefore,
 perceiving atom types for all atoms in a molecule can be done more
 efficiently with the following code:
 
-**Script** [code/AtomTypePerceptionMolecule.groovy](code/AtomTypePerceptionMolecule.code.md)
+**<a name="script:AtomTypePerceptionMolecule">Script 12.6</a>** [code/AtomTypePerceptionMolecule.groovy](code/AtomTypePerceptionMolecule.code.md)
 ```groovy
 matcher = CDKAtomTypeMatcher.getInstance(
   DefaultChemObjectBuilder.getInstance()
@@ -185,7 +185,7 @@ perceive and configure all atoms in a molecule with one call:
 What happens when the `findMatchingAtomType` method does not
 find a suitable atom type, is that it returns a generic 'X' atom type:
 
-**Script** [code/AtomTypeX.groovy](code/AtomTypeX.code.md)
+**<a name="script:AtomTypeX">Script 12.7</a>** [code/AtomTypeX.groovy](code/AtomTypeX.code.md)
 ```groovy
 molecule = new AtomContainer();
 atom = new PseudoAtom("G");
@@ -220,7 +220,7 @@ input is the below, uncharged NH<sub>4</sub>. If it is attempted to perceive an
 atom type for this nitrogen, then the `findMatchingAtomType` method
 will in fact return `X`, as intended:
 
-**Script** [code/UnchargedNitrogenPerception.groovy](code/UnchargedNitrogenPerception.code.md)
+**<a name="script:UnchargedNitrogenPerception">Script 12.8</a>** [code/UnchargedNitrogenPerception.groovy](code/UnchargedNitrogenPerception.code.md)
 ```groovy
 molecule = new AtomContainer();
 atom = new Atom(Elements.NITROGEN);
@@ -259,7 +259,7 @@ atom for which no atom type was perceived, it increases the charge of the
 atom and tries to perceive the atom type again. This will certainly address
 the aforementioned nitrogen problem:
 
-**Script** [code/CorrectedNitrogenPerception.groovy](code/CorrectedNitrogenPerception.code.md)
+**<a name="script:CorrectedNitrogenPerception">Script 12.9</a>** [code/CorrectedNitrogenPerception.groovy](code/CorrectedNitrogenPerception.code.md)
 ```groovy
 type = matcher.findMatchingAtomType(molecule, atom);
 if (type.atomTypeName == "X") {
@@ -288,7 +288,7 @@ fields [<a href="#citeref1">1</a>]. Sybyl atom types can be
 perceived with the [`SybylAtomTypeMatcher`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/atomtype/SybylAtomTypeMatcher.html) class, which perceives CDK
 atom types and then translates this in to Sybyl atom types:
 
-**Script** [code/SybylAtomTypePerception.groovy](code/SybylAtomTypePerception.code.md)
+**<a name="script:SybylAtomTypePerception">Script 12.10</a>** [code/SybylAtomTypePerception.groovy](code/SybylAtomTypePerception.code.md)
 ```groovy
 molecule = new AtomContainer();
 atom = new Atom(Elements.CARBON);

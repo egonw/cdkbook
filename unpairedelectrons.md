@@ -29,7 +29,7 @@ Oxygens are atoms with <a name="tp2">lone pairs</a>: the free electrons that do
 not take part in a bond. These lone pairs can be explicitly modeled
 in the CDK. For example, this is how we can represent <a name="tp3">water</a>:
 
-**Script** [code/LonePairOxygen.groovy](code/LonePairOxygen.code.md)
+**<a name="script:LonePairOxygen">Script 6.1</a>** [code/LonePairOxygen.groovy](code/LonePairOxygen.code.md)
 ```groovy
 IAtom atom1 = new Atom("H")
 IAtom atom2 = new Atom("H")
@@ -49,7 +49,7 @@ water.addLonePair(new LonePair(atom3))
 And we can the count the number of lone pair on each atom with,
 for example, this code:
 
-**Script** [code/LonePairCount.groovy](code/LonePairCount.code.md)
+**<a name="script:LonePairCount">Script 6.2</a>** [code/LonePairCount.groovy](code/LonePairCount.code.md)
 ```groovy
 for (atom in water.atoms()) {
   println atom.getSymbol() + " has " +
@@ -76,7 +76,7 @@ are well-supported in the data model.
 We can add an unpaired electron with the `addSingleElectron`
 method of the [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) class.
 
-**Script** [code/HydrogenRadical.groovy](code/HydrogenRadical.code.md)
+**<a name="script:HydrogenRadical">Script 6.3</a>** [code/HydrogenRadical.groovy](code/HydrogenRadical.code.md)
 ```groovy
 hydrogen = new Atom("H")
 radicalElectron =

@@ -105,7 +105,7 @@ of the class.
 The [`UniversalIsomorphismTester`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/isomorphism/UniversalIsomorphismTester.html) is an example class that now needs to be
 instantiated. However, the class is easy to instantiate. For example:
 
-**Script** [code/Isomorphism.groovy](code/Isomorphism.code.md)
+**<a name="script:Isomorphism">Script 20.1</a>** [code/Isomorphism.groovy](code/Isomorphism.code.md)
 ```groovy
 butane = MoleculeFactory.makeAlkane(4);
 isomorphismTester = new UniversalIsomorphismTester()
@@ -126,7 +126,7 @@ which contains information extracted from the XML file, but is available as a pu
 Java class. The APIs for getting isotope information is mostly the same, but the
 instantiation is much simpler, and also no longer requires an [`IChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObjectBuilder.html):
 
-**Script** [code/IsotopesDemo.groovy](code/IsotopesDemo.code.md)
+**<a name="script:IsotopesDemo">Script 20.2</a>** [code/IsotopesDemo.groovy](code/IsotopesDemo.code.md)
 ```groovy
 isofac = Isotopes.getInstance();
 uranium = 92;
@@ -155,7 +155,7 @@ how often a bit was set, implementing the new `getRawFingerprint(IAtomContainer)
 will likely take some effort, but the other two methods can in many cases just wrap
 other methods in the class, as shown in this example code:
 
-**Script** [code/FingerprinterMigration.java](code/FingerprinterMigration.code.md)
+**<a name="script:FingerprinterMigration">Script 20.3</a>** [code/FingerprinterMigration.java](code/FingerprinterMigration.code.md)
 ```java
   public ICountFingerprint getCountFingerprint(
     IAtomContainer molecule
@@ -182,7 +182,7 @@ had before. Below are typical new [`SmilesGenerator`](http://cdk.github.io/cdk/l
 
 Generating unique SMILES is done slightly differently, but elegantly:
 
-**Script** [code/UniqueSMILES.groovy](code/UniqueSMILES.code.md)
+**<a name="script:UniqueSMILES">Script 20.4</a>** [code/UniqueSMILES.groovy](code/UniqueSMILES.code.md)
 ```groovy
 generator = SmilesGenerator.unique()
 smiles = generator.createSMILES(mol)
@@ -195,7 +195,7 @@ are keen on using it, for various sometimes logical reasons, so here goes. Previ
 you would use the `setUseAromaticityFlag(true)` method for this, but you can now
 use instead:
 
-**Script** [code/AromaticSMILES.groovy](code/AromaticSMILES.code.md)
+**<a name="script:AromaticSMILES">Script 20.5</a>** [code/AromaticSMILES.groovy](code/AromaticSMILES.code.md)
 ```groovy
 generator = SmilesGenerator.generic().aromatic()
 smiles = generator.createSMILES(mol)

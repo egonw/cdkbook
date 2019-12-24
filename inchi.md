@@ -23,7 +23,7 @@ generator is then used to run the InChI software on the given molecule. The
 algorithm might fail, for various reasons, and we need to check if the
 generation succeeded too:
 
-**Script** [code/InChIGeneration.groovy](code/InChIGeneration.code.md)
+**<a name="script:InChIGeneration">Script 18.1</a>** [code/InChIGeneration.groovy](code/InChIGeneration.code.md)
 ```groovy
 factory = InChIGeneratorFactory.getInstance();
 generator = factory.getInChIGenerator(methane);
@@ -57,7 +57,7 @@ defined in the connection table (see Section [3.5](atomsbonds.md#sec:hydrogens))
 Therefore, the InChI for methane does not have a connectivity layer,
 but formic acid, *mierezuur* in Dutch, does (*/c2-1-3*):
 
-**Script** [code/InChIMierezuur.groovy](code/InChIMierezuur.code.md)
+**<a name="script:InChIMierezuur">Script 18.2</a>** [code/InChIMierezuur.groovy](code/InChIMierezuur.code.md)
 ```groovy
 mierezuur = new AtomContainer();
 atom1 = new Atom("O")

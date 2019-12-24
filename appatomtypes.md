@@ -5,7 +5,7 @@ The table listed in this Appendix is generated with the following
 code, listing all six properties of CDK atom types, as outlined
 in Section [12.1](atomtype.md#sec:cdkatomtype):
 
-**Script** [code/ListAllCDKAtomTypes.groovy](code/ListAllCDKAtomTypes.code.md)
+**<a name="script:ListAllCDKAtomTypes">Script 21.1</a>** [code/ListAllCDKAtomTypes.groovy](code/ListAllCDKAtomTypes.code.md)
 ```groovy
 factory = AtomTypeFactory.getInstance(
   "org/openscience/cdk/dict/data/cdk-atom-types.owl",
@@ -37,7 +37,7 @@ for (IAtomType type : types) {
 For the Sybyl atom types we can do the same, just by updating
 to code to load the proper atom type list:
 
-**Script** [code/ListAllSybylAtomTypes.groovy](code/ListAllSybylAtomTypes.code.md)
+**<a name="script:ListAllSybylAtomTypes">Script 21.2</a>** [code/ListAllSybylAtomTypes.groovy](code/ListAllSybylAtomTypes.code.md)
 ```groovy
 factory = AtomTypeFactory.getInstance(
   "org/openscience/cdk/dict/data/sybyl-atom-types.owl",

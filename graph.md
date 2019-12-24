@@ -17,7 +17,7 @@ this is often in combination with ensuring fully connected graphs, the
 atoms and bonds in an [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) into molecules, organized into
 [`IAtomContainerSet`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainerSet.html):
 
-**Script** [code/ConnectivityCheckerDemo.groovy](code/ConnectivityCheckerDemo.code.md)
+**<a name="script:ConnectivityCheckerDemo">Script 13.1</a>** [code/ConnectivityCheckerDemo.groovy](code/ConnectivityCheckerDemo.code.md)
 ```groovy
 atomCon = new AtomContainer();
 atom1 = new Atom("C");
@@ -43,7 +43,7 @@ Number of isolated graphs: 2
 The <a name="tp3">spanning tree</a> of a graph, is subgraph with no cycles; that spans
 all atoms into a, still, fully connected graph:
 
-**Script** [code/SpanningTreeBondCount.groovy](code/SpanningTreeBondCount.code.md)
+**<a name="script:SpanningTreeBondCount">Script 13.2</a>** [code/SpanningTreeBondCount.groovy](code/SpanningTreeBondCount.code.md)
 ```groovy
 println "Number of azulene bonds: $azulene.bondCount"
 treeBuilder = new SpanningTree(azulene)
@@ -61,7 +61,7 @@ Number of tree bonds: 9
 As a side effect, it also determines which bonds are <a name="tp4">ring bonds</a>, and which are
 not:
 
-**Script** [code/SpanningTreeRingBonds.groovy](code/SpanningTreeRingBonds.code.md)
+**<a name="script:SpanningTreeRingBonds">Script 13.3</a>** [code/SpanningTreeRingBonds.groovy](code/SpanningTreeRingBonds.code.md)
 ```groovy
 ethaneTree = new SpanningTree(ethane)
 println "[ethane]"
@@ -118,7 +118,7 @@ The CDK implements two algorithms, both are found in the `cdk.ringsearch` packag
 first is the algorithm developed by Figureas [<a href="#citeref2">2</a>] for which the
 `FiguerasSSSRFinder` class can be used:
 
-**Script** [code/FiguerasSSSR.groovy](code/FiguerasSSSR.code.md)
+**<a name="script:FiguerasSSSR">Script 13.4</a>** [code/FiguerasSSSR.groovy](code/FiguerasSSSR.code.md)
 ```groovy
 ringset = new FiguerasSSSRFinder().findSSSR(azulene)
 println "Number of rings: $ringset.atomContainerCount"
@@ -134,7 +134,7 @@ However, because of this algorithm's limitations in finding a correct SSSR set f
 case structure, the following alternative method by Berger *et al.* [<a href="#citeref3">3</a>] is
 recommended:
 
-**Script** [code/SSSR.groovy](code/SSSR.code.md)
+**<a name="script:SSSR">Script 13.5</a>** [code/SSSR.groovy](code/SSSR.code.md)
 ```groovy
 ringset = new SSSRFinder(azulene).findSSSR()
 println "Number of rings: $ringset.atomContainerCount"
@@ -151,7 +151,7 @@ Number of rings: 2
 If you are interesting in all possible rings, you can use the [`AllRingsFinder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/ringsearch/AllRingsFinder.html) class, which
 implements an algorithm by Hanser *et al.* [<a href="#citeref4">4</a>]:
 
-**Script** [code/FindAllRings.groovy](code/FindAllRings.code.md)
+**<a name="script:FindAllRings">Script 13.6</a>** [code/FindAllRings.groovy](code/FindAllRings.code.md)
 ```groovy
 ringset = new AllRingsFinder().findAllRings(azulene)
 println "Number of rings: $ringset.atomContainerCount"
@@ -159,7 +159,7 @@ println "Number of rings: $ringset.atomContainerCount"
 
 Which returns all three rings present in azulene:
 
-**Script** [code/FindAllRings.groovy](code/FindAllRings.code.md)
+**<a name="script:FindAllRings">Script 13.6</a>** [code/FindAllRings.groovy](code/FindAllRings.code.md)
 ```groovy
 ringset = new AllRingsFinder().findAllRings(azulene)
 println "Number of rings: $ringset.atomContainerCount"
@@ -172,7 +172,7 @@ calculation manageable for larger structures.
 The first option is to search only for rings up to a certain size. For example, only rings
 of at most 5 atoms:
 
-**Script** [code/FindUptoFiveRings.groovy](code/FindUptoFiveRings.code.md)
+**<a name="script:FindUptoFiveRings">Script 13.7</a>** [code/FindUptoFiveRings.groovy](code/FindUptoFiveRings.code.md)
 ```groovy
 ringset = new AllRingsFinder().findAllRings(azulene, 5)
 println "Number of rings: $ringset.atomContainerCount"
@@ -191,7 +191,7 @@ above two approaches.
 The third option to limit the execution time is to set a time out. This ensures that
 a computation will return after a certain time rather than continuing indefinately:
 
-**Script** [code/FindAllRingsInLimitedTime.groovy](code/FindAllRingsInLimitedTime.code.md)
+**<a name="script:FindAllRingsInLimitedTime">Script 13.8</a>** [code/FindAllRingsInLimitedTime.groovy](code/FindAllRingsInLimitedTime.code.md)
 ```groovy
 ringFinder = new AllRingsFinder(AllRingsFinder.Threshold.PubChem_99)
 ringset = ringFinder.findAllRings(azulene)
@@ -218,7 +218,7 @@ The algorithm to calculate this matrix is implemented in the
 [`AdjacencyMatrix`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/graph/matrix/AdjacencyMatrix.html) class. The matrix is calculated with
 the static `getMatrix(IAtomContainer)` method:
 
-**Script** [code/AdjacencyMatrixCalc.groovy](code/AdjacencyMatrixCalc.code.md)
+**<a name="script:AdjacencyMatrixCalc">Script 13.9</a>** [code/AdjacencyMatrixCalc.groovy](code/AdjacencyMatrixCalc.code.md)
 ```groovy
 int[][] matrix = AdjacencyMatrix.getMatrix(ethanoicAcid)
 for (row=0;row<ethanoicAcid.getAtomCount();row++) {
@@ -248,7 +248,7 @@ neighboring atoms are 1 and others are larger. The CDK uses
 <a name="tp12">Floyd's algorithm</a> to calculate this matrix [<a href="#citeref5">5</a>],
 which is exposed via the [`TopologicalMatrix`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/graph/matrix/TopologicalMatrix.html) class:
 
-**Script** [code/DistanceMatrix.groovy](code/DistanceMatrix.code.md)
+**<a name="script:DistanceMatrix">Script 13.10</a>** [code/DistanceMatrix.groovy](code/DistanceMatrix.code.md)
 ```groovy
 int[][] matrix = TopologicalMatrix.getMatrix(ethanoicAcid)
 ```
@@ -281,7 +281,7 @@ associated with those vertices, and it only based on the connectivity.
 Therefore, we see the same number of symmetry related atoms, even if they have
 different symbols. If we run:
 
-**Script** [code/MorganAtomNumbers.groovy](code/MorganAtomNumbers.code.md)
+**<a name="script:MorganAtomNumbers">Script 13.11</a>** [code/MorganAtomNumbers.groovy](code/MorganAtomNumbers.code.md)
 ```groovy
 oxazole = MoleculeFactory.makeOxazole();
 long[] morganNumbers =
@@ -317,7 +317,7 @@ are those listed in the bond layer, but to use these in the CDK molecule class,
 we need to mapping of the <a name="tp17">InChI atom numbers</a> This method
 is made available via the [`InChINumbersTools`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/graph/invariant/InChINumbersTools.html) class:
 
-**Script** [code/InChIAtomNumbers.groovy](code/InChIAtomNumbers.code.md)
+**<a name="script:InChIAtomNumbers">Script 13.14</a>** [code/InChIAtomNumbers.groovy](code/InChIAtomNumbers.code.md)
 ```groovy
 oxazole = MoleculeFactory.makeOxazole();
 long[] morganNumbers =
@@ -345,7 +345,7 @@ It is important to note that because these numbers are used in the connectivity 
 symmetry is broken in assignment of these numbers, allowing all atoms in, for example,
 benzene to still be uniquely identified:
 
-**Script** [code/InChIAtomNumbersBenzene.groovy](code/InChIAtomNumbersBenzene.code.md)
+**<a name="script:InChIAtomNumbersBenzene">Script 13.15</a>** [code/InChIAtomNumbersBenzene.groovy](code/InChIAtomNumbersBenzene.code.md)
 ```groovy
 benzene = MoleculeFactory.makeBenzene();
 long[] numbers =

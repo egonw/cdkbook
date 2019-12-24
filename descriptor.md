@@ -63,7 +63,7 @@ track of what value came from what vendor.
 For example, we can inspect these field values for the TPSA descriptor
 (see Section [16.3](properties.md#sec:tpsa)):
 
-**Script** [code/TPSASpecs.groovy](code/TPSASpecs.code.md)
+**<a name="script:TPSASpecs">Script 17.1</a>** [code/TPSASpecs.groovy](code/TPSASpecs.code.md)
 ```groovy
 descriptor = new TPSADescriptor()
 specs = descriptor.specification
@@ -118,7 +118,7 @@ The next two methods, `getParameterNames()` and `getParameterType(String name)`,
 allow us to discover which parameters a particular descriptor has, if any. For example,
 we can check those of the [`AtomCountDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/descriptors/molecular/AtomCountDescriptor.html):
 
-**Script** [code/AtomCountDescriptorParams.groovy](code/AtomCountDescriptorParams.code.md)
+**<a name="script:AtomCountDescriptorParams">Script 17.2</a>** [code/AtomCountDescriptorParams.groovy](code/AtomCountDescriptorParams.code.md)
 ```groovy
 descriptor = new AtomCountDescriptor()
 descriptor.parameterNames.each { name ->
@@ -139,7 +139,7 @@ The last two methods allow is to change the current parameter values
 names. For example, we can see if the [`AromaticAtomsCountDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/descriptors/molecular/AromaticAtomsCountDescriptor.html) calculates
 aromaticity itself by default:
 
-**Script** [code/AromaticAtomCountDescriptorParams.groovy](code/AromaticAtomCountDescriptorParams.code.md)
+**<a name="script:AromaticAtomCountDescriptorParams">Script 17.3</a>** [code/AromaticAtomCountDescriptorParams.groovy](code/AromaticAtomCountDescriptorParams.code.md)
 ```groovy
 descriptor = new AromaticAtomsCountDescriptor()
 println "Values:"
@@ -193,7 +193,7 @@ return a cardinal value, and a boolean. But before we go into the details of the
 actually calculated descriptor values, let's look at TPSA calculation in a bit more detail
 then we did in Script ??:
 
-**Script** [code/TPSACalc.groovy](code/TPSACalc.code.md)
+**<a name="script:TPSACalc">Script 17.4</a>** [code/TPSACalc.groovy](code/TPSACalc.code.md)
 ```groovy
 descriptor = new TPSADescriptor()
 result = descriptor.calculate(oxazone)
@@ -224,7 +224,7 @@ Additionally, if the calculation failed (because the input structure
 had error, had missing information, like no 3D coordinates), then an <a name="tp5">exception</a> is stored
 and returned too:
 
-**Script** [code/DescriptorCalcException.groovy](code/DescriptorCalcException.code.md)
+**<a name="script:DescriptorCalcException">Script 17.5</a>** [code/DescriptorCalcException.groovy](code/DescriptorCalcException.code.md)
 ```groovy
 descriptor = new MomentOfInertiaDescriptor()
 result = descriptor.calculate(oxazone)
@@ -250,7 +250,7 @@ we see that some descriptors return one numerical value, while others return man
 It should also be noted, that depending on parameter values set, the actual number of
 calculated numbers can vary!
 
-**Script** [code/DescriptorResultLength.groovy](code/DescriptorResultLength.code.md)
+**<a name="script:DescriptorResultLength">Script 17.6</a>** [code/DescriptorResultLength.groovy](code/DescriptorResultLength.code.md)
 ```groovy
 descriptor = new MomentOfInertiaDescriptor()
 result = descriptor.calculate(methane)
@@ -279,7 +279,7 @@ work slightly different, and both provide a `get(int)` method to iterate over al
 values. For example, for the molecular inertia descriptor values for methane it would
 look like:
 
-**Script** [code/DoubleArrayGetValue.groovy](code/DoubleArrayGetValue.code.md)
+**<a name="script:DoubleArrayGetValue">Script 17.7</a>** [code/DoubleArrayGetValue.groovy](code/DoubleArrayGetValue.code.md)
 ```groovy
 value = descriptor.calculate(methane).value
 for (i in 0..(value.length()-1)) {
@@ -306,7 +306,7 @@ Now that we know how the general API works, we can calculate custom descriptors,
 `nitrogenCount` and `oxygenCount`. We reuse the [`AtomCountDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/descriptors/molecular/AtomCountDescriptor.html) for that, and
 set the parameter:
 
-**Script** [code/SpecificAtomCountDescriptor.groovy](code/SpecificAtomCountDescriptor.code.md)
+**<a name="script:SpecificAtomCountDescriptor">Script 17.8</a>** [code/SpecificAtomCountDescriptor.groovy](code/SpecificAtomCountDescriptor.code.md)
 ```groovy
 descriptor = new AtomCountDescriptor()
 Object[] params = [ "N" ]

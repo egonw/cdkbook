@@ -18,7 +18,7 @@ Before I will explain how these fingerprints are created, we will first
 look at the `BitSet` class that is used by the CDK to
 represent these fingerprints. Consider this code:
 
-**Script** [code/BitSetDemo.groovy](code/BitSetDemo.code.md)
+**<a name="script:BitSetDemo">Script 15.1</a>** [code/BitSetDemo.groovy](code/BitSetDemo.code.md)
 ```groovy
 bitset = new BitSet(10);
 println "Empty bit set: $bitset";
@@ -45,7 +45,7 @@ with the following bit definitions:
 
 Let's call this fingerprinter `SimpleFingerprinter`:
 
-**Script** [code/SimpleFingerprinter.java](code/SimpleFingerprinter.code.md)
+**<a name="script:SimpleFingerprinter">Script 15.2</a>** [code/SimpleFingerprinter.java](code/SimpleFingerprinter.code.md)
 ```java
 public class SimpleFingerprinter implements IFingerprinter {
   Map<String,Integer> map = new HashMap<String,Integer>() {{
@@ -99,8 +99,8 @@ public class SimpleFingerprinter implements IFingerprinter {
 
 We can then calculate the fingerprints for ethanol and benzene:
 
-**Script** [code/SimpleFingerprintDemo.groovyl](code/SimpleFingerprintDemo.code.md)
-```groovyl
+**<a name="script:SimpleFingerprintDemo">Script 15.3</a>** [code/SimpleFingerprintDemo.groovyl](code/SimpleFingerprintDemo.code.md)
+```groovy
 fingerprinter = new SimpleFingerprinter();
 println "ethanol: " + fingerprinter.getFingerprint(ethanol)
 println "benzene: " + fingerprinter.getFingerprint(benzene)
@@ -132,7 +132,7 @@ substructures are defined as SMARTS substructure specifications,
 inherited from RDKit ([http://rdkit.org/](http://rdkit.org/)). For this fingerprint it is required the implicit hydrogen
 counts are first set:
 	
-**Script** [code/MACCSFingerprint.groovy](code/MACCSFingerprint.code.md)
+**<a name="script:MACCSFingerprint">Script 15.4</a>** [code/MACCSFingerprint.groovy](code/MACCSFingerprint.code.md)
 ```groovy
 fingerprinter = new MACCSFingerprinter();
 println "ethanol: " +
@@ -158,7 +158,7 @@ It implements both in four variants:
 ECFP0, ECFP2, ECFP4, ECFP6, FCFP0, FCFP2, FCFP4, and FCFP6. The code is quite similar
 as for other fingerprints, but we do have to indicate what variant we want:
 	
-**Script** [code/ECFPFingerprint.groovy](code/ECFPFingerprint.code.md)
+**<a name="script:ECFPFingerprint">Script 15.5</a>** [code/ECFPFingerprint.groovy](code/ECFPFingerprint.code.md)
 ```groovy
 fingerprinter = new CircularFingerprinter(
   CircularFingerprinter.CLASS_ECFP6

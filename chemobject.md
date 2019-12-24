@@ -27,7 +27,7 @@ set of conformation for a single molecule.
 
 Adding entries typically works with add methods:
 
-**Script** [code/SetOfAtomContainers.groovy](code/SetOfAtomContainers.code.md)
+**<a name="script:SetOfAtomContainers">Script 9.1</a>** [code/SetOfAtomContainers.groovy](code/SetOfAtomContainers.code.md)
 ```groovy
 set = new AtomContainerSet()
 println "This set has $set.atomContainerCount containers"
@@ -47,7 +47,7 @@ Now it has 2 containers
 
 The set can be reused by removing all containers:
 
-**Script** [code/EmptySetOfAtomContainers.groovy](code/EmptySetOfAtomContainers.code.md)
+**<a name="script:EmptySetOfAtomContainers">Script 9.2</a>** [code/EmptySetOfAtomContainers.groovy](code/EmptySetOfAtomContainers.code.md)
 ```groovy
 set.removeAllAtomContainers()
 ```
@@ -55,7 +55,7 @@ set.removeAllAtomContainers()
 There are two approaches to iterate over all atom containers. The first option is
 to use the matching `Iterable`:
 
-**Script** [code/AtomContainersLoopingInSet.groovy](code/AtomContainersLoopingInSet.code.md)
+**<a name="script:AtomContainersLoopingInSet">Script 9.3</a>** [code/AtomContainersLoopingInSet.groovy](code/AtomContainersLoopingInSet.code.md)
 ```groovy
 println "Number of containers: " + 
   set.getAtomContainerCount()
@@ -75,7 +75,7 @@ container's hashcode 1401295795
 
 The other options is to use a regular for-loop:
 
-**Script** [code/AtomContainersForLoopingInSet.groovy](code/AtomContainersForLoopingInSet.code.md)
+**<a name="script:AtomContainersForLoopingInSet">Script 9.4</a>** [code/AtomContainersForLoopingInSet.groovy](code/AtomContainersForLoopingInSet.code.md)
 ```groovy
 println "Number of containers: " +
   set.getAtomContainerCount()
@@ -115,7 +115,7 @@ mixtures of content, but silently assumed is that the fields are mutually
 exclusive: if the model contains an crystal, it will not also contain a set
 of reactions.
 
-**Script** [code/SetChemModelContent.groovy](code/SetChemModelContent.code.md)
+**<a name="script:SetChemModelContent">Script 9.5</a>** [code/SetChemModelContent.groovy](code/SetChemModelContent.code.md)
 ```groovy
 model = new ChemModel()
 model.setMoleculeSet(new AtomContainerSet())
@@ -132,7 +132,7 @@ pretty much like another set, and has a similar API for looping over all models
 with two alternative approaches. Like with the earlier sets, we can use both
 a regular for-loop:
 
-**Script** [code/ChemSequenceForLooping.groovy](code/ChemSequenceForLooping.code.md)
+**<a name="script:ChemSequenceForLooping">Script 9.6</a>** [code/ChemSequenceForLooping.groovy](code/ChemSequenceForLooping.code.md)
 ```groovy
 for (i = 0; i < sequence.chemModelCount; i++) {
   println "model $i has hash: " + model.getChemModel(i)
@@ -141,7 +141,7 @@ for (i = 0; i < sequence.chemModelCount; i++) {
 
 And the method that returns an `Iterable`:
 
-**Script** [code/ChemSequenceLooping.groovy](code/ChemSequenceLooping.code.md)
+**<a name="script:ChemSequenceLooping">Script 9.7</a>** [code/ChemSequenceLooping.groovy](code/ChemSequenceLooping.code.md)
 ```groovy
 for (model in sequence.chemModels()) {
   println "model's hash: " + model.hashCode()
@@ -162,7 +162,7 @@ complementary blocks of information.
 Here too, we have the usual two combinations to access the sequences. The for-loop
 looks like:
 
-**Script** [code/ChemFileForLooping.groovy](code/ChemFileForLooping.code.md)
+**<a name="script:ChemFileForLooping">Script 9.8</a>** [code/ChemFileForLooping.groovy](code/ChemFileForLooping.code.md)
 ```groovy
 for (i = 0; i < file.chemSequenceCount; i++) {
   println "sequence $i has hash: " +
@@ -172,7 +172,7 @@ for (i = 0; i < file.chemSequenceCount; i++) {
 
 And the approach using the `Iterable` looks like:
 
-**Script** [code/ChemFileLooping.groovy](code/ChemFileLooping.code.md)
+**<a name="script:ChemFileLooping">Script 9.9</a>** [code/ChemFileLooping.groovy](code/ChemFileLooping.code.md)
 ```groovy
 for (sequence in file.chemSequences()) {
   println "sequence's hash: " + sequence.hashCode()

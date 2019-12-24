@@ -7,7 +7,7 @@ in Section [12.1](atomtype.md#sec:cdkatomtype). Abundances and exact masses are
 inherited from the BODR project, which contains
 values extracted from IUPAC recommendations.
 
-**Script** [code/ListAllIsotopes.groovy](code/ListAllIsotopes.code.md)
+**<a name="script:ListAllIsotopes">Script 22.1</a>** [code/ListAllIsotopes.groovy](code/ListAllIsotopes.code.md)
 ```groovy
 isofac = Isotopes.getInstance();
 maxAtomicNumber = 150;

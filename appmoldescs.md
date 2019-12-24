@@ -5,7 +5,7 @@ The below tables lists several descriptor types available in the CDK.
 The following code is for molecular descriptors, but equivalent code
 is used for the other descriptor types:
 
-**Script** [code/ListAllMolecularDescriptors.groovy](code/ListAllMolecularDescriptors.code.md)
+**<a name="script:ListAllMolecularDescriptors">Script 23.1</a>** [code/ListAllMolecularDescriptors.groovy](code/ListAllMolecularDescriptors.code.md)
 ```groovy
 DescriptorEngine engine =
   new DescriptorEngine(

@@ -23,7 +23,7 @@ Of course, we can also read PDB files from a local disc. The results are read in
 a [`IChemFile`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemFile.html). from which the first IAtomContainer is the IBioPolymer. For example,
 we can read <a name="tp4">crambin</a> [<a href="#citeref2">2</a>]:
 
-**Script** [code/ProteinFromFile.groovy](code/ProteinFromFile.code.md)
+**<a name="script:ProteinFromFile">Script 7.1</a>** [code/ProteinFromFile.groovy](code/ProteinFromFile.code.md)
 ```groovy
 reader = new PDBReader(
   new FileReader("data/1CRN.pdb")
@@ -47,7 +47,7 @@ Crambin has 327 atoms.
 It is also possible to create an protein data structure starting from a <a name="tp5">sequence</a>
 with the `ProteinBuilder` class:
 
-**Script** [code/ProteinFromSequence.groovy](code/ProteinFromSequence.code.md)
+**<a name="script:ProteinFromSequence">Script 7.2</a>** [code/ProteinFromSequence.groovy](code/ProteinFromSequence.code.md)
 ```groovy
 crambin = ProteinBuilderTool.createProtein(
   "TTCCPSIVARSNFNVCRLPGTPEA" +
@@ -73,7 +73,7 @@ but also of strands, which consist of a sequence of polymers. So, a BioPolymer i
 
 There are access methods for the strand information we can use to iterate over the sequence of a biopolymer:
 
-**Script** [code/ProteinStrands.groovy](code/ProteinStrands.code.md)
+**<a name="script:ProteinStrands">Script 7.3</a>** [code/ProteinStrands.groovy](code/ProteinStrands.code.md)
 ```groovy
 println "Crambin has " +
   crambin.strandCount + " strand(s)"
@@ -94,7 +94,7 @@ Crambin has 1 strand(s)
 
 Each strand consists of a sequence monomers, over which we can iterate:
 
-**Script** [code/ProteinMonomers.groovy](code/ProteinMonomers.code.md)
+**<a name="script:ProteinMonomers">Script 7.4</a>** [code/ProteinMonomers.groovy](code/ProteinMonomers.code.md)
 ```groovy
 strand = crambin.getStrand("A")
 for (name in crambin.monomerNames) {
@@ -121,7 +121,7 @@ specific properties, but also extend the `IAtomContainer` interface, as depicted
 in Figure [7.2](#fig:strandmonomerClass). Both provide access to a name for the entity as
 well as a type:
 
-**Script** [code/BioNameType.groovy](code/BioNameType.code.md)
+**<a name="script:BioNameType">Script 7.5</a>** [code/BioNameType.groovy](code/BioNameType.code.md)
 ```groovy
 strand = crambin.getStrand("A")
 println "Strand name: " + strand.strandName

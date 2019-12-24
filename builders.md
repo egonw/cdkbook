@@ -24,7 +24,7 @@ Many code examples in this book use a specific implementation, but it
 is recommended to builders as much as possible. This code is more verbose,
 but more flexible at the same time:
 
-**Script** [code/Builders.groovy](code/Builders.code.md)
+**<a name="script:Builders">Script 10.1</a>** [code/Builders.groovy](code/Builders.code.md)
 ```groovy
 IChemObjectBuilder builder =
   DefaultChemObjectBuilder.getInstance();
@@ -49,7 +49,7 @@ should be created. All further parameters are passes to the constructor
 of that class. Therefore, the following example is equivalent for the
 above code:
 
-**Script** [code/BuildersOldFashion.groovy](code/BuildersOldFashion.code.md)
+**<a name="script:BuildersOldFashion">Script 10.2</a>** [code/BuildersOldFashion.groovy](code/BuildersOldFashion.code.md)
 ```groovy
 IAtom atom1 = new Atom("C");
 IAtom atom2 = new Atom("C");
@@ -87,7 +87,7 @@ Internally, these classes inform each other when contained classes are changed.
 Therefore, when we register a change event listener to a molecule, we not only
 get events when we change the molecule, but also when a contained atom changed:
 
-**Script** [code/ObjectListening.groovy](code/ObjectListening.code.md)
+**<a name="script:ObjectListening">Script 10.3</a>** [code/ObjectListening.groovy](code/ObjectListening.code.md)
 ```groovy
 IChemObjectBuilder builder =
   DefaultChemObjectBuilder.getInstance();
@@ -124,9 +124,9 @@ Event: org.openscience.cdk.event.ChemObjectChang...
 The [`DebugChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/debug/DebugChemObjectBuilder.html) constructs classes to provide debug
 information, allowing you to track what is happening with your data model.
 For example, if we use this builder instead of the default builder by
-changing the first line in Script ??:
+changing the first line in Script [10.1](#script:Builders):
 
-**Script** [code/DebugBuilder.groovy](code/DebugBuilder.code.md)
+**<a name="script:DebugBuilder">Script 10.4</a>** [code/DebugBuilder.groovy](code/DebugBuilder.code.md)
 ```groovy
 IChemObjectBuilder builder =
   DebugChemObjectBuilder.getInstance();
@@ -144,7 +144,7 @@ around change events. It replaces the `NoNotificationChemObjectBuilder`
 and has cleaner code, and is even faster [<a href="#citeref2">2</a>]. This builder too is created using
 the now familiar pattern:
 
-**Script** [code/SilentBuilder.groovy](code/SilentBuilder.code.md)
+**<a name="script:SilentBuilder">Script 10.6</a>** [code/SilentBuilder.groovy](code/SilentBuilder.code.md)
 ```groovy
 IChemObjectBuilder builder =
   SilentChemObjectBuilder.getInstance();

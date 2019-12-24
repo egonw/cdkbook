@@ -27,7 +27,7 @@ provides a list of all chemical file formats the CDK knows about.
 Programmatically, the format of a file can be detected using the
 `FormatFactory`:
 
-**Script** [code/GuessFormat.groovy](code/GuessFormat.code.md)
+**<a name="script:GuessFormat">Script 11.1</a>** [code/GuessFormat.groovy](code/GuessFormat.code.md)
 ```groovy
 Reader stringReader = new StringReader(
   "<molecule xmlns='http://www.xml-cml.org/schema'/>"
@@ -48,7 +48,7 @@ To learn if the CDK has a `IChemObjectReader` or
 `IChemObjectWriter` for a format, one can use the methods `getReaderClassName()`
 and `getWriterClassName()` respectively:
 
-**Script** [code/HasReaderOrWriter.groovy](code/HasReaderOrWriter.code.md)
+**<a name="script:HasReaderOrWriter">Script 11.2</a>** [code/HasReaderOrWriter.groovy](code/HasReaderOrWriter.code.md)
 ```groovy
 Reader stringReader = new StringReader(
   "<molecule xmlns='http://www.xml-cml.org/schema'/>"
@@ -76,7 +76,7 @@ line notation.
 However, we can define a custom matcher ourselves and use that. First,
 the matcher will look something like:
 
-**Script** [code/SMILESFormatMatcher.java](code/SMILESFormatMatcher.code.md)
+**<a name="script:SMILESFormatMatcher">Script 11.3</a>** [code/SMILESFormatMatcher.java](code/SMILESFormatMatcher.code.md)
 ```java
 public class SMILESFormatMatcher
   extends SMILESFormat
@@ -122,8 +122,8 @@ public class SMILESFormatMatcher
 
 If we then register this new matcher with the `FormatFactory`:
 
-**Script** [code/GuessSMILES.groovyl](code/GuessSMILES.code.md)
-```groovyl
+**<a name="script:GuessSMILES">Script 11.4</a>** [code/GuessSMILES.groovyl](code/GuessSMILES.code.md)
+```groovy
 Reader stringReader = new StringReader(
   "O=CN formamide\n" +
   "OCC ethanol\n"
@@ -158,7 +158,7 @@ For other formats, it does not matter. This allows, for example, to read
 a file easily from a string with a `StringReader`
 (mind the newlines indicated by `\n`):
 
-**Script** [code/InputFromStringReader.groovy](code/InputFromStringReader.code.md)
+**<a name="script:InputFromStringReader">Script 11.5</a>** [code/InputFromStringReader.groovy](code/InputFromStringReader.code.md)
 ```groovy
 String bf3 = "4\n" +
 "Bortrifluorid\n" +
@@ -187,7 +187,7 @@ As an example, below will follow a small script that takes a
 identifier (CID) and downloads the corresponding <a name="tp3">ASN.1</a> XML file, parses it and
 counts the number of atoms:
 
-**Script** [code/PubChemDownload.groovy](code/PubChemDownload.code.md)
+**<a name="script:PubChemDownload">Script 11.6</a>** [code/PubChemDownload.groovy](code/PubChemDownload.code.md)
 ```groovy
 cid = 5282253
 reader = new PCCompoundXMLReader(
@@ -212,7 +212,7 @@ PubChem ASN.1 files come with an extensive list of molecular properties. These
 are stored as properties on the molecule object and can be retrieved using the
 `getProperties()` method, or, using the Groovy bean formalism:
 
-**Script** [code/PubChemDownloadProperties.groovy](code/PubChemDownloadProperties.code.md)
+**<a name="script:PubChemDownloadProperties">Script 11.7</a>** [code/PubChemDownloadProperties.groovy](code/PubChemDownloadProperties.code.md)
 ```groovy
 mol.properties.each {
   line = "" + it
@@ -299,7 +299,7 @@ this graph. These problems are much more rare, though.
 The [`IChemObjectReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/IChemObjectReader.html) has a feature that allows setting
 a validating mode, which has two values:
 
-**Script** [code/ReadingModes.groovy](code/ReadingModes.code.md)
+**<a name="script:ReadingModes">Script 11.8</a>** [code/ReadingModes.groovy](code/ReadingModes.code.md)
 ```groovy
 IChemObjectReader.Mode.each {
   println it
@@ -334,7 +334,7 @@ M  END
 
 If we read this file with:
 
-**Script** [code/ReadStrict.groovy](code/ReadStrict.code.md)
+**<a name="script:ReadStrict">Script 11.9</a>** [code/ReadStrict.groovy](code/ReadStrict.code.md)
 ```groovy
 reader = new MDLV2000Reader(
   new File("data/t.mol").newReader(),
@@ -352,7 +352,7 @@ invalid symbol: D
 
 However, if we read the file in `RELAXED` mode with this code:
 
-**Script** [code/ReadRelaxed.groovy](code/ReadRelaxed.code.md)
+**<a name="script:ReadRelaxed">Script 11.10</a>** [code/ReadRelaxed.groovy](code/ReadRelaxed.code.md)
 ```groovy
 reader = new MDLV2000Reader(
   new File("data/t.mol").newReader(),
@@ -376,7 +376,7 @@ error messages. This functionality is provided by the
 [`IChemObjectReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/IChemObjectReader.html).
 For example, we can define this custom error handler:
 
-**Script** [code/CustomErrorHandler.groovy](code/CustomErrorHandler.code.md)
+**<a name="script:CustomErrorHandler">Script 11.11</a>** [code/CustomErrorHandler.groovy](code/CustomErrorHandler.code.md)
 ```groovy
 class ErrorHandler
 implements IChemObjectReaderErrorHandler {
@@ -410,7 +410,7 @@ implements IChemObjectReaderErrorHandler {
 
 and use that when reading a file:
 
-**Script** [code/ReadErrorHandler.groovy](code/ReadErrorHandler.code.md)
+**<a name="script:ReadErrorHandler">Script 11.12</a>** [code/ReadErrorHandler.groovy](code/ReadErrorHandler.code.md)
 ```groovy
 reader = new MDLV2000Reader(
   new File("data/t.mol").newReader(),
@@ -437,7 +437,7 @@ Some remote databases <a name="tp4">gzip</a> their data files to reduce download
 The Protein Brookhaven Database (<a name="tp5">PDB</a>) is such a database. Fortunately, Java
 has a simple API to work with gzipped files, using the `GZIPInputStream`:
 
-**Script** [code/PDBCoordinateExtraction.groovy](code/PDBCoordinateExtraction.code.md)
+**<a name="script:PDBCoordinateExtraction">Script 11.13</a>** [code/PDBCoordinateExtraction.groovy](code/PDBCoordinateExtraction.code.md)
 ```groovy
 reader = new PDBReader(
   new GZIPInputStream(
@@ -473,7 +473,7 @@ individual molecule one by one.
 MDL SD files can be processed using the [`IteratingSDFReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/iterator/IteratingSDFReader.html), for
 example, to generate a SMILES for each structure:
 
-**Script** [code/IteratingSDFReaderDemo.groovy](code/IteratingSDFReaderDemo.code.md)
+**<a name="script:IteratingSDFReaderDemo">Script 11.14</a>** [code/IteratingSDFReaderDemo.groovy](code/IteratingSDFReaderDemo.code.md)
 ```groovy
 iterator = new IteratingSDFReader(
   new File("data/test6.sdf").newReader(),
@@ -505,7 +505,7 @@ interface as used for parsing MDL SD files. Iterating over a set
 of compounds is fairly straightforward with the
 [`IteratingPCCompoundXMLReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/iterator/IteratingPCCompoundXMLReader.html) class:
 
-**Script** [code/PubChemCompoundsXMLDemo.groovy](code/PubChemCompoundsXMLDemo.code.md)
+**<a name="script:PubChemCompoundsXMLDemo">Script 11.15</a>** [code/PubChemCompoundsXMLDemo.groovy](code/PubChemCompoundsXMLDemo.code.md)
 ```groovy
 iterator = new IteratingPCCompoundXMLReader(
   new File("data/aceticAcids38.xml").newReader(),
@@ -567,7 +567,7 @@ The writer used the default IO options in the above example. So, the next step i
 which options the writer allows. To get a list of options for a certain IO
 class in one does something along the lines:
 
-**Script** [code/ListIOOptions.groovy](code/ListIOOptions.code.md)
+**<a name="script:ListIOOptions">Script 11.16</a>** [code/ListIOOptions.groovy](code/ListIOOptions.code.md)
 ```groovy
 IChemObjectWriter writer = new GaussianInputWriter();
 for (IOSetting setting : writer.getIOSettings()) {
@@ -606,7 +606,7 @@ perfectly fine alternative is to use a Java Properties object.
 
 Consider the following source code:
 
-**Script** [code/PropertiesSettings.groovy](code/PropertiesSettings.code.md)
+**<a name="script:PropertiesSettings">Script 11.17</a>** [code/PropertiesSettings.groovy](code/PropertiesSettings.code.md)
 ```groovy
 // the custom settings
 Properties customSettings = new Properties();
@@ -657,7 +657,7 @@ Section [12.2](atomtype.md#sec:atomtypePerception)). But because we do not want
 2D and 3D coordinates being set in the source code, we disable those
 options:
 
-**Script** [code/AtomTypeUnitTest.groovy](code/AtomTypeUnitTest.code.md)
+**<a name="script:AtomTypeUnitTest">Script 11.18</a>** [code/AtomTypeUnitTest.groovy](code/AtomTypeUnitTest.code.md)
 ```groovy
 cid = 3396560
 mol = reader.read(new AtomContainer())
@@ -757,7 +757,7 @@ line notation. You can parse a SMILES into a IAtomContainer with the
 because it needs to know what CDK interface implementation it must use to create
 classes. This example uses the [`DefaultChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/DefaultChemObjectBuilder.html):
 
-**Script** [code/ReadSMILES.groovy](code/ReadSMILES.code.md)
+**<a name="script:ReadSMILES">Script 11.19</a>** [code/ReadSMILES.groovy](code/ReadSMILES.code.md)
 ```groovy
 sp = new SmilesParser(
   DefaultChemObjectBuilder.getInstance()
@@ -777,7 +777,7 @@ the `SMILESGenerator` does not use the convention to use lower case element
 symbols for aromatic atoms. To trigger that, you should use the
 `setUseAromaticityFlag` method:
 
-**Script** [code/WriteSMILES.groovy](code/WriteSMILES.code.md)
+**<a name="script:WriteSMILES">Script 11.20</a>** [code/WriteSMILES.groovy](code/WriteSMILES.code.md)
 ```groovy
 mol = MoleculeFactory.makePhenylAmine()
 generator = SmilesGenerator.generic()
@@ -842,11 +842,11 @@ M  END
 ```
 
 More recent MDL formats have become more powerful. The V3000 format can do
-much more then the V2000 format, or even the pre-V2000 format.
+much more than the V2000 format, or even the pre-V2000 format.
 
 Here's a recipe with inline comments:
 
-**Script** [code/InputMDLMolfiles.groovy](code/InputMDLMolfiles.code.md)
+**<a name="script:InputMDLMolfiles">Script 11.21</a>** [code/InputMDLMolfiles.groovy](code/InputMDLMolfiles.code.md)
 ```groovy
 reader = new MDLV2000Reader(
   new File("data/azulene4.mol").newReader(),

@@ -18,7 +18,7 @@ bound to each other by coulombic interactions. These may be solids.
 A common kitchen example is the table salt sodium chloride. We can
 represent this using the following model:
 
-**Script** [code/Salt.groovy](code/Salt.code.md)
+**<a name="script:Salt">Script 5.1</a>** [code/Salt.groovy](code/Salt.code.md)
 ```groovy
 salt = new AtomContainer();
 sodium = new Atom("Na");
@@ -46,7 +46,7 @@ structure would perhaps be a more accurate description of what you
 like to represent. In this case, the <a name="tp3">`ICrystal`</a> subclass of
 the `IAtomContainer` can be used (see Figure [5.1](#fig:crystalInheritance)):
 
-**Script** [code/SaltCrystal.groovy](code/SaltCrystal.code.md)
+**<a name="script:SaltCrystal">Script 5.2</a>** [code/SaltCrystal.groovy](code/SaltCrystal.code.md)
 ```groovy
 salt = new Crystal();
 sodium = new Atom("Na");
@@ -61,7 +61,7 @@ If we want to add the crystal structure parameters and crystal
 structure coordinates of the atoms, we add can add them too (data
 taken from [this webpage](http://www.ilpi.com/inorganic/structures/nacl/)):
 
-**Script** [code/SaltCrystalParam.groovy](code/SaltCrystalParam.code.md)
+**<a name="script:SaltCrystalParam">Script 5.3</a>** [code/SaltCrystalParam.groovy](code/SaltCrystalParam.code.md)
 ```groovy
 salt = new Crystal();
 salt.setA(new Vector3d(5.6402, 0, 0));

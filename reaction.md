@@ -17,7 +17,7 @@ water. To encode this into a CDK data model, we need to set the reaction coeffic
 products, and catalyst. The latter is called an agent in the data model. We know how to create molecules
 and that will not be repeated here. Given these atom containers, we create this reaction with:
 
-**Script** [code/MethanolReaction.groovy](code/MethanolReaction.code.md)
+**<a name="script:MethanolReaction">Script 8.1</a>** [code/MethanolReaction.groovy](code/MethanolReaction.code.md)
 ```groovy
 reaction = new Reaction()
 reaction.addReactant(methanol, (double)2.0)
@@ -30,7 +30,7 @@ reaction.addProduct(water)
 This example shows we can set the reaction direction too. We can list the balance directions that
 are available by the `Direction` enum:
 
-**Script** [code/ReactionDirections.groovy](code/ReactionDirections.code.md)
+**<a name="script:ReactionDirections">Script 8.2</a>** [code/ReactionDirections.groovy](code/ReactionDirections.code.md)
 ```groovy
 IReaction.Direction.each {
   println it
@@ -47,7 +47,7 @@ BIDIRECTIONAL
 
 There are matching get methods to access all <a name="tp2">reactants</a> and <a name="tp3">products</a>:
 
-**Script** [code/ReactionGetters.groovy](code/ReactionGetters.code.md)
+**<a name="script:ReactionGetters">Script 8.3</a>** [code/ReactionGetters.groovy](code/ReactionGetters.code.md)
 ```groovy
 println "Reactants: "
 for (reactant in reaction.reactants.atomContainers()) {
@@ -88,7 +88,7 @@ The first, and likely more common format, is the <a name="tp4">MDL RXN</a> file 
 a special concatenation of MDL molfiles. The [`MDLRXNReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/MDLRXNReader.html) will read the content from such files into
 a [`IReaction`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IReaction.html) class:
 
-**Script** [code/ReactionMDLRXN.groovy](code/ReactionMDLRXN.code.md)
+**<a name="script:ReactionMDLRXN">Script 8.4</a>** [code/ReactionMDLRXN.groovy](code/ReactionMDLRXN.code.md)
 ```groovy
 MDLRXNReader reader = new MDLRXNReader(
   new File("data/anie.201203222.rxn").newReader()
@@ -112,7 +112,7 @@ Products: 1
 There is also a CML extension for reactions [<a href="#citeref1">1</a>]. But because CML files can contain a lot
 of information, we read an [`IChemFile`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemFile.html) from this file, and extract the [`IReaction`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IReaction.html) from that:
 
-**Script** [code/ReactionCMLReact.groovy](code/ReactionCMLReact.code.md)
+**<a name="script:ReactionCMLReact">Script 8.5</a>** [code/ReactionCMLReact.groovy](code/ReactionCMLReact.code.md)
 ```groovy
 CMLReader reader = new CMLReader(
   new File("data/anie.201203222.cml").newInputStream()

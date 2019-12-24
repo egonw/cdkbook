@@ -22,7 +22,7 @@ a new atom is fairly easy. For example, we can create an atom of element
 type carbon, as defined by the element’s atomic number that we pass as parameter
 in the constructor:
 
-**Script** [code/CreateAtom3.groovy](code/CreateAtom3.code.md)
+**<a name="script:CreateAtom3">Script 3.1</a>** [code/CreateAtom3.groovy](code/CreateAtom3.code.md)
 ```groovy
 atom = new Atom(6);
 ```
@@ -30,7 +30,7 @@ atom = new Atom(6);
 An atom can also be constructed by passing in the symbol but this is marginally
 less efficient:
 
-**Script** [code/CreateAtom1.groovy](code/CreateAtom1.code.md)
+**<a name="script:CreateAtom1">Script 3.2</a>** [code/CreateAtom1.groovy](code/CreateAtom1.code.md)
 ```groovy
 IAtom atom = new Atom("C");
 ```
@@ -38,7 +38,7 @@ IAtom atom = new Atom("C");
 Alternatively, we can also construct a new carbon atom, by passing a
 carbon [`IElement`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IElement.html), conveniently provided by the [`Elements`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/config/Elements.html) class:
 
-**Script** [code/CreateAtom2.groovy](code/CreateAtom2.code.md)
+**<a name="script:CreateAtom2">Script 3.3</a>** [code/CreateAtom2.groovy](code/CreateAtom2.code.md)
 ```groovy
 IAtom atom = new Atom(Elements.CARBON);
 ```
@@ -64,7 +64,7 @@ number. Because the `IAtom` extends the `IElement`, CDK atoms also have
 these properties. Therefore, we can set these properties for atoms
 manually too:
 
-**Script** [code/ElementProperties.groovy](code/ElementProperties.code.md)
+**<a name="script:ElementProperties">Script 3.4</a>** [code/ElementProperties.groovy](code/ElementProperties.code.md)
 ```groovy
 atom.setSymbol("N")
 atom.setAtomicNumber(7)
@@ -72,7 +72,7 @@ atom.setAtomicNumber(7)
 
 Of course, we can use the matching get methods to recover the properties:
 
-**Script** [code/ElementGetProperties.groovy](code/ElementGetProperties.code.md)
+**<a name="script:ElementGetProperties">Script 3.5</a>** [code/ElementGetProperties.groovy](code/ElementGetProperties.code.md)
 ```groovy
 IAtom atom = new Atom(Elements.CARBON);
 println "Symbol: " + atom.getSymbol()
@@ -91,7 +91,7 @@ Atomic number: 6
 The <a name="tp4">`IIsotope`</a> information consists of the *mass number*, *exact mass* and
 *natural abundance*:
 
-**Script** [code/IsotopeProperties.groovy](code/IsotopeProperties.code.md)
+**<a name="script:IsotopeProperties">Script 3.6</a>** [code/IsotopeProperties.groovy](code/IsotopeProperties.code.md)
 ```groovy
 IAtom atom = new Atom("C");
 atom.setMassNumber(13)
@@ -101,7 +101,7 @@ atom.setExactMass(13.00335484)
 
 Here too, the complementary get methods are available:
 
-**Script** [code/IsotopeGetProperties.groovy](code/IsotopeGetProperties.code.md)
+**<a name="script:IsotopeGetProperties">Script 3.7</a>** [code/IsotopeGetProperties.groovy](code/IsotopeGetProperties.code.md)
 ```groovy
 println "Mass number: " + atom.getMassNumber()
 println "Natural abundance: " + atom.getNaturalAbundance()
@@ -117,7 +117,7 @@ Exact mass: 13.00335484
 ```
 
 Appendix [B](appisotopes.md#sec:isotopes) lists all isotopes defined in the CDK with a natural
-abundance of more then 0.1.
+abundance of more than 0.1.
 
 
 ### IAtomType
@@ -135,7 +135,7 @@ The <a name="tp5">`IAtomType`</a> interface contains fields that relate to atom 
 properties include formal charge, neighbor count, maximum bond order
 and atom type name:
 
-**Script** [code/AtomTypeProperties.groovy](code/AtomTypeProperties.code.md)
+**<a name="script:AtomTypeProperties">Script 3.8</a>** [code/AtomTypeProperties.groovy](code/AtomTypeProperties.code.md)
 ```groovy
 atom.setAtomTypeName("C.3")
 atom.setFormalCharge(-1)
@@ -150,7 +150,7 @@ used for diagrams, <a name="tp7">3D coordinates</a> for geometries, and crystal 
 or <a name="tp9">notional coordinates</a>. These properties are set with the respective
 methods:
 
-**Script** [code/AtomCoordinates.groovy](code/AtomCoordinates.code.md)
+**<a name="script:AtomCoordinates">Script 3.9</a>** [code/AtomCoordinates.groovy](code/AtomCoordinates.code.md)
 ```groovy
 atom.setPoint2d(
   new Point2d(1.0, 2.3)
@@ -178,7 +178,7 @@ not more, atoms.
 
 For example, to create <a name="tp12">ethanol</a> we write:
 
-**Script** [code/Ethanol.groovy](code/Ethanol.code.md)
+**<a name="script:Ethanol">Script 3.10</a>** [code/Ethanol.groovy](code/Ethanol.code.md)
 ```groovy
 IAtom atom1 = new Atom("C")
 IAtom atom2 = new Atom("C")
@@ -189,7 +189,7 @@ IBond bond2 = new Bond(atom2, atom3, IBond.Order.SINGLE);
 
 The CDK has a few bond orders, which we can list with this groovy code:
 
-**Script** [code/BondOrders.groovy](code/BondOrders.code.md)
+**<a name="script:BondOrders">Script 3.11</a>** [code/BondOrders.groovy](code/BondOrders.code.md)
 ```groovy
 IBond.Order.each {
   println it
@@ -213,7 +213,7 @@ deliberate and the CDK allows to define single-double bond order patterns at
 the same time as aromaticity information. For example, a kekule
 structure of <a name="tp13">benzene</a> with bonds marked as aromatic can be constructed with:
 
-**Script** [code/AromaticBond.groovy](code/AromaticBond.code.md)
+**<a name="script:AromaticBond">Script 3.12</a>** [code/AromaticBond.groovy](code/AromaticBond.code.md)
 ```groovy
 IAtom atom1 = new Atom("C")
 IAtom atom2 = new Atom("C")
@@ -244,7 +244,7 @@ consists of a number of atoms. For example, in a single (sigma) bond, two
 and in a triple bond, six electrons are involved. We can report on the
 electron counts for the various orders with this code:
 
-**Script** [code/ElectronCounts.groovy](code/ElectronCounts.code.md)
+**<a name="script:ElectronCounts">Script 3.13</a>** [code/ElectronCounts.groovy](code/ElectronCounts.code.md)
 ```groovy
 IBond.Order.each { order ->
   bond = new Bond(
@@ -289,7 +289,7 @@ atoms are connected to each other via one or more covalent bonds.
 Adding atoms and bonds is done by the methods `addAtom(IAtom)` and
 `addBond(IBond)`:
 
-**Script** [code/AtomContainerAddAtomsAndBonds.groovy](code/AtomContainerAddAtomsAndBonds.code.md)
+**<a name="script:AtomContainerAddAtomsAndBonds">Script 3.14</a>** [code/AtomContainerAddAtomsAndBonds.groovy](code/AtomContainerAddAtomsAndBonds.code.md)
 ```groovy
 mol = new AtomContainer();
 mol.addAtom(new Atom("C"));
@@ -308,7 +308,7 @@ the first atom, the second atom, and the bond order. Note that atom indices
 follows programmers habits and starts at `0`, as you can observe in the
 previous example too. This shortens the previous version a bit:
 
-**Script** [code/AtomContainerAddAtomsAndBonds2.groovy](code/AtomContainerAddAtomsAndBonds2.code.md)
+**<a name="script:AtomContainerAddAtomsAndBonds2">Script 3.15</a>** [code/AtomContainerAddAtomsAndBonds2.groovy](code/AtomContainerAddAtomsAndBonds2.code.md)
 ```groovy
 mol = new AtomContainer();
 mol.addAtom(new Atom("C"));
@@ -328,7 +328,7 @@ The [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/
 and bonds. Both methods use the `Iterable` interfaces, and for atoms we
 do:
 
-**Script** [code/CountHydrogens.groovy](code/CountHydrogens.code.md)
+**<a name="script:CountHydrogens">Script 3.16</a>** [code/CountHydrogens.groovy](code/CountHydrogens.code.md)
 ```groovy
 int hydrogenCount = 0
 for (IAtom atom : mol.atoms()) {
@@ -345,7 +345,7 @@ Number of hydrogens: 4
 
 And for bonds the equivalent:
 
-**Script** [code/CountDoubleBonds.groovy](code/CountDoubleBonds.code.md)
+**<a name="script:CountDoubleBonds">Script 3.17</a>** [code/CountDoubleBonds.groovy](code/CountDoubleBonds.code.md)
 ```groovy
 int doubleBondCount = 0
 for (IBond bond : mol.bonds()) {
@@ -371,10 +371,10 @@ provides methods for these use cases. But it should be stressed that
 these methods do only take into account explicit hydrogens (see the
 next section).
 
-Let's consider ethanol again, given in Script XX,
+Let's consider ethanol again, given in Script [3.10](#script:Ethanol),
 and count the number of neighbors for each atom:
 
-**Script** [code/NeighborCount.groovy](code/NeighborCount.code.md)
+**<a name="script:NeighborCount">Script 3.18</a>** [code/NeighborCount.groovy](code/NeighborCount.code.md)
 ```groovy
 for (atom in ethanol.atoms()) {
   println atom.getSymbol() +
@@ -392,7 +392,7 @@ O 1
 
 Similarly, we can also list all <a name="tp16">connected atoms</a>:
 
-**Script** [code/ConnectedAtoms.groovy](code/ConnectedAtoms.code.md)
+**<a name="script:ConnectedAtoms">Script 3.19</a>** [code/ConnectedAtoms.groovy](code/ConnectedAtoms.code.md)
 ```groovy
 for (atom in ethanol.atoms()) {
   print atom.getSymbol() +
@@ -414,7 +414,7 @@ O is connected to C
 
 We can do the same thing for <a name="tp17">connected bonds</a>:
 
-**Script** [code/ConnectedBonds.groovy](code/ConnectedBonds.code.md)
+**<a name="script:ConnectedBonds">Script 3.20</a>** [code/ConnectedBonds.groovy](code/ConnectedBonds.code.md)
 ```groovy
 for (atom in ethanol.atoms()) {
   print atom.getSymbol() +
@@ -440,7 +440,7 @@ O has bond(s) SINGLE
 Getting the <a name="tp18">molecular formula</a> of a molecule and returning that as a String
 is both done with the [`MolecularFormulaManipulator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/manipulator/MolecularFormulaManipulator.html) class:
 
-**Script** [code/MFGeneration.groovy](code/MFGeneration.code.md)
+**<a name="script:MFGeneration">Script 3.21</a>** [code/MFGeneration.groovy](code/MFGeneration.code.md)
 ```groovy
 molForm = MolecularFormulaManipulator.getMolecularFormula(
   azulene
@@ -481,7 +481,7 @@ carbon.
 
 The first option in CDK code looks like:
 
-**Script** [code/HydrogenDepletedGraph.groovy](code/HydrogenDepletedGraph.code.md)
+**<a name="script:HydrogenDepletedGraph">Script 3.24</a>** [code/HydrogenDepletedGraph.groovy](code/HydrogenDepletedGraph.code.md)
 ```groovy
 molecule = new AtomContainer();
 carbon = new Atom(Elements.CARBON);
@@ -491,7 +491,7 @@ molecule.addAtom(carbon);
 
 while the alternative look like:
 
-**Script** [code/HydrogenExplicitGraph.groovy](code/HydrogenExplicitGraph.code.md)
+**<a name="script:HydrogenExplicitGraph">Script 3.25</a>** [code/HydrogenExplicitGraph.groovy](code/HydrogenExplicitGraph.code.md)
 ```groovy
 molecule = new AtomContainer();
 carbon = new Atom(Elements.CARBON);
@@ -518,7 +518,7 @@ for object identifiers, properties, and flags.
 For example. <a name="tp19">identifiers</a> are set and retrieved with the `setID()` and
 `getID()` methods:
 
-**Script** [code/ChemObjectIdentifiers.groovy](code/ChemObjectIdentifiers.code.md)
+**<a name="script:ChemObjectIdentifiers">Script 3.26</a>** [code/ChemObjectIdentifiers.groovy](code/ChemObjectIdentifiers.code.md)
 ```groovy
 butane = new AtomContainer();
 butane.setID("cdkbook000000001")
@@ -529,7 +529,7 @@ If you have more than one identifier, or other <a name="tp20">properties</a> you
 associate with objects, you can use the `setProperty()` and
 `getProperty()` methods:
 
-**Script** [code/ChemObjectProperties.groovy](code/ChemObjectProperties.code.md)
+**<a name="script:ChemObjectProperties">Script 3.27</a>** [code/ChemObjectProperties.groovy](code/ChemObjectProperties.code.md)
 ```groovy
 butane = new AtomContainer();
 butane.setProperty(
@@ -541,7 +541,7 @@ print "InChI: " + butane.getProperty("InChI")
 For example, we can use this approach to assign labels to atoms, such as in this
 example from substructure searching (see Chapter ??):
 
-**Script** [code/AtomLabels.groovy](code/AtomLabels.code.md)
+**<a name="script:AtomLabels">Script 3.28</a>** [code/AtomLabels.groovy](code/AtomLabels.code.md)
 ```groovy
 butane = MoleculeFactory.makeAlkane(4);
 butane.atoms().each { atom ->
@@ -555,7 +555,7 @@ ccc.atoms().each { atom ->
 
 The [`CDKConstants`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/CDKConstants.html) class provides a few constants for common properties:
 
-**Script** [code/CDKConstantsProperties.groovy](code/CDKConstantsProperties.code.md)
+**<a name="script:CDKConstantsProperties">Script 3.29</a>** [code/CDKConstantsProperties.groovy](code/CDKConstantsProperties.code.md)
 ```groovy
 println "Title: " + 
   aspirin.getProperty(CDKConstants.TITLE)
@@ -588,7 +588,7 @@ A third characteristic of the [`IChemObject`](http://cdk.github.io/cdk/latest/do
 an atom or bond is aromatic (see Script XX)
 or if an atom is part of a ring:
 
-**Script** [code/RingBond.groovy](code/RingBond.code.md)
+**<a name="script:RingBond">Script 3.30</a>** [code/RingBond.groovy](code/RingBond.code.md)
 ```groovy
 benzene = MoleculeFactory.makeBenzene();
 benzene.bonds().each { bond ->
@@ -622,7 +622,7 @@ as shown in Figure [3.3](#fig:ring). Practically, there is nothing much to
 say about the IRing interface. One method it adds, is to get the size of the
 ring:
 
-**Script** [code/RingExample.groovy](code/RingExample.code.md)
+**<a name="script:RingExample">Script 3.31</a>** [code/RingExample.groovy](code/RingExample.code.md)
 ```groovy
 IRing ring = new Ring(5, "C")
 println "Ring size: " + ring.getRingSize()

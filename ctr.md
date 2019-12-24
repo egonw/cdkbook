@@ -20,7 +20,7 @@ features, so that we do not have to worry about D and T element symbols.
 
 The solution lists all heavy atom counts:
 
-**Script** [code/CTR1.groovy](code/CTR1.code.md)
+**<a name="script:CTR1">Script 19.1</a>** [code/CTR1.groovy](code/CTR1.code.md)
 ```groovy
 iterator = new IteratingSDFReader(
   new GZIPInputStream(
@@ -64,7 +64,7 @@ The solution does not render the structure's title.
 The solution can then look like, resulting roughly in Figure 20.1 for the SMILES of
 caffeine in this example:
 
-**Script** [code/CTR2.groovy](code/CTR2.code.md)
+**<a name="script:CTR2">Script 19.2</a>** [code/CTR2.groovy](code/CTR2.code.md)
 ```groovy
 smiles = "CN1C=NC2=C1C(=O)N(C(=O)N2C)C"
 int WIDTH = 200

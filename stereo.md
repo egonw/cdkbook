@@ -37,7 +37,7 @@ is shown in Figure [4.1](#fig:wedgebond).
 To add such 2D stereochemistry information we use the `IBond.setStereo()`
 method:
 
-**Script** [code/StereoisomerOne.groovy](code/StereoisomerOne.code.md)
+**<a name="script:StereoisomerOne">Script 4.1</a>** [code/StereoisomerOne.groovy](code/StereoisomerOne.code.md)
 ```groovy
 isomer = new AtomContainer()
 isomer.addAtom(new Atom("C"));
@@ -57,7 +57,7 @@ This `setStereo()` and `getStereo()` methods in `IBond` take
 and `IBond.Stereo` class. The values are defined by the matching enumeration
 and can be iterated over and printed with:
 
-**Script** [code/BondStereos.groovy](code/BondStereos.code.md)
+**<a name="script:BondStereos">Script 4.2</a>** [code/BondStereos.groovy](code/BondStereos.code.md)
 ```groovy
 IBond.Stereo.each {
   println it
@@ -136,7 +136,7 @@ atoms around a central <a name="tp6">chiral atom</a>. Thus for bromochlorofluoro
 we can define the chirality also without coordinates. For this, we use the
 constructor of the interface's prime implementation:
 
-**Script** [code/TetrahedralStereo.groovy](code/TetrahedralStereo.code.md)
+**<a name="script:TetrahedralStereo">Script 4.4</a>** [code/TetrahedralStereo.groovy](code/TetrahedralStereo.code.md)
 ```groovy
 isomer = new AtomContainer()
 isomer.addAtom(new Atom("C"))
@@ -157,7 +157,7 @@ chirality = new TetrahedralChirality(
 
 The interface provides appropriate getter methods for algorithms to use:
 
-**Script** [code/TetrahedralIface.groovy](code/TetrahedralIface.code.md)
+**<a name="script:TetrahedralIface">Script 4.5</a>** [code/TetrahedralIface.groovy](code/TetrahedralIface.code.md)
 ```groovy
 println "Central atom: " +
   chirality.chiralAtom.symbol
@@ -182,7 +182,7 @@ Mind you, the `Stereo` class listed here is different from that for IBonds.
 `ITetrahedralChirality.Stereo` has only two values, which we print like any
 enumeration with:
 
-**Script** [code/ChiralityStereos.groovy](code/ChiralityStereos.code.md)
+**<a name="script:ChiralityStereos">Script 4.6</a>** [code/ChiralityStereos.groovy](code/ChiralityStereos.code.md)
 ```groovy
 ITetrahedralChirality.Stereo.each {
   println it

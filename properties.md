@@ -22,7 +22,7 @@ mixture of isotopes, which is not constant itself. If you have an atom container
 with explicit hydrogens, you can loop over the atoms to calculate the molecular
 mass as summation of the masses of the individual atoms:
 
-**Script** [code/CalculateMolecularWeight.groovy](code/CalculateMolecularWeight.code.md)
+**<a name="script:CalculateMolecularWeight">Script 16.1</a>** [code/CalculateMolecularWeight.groovy](code/CalculateMolecularWeight.code.md)
 ```groovy
 molWeight = 0.0
 for (atom in molecule.atoms()) {
@@ -32,7 +32,7 @@ for (atom in molecule.atoms()) {
 
 In this case, you can also use the [`AtomContainerManipulator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/manipulator/AtomContainerManipulator.html):
 
-**Script** [code/CalculateMolecularWeightShort.groovy](code/CalculateMolecularWeightShort.code.md)
+**<a name="script:CalculateMolecularWeightShort">Script 16.2</a>** [code/CalculateMolecularWeightShort.groovy](code/CalculateMolecularWeightShort.code.md)
 ```groovy
 molWeight = AtomContainerManipulator
   .getNaturalExactMass(molecule)
@@ -46,7 +46,7 @@ abundances defined in the Blue Obelisk Data Repository [<a href="#citeref1">1</a
 If your atom container has <a name="tp2">implicit hydrogens</a> specified, you will have the above
 code will not be sufficient. Instead, your code should look like:
 
-**Script** [code/CalculateMolecularWeightImplicitHydrogens.groovy](code/CalculateMolecularWeightImplicitHydrogens.code.md)
+**<a name="script:CalculateMolecularWeightImplicitHydrogens">Script 16.3</a>** [code/CalculateMolecularWeightImplicitHydrogens.groovy](code/CalculateMolecularWeightImplicitHydrogens.code.md)
 ```groovy
 molWeight = 0.0
 hWeight = isotopeInfo.getNaturalMass(Elements.HYDROGEN)
@@ -74,7 +74,7 @@ molecule. The implementation expects explicit hydrogens, so you need to add thos
 present yet (see Section [14.4](missing.md#sec:missinghydrogens)). The calculation returns a [`DoubleResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/DoubleResult.html)
 following the descriptor API:
 
-**Script** [code/XLogP.groovy](code/XLogP.code.md)
+**<a name="script:XLogP">Script 16.4</a>** [code/XLogP.groovy](code/XLogP.code.md)
 ```groovy
 oxazone = MoleculeFactory.makeOxazole();
 benzene = MoleculeFactory.makeBenzene();
@@ -105,7 +105,7 @@ Another properties that frequently returns in cheminformatics is the <a name="tp
 Here too, the descriptor API is used, so that the code is quite similar to that for the logP
 calculation:
 
-**Script** [code/TPSA.groovy](code/TPSA.code.md)
+**<a name="script:TPSA">Script 16.5</a>** [code/TPSA.groovy](code/TPSA.code.md)
 ```groovy
 oxazone = MoleculeFactory.makeOxazole();
 benzene = MoleculeFactory.makeBenzene();
@@ -138,7 +138,7 @@ particular element-element combinations, which explains why their approach only 
 aforementioned list of elements. The full method is implemented by the [`VABCVolume`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/geometry/volume/VABCVolume.html) class,
 which does not use the descriptor API, so that we can simply use the following method:
 
-**Script** [code/VABCVolumes.groovy](code/VABCVolumes.code.md)
+**<a name="script:VABCVolumes">Script 16.6</a>** [code/VABCVolumes.groovy](code/VABCVolumes.code.md)
 ```groovy
 methane = smilesParser.parseSmiles("C");
 println "Methane volume = " +
@@ -172,7 +172,7 @@ various atoms contribute. The combination of these two aspect explains most of t
 in aromaticity as calculated with various cheminformatics libraries. The CDK can calculate
 most of them by selecting the right [`ElectronDonation`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/aromaticity/ElectronDonation.html) and [`CycleFinder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/graph/CycleFinder.html):
 
-**Script** [code/AromaticityDemo.groovy](code/AromaticityDemo.code.md)
+**<a name="script:AromaticityDemo">Script 16.7</a>** [code/AromaticityDemo.groovy](code/AromaticityDemo.code.md)
 ```groovy
 model       = ElectronDonation.daylight();
 cycles      = Cycles.or(Cycles.all(), Cycles.all(6));
@@ -190,7 +190,7 @@ benzene is aromatic.
 
 Furthermore, if you wish to know which bonds are aromatic, the same class can be used:
 
-**Script** [code/AromaticBonds.groovy](code/AromaticBonds.code.md)
+**<a name="script:AromaticBonds">Script 16.8</a>** [code/AromaticBonds.groovy](code/AromaticBonds.code.md)
 ```groovy
 aromaticBonds = aromaticity.findBonds(mol)
 count = aromaticBonds.size()

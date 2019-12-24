@@ -8,7 +8,7 @@ the CDK implement the [`IChemFormatMatcher`](http://cdk.github.io/cdk/latest/doc
 
 This script was used to create this list:
 
-**Script** [code/ListAllFileFormats.groovy](code/ListAllFileFormats.code.md)
+**<a name="script:ListAllFileFormats">Script 24.1</a>** [code/ListAllFileFormats.groovy](code/ListAllFileFormats.code.md)
 ```groovy
 formats = new ArrayList<IChemFormat>();
 reader =
@@ -552,7 +552,7 @@ for (format in formats) {
 Additionally, for all formats we can list information about the readers and writers, again
 by iterating over all formats:
 
-**Script** [code/ListAllIOClassesByFormat.groovy](code/ListAllIOClassesByFormat.code.md)
+**<a name="script:ListAllIOClassesByFormat">Script 24.2</a>** [code/ListAllIOClassesByFormat.groovy](code/ListAllIOClassesByFormat.code.md)
 ```groovy
 for (format in formats) {
   if (format instanceof IChemFormat &&
