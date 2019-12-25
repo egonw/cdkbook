@@ -117,6 +117,58 @@ one mobile hydrogen to the second atom, which is the first oxygen.
 ![](images/generated/RenderAdenine.png)
 <br />**Figure 18.1**: 2D diagram of one of the tautomers of adenine.
 
+### Stereoisomerism
+
+Another interesting layer to look at is the <a name="tp11">stereoisomerism</a> layer. Particular,
+because databases often disagree on the exact <a name="tp12">stereochemistry</a> of molecules, which is
+weird but commonplace, unfortunately [Williams2012blog]. The standard InChIs for 
+the two stereoisomers of bromo cholo fluoro methane result in two different InChIs:
+
+**Script** [code/InChIStereoisomerism.groovy](code/InChIStereoisomerism.code.md)
+```groovy
+generator = factory.getInChIGenerator(isomer1)
+println generator.inchi
+generator = factory.getInChIGenerator(isomer2)
+println generator.inchi
+```
+
+The differences are found in the stereochemistry related layers, `/t` and `/m`.
+The first layer captures tetrahedral stereochemistry, while the other layer captures mirror
+image. And because we started with two mirror image structures, the `/t` layer is
+identical, and we the difference in the `/m` layer:
+
+```plain
+InChI=1S/CHBrClF/c2-1(3)4/h1H/t1-/m0/s1
+InChI=1S/CHBrClF/c2-1(3)4/h1H/t1-/m1/s1
+```
+
+Because of the aforementioned database comparison argument, there is an important use case in
+comparing InChIs without the stereochemistry layers. To create such InChIs, you can use the
+<a name="tp13">SNon option</a>:
+
+**Script** [code/InChINoStereoisomerism.groovy](code/InChINoStereoisomerism.code.md)
+```groovy
+generator = factory.getInChIGenerator(
+  isomer1, "Snon"
+)
+println generator.inchi
+generator = factory.getInChIGenerator(
+  isomer2, "Snon"
+)
+println generator.inchi
+```
+
+And then the InChIs for both structures are identical:
+
+```plain
+InChI=1S/CHBrClF/c2-1(3)4/h1H
+InChI=1S/CHBrClF/c2-1(3)4/h1H
+```
+
+One important caveat: chiral information as read by the SMILES parser is not currently converted
+into stereo information for the InChI generation process!
+
+
 
 ## References
 

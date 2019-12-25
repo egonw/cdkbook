@@ -167,11 +167,14 @@ Smallest Set of Smallest Rings [graph](graph.md#tp6)<br />
 SMILES [cheminfo](cheminfo.md#tp8) [io](io.md#tp11) [migration](migration.md#tp1)<br />
 SMILESReader [ioclasseslist](ioclasseslist.md#tp38)<br />
 SMILESWriter [ioclasseslist](ioclasseslist.md#tp39)<br />
+SNon option [inchi](inchi.md#tp13)<br />
 spanning tree [graph](graph.md#tp3)<br />
 specification [descriptor](descriptor.md#tp3)<br />
 SSSR [graph](graph.md#tp7)<br />
 Standard InChI [inchi](inchi.md#tp4) [inchi](inchi.md#tp6)<br />
 statistical methods [cheminfo](cheminfo.md#tp32)<br />
+stereochemistry [inchi](inchi.md#tp12)<br />
+stereoisomerism [inchi](inchi.md#tp11)<br />
 superimpose [stereo](stereo.md#tp3)<br />
 Sybyl atom type [atomtype](atomtype.md#tp3)<br />
 Sybyl Line Notation [io](io.md#tp10)<br />
