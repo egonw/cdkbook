@@ -97,6 +97,36 @@ one mobile hydrogen to the second atom, which is the first oxygen.
 ![](images/generated/RenderAdenine.png)
 </figure>
 
+### Stereoisomerism
+
+Another interesting layer to look at is the <topic>stereoisomerism</topic> layer. Particular,
+because databases often disagree on the exact <topic>stereochemistry</topic> of molecules, which is
+weird but commonplace, unfortunately [Williams2012blog]. The standard InChIs for 
+the two stereoisomers of bromo cholo fluoro methane result in two different InChIs:
+
+<code>InChIStereoisomerism</code>
+
+The differences are found in the stereochemistry related layers, `/t` and `/m`.
+The first layer captures tetrahedral stereochemistry, while the other layer captures mirror
+image. And because we started with two mirror image structures, the `/t` layer is
+identical, and we the difference in the `/m` layer:
+
+<out>InChIStereoisomerism</out>
+
+Because of the aforementioned database comparison argument, there is an important use case in
+comparing InChIs without the stereochemistry layers. To create such InChIs, you can use the
+<topic>SNon option</topic>:
+
+<code>InChINoStereoisomerism</code>
+
+And then the InChIs for both structures are identical:
+
+<out>InChINoStereoisomerism</out>
+
+One important caveat: chiral information as read by the SMILES parser is not currently converted
+into stereo information for the InChI generation process!
+
+
 
 ## References
 
