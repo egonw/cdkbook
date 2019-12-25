@@ -57,7 +57,7 @@ has atom number 1, while the oxygens are atoms 2 and 3.
 
 Now, have a careful look at this InChI for formic acid. Take a few minutes for
 this, and make sure you fully understand the connectivity and hydrogen
-layers (the answer is given in code snippet <xref>InChIMierezuurFixed</xref>).
+layers (the answer is given in code snippet <xref>script:InChIMierezuurFixed</xref>).
 
 Other layers the InChI supports include those for, for example, stereochemistry.
 The InChI software has a number of option to enable or disable certain layers.
