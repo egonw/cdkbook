@@ -168,6 +168,7 @@ steps forward, but it will take some time for things to iron out. If you find is
 17.5. [Counting Nitrogens and Oxygens](descriptor.md#counting-nitrogens-and-oxygens) <br />
 18. [InChI](inchi.md) <br />
 18.1. [Layers](inchi.md#layers) <br />
+18.1.1. [Fixed Hydrogens](inchi.md#fixed-hydrogens) <br />
 19. [Chemistry Toolkit Rosetta](ctr.md) <br />
 19.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
 19.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />

@@ -57,20 +57,8 @@ defined in the connection table (see Section [3.5](atomsbonds.md#sec:hydrogens))
 Therefore, the InChI for methane does not have a connectivity layer,
 but formic acid, *mierezuur* in Dutch, does (*/c2-1-3*):
 
-**<a name="script:InChIMierezuur">Script 18.2</a>** [code/InChIMierezuur.groovy](code/InChIMierezuur.code.md)
-```groovy
-mierezuur = new AtomContainer();
-atom1 = new Atom("O")
-atom2 = new Atom("C")
-atom3 = new Atom("O")
-bond1 = new Bond(atom1, atom2, IBond.Order.SINGLE)
-bond2 = new Bond(atom2, atom3, IBond.Order.DOUBLE)
-mierezuur.addAtom(atom1)
-mierezuur.addAtom(atom2)
-mierezuur.addAtom(atom3)
-mierezuur.addBond(bond1)
-mierezuur.addBond(bond2)
-  print generator.getInchi()
+```plain
+InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)
 ```
 
 You see that the <a name="tp5">connectivity layer</a> shows how the atoms are connected, and
@@ -96,6 +84,39 @@ or removed.
 A Standard InChI string is identified by the *1S* version number. If
 non-standard layers are turned on, the version is simply *1*, as we will
 see shortly.
+
+### Fixed Hydrogens
+
+If you had not cheated in the mierezuur exercise, you will have noted that one
+hydrogen is delocalized: it can be attached to either of the oxygens. This
+feature is picked up by the InChI algorithm to compensate for certain kinds
+of <a name="tp8">tautomerism</a>. If we want to fix the hydrogens to a particular
+atom, we use the following code:
+
+**Script** [code/InChIMierezuurFixed.groovy](code/InChIMierezuurFixed.code.md)
+```groovy
+factory = InChIGeneratorFactory.getInstance();
+generator = factory.getInChIGenerator(
+  mierezuur, "FixedH"
+);
+print generator.getInchi()
+```
+
+which results in this non-standard InChI:
+
+```plain
+InChI=1/CH2O2/c2-1-3/h1H,(H,2,3)/f/h2H
+```
+
+By adding the <a name="tp9">FixedH option</a> for the InChI algorithm, we added the
+<a name="tp10">fixed hydrogen layer</a> (*/f/h2H*). This additional layer assigns
+one mobile hydrogen to the second atom, which is the first oxygen.
+
+<!-- <code>RenderAdenine</code> -->
+<a name="fig:adenine"></a>
+![](images/generated/RenderAdenine.png)
+<br />**Figure 18.1**: 2D diagram of one of the tautomers of adenine.
+
 
 ## References
 

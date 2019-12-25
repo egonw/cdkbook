@@ -58,6 +58,8 @@ explicit hydrogens [missing](missing.md#tp14)<br />
 FCFP [substructure](substructure.md#tp3)<br />
 ferrocene} [cheminfo](cheminfo.md#tp22)<br />
 Figueras algorithm [graph](graph.md#tp8)<br />
+FixedH option [inchi](inchi.md#tp9)<br />
+fixed hydrogen layer [inchi](inchi.md#tp10)<br />
 flags [atomsbonds](atomsbonds.md#tp21)<br />
 Floyd's algorithm [graph](graph.md#tp12)<br />
 force field [cheminfo](cheminfo.md#tp12)<br />
@@ -174,7 +176,7 @@ superimpose [stereo](stereo.md#tp3)<br />
 Sybyl atom type [atomtype](atomtype.md#tp3)<br />
 Sybyl Line Notation [io](io.md#tp10)<br />
 symbol [missing](missing.md#tp2)<br />
-tautomerism [inchi](inchi.md#tp3)<br />
+tautomerism [inchi](inchi.md#tp3) [inchi](inchi.md#tp8)<br />
 tetrahedral chirality [stereo](stereo.md#tp5)<br />
 torsion [cheminfo](cheminfo.md#tp13)<br />
 Total Polar Surface Area [properties](properties.md#tp6)<br />
