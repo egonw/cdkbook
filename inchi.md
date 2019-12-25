@@ -68,7 +68,7 @@ has atom number 1, while the oxygens are atoms 2 and 3.
 
 Now, have a careful look at this InChI for formic acid. Take a few minutes for
 this, and make sure you fully understand the connectivity and hydrogen
-layers (the answer is given in code snippet ??).
+layers (the answer is given in code snippet [18.2](#script:InChIMierezuurFixed)).
 
 Other layers the InChI supports include those for, for example, stereochemistry.
 The InChI software has a number of option to enable or disable certain layers.
@@ -93,7 +93,7 @@ feature is picked up by the InChI algorithm to compensate for certain kinds
 of <a name="tp8">tautomerism</a>. If we want to fix the hydrogens to a particular
 atom, we use the following code:
 
-**Script** [code/InChIMierezuurFixed.groovy](code/InChIMierezuurFixed.code.md)
+**<a name="script:InChIMierezuurFixed">Script 18.2</a>** [code/InChIMierezuurFixed.groovy](code/InChIMierezuurFixed.code.md)
 ```groovy
 factory = InChIGeneratorFactory.getInstance();
 generator = factory.getInChIGenerator(
@@ -124,7 +124,7 @@ because databases often disagree on the exact <a name="tp12">stereochemistry</a>
 weird but commonplace, unfortunately [Williams2012blog]. The standard InChIs for 
 the two stereoisomers of bromo cholo fluoro methane result in two different InChIs:
 
-**Script** [code/InChIStereoisomerism.groovy](code/InChIStereoisomerism.code.md)
+**<a name="script:InChIStereoisomerism">Script 18.4</a>** [code/InChIStereoisomerism.groovy](code/InChIStereoisomerism.code.md)
 ```groovy
 generator = factory.getInChIGenerator(isomer1)
 println generator.inchi
@@ -146,7 +146,7 @@ Because of the aforementioned database comparison argument, there is an importan
 comparing InChIs without the stereochemistry layers. To create such InChIs, you can use the
 <a name="tp13">SNon option</a>:
 
-**Script** [code/InChINoStereoisomerism.groovy](code/InChINoStereoisomerism.code.md)
+**<a name="script:InChINoStereoisomerism">Script 18.5</a>** [code/InChINoStereoisomerism.groovy](code/InChINoStereoisomerism.code.md)
 ```groovy
 generator = factory.getInChIGenerator(
   isomer1, "Snon"
