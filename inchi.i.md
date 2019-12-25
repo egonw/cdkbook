@@ -48,7 +48,7 @@ defined in the connection table (see Section <xref>hydrogens</xref>).
 Therefore, the InChI for methane does not have a connectivity layer,
 but formic acid, *mierezuur* in Dutch, does (*/c2-1-3*):
 
-<code>InChIMierezuur</code>
+<out>InChIMierezuur</out>
 
 You see that the <topic>connectivity layer</topic> shows how the atoms are connected, and
 this layer it does not give bond orders. The atom numbering follows the molecular
