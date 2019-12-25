@@ -74,6 +74,30 @@ A Standard InChI string is identified by the *1S* version number. If
 non-standard layers are turned on, the version is simply *1*, as we will
 see shortly.
 
+### Fixed Hydrogens
+
+If you had not cheated in the mierezuur exercise, you will have noted that one
+hydrogen is delocalized: it can be attached to either of the oxygens. This
+feature is picked up by the InChI algorithm to compensate for certain kinds
+of <topic>tautomerism</topic>. If we want to fix the hydrogens to a particular
+atom, we use the following code:
+
+<code>InChIMierezuurFixed</code>
+
+which results in this non-standard InChI:
+
+<out>InChIMierezuurFixed</out>
+
+By adding the <topic>FixedH option</topic> for the InChI algorithm, we added the
+<topic>fixed hydrogen layer</topic> (*/f/h2H*). This additional layer assigns
+one mobile hydrogen to the second atom, which is the first oxygen.
+
+<!-- <code>RenderAdenine</code> -->
+<figure label="adenine" caption="2D diagram of one of the tautomers of adenine.">
+![](images/generated/RenderAdenine.png)
+</figure>
+
+
 ## References
 
 <references/>
