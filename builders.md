@@ -144,7 +144,7 @@ around change events. It replaces the `NoNotificationChemObjectBuilder`
 and has cleaner code, and is even faster [<a href="#citeref2">2</a>]. This builder too is created using
 the now familiar pattern:
 
-**<a name="script:SilentBuilder">Script 10.6</a>** [code/SilentBuilder.groovy](code/SilentBuilder.code.md)
+**<a name="script:SilentBuilder">Script 10.5</a>** [code/SilentBuilder.groovy](code/SilentBuilder.code.md)
 ```groovy
 IChemObjectBuilder builder =
   SilentChemObjectBuilder.getInstance();
