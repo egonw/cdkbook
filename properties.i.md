@@ -1,7 +1,7 @@
 # Molecular Properties
 
 Cheminformatics is about molecular properties and chemistry in general the field
-of finding chemicals with new properties. [Prof. Gasteiger](https://tools.wmflabs.org/scholia/author/Q109081)
+of finding chemicals with new properties. [Prof. Gasteiger](https://scholia.toolforge.org/author/Q109081)
 in 2006 gave a lecture at Cologne University where he expressed this view. It stuck around. We keep
 databases to store those properties, and we develop methods to predict and understand
 those properties. Prediction is important for one reason: there are too many
