@@ -200,6 +200,6 @@ ANTI_CLOCKWISE
 
 ## References
 
-1. <a name="citeref1"></a>Brecher J. Graphical representation of stereochemical configuration (IUPAC Recommendations 2006). Pure and Applied Chemistry. 2006 Jan 1;78(10):1897–970.  doi:[10.1351/PAC200678101897](https://doi.org/10.1351/PAC200678101897) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1351/PAC200678101897))
+1. <a name="citeref1"></a>Brecher J. Graphical representation of stereochemical configuration (IUPAC Recommendations 2006). Pure and Applied Chemistry. 2006 Jan 1;78(10):1897–970.  doi:[10.1351/PAC200678101897](https://doi.org/10.1351/PAC200678101897) ([Scholia](https://scholia.toolforge.org/doi/10.1351/PAC200678101897))
 
 

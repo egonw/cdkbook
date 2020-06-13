@@ -311,5 +311,5 @@ A full list of Sybyl atom types is given in a table in Appendix [A.2](appatomtyp
 
 ## References
 
-1. <a name="citeref1"></a>Clark M, Cramer RD, Van Opdenbosch N. Validation of the general purpose tripos 5.2 force field. Journal of Computational Chemistry. 1989 Dec 1;10(8):982–1012.  doi:[10.1002/JCC.540100804](https://doi.org/10.1002/JCC.540100804) ([Scholia](https://tools.wmflabs.org/scholia/doi/10.1002/JCC.540100804))
+1. <a name="citeref1"></a>Clark M, Cramer RD, Van Opdenbosch N. Validation of the general purpose tripos 5.2 force field. Journal of Computational Chemistry. 1989 Dec 1;10(8):982–1012.  doi:[10.1002/JCC.540100804](https://doi.org/10.1002/JCC.540100804) ([Scholia](https://scholia.toolforge.org/doi/10.1002/JCC.540100804))
 
