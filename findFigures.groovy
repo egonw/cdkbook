@@ -1,6 +1,8 @@
-// Copyright (c) 2018  Egon Willighagen <egon.willighagen@gmail.com>
+// Copyright (c) 2018-2022  Egon Willighagen <egon.willighagen@gmail.com>
 //
 // GPL v3
+
+import groovy.xml.XmlSlurper
 
 chapterCounters = new HashMap<String,String>();
 chapterCounter = 0
