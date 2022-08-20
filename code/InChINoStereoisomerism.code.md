@@ -1,7 +1,7 @@
 # InChINoStereoisomerism.groovy
 **Source code:**
 ```groovy
-@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.7.1')
 
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.silent.*;
@@ -42,6 +42,6 @@ println generator.inchi
 ```
 **Output:**
 ```plain
-InChI=1S/CHBrClF/c2-1(3)4/h1H
-InChI=1S/CHBrClF/c2-1(3)4/h1H
+InChI=1S/CHBrClF/c2-1(3)4/h1H/t1-/m0/s1
+InChI=1S/CHBrClF/c2-1(3)4/h1H/t1-/m1/s1
 ```

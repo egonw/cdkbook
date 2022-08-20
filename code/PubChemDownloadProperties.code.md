@@ -1,7 +1,7 @@
 # PubChemDownloadProperties.groovy
 **Source code:**
 ```groovy
-@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.7.1')
 
 import java.net.UnknownHostException;
 import org.openscience.cdk.*
@@ -62,7 +62,7 @@ InChI (Standard)=InChI=1S/C15H21NO6/c1-8(4-3-5-9...
   ,20)(H,21,22)/b5-3+,8-4-/t9-,10+,11-,13+/m1/s1
 InChIKey (Standard)=VZFRNCSOCOPNDB-AOKDLOFSSA-N
 Log P (XLogP3-AA)=-1.3
-Mass (Exact)=311.1368874
+Mass (Exact)=311.13688739
 Molecular Formula=C15H21NO6
 Molecular Weight=311.33
 SMILES (Canonical)=CC(C=CC=C(C)C1CNC(C1CC(=O)O)C...
@@ -70,5 +70,5 @@ SMILES (Canonical)=CC(C=CC=C(C)C1CNC(C1CC(=O)O)C...
 SMILES (Isomeric)=C[C@H](/C=C/C=C(/C)\textbacksl...
   ash[C@H]1CN[C@@H]([C@H]1CC(=O)O)C(=O)O)C(=O)O
 Topological (Polar Surface Area)=124
-Weight (MonoIsotopic)=311.1368874
+Weight (MonoIsotopic)=311.13688739
 ```

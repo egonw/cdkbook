@@ -1,7 +1,7 @@
 # SetChemModelContent.groovy
 **Source code:**
 ```groovy
-@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.7.1')
 
 import org.openscience.cdk.*;
 model = new ChemModel()
