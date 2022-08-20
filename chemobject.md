@@ -69,8 +69,8 @@ which outputs:
 
 ```plain
 Number of containers: 2
-container's hashcode 1306535359
-container's hashcode 1401295795
+container's hashcode 1482986993
+container's hashcode 1205817409
 ```
 
 The other options is to use a regular for-loop:
@@ -89,8 +89,8 @@ which requires more coding, but has the advantage that it keeps track of the ind
 
 ```plain
 Number of containers: 2
-container 0 has hashcode 167013780
-container 1 has hashcode 2113243119
+container 0 has hashcode 1483243447
+container 1 has hashcode 1322354584
 ```
 
 ## IReactionSet and IRingSet

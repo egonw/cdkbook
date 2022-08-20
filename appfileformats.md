@@ -1032,6 +1032,9 @@ This writer has these IO settings:
   <td>WriteQueryFormatValencies</td>
   <td>Should valencies be written in the MDL Query format? (deprecated) [Default: false]</td></tr>
 <tr>
+  <td>TruncateLongData</td>
+  <td>Truncate long data files >200 characters [Default: false]</td></tr>
+<tr>
   <td>ProgramName</td>
   <td>Program name to write at the top of the molfile header, should be exactly 8 characters long [Default: CDK]</td></tr>
 <tr>
@@ -1180,6 +1183,12 @@ This writer supports these data objects:
 This writer has these IO settings:
 <table>
 <tr><td><b>Name</b></td><td><b>Desc</b></td></tr>
+<tr>
+  <td>SmilesFlavor</td>
+  <td>Output SMILES flavor, binary option [Default: 12551944]</td></tr>
+<tr>
+  <td>WriteTitle</td>
+  <td>Write the molecule title after the SMILES [Default: true]</td></tr>
 <tr>
   <td>UseAromaticity</td>
   <td>Should aromaticity information be stored in the SMILES? [Default: false]</td></tr>

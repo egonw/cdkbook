@@ -81,7 +81,7 @@ Title: org.openscience.cdk.qsar.descriptors.mole...
 Reference: http://www.blueobelisk.org/ontologies...
   /chemoinformatics-algorithms/#tpsa
 Vendor: The Chemistry Development Kit
-Identifier: 2.3
+Identifier: 2.7.1
 ```
 
 The identifier values originally referred to a String which held the
@@ -209,7 +209,7 @@ The output shows us that quite some metadata is preserved:
 
 ```plain
 Specification: org.openscience.cdk.qsar.Descript...
-  orSpecification@199e4c2b
+  orSpecification@454bcbbf
 Parameters names: [checkAromaticity]
 Parameters values: [false]
 Exception: null
@@ -337,9 +337,9 @@ the case for all descriptors, but many take this approach.
 ## References
 
 1. <a name="citeref1"></a>Wikberg J, Eklund M, Willighagen E, Spjuth O, Lapins M, Engkvist O, et al. Introduction to Pharmaceutical Bioinformatics. 2018. 
-2. <a name="citeref2"></a>Steinbeck C, Hoppe C, Hoppe C, Kuhn S, Floris M, Guha R, et al. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Current Pharmaceutical Design [Internet]. 2006 Jun 1;12(17):2111–20. Available from: https://cdk.github.io/cdk-paper-2/ doi:[10.2174/138161206777585274](https://doi.org/10.2174/138161206777585274) ([Scholia](https://scholia.toolforge.org/doi/10.2174/138161206777585274))
-3. <a name="citeref3"></a>Guha R, Howard MT, Hutchison GR, Murray-Rust P, Rzepa HS, Steinbeck C, et al. The Blue Obelisk-interoperability in chemical informatics. Journal of Chemical Information and Modeling. 2006 Feb 22;46(3):991–8.  doi:[10.1021/CI050400B](https://doi.org/10.1021/CI050400B) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI050400B))
-4. <a name="citeref4"></a>Spjuth O, Willighagen E, Guha R, Eklund M, Wikberg J. Towards interoperable and reproducible QSAR analyses: Exchange of datasets. Journal of Cheminformatics. 2010 Jan 1;2(1):5.  doi:[10.1186/1758-2946-2-5](https://doi.org/10.1186/1758-2946-2-5) ([Scholia](https://scholia.toolforge.org/doi/10.1186/1758-2946-2-5))
+2. <a name="citeref2"></a>Steinbeck C, Hoppe C, Hoppe C, Kuhn S, Floris M, Guha R, et al. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Curr Pharm Des [Internet]. 2006 Jun 1;12(17):2111–20. Available from: https://cdk.github.io/cdk-paper-2/ doi:[10.2174/138161206777585274](https://doi.org/10.2174/138161206777585274) ([Scholia](https://scholia.toolforge.org/doi/10.2174/138161206777585274))
+3. <a name="citeref3"></a>Guha R, Howard MT, Hutchison GR, Murray-Rust P, Rzepa HS, Steinbeck C, et al. The Blue Obelisk-interoperability in chemical informatics. JCIM. 2006 Feb 22;46(3):991–8.  doi:[10.1021/CI050400B](https://doi.org/10.1021/CI050400B) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI050400B))
+4. <a name="citeref4"></a>Spjuth O, Willighagen E, Guha R, Eklund M, Wikberg J. Towards interoperable and reproducible QSAR analyses: Exchange of datasets. J Cheminform. 2010;2(1):5.  doi:[10.1186/1758-2946-2-5](https://doi.org/10.1186/1758-2946-2-5) ([Scholia](https://scholia.toolforge.org/doi/10.1186/1758-2946-2-5))
 5. <a name="citeref5"></a>[https://stackoverflow.com/questions/9363550/how-to-prevent-getting-a-groovy-boolean-in-an-object-array](https://stackoverflow.com/questions/9363550/how-to-prevent-getting-a-groovy-boolean-in-an-object-array)
 
 

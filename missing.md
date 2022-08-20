@@ -409,6 +409,6 @@ Generator addressed this gap [<a href="#citeref2">2</a>].
 ## References
 
 1. <a name="citeref1"></a>Rojas-Cherto M, Kasper PT, Willighagen E, Vreeken RJ, Hankemeier T, Reijmers TH. Elemental composition determination based on MSn. Bioinformatics. 2011 Jul 14;27(17):2376–83.  doi:[10.1093/BIOINFORMATICS/BTR409](https://doi.org/10.1093/BIOINFORMATICS/BTR409) ([Scholia](https://scholia.toolforge.org/doi/10.1093/BIOINFORMATICS/BTR409))
-2. <a name="citeref2"></a>Peironcely JE, Rojas-Chertó M, Fichera D, Reijmers T, Reijmers T, Coulier L, et al. OMG: Open Molecule Generator. Journal of Cheminformatics. 2012 Sep 17;4(1):21.  doi:[10.1186/1758-2946-4-21](https://doi.org/10.1186/1758-2946-4-21) ([Scholia](https://scholia.toolforge.org/doi/10.1186/1758-2946-4-21))
+2. <a name="citeref2"></a>Peironcely JE, Rojas-Chertó M, Fichera D, Reijmers T, Reijmers T, Coulier L, et al. OMG: Open Molecule Generator. J Cheminform. 2012 Sep 17;4(1):21.  doi:[10.1186/1758-2946-4-21](https://doi.org/10.1186/1758-2946-4-21) ([Scholia](https://scholia.toolforge.org/doi/10.1186/1758-2946-4-21))
 
 

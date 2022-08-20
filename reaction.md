@@ -137,6 +137,6 @@ Products: 1
 
 ## References
 
-1. <a name="citeref1"></a>Holliday GL, Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the World Wide Web. 6. CMLReact, an XML Vocabulary for Chemical Reactions. Journal of Chemical Information and Modeling. 2006 Jan 1;46(1):145–57.  doi:[10.1021/CI0502698](https://doi.org/10.1021/CI0502698) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI0502698))
+1. <a name="citeref1"></a>Holliday GL, Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the World Wide Web. 6. CMLReact, an XML Vocabulary for Chemical Reactions. JCIM. 2006 Jan;46(1):145–57.  doi:[10.1021/CI0502698](https://doi.org/10.1021/CI0502698) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI0502698))
 
 

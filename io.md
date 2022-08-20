@@ -257,7 +257,7 @@ InChI (Standard)=InChI=1S/C15H21NO6/c1-8(4-3-5-9...
   ,20)(H,21,22)/b5-3+,8-4-/t9-,10+,11-,13+/m1/s1
 InChIKey (Standard)=VZFRNCSOCOPNDB-AOKDLOFSSA-N
 Log P (XLogP3-AA)=-1.3
-Mass (Exact)=311.1368874
+Mass (Exact)=311.13688739
 Molecular Formula=C15H21NO6
 Molecular Weight=311.33
 SMILES (Canonical)=CC(C=CC=C(C)C1CNC(C1CC(=O)O)C...
@@ -265,7 +265,7 @@ SMILES (Canonical)=CC(C=CC=C(C)C1CNC(C1CC(=O)O)C...
 SMILES (Isomeric)=C[C@H](/C=C/C=C(/C)\textbacksl...
   ash[C@H]1CN[C@@H]([C@H]1CC(=O)O)C(=O)O)C(=O)O
 Topological (Polar Surface Area)=124
-Weight (MonoIsotopic)=311.1368874
+Weight (MonoIsotopic)=311.13688739
 ```
 
 
@@ -427,7 +427,7 @@ location: 6, 31-33: invalid symbol: D
 location: 7, 31-33: invalid symbol: T
 ```
 
-Because of an issue in version 2.3 of the CDK, the above does not show any warnings.
+Because of an issue in version 2.7.1 of the CDK, the above does not show any warnings.
 This has been fixed in CDK 2.3, see [commit 547b028e17656f54a080a885a166377320b3a8ad](https://github.com/cdk/cdk/commit/547b028e17656f54a080a885a166377320b3a8ad).
 
 <a name="sec:gzip"></a>
@@ -891,10 +891,10 @@ Double bonds: 5
 
 ## References
 
-1. <a name="citeref1"></a>Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the Worldwide Web. 1. Basic Principles. Journal of Chemical Information and Modeling. 1999 Nov 1;39(6):928–42.  doi:[10.1021/CI990052B](https://doi.org/10.1021/CI990052B) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI990052B))
-2. <a name="citeref2"></a>Willighagen E. Processing CML conventions in Java. Internet Journal of Chemistry [Internet]. 2001 Jan 1;4:4. Available from: https://zenodo.org/record/1495470 doi:[10.5281/zenodo.1495470](https://doi.org/10.5281/zenodo.1495470) ([Scholia](https://scholia.toolforge.org/doi/10.5281/zenodo.1495470))
-3. <a name="citeref3"></a>Dalby A, Nourse JG, Hounshell WD, Gushurst AKI, Grier DL, Leland BA, et al. Description of several chemical structure file formats used by computer programs developed at Molecular Design Limited. Journal of Chemical Information and Modeling. 1992 May 1;32(3):244–55.  doi:[10.1021/CI00007A012](https://doi.org/10.1021/CI00007A012) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI00007A012))
-4. <a name="citeref4"></a>Wiswesser WJ. How the WLN began in 1949 and how it might be in 1999. Journal of Chemical Information and Modeling. 1982 May 1;22(2):88–93.  doi:[10.1021/CI00034A005](https://doi.org/10.1021/CI00034A005) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI00034A005))
-5. <a name="citeref5"></a>Homer RW, Swanson J, Jilek RJ, Hurst T, Clark RD. SYBYL line notation (SLN): a single notation to represent chemical structures, queries, reactions, and virtual libraries. Journal of Chemical Information and Modeling. 2008 Dec 1;48(12):2294–307.  doi:[10.1021/CI7004687](https://doi.org/10.1021/CI7004687) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI7004687))
-6. <a name="citeref6"></a>Weininger D. SMILES, a chemical language and information system. 1. Introduction to methodology and encoding rules. Journal of Chemical Information and Modeling [Internet]. 1988 Feb 1;28(1):31–6. Available from: http://organica1.org/seminario/weininger88.pdf doi:[10.1021/CI00057A005](https://doi.org/10.1021/CI00057A005) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI00057A005))
+1. <a name="citeref1"></a>Murray-Rust P, Rzepa HS. Chemical Markup, XML, and the Worldwide Web. 1. Basic Principles. JCICS. 1999 Nov;39(6):928–42.  doi:[10.1021/CI990052B](https://doi.org/10.1021/CI990052B) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI990052B))
+2. <a name="citeref2"></a>Willighagen E. Processing CML conventions in Java. Internet Journal of Chemistry [Internet]. 2001 Feb 12;4:4. Available from: https://zenodo.org/record/1495470 doi:[10.5281/ZENODO.1495470](https://doi.org/10.5281/ZENODO.1495470) ([Scholia](https://scholia.toolforge.org/doi/10.5281/ZENODO.1495470))
+3. <a name="citeref3"></a>Dalby A, Nourse JG, Hounshell WD, Gushurst AKI, Grier DL, Leland BA, et al. Description of several chemical structure file formats used by computer programs developed at Molecular Design Limited. JCICS. 1992 May 1;32(3):244–55.  doi:[10.1021/CI00007A012](https://doi.org/10.1021/CI00007A012) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI00007A012))
+4. <a name="citeref4"></a>Wiswesser WJ. How the WLN began in 1949 and how it might be in 1999. JCICS. 1982 May 1;22(2):88–93.  doi:[10.1021/CI00034A005](https://doi.org/10.1021/CI00034A005) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI00034A005))
+5. <a name="citeref5"></a>Homer RW, Swanson J, Jilek RJ, Hurst T, Clark RD. SYBYL line notation (SLN): a single notation to represent chemical structures, queries, reactions, and virtual libraries. JCIM. 2008 Dec 1;48(12):2294–307.  doi:[10.1021/CI7004687](https://doi.org/10.1021/CI7004687) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI7004687))
+6. <a name="citeref6"></a>Weininger D. SMILES, a chemical language and information system. 1. Introduction to methodology and encoding rules. JCICS [Internet]. 1988 Feb 1;28(1):31–6. Available from: http://organica1.org/seminario/weininger88.pdf doi:[10.1021/CI00057A005](https://doi.org/10.1021/CI00057A005) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI00057A005))
 

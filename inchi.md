@@ -161,8 +161,8 @@ println generator.inchi
 And then the InChIs for both structures are identical:
 
 ```plain
-InChI=1S/CHBrClF/c2-1(3)4/h1H
-InChI=1S/CHBrClF/c2-1(3)4/h1H
+InChI=1S/CHBrClF/c2-1(3)4/h1H/t1-/m0/s1
+InChI=1S/CHBrClF/c2-1(3)4/h1H/t1-/m1/s1
 ```
 
 One important caveat: chiral information as read by the SMILES parser is not currently converted
@@ -174,6 +174,6 @@ into stereo information for the InChI generation process!
 
 1. <a name="citeref1"></a>Stein SE, Heller SR, Tchekhovski D. An Open Standard for Chemical Structure Representation: The IUPAC Chemical Identifier. Proceedings of the International Chemical Information Conference, 2003, pp 131-143.
 2. <a name="citeref2"></a>Wohlgemuth G, Haldiya PK, Willighagen E, Kind T, Fiehn O. The Chemical Translation Service--a web-based tool to improve standardization of metabolomic reports. Bioinformatics. 2010 Oct 15;26(20):2647–8.  doi:[10.1093/BIOINFORMATICS/BTQ476](https://doi.org/10.1093/BIOINFORMATICS/BTQ476) ([Scholia](https://scholia.toolforge.org/doi/10.1093/BIOINFORMATICS/BTQ476))
-3. <a name="citeref3"></a>Coles SJ, Day NE, Murray-Rust P, Rzepa HS, Zhang Y. Enhancement of the chemical semantic web through the use of InChI identifiers. Organic and Biomolecular Chemistry. 2005 Jan 1;3(10):1832.  doi:[10.1039/B502828K](https://doi.org/10.1039/B502828K) ([Scholia](https://scholia.toolforge.org/doi/10.1039/B502828K))
+3. <a name="citeref3"></a>Coles SJ, Day NE, Murray-Rust P, Rzepa HS, Zhang Y. Enhancement of the chemical semantic web through the use of InChI identifiers. Organic & Biomolecular Chemistry. 2005;3(10):1832.  doi:[10.1039/B502828K](https://doi.org/10.1039/B502828K) ([Scholia](https://scholia.toolforge.org/doi/10.1039/B502828K))
 
 
