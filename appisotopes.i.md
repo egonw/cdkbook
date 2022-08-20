@@ -1,8 +1,7 @@
 <section level="#" label="isotopes">Isotope List</section>
 
 The table listed in this Appendix is generated with the following
-code, listing all six properties of CDK atom types, as outlined
-in Section <xref>cdkatomtype</xref>. Abundances and exact masses are
+code, listing all properties of the isotopes. Abundances and exact masses are
 inherited from the BODR project, which contains
 values extracted from IUPAC recommendations.
 
