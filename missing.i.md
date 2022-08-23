@@ -185,8 +185,9 @@ Now the list looks more chemical:
 <out>MissingMFRestrictions</out>
 
 Of course, this is a long way from actual chemical structures. An Open Source structure
-generator has been a long standing holy grail, and recently the CDK-based Open Molecular
-Generator addressed this gap [<cite>Q27499209</cite>].
+generator has been a long standing holy grail, and the CDK-based MAYGEN addresses
+this gap [<cite>Q109827109</cite>], though the also open source Surge is a good bit
+faster [<cite>Q113585012</cite>].
 
 ## References
 
