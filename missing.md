@@ -403,12 +403,14 @@ C8H7NO 133.052763844
 ```
 
 Of course, this is a long way from actual chemical structures. An Open Source structure
-generator has been a long standing holy grail, and recently the CDK-based Open Molecular
-Generator addressed this gap [<a href="#citeref2">2</a>].
+generator has been a long standing holy grail, and the CDK-based MAYGEN addresses
+this gap [<a href="#citeref2">2</a>], though the also open source Surge is a good bit
+faster [<a href="#citeref3">3</a>].
 
 ## References
 
 1. <a name="citeref1"></a>Rojas-Cherto M, Kasper PT, Willighagen E, Vreeken RJ, Hankemeier T, Reijmers TH. Elemental composition determination based on MSn. Bioinformatics. 2011 Jul 14;27(17):2376–83.  doi:[10.1093/BIOINFORMATICS/BTR409](https://doi.org/10.1093/BIOINFORMATICS/BTR409) ([Scholia](https://scholia.toolforge.org/doi/10.1093/BIOINFORMATICS/BTR409))
-2. <a name="citeref2"></a>Peironcely JE, Rojas-Chertó M, Fichera D, Reijmers T, Reijmers T, Coulier L, et al. OMG: Open Molecule Generator. J Cheminform. 2012 Sep 17;4(1):21.  doi:[10.1186/1758-2946-4-21](https://doi.org/10.1186/1758-2946-4-21) ([Scholia](https://scholia.toolforge.org/doi/10.1186/1758-2946-4-21))
+2. <a name="citeref2"></a>Yirik MA, Sorokina M, Steinbeck C. MAYGEN: an open-source chemical structure generator for constitutional isomers based on the orderly generation principle. J Cheminform. 2021 Jul 3;13(1).  doi:[10.1186/S13321-021-00529-9](https://doi.org/10.1186/S13321-021-00529-9) ([Scholia](https://scholia.toolforge.org/doi/10.1186/S13321-021-00529-9))
+3. <a name="citeref3"></a>McKay BD, Yirik MA, Steinbeck C. Surge: a fast open-source chemical graph generator. J Cheminform. 2022 Apr 23;14(1).  doi:[10.1186/S13321-022-00604-9](https://doi.org/10.1186/S13321-022-00604-9) ([Scholia](https://scholia.toolforge.org/doi/10.1186/S13321-022-00604-9))
 
 
