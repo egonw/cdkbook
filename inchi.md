@@ -53,7 +53,7 @@ layer, most layers start with a lower case character, as is visible in the
 hydrogen layer, indicated by the (*/h*).
 
 Another important thing to note is that hydrogens are not explicitly
-defined in the connection table (see Section [3.5](atomsbonds.md#sec:hydrogens)).
+defined in the connection table (see Section [4.5](atomsbonds.md#sec:hydrogens)).
 Therefore, the InChI for methane does not have a connectivity layer,
 but formic acid, *mierezuur* in Dutch, does (*/c2-1-3*):
 
@@ -115,7 +115,7 @@ one mobile hydrogen to the second atom, which is the first oxygen.
 <!-- <code>RenderAdenine</code> -->
 <a name="fig:adenine"></a>
 ![](images/generated/RenderAdenine.png)
-<br />**Figure 18.1**: 2D diagram of one of the tautomers of adenine.
+<br />**Figure 19.1**: 2D diagram of one of the tautomers of adenine.
 
 ### Stereoisomerism
 

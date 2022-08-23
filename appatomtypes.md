@@ -3,7 +3,7 @@
 
 The table listed in this Appendix is generated with the following
 code, listing all six properties of CDK atom types, as outlined
-in Section [12.1](atomtype.md#sec:cdkatomtype):
+in Section [13.1](atomtype.md#sec:cdkatomtype):
 
 **<a name="script:ListAllCDKAtomTypes">Script 21.1</a>** [code/ListAllCDKAtomTypes.groovy](code/ListAllCDKAtomTypes.code.md)
 ```groovy

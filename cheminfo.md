@@ -17,7 +17,7 @@ bits of information about the molecular system under study. Unfortunately,
 in many cases it is unclear which part of the information is essential for a
 certain application. For example, although the <a name="tp2">boiling points</a> correlates well
 with the number of carbon atoms in a homologous series of alkanes [<a href="#citeref2">2</a>]
-(see Figure [2.1](#fig:bp:alkanes)), the
+(see Figure [3.1](#fig:bp:alkanes)), the
 carbon count descriptor is not generally useful for
 predicting other properties, or even the same property for a more diverse set
 of molecules. From simple physico-chemical principles, it is clear why this
@@ -25,7 +25,7 @@ is the case.
 
 <a name="fig:bp:alkanes"></a>
 ![](images/boilingPoints.png)
-<br />**Figure 2.1**: Diagram showing the relation between the boiling point and the numberof carbon atoms in alkanes.
+<br />**Figure 3.1**: Diagram showing the relation between the boiling point and the numberof carbon atoms in alkanes.
 
 However, for more complex problems there is very little a-priori
 knowledge that guides us in choosing appropriate descriptors. Nevertheless,
@@ -57,7 +57,7 @@ recommendations, and <a name="tp6">line notations</a> such as the
 <a name="tp7">Wiswesser Line Notation</a> [<a href="#citeref3">3</a>] and the
 <a name="tp8">SMILES</a> [<a href="#citeref4">4</a>],
 are examples for standardized conventions
-for labeling molecules (see Section [11.8](io.md#sec:lineNotations)).
+for labeling molecules (see Section [12.8](io.md#sec:lineNotations)).
 In addition, these representations do not include
 information on the 3D conformation.
 
@@ -122,7 +122,7 @@ as unique molecular identifier.
 
 <a name="fig:benzene"></a>
 ![](images/benzoCompounds.svg)
-<br />**Figure 2.2**: 2D diagrams of the two possible resonance structures of a compound with a phenyl ring. Both diagrams refer to the same compounds, but the depicted graph representations are not identical.
+<br />**Figure 3.2**: 2D diagrams of the two possible resonance structures of a compound with a phenyl ring. Both diagrams refer to the same compounds, but the depicted graph representations are not identical.
 
 The use of these line notations and the substructure searching has allowed setting
 up <a name="tp15">databases</a> with molecular structures and their properties. For example,
@@ -169,14 +169,14 @@ predicting NMR spectra.
 However, while the application of graph theory in chemistry has shown to be
 quite powerful, it is unable to reflect to full chemistry that can be found in
 molecules. Consider the benzene derivative diagrams shown in
-Figure [2.2](#fig:benzene). The two diagrams show non-identical graphs, but refer
+Figure [3.2](#fig:benzene). The two diagrams show non-identical graphs, but refer
 to the same molecular compound; the only difference is that of the resonance
 structures of the phenylic ring.
 
 Organometallic compounds are excellent examples of another class of molecules that
 are difficult to represent using chemical graphs:
 they involve complex delocalized bonding systems. Ferrocene, shown in <!-- <a name="tp22">ferrocene}</a> -->
-Figure [2.3](#fig:ferrocene), is an organometallic compound where two cyclopentadienyl
+Figure [3.3](#fig:ferrocene), is an organometallic compound where two cyclopentadienyl
 fragments are bound to the iron. No classical two electron bonds can be drawn between
 the iron and any of the carbons; instead, the two six-electron π-systems of the
 cyclopentadienyl rings that bind to the iron. In the nineties several alternative
@@ -185,7 +185,7 @@ problem [<a href="#citeref21">21</a>,<a href="#citeref22">22</a>,<a href="#citer
 
 <a name="fig:ferrocene"></a>
 ![](images/Ferrocene-2D.png)
-<br />**Figure 2.3**: 2D diagram of ferrocene, which, like all organometallic compounds, is difficult to represent with classical chemoinformatics approaches.
+<br />**Figure 3.3**: 2D diagram of ferrocene, which, like all organometallic compounds, is difficult to represent with classical chemoinformatics approaches.
 
 ## Quantum Chemistry
 
@@ -255,7 +255,7 @@ JOELib [<a href="#citeref29">29</a>] and the CDK [<a href="#citeref30">30</a>,<a
 
 <a name="fig:cicm"></a>
 ![](images/rodeDraad.png)
-<br />**Figure 2.4**: While both fields aim at increasing our knowledge about chemistry, chemometrics has traditionally focused on extracting information from analytical data (darker green area), where chemoinformatics focused on structural information of molecules (blue-ish area). Molecular chemometrics (light green area) takes approaches from both to study properties of molecules and molecular systems.
+<br />**Figure 3.4**: While both fields aim at increasing our knowledge about chemistry, chemometrics has traditionally focused on extracting information from analytical data (darker green area), where chemoinformatics focused on structural information of molecules (blue-ish area). Molecular chemometrics (light green area) takes approaches from both to study properties of molecules and molecular systems.
 
 ## Chemometrics
 
@@ -276,7 +276,7 @@ While chemometrics focuses on the statistical analysis of mostly multivariate
 chemical data, chemoinformatics generally uses the chemical graph as principal
 representation of molecular data. The previous section has shown that both
 complement each other when dealing with the understanding and prediction
-of properties of molecular systems (see Figure [2.4](#fig:cicm)).
+of properties of molecular systems (see Figure [3.4](#fig:cicm)).
 Bridging the gap between representation of molecular structures or systems
 composed of molecular structures, and statistical and data mining methods, has
 shown to be an interesting area of research [<a href="#citeref34">34</a>,<a href="#citeref35">35</a>,<a href="#citeref36">36</a>].

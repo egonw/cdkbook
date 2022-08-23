@@ -63,7 +63,7 @@ for all atoms.
 Some classes and methods have the same API, but have slightly different
 behavior as before. For example, the [`SmilesGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/smiles/SmilesGenerator.html) now requires
 that all atoms have implicit hydrogen counts set. This can be done with
-the [`CDKHydrogenAdder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/CDKHydrogenAdder.html) as explained in Section [14.4](missing.md#sec:missinghydrogens).
+the [`CDKHydrogenAdder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/CDKHydrogenAdder.html) as explained in Section [15.4](missing.md#sec:missinghydrogens).
 
 ### Constructors that now require a builder
 
@@ -93,7 +93,7 @@ requires a [`IChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/o
 
 A significant change in the [`CDKAtomTypeMatcher`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/atomtype/CDKAtomTypeMatcher.html) behavior is that it now
 returns a special 'X' atom type when no atom type could be perceived.
-See Section [12.2](atomtype.md#sec:atomtypePerception).
+See Section [13.2](atomtype.md#sec:atomtypePerception).
 
 ### Static methods that are no longer
 
@@ -204,7 +204,7 @@ println "$smiles"
 
 ### Aromaticity calculations
 
-Aromaticity is differently calculated now, see Section [16.5](properties.md#sec:aromaticity).
+Aromaticity is differently calculated now, see Section [17.5](properties.md#sec:aromaticity).
 
 ## References
 

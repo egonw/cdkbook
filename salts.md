@@ -1,13 +1,13 @@
 # Salts and other disconnected structures
 
-In the Section [3.3](atomsbonds.md#sec:molecules) we saw how atoms and bonds are contained in
+In the Section [4.3](atomsbonds.md#sec:molecules) we saw how atoms and bonds are contained in
 the `IAtomContainer` data model. It was mentioned that 
 it is a general container, and this is exactly what we need for disconnected
 structures like salts and molecular crystal structures.
 
 Functionality to determine if the content of an IAtomContainer is
 connected, you can use the [`ConnectivityChecker`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/graph/ConnectivityChecker.html), as explained in
-Section [13.1](graph.md#sec:partitioning).
+Section [14.1](graph.md#sec:partitioning).
 
 ## Salts
 
@@ -32,11 +32,11 @@ salt.addAtom(chloride);
 If you prefer a single `IAtomContainer` to only contain connected
 atoms, instead of unbound atoms as in this salt example, you can
 partition them into two or more new containers, as explained in
-Section [13.1](graph.md#sec:partitioning).
+Section [14.1](graph.md#sec:partitioning).
 
 <a name="fig:crystalInheritance"></a>
 ![](images/crystal.png)
-<br />**Figure 5.1**: The `ICrystal` interface extends the `IAtomContainer` interface.
+<br />**Figure 6.1**: The `ICrystal` interface extends the `IAtomContainer` interface.
 
 ## Crystals
 
@@ -44,7 +44,7 @@ Of course, the representation given in the previous section
 is a very basic model for sodium chloride. A <a name="tp2">crystal</a>
 structure would perhaps be a more accurate description of what you
 like to represent. In this case, the <a name="tp3">`ICrystal`</a> subclass of
-the `IAtomContainer` can be used (see Figure [5.1](#fig:crystalInheritance)):
+the `IAtomContainer` can be used (see Figure [6.1](#fig:crystalInheritance)):
 
 **<a name="script:SaltCrystal">Script 5.2</a>** [code/SaltCrystal.groovy](code/SaltCrystal.code.md)
 ```groovy

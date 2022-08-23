@@ -71,7 +71,7 @@ This equation assumes that the solute is neutral, which may involve changing the
 The CDK has implemented an algorithm based on the <a name="tp5">XLogP</a> algorithm [<a href="#citeref4">4</a>,<a href="#citeref5">5</a>]. The
 code is available via the descriptor API. It can be used to calculate the LogP for a single
 molecule. The implementation expects explicit hydrogens, so you need to add those if not
-present yet (see Section [14.4](missing.md#sec:missinghydrogens)). The calculation returns a [`DoubleResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/DoubleResult.html)
+present yet (see Section [15.4](missing.md#sec:missinghydrogens)). The calculation returns a [`DoubleResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/DoubleResult.html)
 following the descriptor API:
 
 **<a name="script:XLogP">Script 16.4</a>** [code/XLogP.groovy](code/XLogP.code.md)

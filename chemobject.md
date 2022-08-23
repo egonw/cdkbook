@@ -6,13 +6,13 @@ such as `IReaction`. But there are many more data structure interfaces used
 by the CDK, and this chapter will give an overview of what is available.
 
 All these data interfaces have one interface in common:
-`IChemObject`, which we already briefly saw in Section [3.6](atomsbonds.md#sec:chemobjects).
+`IChemObject`, which we already briefly saw in Section [4.6](atomsbonds.md#sec:chemobjects).
 The core `IChemObject` interface itself, extends another core, though commonly
 hidden, interface: `ICDKObject`.
 The roles of these two classes are to provide basic functionality needed by the
 library: the `ICDKObject` interface provides the `getBuilder()` method
 which returns a `IChemObjectBuilder` that is used to create new chemical objects
-(see Chapter [10](builders.md#sec:builders)).
+(see Chapter [11](builders.md#sec:builders)).
 This method is split out from `IChemObject` because some classes are required
 to return a builder, but not provide the full set of fields that `IChemObject`
 does.
@@ -69,8 +69,8 @@ which outputs:
 
 ```plain
 Number of containers: 2
-container's hashcode 1482986993
-container's hashcode 1205817409
+container's hashcode 190496961
+container's hashcode 575438308
 ```
 
 The other options is to use a regular for-loop:
@@ -89,8 +89,8 @@ which requires more coding, but has the advantage that it keeps track of the ind
 
 ```plain
 Number of containers: 2
-container 0 has hashcode 1483243447
-container 1 has hashcode 1322354584
+container 0 has hashcode 697707311
+container 1 has hashcode 142871704
 ```
 
 ## IReactionSet and IRingSet

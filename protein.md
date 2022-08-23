@@ -6,16 +6,16 @@ organic molecules, and the [`IAtomContainer`](http://cdk.github.io/cdk/latest/do
 for <a name="tp2">DNA</a> strands. However, there is more extensive support for protein and
 DNA in the CDK, and this chapter will outline some of that.
 The core interface is the [`IBioPolymer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBioPolymer.html) interface, which is derived from an
-IAtomContainer. Figure [7.1](#fig:proteinClass) shows its hierarchy.
+IAtomContainer. Figure [8.1](#fig:proteinClass) shows its hierarchy.
 
 <a name="fig:proteinClass"></a>
 ![](images/biopolymer.png)
-<br />**Figure 7.1**: The IBioPolymer interface extends the IPolymer interface, which extends the IAtomContainer interface.
+<br />**Figure 8.1**: The IBioPolymer interface extends the IPolymer interface, which extends the IAtomContainer interface.
 
 ## Protein From File
 
 One straightforward way to create protein and DNA structures is to read them from
-PDB files [<a href="#citeref1">1</a>]. Chapter [11](io.md#sec:io) explains how files are read in general. For <a name="tp3">PDB files</a>,
+PDB files [<a href="#citeref1">1</a>]. Chapter [12](io.md#sec:io) explains how files are read in general. For <a name="tp3">PDB files</a>,
 the [`PDBReader`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/PDBReader.html) should be used. A code example showing how to use this reader
 is given by Script [11.13](io.md#script:PDBCoordinateExtraction).
 
@@ -118,7 +118,7 @@ monomer ARGA10
 
 The [`IStrand`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IStrand.html) and [`IMonomer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IMonomer.html) interfaces provide functionality to access
 specific properties, but also extend the `IAtomContainer` interface, as depicted
-in Figure [7.2](#fig:strandmonomerClass). Both provide access to a name for the entity as
+in Figure [8.2](#fig:strandmonomerClass). Both provide access to a name for the entity as
 well as a type:
 
 **<a name="script:BioNameType">Script 7.5</a>** [code/BioNameType.groovy](code/BioNameType.code.md)
@@ -142,7 +142,7 @@ Monomer name: ALAA9
 
 <a name="fig:strandmonomerClass"></a>
 ![](images/strandmonomer.png)
-<br />**Figure 7.2**: The IStrand and IMonomer interfaces extend the IAtomContainer interface.
+<br />**Figure 8.2**: The IStrand and IMonomer interfaces extend the IAtomContainer interface.
 
 ## References
 

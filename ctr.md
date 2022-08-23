@@ -10,12 +10,12 @@ CC-BY-SA license, as it is in the wiki.
 
 ## Heavy atom counts from an SD file
 
-This tasks starts with an SD file (see Section [11.5.1](io.md#sec:sdfiles)) and counts for each structure in the file
+This tasks starts with an SD file (see Section [12.5.1](io.md#sec:sdfiles)) and counts for each structure in the file
 the number of <a name="tp1">heavy atoms</a> (non-hydrogen atoms). Because we simply handle the structures one by one,
 the solution uses the `IteratingSDFReader` reader. The input file (`benzodiazepine.sdf.gz`) is a
-gzipped file, which we handle by using a `GZIPInputStream` as outlined in Section [11.4](io.md#sec:gzip).
+gzipped file, which we handle by using a `GZIPInputStream` as outlined in Section [12.4](io.md#sec:gzip).
 Because we want to make sure the input file does not have any unexpected content, we use the `STRICT`
-mode, detailed in Section [11.3.1](io.md#sec:readingModes). The input file turns out to do not have non-standard
+mode, detailed in Section [12.3.1](io.md#sec:readingModes). The input file turns out to do not have non-standard
 features, so that we do not have to worry about D and T element symbols.
 
 The solution lists all heavy atom counts:

@@ -73,6 +73,7 @@ GhemicalMMReader [ioclasseslist](ioclasseslist.md#tp15) [ioclasseslist](ioclasse
 graph [graph](graph.md#tp1)<br />
 graph matrices [graph](graph.md#tp10)<br />
 graph theory [cheminfo](cheminfo.md#tp9)<br />
+Groovy [writingApps](writingApps.md#tp3)<br />
 group [missing](missing.md#tp4)<br />
 gzip [io](io.md#tp4)<br />
 heavy atoms [ctr](ctr.md#tp1)<br />
@@ -93,6 +94,8 @@ InChI [graph](graph.md#tp16) [inchi](inchi.md#tp1)<br />
 INChIPlainTextReader [ioclasseslist](ioclasseslist.md#tp19)<br />
 INChIReader [ioclasseslist](ioclasseslist.md#tp20)<br />
 IUPAC name [cheminfo](cheminfo.md#tp5)<br />
+Java application [writingApps](writingApps.md#tp1)<br />
+javac [writingApps](writingApps.md#tp2)<br />
 JNI-InChI [inchi](inchi.md#tp2)<br />
 line notation [io](io.md#tp8)<br />
 line notations [cheminfo](cheminfo.md#tp6)<br />

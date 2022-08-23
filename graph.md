@@ -268,7 +268,7 @@ Another important aspect of the chemical graph, is that the graph uniquely
 places atoms in the molecule. That is, the graphs allows us to uniquely
 identify, and therefore, number atoms in the molecule. This is an important
 aspect of cheminformatics, and the concept behind <a name="tp13">canonicalization</a>, such
-as used to create <a name="tp14">canonical SMILES</a>. The InChI library (see Chapter [18](inchi.md#sec:inchi))
+as used to create <a name="tp14">canonical SMILES</a>. The InChI library (see Chapter [19](inchi.md#sec:inchi))
 implements such an algorithm, and we can use it to assign unique integers to all
 atoms in a chemical graph.
 
@@ -309,7 +309,7 @@ C 64
 
 <a name="fig:inchiAtomNumbers"></a>
 ![](images/generated/RenderAdenineWithNumbers.png) ![](images/generated/RenderOxazole.png) ![](images/generated/InChIAtomNumbersBenzene.png)
-<br />**Figure 13.1**: InChI atom numbers of adenine (left), oxazole (middle), and benzene (right).
+<br />**Figure 14.1**: InChI atom numbers of adenine (left), oxazole (middle), and benzene (right).
 
 The <a name="tp16">InChI</a> library does not have a direct method to calculate atom numbers
 from Java, but the CDK can extract these from the auxiliary layer. These numbers
@@ -372,7 +372,7 @@ C 5
 C 3
 ```
 
-The InChI atom numbers are shown in Figure [13.1](#fig:inchiAtomNumbers).
+The InChI atom numbers are shown in Figure [14.1](#fig:inchiAtomNumbers).
 
 ## References
 

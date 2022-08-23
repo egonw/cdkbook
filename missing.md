@@ -212,21 +212,21 @@ fbot = new FixBondOrdersTool()
 pyrrole = fbot.kekuliseAromaticRings(pyrrole)
 ```
 
-This results in the image given in Figure [14.1](#fig:pyrrole).
+This results in the image given in Figure [15.1](#fig:pyrrole).
 
 <a name="fig:pyrrole"></a>
 ![](code/generated/FixPyrroleBondOrders.png)
-<br />**Figure 14.1**: 2D diagram of pyrrole.
+<br />**Figure 15.1**: 2D diagram of pyrrole.
 
 <a name="sec:missinghydrogens"></a>
 ## Missing Hydrogens
 
 The [`CDKHydrogenAdder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/CDKHydrogenAdder.html) class can be used to add
 <a name="tp12">missing hydrogens</a>. The algorithm itself adds implicit
-hydrogens (see Section [3.5](atomsbonds.md#sec:hydrogens)), but we will see how these can be
+hydrogens (see Section [4.5](atomsbonds.md#sec:hydrogens)), but we will see how these can be
 converted into explicit hydrogens. 
 The hydrogen adding algorithm expects, however, that CDK atom
-types are already perceived (see Section [12.2](atomtype.md#sec:atomtypePerception)).
+types are already perceived (see Section [13.2](atomtype.md#sec:atomtypePerception)).
 
 <a name="sec:implicithydrogens"></a>
 ### Implicit Hydrogens

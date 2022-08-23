@@ -177,7 +177,7 @@ println "Atom count: $mol.atomCount"
 
 But besides reading XML files correctly, the support for InputStream also allows
 reading files directly from the internet and from gzipped files (see
-Section [11.4](#sec:gzip)).
+Section [12.4](#sec:gzip)).
 
 <a name="sec:domoicacid"></a>
 ### Example: Downloading Domoic Acid from PubChem
@@ -650,10 +650,10 @@ the `content` to the created Gaussian Input file.
 ## Example: creating unit tests for atom type perception
 
 We saw earlier an example for reading files directly from PubChem
-(see Section [11.2.1](#sec:domoicacid)).
+(see Section [12.2.1](#sec:domoicacid)).
 This can be conveniently used to create `CDK source code`, for example,
 for use in unit tests for the atom type perception code (see
-Section [12.2](atomtype.md#sec:atomtypePerception)). But because we do not want
+Section [13.2](atomtype.md#sec:atomtypePerception)). But because we do not want
 2D and 3D coordinates being set in the source code, we disable those
 options:
 
@@ -753,7 +753,7 @@ this format called <a name="tp12">OpenSMILES</a>, available at [http://www.opens
 
 The CDK can both read and write SMILES, or at least a significant subset of the
 line notation. You can parse a SMILES into a IAtomContainer with the
-[`SmilesParser`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/smiles/SmilesParser.html). The constructor of the parser takes an [`IChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObjectBuilder.html) (see Section [10](builders.md#sec:builders))
+[`SmilesParser`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/smiles/SmilesParser.html). The constructor of the parser takes an [`IChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObjectBuilder.html) (see Section [11](builders.md#sec:builders))
 because it needs to know what CDK interface implementation it must use to create
 classes. This example uses the [`DefaultChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/DefaultChemObjectBuilder.html):
 
@@ -796,7 +796,7 @@ Ph-NH2 -> c1(ccccc1)N
 ```
 
 Of course, this does require that aromaticity has been perceived, as explained
-in Section [16.5](properties.md#sec:aromaticity).
+in Section [17.5](properties.md#sec:aromaticity).
 
 ## Recipes
 

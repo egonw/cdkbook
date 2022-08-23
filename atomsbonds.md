@@ -44,7 +44,7 @@ IAtom atom = new Atom(Elements.CARBON);
 ```
 
 A CDK atom has many properties, many of them inherited from the `IElement`,
-`IIsotope` and `IAtomType` interfaces. Figure [3.1](#fig:atomInheritance) shows the interface
+`IIsotope` and `IAtomType` interfaces. Figure [4.1](#fig:atomInheritance) shows the interface
 inheritance specified by the CDK data model.
 
 These constructors will set the atomic number of the atom:
@@ -55,7 +55,7 @@ atomic number: 6
 
 <a name="fig:atomInheritance"></a>
 ![](images/atomInheritance.png)
-<br />**Figure 3.1**: The `IAtom` interface extends the `IAtomType` interface, which extends the `IIsotope` interface, which, in turn, extends the `IElement` interface.
+<br />**Figure 4.1**: The `IAtom` interface extends the `IAtomType` interface, which extends the `IIsotope` interface, which, in turn, extends the `IElement` interface.
 
 ### IElement
 
@@ -126,7 +126,7 @@ Atom types are an important concept in cheminformatics. They describe
 some basic facts about that particular atom in some particular
 configuration. These properties are used in many cheminformatics algorithms,
 including adding hydrogens to hydrogen-depleted chemical graphs (see
-Section [14.4.1](missing.md#sec:implicithydrogens)) and force fields. Chapter [12](atomtype.md#sec:atomtype) provides much more detail
+Section [15.4.1](missing.md#sec:implicithydrogens)) and force fields. Chapter [13](atomtype.md#sec:atomtype) provides much more detail
 on the atom type infrastructure in the CDK library, and, for example,
 details how atom types can be perceived, and how atom type information
 is set for atoms.
@@ -270,7 +270,7 @@ Bond order UNSET has 0 electrons
  
 ### Bond stereochemistry
 
-The `IBond.setStereo()` method is discussed in Section [4.1](stereo.md#sec:stereo:bond).
+The `IBond.setStereo()` method is discussed in Section [5.1](stereo.md#sec:stereo:bond).
 
 <a name="sec:molecules"></a>
 ## Molecules
@@ -466,7 +466,7 @@ existing vertices.
 
 <a name="fig:methaneImExplicit"></a>
 ![](images/generated/MethaneImplicit.png) ![](images/generated/MethaneExplicit.png)
-<br />**Figure 3.2**: Methane with implicit (left) and explicit (right) hydrogens.
+<br />**Figure 4.2**: Methane with implicit (left) and explicit (right) hydrogens.
 <!-- <code>MethaneImplicit</code> -->
 <!-- <code>MethaneExplicit</code> -->
 
@@ -503,7 +503,7 @@ for (int i=1; i<=4; i++) {
 }
 ```
 
-Section [14.4](missing.md#sec:missinghydrogens) describes how hydrogens can
+Section [15.4](missing.md#sec:missinghydrogens) describes how hydrogens can
 be added programmatically.
 
 <a name="sec:chemobjects"></a>
@@ -608,17 +608,17 @@ interesting chemical phenomena. For example, if the number of FIXME electrons
 is right, then the ring will become aromatic, as we commonly observer in
 phenyl rings, such as in benzene. But, cheminformatics has many other
 aspects where one like to know about those rings. For example, 2D coordinate
-generator (see Section [14.5](missing.md#sec:layout)) requires algorithms to know what
+generator (see Section [15.5](missing.md#sec:layout)) requires algorithms to know what
 the rings are in a molecule.
 
 <a name="fig:ring"></a>
 ![](images/rings.png)
-<br />**Figure 3.3**: The `IRing` interface extends the `IAtomContainer` interface and is used to hold information about rings.
+<br />**Figure 4.3**: The `IRing` interface extends the `IAtomContainer` interface and is used to hold information about rings.
 
-Section [13.2](graph.md#sec:spanningtree) explains what functionality the CDK has to
+Section [14.2](graph.md#sec:spanningtree) explains what functionality the CDK has to
 determine a bond takes part in a ring system. Here, we just introduce the
 [`IRing`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IRing.html) interface, which extends the more general `IAtomContainer`
-as shown in Figure [3.3](#fig:ring). Practically, there is nothing much to
+as shown in Figure [4.3](#fig:ring). Practically, there is nothing much to
 say about the IRing interface. One method it adds, is to get the size of the
 ring:
 
@@ -639,7 +639,7 @@ Ring bonds: 5
 ```
 
 An overview of three algorithms to find rings in atom containers is provided
-in Section [13.3](graph.md#sec:ringsearch). Additionally, you may also be interested
+in Section [14.3](graph.md#sec:ringsearch). Additionally, you may also be interested
 in ring sets, explained in Section ??.
 
 
