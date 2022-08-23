@@ -96,13 +96,13 @@ scripts from the command line [<cite>Q107332190</cite>].
 ### Cinfony
 
 Cinfony is a Python module that integrates to the CDK as well as other
-cheminformatics toolkits [<cite>Q27499065</cite>]. Cinfony can be downloaded from [https://cinfony.github.io/](https://cinfony.github.io/].
+cheminformatics toolkits [<cite>Q27499065</cite>]. Cinfony can be downloaded from [https://cinfony.github.io/](https://cinfony.github.io/).
 
 ### R
 
 The statistical software R ([http://www.r-project.org/](http://www.r-project.org/)) also provide
 access to the CDK functionality via the rcdk package [<cite>Q28838068</cite>,<cite>Q94317027</cite>]. This
-package can be downloaded from CRAN from \url{http://cran.r-project.org/web/packages/rcdk/}.
+package can be downloaded from CRAN from [https://cran.r-project.org/web/packages/rcdk/](https://cran.r-project.org/web/packages/rcdk/).
 
 ## References
 
