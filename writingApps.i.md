@@ -61,6 +61,56 @@ But in Groovy it can also look like:
 
 <code>IterateAtomsGroovy</code>
 
+### Closures
+
+One of the more interesting features of Groovy is something called
+<topic type="key">closures</topic>.
+I have know this programming pattern from R and happily used for a long time,
+but only recently learned them to be called closures. Closures allow you to
+pass a method as a parameter, which can have many applications, and I will show one
+situation here.
+
+Consider the calculation of molecular properties which happen to be a
+mere summation over atomic properties, such as the total charge, or
+the molecular weight. Both these calculations require an iteration over all
+atoms. If we need those properties at the same time, we can combine the
+calcultion into one iteration. However, for the purpose of this section,
+we will not combine the two calculations to use one iteration, but use
+closures instead.
+
+Therefore, we have two slices of code which share a large amount of
+source code statements:
+
+<code>CalculateTotalCharge</code>
+
+and
+
+<code>CalculateMolecularWeight</code>
+
+In both cases we want to apply a custom bit of code to all atoms, while
+the iteration over the atoms is identical. Groovy allows
+us to share the common code, by defining a \code{forAllAtoms} function
+into which we inject a code block using closures:
+
+<code>GroovyClosureForAllAtoms</code>
+
+which gives the output:
+
+<out>GroovyClosureForAllAtoms</out>
+
+This language feature makes it possible to write more compact code. 
+
+### Grabbing dependencies
+
+The introduction of this section showed how to use the environment variable
+`CLASSPATH` to define where to find dependencies. Groovy has, however,
+a different way of doing this too, allowing it to `grab` its dependencies.
+
+```groovy
+@Grab(group='org.openscience.cdk', module='cdk-io', version='<version/>')
+@Grab(group='org.openscience.cdk', module='cdk-silent', version='<version/>')
+```
+
 ## Python
 
 Using [ScyJava](https://github.com/scijava/scyjava), the CDK can also be used in Python, for example, in a [Jupyter notebook
