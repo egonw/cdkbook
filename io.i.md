@@ -322,14 +322,22 @@ Telling us the number of (non-hydrogen) atoms in aspirin:
 
 Writing of SMILES goes in a similar way. But I do like to point out that by default
 the <class>SMILESGenerator</class> does not use the convention to use lower case element
-symbols for aromatic atoms. To trigger that, you should use the
-`setUseAromaticityFlag` method:
+symbols for aromatic atoms. 
 
 <code>WriteSMILES</code>
 
 showing the different output without and with that option set:
 
 <out>WriteSMILES</out>
+
+The `generic` format does not output stereo information. For <topic>isomeric SMILES</topic> we need to use
+a different approach:
+
+<code>WriteIsomericSMILES</code>
+
+showing the difference in output between `.generic()` and `.isomeric`:
+
+<out>WriteIsomericSMILES</out>
 
 Of course, this does require that aromaticity has been perceived, as explained
 in Section <xref>aromaticity</xref>.
