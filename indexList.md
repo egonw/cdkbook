@@ -29,6 +29,7 @@ chiral atom [stereo](stereo.md#tp6)<br />
 CIFReader [ioclasseslist](ioclasseslist.md#tp10)<br />
 classification methods [cheminfo](cheminfo.md#tp35)<br />
 clockwise [stereo](stereo.md#tp7)<br />
+closures [writingApps](writingApps.md#tp4)<br />
 CMLReader [ioclasseslist](ioclasseslist.md#tp6)<br />
 CMLWriter [ioclasseslist](ioclasseslist.md#tp7)<br />
 collinearity [cheminfo](cheminfo.md#tp33)<br />

@@ -1,7 +1,7 @@
 # WriteSMILES.groovy
 **Source code:**
 ```groovy
-@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.7.1')
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.8')
 
 import org.openscience.cdk.smiles.SmilesGenerator;
 import org.openscience.cdk.interfaces.*;

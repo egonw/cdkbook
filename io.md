@@ -112,7 +112,7 @@ public class SMILESFormatMatcher
       return new MatchResult(
         true,
         (IChemFormat)SMILESFormat.getInstance(),
-        new Integer(1)
+        Integer.valueOf(1)
       );
     }
     return new MatchResult(false, null, Integer.MAX_VALUE);
@@ -427,7 +427,7 @@ location: 6, 31-33: invalid symbol: D
 location: 7, 31-33: invalid symbol: T
 ```
 
-Because of an issue in version 2.7.1 of the CDK, the above does not show any warnings.
+Because of an issue in version 2.8 of the CDK, the above does not show any warnings.
 This has been fixed in CDK 2.3, see [commit 547b028e17656f54a080a885a166377320b3a8ad](https://github.com/cdk/cdk/commit/547b028e17656f54a080a885a166377320b3a8ad).
 
 <a name="sec:gzip"></a>

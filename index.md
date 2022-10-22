@@ -20,12 +20,12 @@
   "keywords":"cheminformatics, chemoinformatics, java, Groovy, Chemistry Development Kit, CDK",
   "license":"CC BY-SA 4.0",
   "url": "https://egonw.github.io/cdkbook/",
-  "version":"2.7.1-2"
+  "version":"2.8-0"
 }
 </script>
 
 
-Edition 2.7.1-2
+Edition 2.8-0
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
@@ -50,6 +50,8 @@ book, please give the [GitHub repository](https://github.com/egonw/cdkbook/) a s
 2. [Writing CDK Applications](writingApps.md) <br />
 2.1. [A (Very) Basic Java Application](writingApps.md#a-(very)-basic-java-application) <br />
 2.2. [Groovy](writingApps.md#groovy) <br />
+2.2.1. [Closures](writingApps.md#closures) <br />
+2.2.2. [Grabbing dependencies](writingApps.md#grabbing-dependencies) <br />
 2.3. [Python](writingApps.md#python) <br />
 2.4. [Other environments](writingApps.md#other-environments) <br />
 2.4.1. [Bioclipse](writingApps.md#bioclipse) <br />

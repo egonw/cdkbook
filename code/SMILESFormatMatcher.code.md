@@ -44,7 +44,7 @@ public class SMILESFormatMatcher
       return new MatchResult(
         true,
         (IChemFormat)SMILESFormat.getInstance(),
-        new Integer(1)
+        Integer.valueOf(1)
       );
     }
     return new MatchResult(false, null, Integer.MAX_VALUE);

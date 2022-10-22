@@ -1,7 +1,7 @@
 # TPSACalc.groovy
 **Source code:**
 ```groovy
-@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.7.1')
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.8')
 
 import org.openscience.cdk.*;
 import org.openscience.cdk.templates.*;
@@ -30,7 +30,7 @@ value = result.getValue()
 **Output:**
 ```plain
 Specification: org.openscience.cdk.qsar.Descript...
-  orSpecification@454bcbbf
+  orSpecification@241fc278
 Parameters names: [checkAromaticity]
 Parameters values: [false]
 Exception: null

@@ -287,6 +287,22 @@ This reader supports these data objects:
 <tr><td>AtomContainer</td><td>true</td></tr>
 <tr><td>Crystal</td><td>true</td></tr>
 </table>
+This reader has these IO settings:
+<table>
+<tr><td><b>Name</b></td><td><b>Desc</b></td></tr>
+<tr>
+  <td>AddStereo0d</td>
+  <td>Allow stereo created from parity value when no coordinates [Default: true]</td></tr>
+<tr>
+  <td>AddStereoElements</td>
+  <td>Detect and create IStereoElements for the input. [Default: true]</td></tr>
+<tr>
+  <td>InterpretHydrogenIsotopes</td>
+  <td>Should D and T be interpreted as hydrogen isotopes? [Default: true]</td></tr>
+<tr>
+  <td>ForceReadAs3DCoordinates</td>
+  <td>Should coordinates always be read as 3D? [Default: false]</td></tr>
+</table>
 ## MDL Molfile
 **Preferred Extension**: mol
 **MIME type**: chemical/x-mdl-molfile
@@ -322,14 +338,17 @@ This reader has these IO settings:
 <table>
 <tr><td><b>Name</b></td><td><b>Desc</b></td></tr>
 <tr>
-  <td>ForceReadAs3DCoordinates</td>
-  <td>Should coordinates always be read as 3D? [Default: false]</td></tr>
+  <td>AddStereo0d</td>
+  <td>Allow stereo created from parity value when no coordinates [Default: true]</td></tr>
 <tr>
   <td>AddStereoElements</td>
   <td>Detect and create IStereoElements for the input. [Default: true]</td></tr>
 <tr>
   <td>InterpretHydrogenIsotopes</td>
   <td>Should D and T be interpreted as hydrogen isotopes? [Default: true]</td></tr>
+<tr>
+  <td>ForceReadAs3DCoordinates</td>
+  <td>Should coordinates always be read as 3D? [Default: false]</td></tr>
 </table>
 ### <a name="tp24">[`MDLV2000Writer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/MDLV2000Writer.html)</a>
 This writer supports these data objects:
@@ -415,14 +434,17 @@ This reader has these IO settings:
 <table>
 <tr><td><b>Name</b></td><td><b>Desc</b></td></tr>
 <tr>
-  <td>ForceReadAs3DCoordinates</td>
-  <td>Should coordinates always be read as 3D? [Default: false]</td></tr>
+  <td>AddStereo0d</td>
+  <td>Allow stereo created from parity value when no coordinates [Default: true]</td></tr>
 <tr>
   <td>AddStereoElements</td>
   <td>Detect and create IStereoElements for the input. [Default: true]</td></tr>
 <tr>
   <td>InterpretHydrogenIsotopes</td>
   <td>Should D and T be interpreted as hydrogen isotopes? [Default: true]</td></tr>
+<tr>
+  <td>ForceReadAs3DCoordinates</td>
+  <td>Should coordinates always be read as 3D? [Default: false]</td></tr>
 </table>
 ### <a name="tp29">`SDFWriter`</a>
 This writer supports these data objects:
