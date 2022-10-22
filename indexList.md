@@ -94,6 +94,7 @@ InChI atom numbers [graph](graph.md#tp17)<br />
 InChI [graph](graph.md#tp16) [inchi](inchi.md#tp1)<br />
 INChIPlainTextReader [ioclasseslist](ioclasseslist.md#tp19)<br />
 INChIReader [ioclasseslist](ioclasseslist.md#tp20)<br />
+isomeric SMILES [io](io.md#tp13)<br />
 IUPAC name [cheminfo](cheminfo.md#tp5)<br />
 Java application [writingApps](writingApps.md#tp1)<br />
 javac [writingApps](writingApps.md#tp2)<br />

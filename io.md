@@ -774,8 +774,7 @@ Aspirin has 13 atoms.
 
 Writing of SMILES goes in a similar way. But I do like to point out that by default
 the `SMILESGenerator` does not use the convention to use lower case element
-symbols for aromatic atoms. To trigger that, you should use the
-`setUseAromaticityFlag` method:
+symbols for aromatic atoms. 
 
 **<a name="script:WriteSMILES">Script 11.20</a>** [code/WriteSMILES.groovy](code/WriteSMILES.code.md)
 ```groovy
@@ -793,6 +792,28 @@ showing the different output without and with that option set:
 ```plain
 Ph-NH2 -> C1(=CC=CC=C1)N
 Ph-NH2 -> c1(ccccc1)N
+```
+
+The `generic` format does not output stereo information. For <a name="tp13">isomeric SMILES</a> we need to use
+a different approach:
+
+**Script** [code/WriteIsomericSMILES.groovy](code/WriteIsomericSMILES.code.md)
+```groovy
+smiles = "F[C@@H](Cl)(Br)"
+mol = smilesParser.parseSmiles(smiles)
+generator = SmilesGenerator.generic()
+smiles = generator.createSMILES(mol)
+println "Generic SMILES: $smiles"
+generator = SmilesGenerator.isomeric()
+smiles = generator.createSMILES(mol)
+println "Isomeric SMILES: $smiles"
+```
+
+showing the difference in output between `.generic()` and `.isomeric`:
+
+```plain
+Generic SMILES: FC(Cl)Br
+Isomeric SMILES: F[C@@H](Cl)Br
 ```
 
 Of course, this does require that aromaticity has been perceived, as explained
