@@ -38,7 +38,7 @@ License: CC-BY-SA 4.0 International
 
 ## Warning
 
-This book is being opensourced. This involves transforming the LaTeX source into Markdown,
+This book is being opensourced [<cite>Q115942292</cite>]. This involves transforming the LaTeX source into Markdown,
 and updating all scripts to ensure all the automation works well. I have made good
 steps forward, but it will take some time for things to iron out. If you find issue,
 please report them [here](https://github.com/egonw/cdkbook/issues). If you like this
@@ -63,3 +63,7 @@ C.4 [Bond Descriptors](appmoldescs.i.md#bond-descriptors) <br />
 C.5 [Protein Descriptors](appmoldescs.i.md#protein-descriptors) <br />
 [Appendix D](appfileformats.i.md) <br />
 D.1 [Readers and Writers](appfileformats.i.md#the-readers-and-writers) <br />
+
+## References
+
+<references/>
