@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/163004968.svg)](https://zenodo.org/badge/latestdoi/163004968)
+
 # Groovy Cheminformatics with the Chemistry Development Kit
 
 [Edition 2.8-0](https://egonw.github.io/cdkbook/)
