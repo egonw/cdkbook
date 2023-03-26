@@ -1,10 +1,10 @@
-// Copyright (c) 2011-2020  Egon Willighagen <egon.willighagen@gmail.com>
+// Copyright (c) 2011-2023  Egon Willighagen <egon.willighagen@gmail.com>
 //
 // GPL v3
 
 // checks
 
-maxLineLength = 50
+maxLineLength = 80
 
 System.in.eachLine { line ->
   while (line.length() > maxLineLength) {
