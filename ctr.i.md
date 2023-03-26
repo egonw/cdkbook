@@ -1,6 +1,6 @@
 # Chemistry Toolkit Rosetta
 
-The [Chemistry Toolkit Rosetta](http://ctr.wikia.com/) (CTR) wiki was set up some time ago by Andrew Dalke to
+The [Chemistry Toolkit Rosetta](https://ctr.fandom.com/wiki/Chemistry_Toolkit_Rosetta_Wiki) (CTR) wiki was set up some time ago by Andrew Dalke to
 demonstrate how certain basic cheminformatics tasks are done in the various cheminformatics toolkits around.
 This chapter shows how CTR tasks can be solved with the CDK in Groovy. Each section discusses one CTR task,
 and show one possible solution.
@@ -40,3 +40,11 @@ The solution can then look like, resulting roughly in Figure 20.1 for the SMILES
 caffeine in this example:
 
 <code>CTR2</code>
+
+<section label="ctr4" level="##">Working with SD tag data</section>
+
+This task shows how toolkits work with SD file tags. The goal is to read various tags, process
+them, and then create a new tag. This example shows how the `IteratingSDFReader` and
+`SDFWriter` classes can be used for this.
+
+<code>CTR4</code>

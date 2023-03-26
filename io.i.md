@@ -376,7 +376,7 @@ The result of the above post-processing is:
 ### SDF files with properties
 
 SDF files are quite similar to MDL files but can have an arbitrary number of
-chemical structures and have properties. An example file from
+chemical structures and have properties (see also Section <xref>ctr4</xref>). An example file from
 [ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3183843/)
 [<cite>Q58608307</cite>]:
 
@@ -386,7 +386,7 @@ We can read this file and extract the property with the following approach:
 
 <code>SDFWithProperties</code>
 
-This extracts the `chembl_id` property::
+This extracts the `chembl_id` property:
 
 <out>SDFWithProperties</out>
 
