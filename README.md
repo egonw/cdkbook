@@ -1,11 +1,13 @@
+[![DOI](https://zenodo.org/badge/163004968.svg)](https://zenodo.org/badge/latestdoi/163004968)
+
 # Groovy Cheminformatics with the Chemistry Development Kit
 
-[Edition 2.8-0](https://egonw.github.io/cdkbook/)
+[Edition 2.8-1](https://egonw.github.io/cdkbook/)
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
 
-© E.L. Willighagen 2011-2022
+© E.L. Willighagen 2011-2023
 
 License: CC-BY-SA 4.0 International
 

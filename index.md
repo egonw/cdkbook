@@ -20,17 +20,17 @@
   "keywords":"cheminformatics, chemoinformatics, java, Groovy, Chemistry Development Kit, CDK",
   "license":"CC BY-SA 4.0",
   "url": "https://egonw.github.io/cdkbook/",
-  "version":"2.8-0"
+  "version":"2.8-1"
 }
 </script>
 
 
-Edition 2.8-0
+Edition 2.8-1
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
 
-© E.L. Willighagen 2011-2022
+© E.L. Willighagen 2011-2023
 
 License: CC-BY-SA 4.0 International
 
@@ -127,6 +127,7 @@ book, please give the [GitHub repository](https://github.com/egonw/cdkbook/) a s
 12.8.1. [SMILES](io.md#smiles) <br />
 12.9. [Recipes](io.md#recipes) <br />
 12.9.1. [MDL molfile (V2000)](io.md#mdl-molfile-(v2000)) <br />
+12.9.2. [SDF files with properties](io.md#sdf-files-with-properties) <br />
 13. [Atom types](atomtype.md) <br />
 13.1. [The CDK atom type model](atomtype.md#the-cdk-atom-type-model) <br />
 13.1.1. [Hybridization Types](atomtype.md#hybridization-types) <br />
@@ -184,6 +185,7 @@ book, please give the [GitHub repository](https://github.com/egonw/cdkbook/) a s
 20. [Chemistry Toolkit Rosetta](ctr.md) <br />
 20.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
 20.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
+20.3. [Working with SD tag data](ctr.md#working-with-sd-tag-data) <br />
 21. [Migration](migration.md) <br />
 21.1. [CDK 2.0 to 2.3](migration.md#cdk-20-to-23) <br />
 21.2. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />

@@ -225,45 +225,35 @@ which lists the properties for the earlier downloaded domoic acid:
 ```plain
 PubChem CID=5282253
 Compound Complexity=510
-Fingerprint (SubStructure Keys)=00000371E0723800...
-  0000000000000000000000000001600000000000000000...
-  00000000000000001E00100800000D28C18004020802C0...
-  0200880220D208000000002000000808818800080A0012...
-  00812004400004D000988003BC7F020E80000000000000...
-  000000000000000000000000000000
-IUPAC Name (Allowed)=(2S,3S,4S)-3-(carboxymethyl...
-  )-4-[(1Z,3E,5R)-5-carboxy-1-methyl-hexa-1,3-di...
-  enyl]pyrrolidine-2-carboxylic acid
-IUPAC Name (CAS-like Style)=(2S,3S,4S)-4-[(2Z,4E...
-  ,6R)-6-carboxyhepta-2,4-dien-2-yl]-3-(carboxym...
-  ethyl)-2-pyrrolidinecarboxylic acid
-IUPAC Name (Markup)=(2<I>S</I>,3<I>S</I>,4<I>S</...
-  I>)-4-[(2<I>Z</I>,4<I>E</I>,6<I>R</I>)-6-carbo...
-  xyhepta-2,4-dien-2-yl]-3-(carboxymethyl)pyrrol...
-  idine-2-carboxylic acid
-IUPAC Name (Preferred)=(2S,3S,4S)-4-[(2Z,4E,6R)-...
-  6-carboxyhepta-2,4-dien-2-yl]-3-(carboxymethyl...
-  )pyrrolidine-2-carboxylic acid
-IUPAC Name (Systematic)=(2S,3S,4S)-3-(2-hydroxy-...
-  2-oxoethyl)-4-[(2Z,4E,6R)-6-methyl-7-oxidanyl-...
-  7-oxidanylidene-hepta-2,4-dien-2-yl]pyrrolidin...
-  e-2-carboxylic acid
-IUPAC Name (Traditional)=(2S,3S,4S)-3-(carboxyme...
-  thyl)-4-[(1Z,3E,5R)-5-carboxy-1-methyl-hexa-1,...
-  3-dienyl]proline
-InChI (Standard)=InChI=1S/C15H21NO6/c1-8(4-3-5-9...
-  (2)14(19)20)11-7-16-13(15(21)22)10(11)6-12(17)...
-  18/h3-5,9-11,13,16H,6-7H2,1-2H3,(H,17,18)(H,19...
-  ,20)(H,21,22)/b5-3+,8-4-/t9-,10+,11-,13+/m1/s1
+Fingerprint (SubStructure Keys)=00000371E0723800000000000000000000000000000160...
+  000000000000000000000000000000001E00100800000D28C18004020802C00200880220D208...
+  000000002000000808818800080A001200812004400004D000988003BC7F020E800000000000...
+  00000000000000000000000000000000
+IUPAC Name (Allowed)=(2S,3S,4S)-3-(carboxymethyl)-4-[(1Z,3E,5R)-5-carboxy-1-me...
+  thyl-hexa-1,3-dienyl]pyrrolidine-2-carboxylic acid
+IUPAC Name (CAS-like Style)=(2S,3S,4S)-4-[(2Z,4E,6R)-6-carboxyhepta-2,4-dien-2...
+  -yl]-3-(carboxymethyl)-2-pyrrolidinecarboxylic acid
+IUPAC Name (Markup)=(2<I>S</I>,3<I>S</I>,4<I>S</I>)-4-[(2<I>Z</I>,4<I>E</I>,6<...
+  I>R</I>)-6-carboxyhepta-2,4-dien-2-yl]-3-(carboxymethyl)pyrrolidine-2-carbox...
+  ylic acid
+IUPAC Name (Preferred)=(2S,3S,4S)-4-[(2Z,4E,6R)-6-carboxyhepta-2,4-dien-2-yl]-...
+  3-(carboxymethyl)pyrrolidine-2-carboxylic acid
+IUPAC Name (Systematic)=(2S,3S,4S)-3-(2-hydroxy-2-oxoethyl)-4-[(2Z,4E,6R)-6-me...
+  thyl-7-oxidanyl-7-oxidanylidene-hepta-2,4-dien-2-yl]pyrrolidine-2-carboxylic...
+   acid
+IUPAC Name (Traditional)=(2S,3S,4S)-3-(carboxymethyl)-4-[(1Z,3E,5R)-5-carboxy-...
+  1-methyl-hexa-1,3-dienyl]proline
+InChI (Standard)=InChI=1S/C15H21NO6/c1-8(4-3-5-9(2)14(19)20)11-7-16-13(15(21)2...
+  2)10(11)6-12(17)18/h3-5,9-11,13,16H,6-7H2,1-2H3,(H,17,18)(H,19,20)(H,21,22)/...
+  b5-3+,8-4-/t9-,10+,11-,13+/m1/s1
 InChIKey (Standard)=VZFRNCSOCOPNDB-AOKDLOFSSA-N
 Log P (XLogP3-AA)=-1.3
 Mass (Exact)=311.13688739
 Molecular Formula=C15H21NO6
 Molecular Weight=311.33
-SMILES (Canonical)=CC(C=CC=C(C)C1CNC(C1CC(=O)O)C...
-  (=O)O)C(=O)O
-SMILES (Isomeric)=C[C@H](/C=C/C=C(/C)\textbacksl...
-  ash[C@H]1CN[C@@H]([C@H]1CC(=O)O)C(=O)O)C(=O)O
+SMILES (Canonical)=CC(C=CC=C(C)C1CNC(C1CC(=O)O)C(=O)O)C(=O)O
+SMILES (Isomeric)=C[C@H](/C=C/C=C(/C)\textbackslash[C@H]1CN[C@@H]([C@H]1CC(=O)...
+  O)C(=O)O)C(=O)O
 Topological (Polar Surface Area)=124
 Weight (MonoIsotopic)=311.13688739
 ```
@@ -585,8 +575,7 @@ Option: Should the calculation be open shell?
 Current value: false
 [Comment]
 Option: What comment should be put in the file?
-Current value: Created with CDK (http://cdk.sf.n...
-  et/)
+Current value: Created with CDK (http://cdk.sf.net/)
 [Memory]
 Option: How much memory do you want to use?
 Current value: unset
@@ -594,8 +583,7 @@ Current value: unset
 Option: What kind of job do you want to perform?
 Current value: energy calculation
 [ProcessorCount]
-Option: How many processors should be used by Ga...
-  ussian?
+Option: How many processors should be used by Gaussian?
 Current value: 1
 ```
 
@@ -681,10 +669,8 @@ This results in this source code:
 
 ```plain
 {
-  IChemObjectBuilder builder = DefaultChemObject...
-  Builder.getInstance();
-  IAtomContainer mol = builder.newInstance(IAtom...
-  Container.class);
+  IChemObjectBuilder builder = DefaultChemObjectBuilder.getInstance();
+  IAtomContainer mol = builder.newInstance(IAtomContainer.class);
   IAtom a1 = builder.newInstance(IAtom.class,"P");
   a1.setFormalCharge(0);
   mol.addAtom(a1);
@@ -712,29 +698,21 @@ This results in this source code:
   IAtom a9 = builder.newInstance(IAtom.class,"H");
   a9.setFormalCharge(0);
   mol.addAtom(a9);
-  IBond b1 = builder.newInstance(IBond.class,a1,...
-   a2, IBond.Order.SINGLE);
+  IBond b1 = builder.newInstance(IBond.class,a1, a2, IBond.Order.SINGLE);
   mol.addBond(b1);
-  IBond b2 = builder.newInstance(IBond.class,a1,...
-   a3, IBond.Order.DOUBLE);
+  IBond b2 = builder.newInstance(IBond.class,a1, a3, IBond.Order.DOUBLE);
   mol.addBond(b2);
-  IBond b3 = builder.newInstance(IBond.class,a1,...
-   a4, IBond.Order.SINGLE);
+  IBond b3 = builder.newInstance(IBond.class,a1, a4, IBond.Order.SINGLE);
   mol.addBond(b3);
-  IBond b4 = builder.newInstance(IBond.class,a1,...
-   a5, IBond.Order.SINGLE);
+  IBond b4 = builder.newInstance(IBond.class,a1, a5, IBond.Order.SINGLE);
   mol.addBond(b4);
-  IBond b5 = builder.newInstance(IBond.class,a2,...
-   a9, IBond.Order.SINGLE);
+  IBond b5 = builder.newInstance(IBond.class,a2, a9, IBond.Order.SINGLE);
   mol.addBond(b5);
-  IBond b6 = builder.newInstance(IBond.class,a4,...
-   a6, IBond.Order.SINGLE);
+  IBond b6 = builder.newInstance(IBond.class,a4, a6, IBond.Order.SINGLE);
   mol.addBond(b6);
-  IBond b7 = builder.newInstance(IBond.class,a4,...
-   a7, IBond.Order.SINGLE);
+  IBond b7 = builder.newInstance(IBond.class,a4, a7, IBond.Order.SINGLE);
   mol.addBond(b7);
-  IBond b8 = builder.newInstance(IBond.class,a4,...
-   a8, IBond.Order.SINGLE);
+  IBond b8 = builder.newInstance(IBond.class,a4, a8, IBond.Order.SINGLE);
   mol.addBond(b8);
 }
 
@@ -909,6 +887,65 @@ Single bonds: 6
 Double bonds: 5
 ```
 
+### SDF files with properties
+
+SDF files are quite similar to MDL files but can have an arbitrary number of
+chemical structures and have properties (see also Section [20.3](ctr.md#sec:ctr4)). An example file from
+[ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3183843/)
+[<a href="#citeref7">7</a>]:
+
+```plain
+
+     RDKit          2D
+
+ 12 12  0  0  0  0  0  0  0  0999 V2000
+    0.0000   -4.1250    0.0000 Br  0  0  0  0  0  0  0  0  0  0  0  0
+    1.4314    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    0.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    0.7136   -1.2334    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.7136   -0.4084    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.7136   -2.8834    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.0000   -1.6500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.4314   -1.6500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.0000   -2.4750    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.4314   -2.4750    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.7136   -3.7084    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.1450   -0.4084    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1 11  1  0
+  2  5  1  0
+  2 12  1  0
+  3  5  2  0
+  4  5  1  0
+  4  7  2  0
+  4  8  1  0
+  6  9  2  0
+  6 10  1  0
+  6 11  1  0
+  7  9  1  0
+  8 10  2  0
+M  END
+> <chembl_id>
+CHEMBL3183843
+
+> <chembl_pref_name>
+None
+```
+
+We can read this file and extract the property with the following approach:
+
+**Script** [code/SDFWithProperties.groovy](code/SDFWithProperties.code.md)
+```groovy
+while (iterator.hasNext()) {
+  mol = iterator.next()
+  println mol.getProperty("chembl_id")
+}
+```
+
+This extracts the `chembl_id` property:
+
+```plain
+CHEMBL3183843
+```
 
 ## References
 
@@ -918,4 +955,5 @@ Double bonds: 5
 4. <a name="citeref4"></a>Wiswesser WJ. How the WLN began in 1949 and how it might be in 1999. JCICS. 1982 May 1;22(2):88–93.  doi:[10.1021/CI00034A005](https://doi.org/10.1021/CI00034A005) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI00034A005))
 5. <a name="citeref5"></a>Homer RW, Swanson J, Jilek RJ, Hurst T, Clark RD. SYBYL line notation (SLN): a single notation to represent chemical structures, queries, reactions, and virtual libraries. JCIM. 2008 Dec 1;48(12):2294–307.  doi:[10.1021/CI7004687](https://doi.org/10.1021/CI7004687) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI7004687))
 6. <a name="citeref6"></a>Weininger D. SMILES, a chemical language and information system. 1. Introduction to methodology and encoding rules. JCICS [Internet]. 1988 Feb 1;28(1):31–6. Available from: http://organica1.org/seminario/weininger88.pdf doi:[10.1021/CI00057A005](https://doi.org/10.1021/CI00057A005) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI00057A005))
+7. <a name="citeref7"></a>Mendez D, Gaulton A, Bento AP, Chambers J, De Veij M, Félix E, et al. ChEMBL: towards direct deposition of bioassay data. NAR. 2018 Nov 6;47(D1):D930–40.  doi:[10.1093/NAR/GKY1075](https://doi.org/10.1093/NAR/GKY1075) ([Scholia](https://scholia.toolforge.org/doi/10.1093/NAR/GKY1075))
 

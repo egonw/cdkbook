@@ -1,6 +1,6 @@
 # Chemistry Toolkit Rosetta
 
-The [Chemistry Toolkit Rosetta](http://ctr.wikia.com/) (CTR) wiki was set up some time ago by Andrew Dalke to
+The [Chemistry Toolkit Rosetta](https://ctr.fandom.com/wiki/Chemistry_Toolkit_Rosetta_Wiki) (CTR) wiki was set up some time ago by Andrew Dalke to
 demonstrate how certain basic cheminformatics tasks are done in the various cheminformatics toolkits around.
 This chapter shows how CTR tasks can be solved with the CDK in Groovy. Each section discusses one CTR task,
 and show one possible solution.
@@ -102,4 +102,56 @@ ImageIO.write(
   (RenderedImage)image, "PNG",
   new File("CTR2.png")
 );
+```
+
+<a name="sec:ctr4"></a>
+## Working with SD tag data
+
+This task shows how toolkits work with SD file tags. The goal is to read various tags, process
+them, and then create a new tag. This example shows how the `IteratingSDFReader` and
+`SDFWriter` classes can be used for this.
+
+**Script** [code/CTR4.groovy](code/CTR4.code.md)
+```groovy
+iterator = new IteratingSDFReader(
+  new GZIPInputStream(
+    new File("ctr/benzodiazepine.sdf.gz")
+      .newInputStream()
+  ),
+  SilentChemObjectBuilder.getInstance()
+)
+writer = new SDFWriter(
+  new FileWriter("ctr/ctr4.sdf")
+)
+while (iterator.hasNext()) {
+  mol = iterator.next()
+  if (mol.getProperty("PUBCHEM_XLOGP3") == null) {
+    mol.setProperty("RULE5", "no logP")
+  } else {
+    ruleCount = 0;
+    if (Integer.valueOf(
+          mol.getProperty(
+            "PUBCHEM_CACTVS_HBOND_ACCEPTOR"
+          )
+        ) <= 10) ruleCount++
+    if (Integer.valueOf(
+          mol.getProperty(
+            "PUBCHEM_CACTVS_HBOND_DONOR"
+          )
+       ) <= 5) ruleCount++
+    if (Double.valueOf(
+          mol.getProperty(
+            "PUBCHEM_MOLECULAR_WEIGHT"
+          )
+       ) <= 500.0) ruleCount++
+    if (Double.valueOf(
+          mol.getProperty(
+            "PUBCHEM_XLOGP3"
+          )
+        ) <= 5.0) ruleCount++
+    mol.setProperty("RULE5", ruleCount >= 3  ? "1" : "0")
+    writer.write(mol)
+  }
+}
+writer.close()
 ```

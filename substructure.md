@@ -144,8 +144,7 @@ The object returned by the `getBitFingerprint` method is the `IBitFingerprint`
 which we can convert into a Java `BitSet` with the `asBitSet` method:
 	
 ```plain
-ethanol: {81, 108, 113, 138, 152, 154, 156, 159,...
-   163}
+ethanol: {81, 108, 113, 138, 152, 154, 156, 159, 163}
 ```
 
 ### ECFP and FCFP Fingerprints

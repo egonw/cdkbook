@@ -76,10 +76,9 @@ println "Identifier: " + specs.implementationIdentifier
 This code provides us with these details:
 
 ```plain
-Title: org.openscience.cdk.qsar.descriptors.mole...
-  cular.TPSADescriptor
-Reference: http://www.blueobelisk.org/ontologies...
-  /chemoinformatics-algorithms/#tpsa
+Title: org.openscience.cdk.qsar.descriptors.molecular.TPSADescriptor
+Reference: http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#...
+  tpsa
 Vendor: The Chemistry Development Kit
 Identifier: 2.8
 ```
@@ -208,8 +207,7 @@ value = result.getValue()
 The output shows us that quite some metadata is preserved:
 
 ```plain
-Specification: org.openscience.cdk.qsar.Descript...
-  orSpecification@241fc278
+Specification: org.openscience.cdk.qsar.DescriptorSpecification@241fc278
 Parameters names: [checkAromaticity]
 Parameters values: [false]
 Exception: null
@@ -237,8 +235,7 @@ in the above script. Therefore, we get an exception:
 
 ```plain
 Exception:
-org.openscience.cdk.exception.CDKException: Mole...
-  cule must have 3D coordinates
+org.openscience.cdk.exception.CDKException: Molecule must have 3D coordinates
 ```
 
 ## IDescriptorResult
