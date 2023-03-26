@@ -29,8 +29,7 @@ value = result.getValue()
 ```
 **Output:**
 ```plain
-Specification: org.openscience.cdk.qsar.Descript...
-  orSpecification@241fc278
+Specification: org.openscience.cdk.qsar.DescriptorSpecification@241fc278
 Parameters names: [checkAromaticity]
 Parameters values: [false]
 Exception: null

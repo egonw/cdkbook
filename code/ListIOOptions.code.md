@@ -21,8 +21,7 @@ Option: Should the calculation be open shell?
 Current value: false
 [Comment]
 Option: What comment should be put in the file?
-Current value: Created with CDK (http://cdk.sf.n...
-  et/)
+Current value: Created with CDK (http://cdk.sf.net/)
 [Memory]
 Option: How much memory do you want to use?
 Current value: unset
@@ -30,7 +29,6 @@ Current value: unset
 Option: What kind of job do you want to perform?
 Current value: energy calculation
 [ProcessorCount]
-Option: How many processors should be used by Ga...
-  ussian?
+Option: How many processors should be used by Gaussian?
 Current value: 1
 ```

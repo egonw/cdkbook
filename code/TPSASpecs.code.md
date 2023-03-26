@@ -14,10 +14,9 @@ println "Identifier: " + specs.implementationIdentifier
 ```
 **Output:**
 ```plain
-Title: org.openscience.cdk.qsar.descriptors.mole...
-  cular.TPSADescriptor
-Reference: http://www.blueobelisk.org/ontologies...
-  /chemoinformatics-algorithms/#tpsa
+Title: org.openscience.cdk.qsar.descriptors.molecular.TPSADescriptor
+Reference: http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#...
+  tpsa
 Vendor: The Chemistry Development Kit
 Identifier: 2.8
 ```

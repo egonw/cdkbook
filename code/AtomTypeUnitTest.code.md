@@ -42,10 +42,8 @@ println stringWriter.toString();
 **Output:**
 ```plain
 {
-  IChemObjectBuilder builder = DefaultChemObject...
-  Builder.getInstance();
-  IAtomContainer mol = builder.newInstance(IAtom...
-  Container.class);
+  IChemObjectBuilder builder = DefaultChemObjectBuilder.getInstance();
+  IAtomContainer mol = builder.newInstance(IAtomContainer.class);
   IAtom a1 = builder.newInstance(IAtom.class,"P");
   a1.setFormalCharge(0);
   mol.addAtom(a1);
@@ -73,29 +71,21 @@ println stringWriter.toString();
   IAtom a9 = builder.newInstance(IAtom.class,"H");
   a9.setFormalCharge(0);
   mol.addAtom(a9);
-  IBond b1 = builder.newInstance(IBond.class,a1,...
-   a2, IBond.Order.SINGLE);
+  IBond b1 = builder.newInstance(IBond.class,a1, a2, IBond.Order.SINGLE);
   mol.addBond(b1);
-  IBond b2 = builder.newInstance(IBond.class,a1,...
-   a3, IBond.Order.DOUBLE);
+  IBond b2 = builder.newInstance(IBond.class,a1, a3, IBond.Order.DOUBLE);
   mol.addBond(b2);
-  IBond b3 = builder.newInstance(IBond.class,a1,...
-   a4, IBond.Order.SINGLE);
+  IBond b3 = builder.newInstance(IBond.class,a1, a4, IBond.Order.SINGLE);
   mol.addBond(b3);
-  IBond b4 = builder.newInstance(IBond.class,a1,...
-   a5, IBond.Order.SINGLE);
+  IBond b4 = builder.newInstance(IBond.class,a1, a5, IBond.Order.SINGLE);
   mol.addBond(b4);
-  IBond b5 = builder.newInstance(IBond.class,a2,...
-   a9, IBond.Order.SINGLE);
+  IBond b5 = builder.newInstance(IBond.class,a2, a9, IBond.Order.SINGLE);
   mol.addBond(b5);
-  IBond b6 = builder.newInstance(IBond.class,a4,...
-   a6, IBond.Order.SINGLE);
+  IBond b6 = builder.newInstance(IBond.class,a4, a6, IBond.Order.SINGLE);
   mol.addBond(b6);
-  IBond b7 = builder.newInstance(IBond.class,a4,...
-   a7, IBond.Order.SINGLE);
+  IBond b7 = builder.newInstance(IBond.class,a4, a7, IBond.Order.SINGLE);
   mol.addBond(b7);
-  IBond b8 = builder.newInstance(IBond.class,a4,...
-   a8, IBond.Order.SINGLE);
+  IBond b8 = builder.newInstance(IBond.class,a4, a8, IBond.Order.SINGLE);
   mol.addBond(b8);
 }
 

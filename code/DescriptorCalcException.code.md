@@ -26,6 +26,5 @@ println "Exception:\n" + exception
 **Output:**
 ```plain
 Exception:
-org.openscience.cdk.exception.CDKException: Mole...
-  cule must have 3D coordinates
+org.openscience.cdk.exception.CDKException: Molecule must have 3D coordinates
 ```

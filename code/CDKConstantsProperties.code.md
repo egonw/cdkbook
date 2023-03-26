@@ -29,8 +29,7 @@ println "NAMES: " +
 **Output:**
 ```plain
 Title: aspirin
-InChI: InChI=1/C9H8O4/c1-6(10)13-8-5-3-2-4-7(8)9...
-  (11)12/h2-5H,1H3,(H,11,12)
+InChI: InChI=1/C9H8O4/c1-6(10)13-8-5-3-2-4-7(8)9(11)12/h2-5H,1H3,(H,11,12)
 SMILES: CC(=O)Oc1ccccc1C(=O)O
 CAS registry number: 50-78-2
 COMMENT: Against headaches.
