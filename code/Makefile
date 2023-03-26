@@ -40,19 +40,19 @@ allScriptsCompiled: ${CODEFILES}
 	@groovy -classpath ${CLASSPATH} preprocess $<
 
 %.out: %.class
-	@echo "doing $@..."
+	@echo "doing $@ ..."
 	@java ${OPTIONS} -classpath ${CLASSPATH} `echo "$<" | sed -e "s/.class//"` > $@
 	@groovy postprocess $<
 
 %.out: %.groovyl md.*.template
-	@echo "doing $@..."
+	@echo "doing $@ ..."
 	@groovy -cp ${CLASSPATH} ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy > $@
 	@if [ -e *.png ]; then mogrify -trim *.png ; fi
 	@if [ -e *.png ]; then mv *.png ../images/generated/. ; fi
 	@groovy postprocess $<
 
 %.out: %.groovy md.*.template
-	@echo "doing $@..."
+	@echo "doing $@ ..."
 	@groovy ${OPTIONS} -d $< | grep -v "net.sf.jnati.deploy." | groovy ../wrap.groovy > $@
 	@if [ -e *.png ]; then mogrify -trim *.png ; fi
 	@if [ -e *.png ]; then mv *.png ../images/generated/. ; fi
