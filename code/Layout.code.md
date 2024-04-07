@@ -1,7 +1,7 @@
 # Layout.groovy
 **Source code:**
 ```groovy
-@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.8')
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.9')
 
 import org.openscience.cdk.*;
 import org.openscience.cdk.layout.*;
@@ -23,9 +23,9 @@ for (atom in butanol.atoms()) {
 ```
 **Output:**
 ```plain
-C: (-1.7763568394002505E-15, -1.3322676295501878E-15)
-C: (0.0, 1.4999999999999991)
-C: (-1.299038105676657, 2.2500000000000018)
-O: (-2.5980762113533165, 1.5000000000000049)
-C: (-1.299038105676652, 3.750000000000002)
+C: (0.9742785792574944, 2.0624999999999982)
+C: (-0.32475952641916295, 2.8125)
+C: (-1.6237976320958227, 2.062500000000002)
+O: (-1.6237976320958263, 0.5625000000000024)
+C: (-2.9228357377724787, 2.812500000000007)
 ```

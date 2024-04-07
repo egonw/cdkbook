@@ -34,7 +34,7 @@ classes are removed. Please use the [`SilentChemObjectBuilder`](http://cdk.githu
 The same, of course, applies to all implementation classes. For example,
 `NNMolecule` is removed.
 
-#### Removal of IMolecule
+#### Removal of IMolecule and IMoleculeSet
 
 The `IMolecule` interface and all implementing classes have been
 removed. They were practically identical in functionality to the
@@ -42,6 +42,11 @@ removed. They were practically identical in functionality to the
 `IMolecule` was for fully connected structures only. This separation
 was found to be complicated, and was therefore removed. Please use the
 [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) interface instead.
+
+Generally, `IMolecule`, `IMoleculeSet`, `Molecule`,
+and `MoleculeSet` can be replaced with the 'atomcontainer' equivalents.
+Additionally, for `IMoleculeSet` you may also have to replace
+use of methods like `getMoleculeCount()` with their matching `getAtomContainerCount()`.
 
 ### Renamed classes and methods
 
@@ -81,7 +86,7 @@ The [`DescriptorEngine`](http://cdk.github.io/cdk/latest/docs/api/org/openscienc
 #### SMARTSQueryTool
 
 The second constructor that now needs a [`IChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObjectBuilder.html) is that of the
-`SMARTSQueryTool`. Here it is passed on to the `SMARTSParser` which
+[`SMARTSQueryTool`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/smiles/smarts/SMARTSQueryTool.html). Here it is passed on to the `SMARTSParser` which
 needs it for its data structure for the matching.
 
 #### ModelBuilder3D
