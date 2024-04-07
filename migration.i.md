@@ -34,7 +34,7 @@ classes are removed. Please use the <class>SilentChemObjectBuilder</class> inste
 The same, of course, applies to all implementation classes. For example,
 <class>NNMolecule</class> is removed.
 
-#### Removal of IMolecule
+#### Removal of IMolecule and IMoleculeSet
 
 The <class>IMolecule</class> interface and all implementing classes have been
 removed. They were practically identical in functionality to the
@@ -42,6 +42,11 @@ removed. They were practically identical in functionality to the
 <class>IMolecule</class> was for fully connected structures only. This separation
 was found to be complicated, and was therefore removed. Please use the
 <class>IAtomContainer</class> interface instead.
+
+Generally, <class>IMolecule</class>, <class>IMoleculeSet</class>, <class>Molecule</class>,
+and <class>MoleculeSet</class> can be replaced with the 'atomcontainer' equivalents.
+Additionally, for <class>IMoleculeSet</class> you may also have to replace
+use of methods like `getMoleculeCount()` with their matching `getAtomContainerCount()`.
 
 ### Renamed classes and methods
 
