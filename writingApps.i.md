@@ -5,9 +5,12 @@ in larger programs. But the book has not shown so far what such a larger
 program can look like. This book is not about Java programming, and therefore
 did not introduce those aspects of using the CDK.
 Nevertheless, this section gives a brief introduction on how to write a
-Java application, a BeanShell script, and a Groovy script. Most code snippets
+Java application, a BeanShell script, and a Groovy script.
+
+Most code snippets
 in this book are actually Groovy scripts, but [this repository](https://egonw.github.io/chempyformatics/)
-has some Jupyter notebook examples.
+has some Jupyter notebook examples. If you want to know how any of those examples translates
+to Python, please [file a request here](https://github.com/egonw/chempyformatics/issues).
 
 ## A (Very) Basic Java Application
 
