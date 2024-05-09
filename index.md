@@ -20,17 +20,17 @@
   "keywords":"cheminformatics, chemoinformatics, java, Groovy, Chemistry Development Kit, CDK",
   "license":"CC BY-SA 4.0",
   "url": "https://egonw.github.io/cdkbook/",
-  "version":"2.9-0"
+  "version":"2.9-1"
 }
 </script>
 
 
-Edition 2.9-0
+Edition 2.9-1
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
 
-© E.L. Willighagen 2011-2023
+© E.L. Willighagen 2011-2024
 
 License: CC-BY-SA 4.0 International
 
@@ -43,6 +43,11 @@ and updating all scripts to ensure all the automation works well. I have made go
 steps forward, but it will take some time for things to iron out. If you find issue,
 please report them [here](https://github.com/egonw/cdkbook/issues). If you like this
 book, please give the [GitHub repository](https://github.com/egonw/cdkbook/) a star.
+
+Most code snippets
+in this book are actually Groovy scripts, but [this repository](https://egonw.github.io/chempyformatics/)
+has some Jupyter notebook examples. If you want to know how any of those examples translates
+to Python, please [file a request here](https://github.com/egonw/chempyformatics/issues).
 
 ## Contents
 

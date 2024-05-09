@@ -5,13 +5,11 @@ in larger programs. But the book has not shown so far what such a larger
 program can look like. This book is not about Java programming, and therefore
 did not introduce those aspects of using the CDK.
 Nevertheless, this section gives a brief introduction on how to write a
-Java application, a BeanShell script, and a Groovy script. Most code snippets
-in this book are actually Groovy scripts, but [this repository](https://egonw.github.io/chempyformatics/)
-has some Jupyter notebook examples.
+Java application, a BeanShell script, and a Groovy script.
 
 ## A (Very) Basic Java Application
 
-Given you already downloaded the [CDK jar](https://github.com/cdk/cdk/releases/tag/cdk-2.8) file,
+Given you already downloaded the [CDK jar](https://github.com/cdk/cdk/releases/tag/cdk-2.9) file,
 or compiled it from scratch, consider the following piece of
 Java source code:
 
@@ -31,13 +29,13 @@ This <a name="tp1">`Java application`</a> can then be compiled with <a name="tp2
 `BasicProgram.class`:
 
 ```shell
-$ javac -classpath cdk-2.8.jar BasicProgram
+$ javac -classpath cdk-2.9.jar BasicProgram
 ```
 
 And then run with:
 
 ```shell
-$ java -classpath .:cdk-2.8.jar BasicProgram
+$ java -classpath .:cdk-2.9.jar BasicProgram
 ```
 
 The downside of pure Java applications is the relative overhead
@@ -149,18 +147,22 @@ The introduction of this section showed how to use the environment variable
 a different way of doing this too, allowing it to `grab` its dependencies.
 
 ```groovy
-@Grab(group='org.openscience.cdk', module='cdk-io', version='2.8')
-@Grab(group='org.openscience.cdk', module='cdk-silent', version='2.8')
+@Grab(group='org.openscience.cdk', module='cdk-io', version='2.9')
+@Grab(group='org.openscience.cdk', module='cdk-silent', version='2.9')
 ```
 
 ## Python
 
-Using [ScyJava](https://github.com/scijava/scyjava), the CDK can also be used in Python, for example, in a [Jupyter notebook
-on Google Colab](https://colab.research.google.com/github/egonw/chempyformatics/blob/main/docs/nb/CreateAtom3.ipynb).
+Using projects like [ScyJava](https://github.com/scijava/scyjava), the CDK can also be used in Python, for example, in a
+[Jupyter notebook on Google Colab](https://colab.research.google.com/github/egonw/chempyformatics/blob/main/docs/nb/CreateAtom3.ipynb).
+Most code snippets
+in this book are actually Groovy scripts, but [this repository](https://egonw.github.io/chempyformatics/)
+has some Jupyter notebook examples. If you want to know how any of those examples translates
+to Python, please [file a request here](https://github.com/egonw/chempyformatics/issues).
 
 ```python
 from scyjava import config, jimport
-config.add_endpoints('org.openscience.cdk:cdk-bundle:2.8')
+config.add_endpoints('org.openscience.cdk:cdk-bundle:2.9')
 SmilesParser = jimport('org.openscience.cdk.smiles.SmilesParser')
 Builder = jimport('org.openscience.cdk.silent.SilentChemObjectBuilder')
 
