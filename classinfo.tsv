@@ -65,7 +65,6 @@ MolecularFormulaManipulator	org.openscience.cdk.tools.manipulator	formula
 PDBReader	org.openscience.cdk.io	pdb
 RebondTool	org.openscience.cdk.graph.rebond	standard
 SilentChemObjectBuilder	org.openscience.cdk.silent	silent
-SMARTSQueryTool	org.openscience.cdk.smiles.smarts	smarts
 SmilesGenerator	org.openscience.cdk.smiles	smiles
 SmilesParser	org.openscience.cdk.smiles	smiles
 StructureDiagramGenerator	org.openscience.cdk.layout	sdg

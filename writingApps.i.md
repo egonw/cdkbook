@@ -7,11 +7,6 @@ did not introduce those aspects of using the CDK.
 Nevertheless, this section gives a brief introduction on how to write a
 Java application, a BeanShell script, and a Groovy script.
 
-Most code snippets
-in this book are actually Groovy scripts, but [this repository](https://egonw.github.io/chempyformatics/)
-has some Jupyter notebook examples. If you want to know how any of those examples translates
-to Python, please [file a request here](https://github.com/egonw/chempyformatics/issues).
-
 ## A (Very) Basic Java Application
 
 Given you already downloaded the [CDK jar](https://github.com/cdk/cdk/releases/tag/cdk-<version/>) file,
@@ -116,8 +111,12 @@ a different way of doing this too, allowing it to `grab` its dependencies.
 
 ## Python
 
-Using [ScyJava](https://github.com/scijava/scyjava), the CDK can also be used in Python, for example, in a [Jupyter notebook
-on Google Colab](https://colab.research.google.com/github/egonw/chempyformatics/blob/main/docs/nb/CreateAtom3.ipynb).
+Using projects like [ScyJava](https://github.com/scijava/scyjava), the CDK can also be used in Python, for example, in a
+[Jupyter notebook on Google Colab](https://colab.research.google.com/github/egonw/chempyformatics/blob/main/docs/nb/CreateAtom3.ipynb).
+Most code snippets
+in this book are actually Groovy scripts, but [this repository](https://egonw.github.io/chempyformatics/)
+has some Jupyter notebook examples. If you want to know how any of those examples translates
+to Python, please [file a request here](https://github.com/egonw/chempyformatics/issues).
 
 ```python
 from scyjava import config, jimport
