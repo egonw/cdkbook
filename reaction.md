@@ -43,6 +43,9 @@ which returns us these current options:
 FORWARD
 BACKWARD
 BIDIRECTIONAL
+NO_GO
+RETRO_SYNTHETIC
+RESONANCE
 ```
 
 There are matching get methods to access all <a name="tp2">reactants</a> and <a name="tp3">products</a>:

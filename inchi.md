@@ -115,7 +115,7 @@ one mobile hydrogen to the second atom, which is the first oxygen.
 <!-- <code>RenderAdenine</code> -->
 <a name="fig:adenine"></a>
 ![](images/generated/RenderAdenine.png)
-<br />**Figure 19.1**: 2D diagram of one of the tautomers of adenine.
+<br />**Figure 20.1**: 2D diagram of one of the tautomers of adenine.
 
 ### Stereoisomerism
 

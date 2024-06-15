@@ -417,7 +417,7 @@ location: 6, 31-33: invalid symbol: D
 location: 7, 31-33: invalid symbol: T
 ```
 
-Because of an issue in version 2.8 of the CDK, the above does not show any warnings.
+Because of an issue in version 2.9 of the CDK, the above does not show any warnings.
 This has been fixed in CDK 2.3, see [commit 547b028e17656f54a080a885a166377320b3a8ad](https://github.com/cdk/cdk/commit/547b028e17656f54a080a885a166377320b3a8ad).
 
 <a name="sec:gzip"></a>
@@ -795,7 +795,7 @@ Isomeric SMILES: F[C@@H](Cl)Br
 ```
 
 Of course, this does require that aromaticity has been perceived, as explained
-in Section [17.5](properties.md#sec:aromaticity).
+in Section [18.5](properties.md#sec:aromaticity).
 
 ## Recipes
 
@@ -890,7 +890,7 @@ Double bonds: 5
 ### SDF files with properties
 
 SDF files are quite similar to MDL files but can have an arbitrary number of
-chemical structures and have properties (see also Section [20.3](ctr.md#sec:ctr4)). An example file from
+chemical structures and have properties (see also Section [21.3](ctr.md#sec:ctr4)). An example file from
 [ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3183843/)
 [<a href="#citeref7">7</a>]:
 

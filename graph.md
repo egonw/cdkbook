@@ -268,7 +268,7 @@ Another important aspect of the chemical graph, is that the graph uniquely
 places atoms in the molecule. That is, the graphs allows us to uniquely
 identify, and therefore, number atoms in the molecule. This is an important
 aspect of cheminformatics, and the concept behind <a name="tp13">canonicalization</a>, such
-as used to create <a name="tp14">canonical SMILES</a>. The InChI library (see Chapter [19](inchi.md#sec:inchi))
+as used to create <a name="tp14">canonical SMILES</a>. The InChI library (see Chapter [20](inchi.md#sec:inchi))
 implements such an algorithm, and we can use it to assign unique integers to all
 atoms in a chemical graph.
 

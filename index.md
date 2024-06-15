@@ -20,12 +20,12 @@
   "keywords":"cheminformatics, chemoinformatics, java, Groovy, Chemistry Development Kit, CDK",
   "license":"CC BY-SA 4.0",
   "url": "https://egonw.github.io/cdkbook/",
-  "version":"2.9-1"
+  "version":"2.9-2"
 }
 </script>
 
 
-Edition 2.9-1
+Edition 2.9-2
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
@@ -165,44 +165,46 @@ to Python, please [file a request here](https://github.com/egonw/chempyformatics
 15.4.2. [Explicit Hydrogens](missing.md#explicit-hydrogens) <br />
 15.5. [2D Coordinates](missing.md#2d-coordinates) <br />
 15.6. [Unknown Molecular Formula](missing.md#unknown-molecular-formula) <br />
-16. [Substructure Searching](substructure.md) <br />
-16.1. [Fingerprints](substructure.md#fingerprints) <br />
-16.1.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
-16.1.2. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
-17. [Molecular Properties](properties.md) <br />
-17.1. [Molecular Mass](properties.md#molecular-mass) <br />
-17.1.1. [Implicit Hydrogens](properties.md#implicit-hydrogens) <br />
-17.2. [LogP](properties.md#logp) <br />
-17.3. [Total Polar Surface Area](properties.md#total-polar-surface-area) <br />
-17.4. [Van der Waals Volume](properties.md#van-der-waals-volume) <br />
-17.5. [Aromaticity](properties.md#aromaticity) <br />
-18. [Molecular Descriptors](descriptor.md) <br />
-18.1. [Descriptors and Specifications](descriptor.md#descriptors-and-specifications) <br />
-18.1.1. [IImplementationSpecification](descriptor.md#iimplementationspecification) <br />
-18.2. [IDescriptor](descriptor.md#idescriptor) <br />
-18.3. [IMolecularDescriptor](descriptor.md#imoleculardescriptor) <br />
-18.4. [IDescriptorResult](descriptor.md#idescriptorresult) <br />
-18.5. [Counting Nitrogens and Oxygens](descriptor.md#counting-nitrogens-and-oxygens) <br />
-19. [InChI](inchi.md) <br />
-19.1. [Layers](inchi.md#layers) <br />
-19.1.1. [Fixed Hydrogens](inchi.md#fixed-hydrogens) <br />
-19.1.2. [Stereoisomerism](inchi.md#stereoisomerism) <br />
-20. [Chemistry Toolkit Rosetta](ctr.md) <br />
-20.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
-20.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
-20.3. [Working with SD tag data](ctr.md#working-with-sd-tag-data) <br />
-21. [Migration](migration.md) <br />
-21.1. [CDK 2.0 to 2.3](migration.md#cdk-20-to-23) <br />
-21.2. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
-21.2.1. [Removed classes](migration.md#removed-classes) <br />
-21.2.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
-21.2.3. [Changed behavior](migration.md#changed-behavior) <br />
-21.2.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
-21.2.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
-21.2.6. [IsotopeFactory](migration.md#isotopefactory) <br />
-21.2.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
-21.2.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
-21.2.9. [Aromaticity calculations](migration.md#aromaticity-calculations) <br />
+16. [Depiction](depiction.md) <br />
+16.1. [Molecules](depiction.md#molecules) <br />
+17. [Substructure Searching](substructure.md) <br />
+17.1. [Fingerprints](substructure.md#fingerprints) <br />
+17.1.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
+17.1.2. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
+18. [Molecular Properties](properties.md) <br />
+18.1. [Molecular Mass](properties.md#molecular-mass) <br />
+18.1.1. [Implicit Hydrogens](properties.md#implicit-hydrogens) <br />
+18.2. [LogP](properties.md#logp) <br />
+18.3. [Total Polar Surface Area](properties.md#total-polar-surface-area) <br />
+18.4. [Van der Waals Volume](properties.md#van-der-waals-volume) <br />
+18.5. [Aromaticity](properties.md#aromaticity) <br />
+19. [Molecular Descriptors](descriptor.md) <br />
+19.1. [Descriptors and Specifications](descriptor.md#descriptors-and-specifications) <br />
+19.1.1. [IImplementationSpecification](descriptor.md#iimplementationspecification) <br />
+19.2. [IDescriptor](descriptor.md#idescriptor) <br />
+19.3. [IMolecularDescriptor](descriptor.md#imoleculardescriptor) <br />
+19.4. [IDescriptorResult](descriptor.md#idescriptorresult) <br />
+19.5. [Counting Nitrogens and Oxygens](descriptor.md#counting-nitrogens-and-oxygens) <br />
+20. [InChI](inchi.md) <br />
+20.1. [Layers](inchi.md#layers) <br />
+20.1.1. [Fixed Hydrogens](inchi.md#fixed-hydrogens) <br />
+20.1.2. [Stereoisomerism](inchi.md#stereoisomerism) <br />
+21. [Chemistry Toolkit Rosetta](ctr.md) <br />
+21.1. [Heavy atom counts from an SD file](ctr.md#heavy-atom-counts-from-an-sd-file) <br />
+21.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
+21.3. [Working with SD tag data](ctr.md#working-with-sd-tag-data) <br />
+22. [Migration](migration.md) <br />
+22.1. [CDK 2.0 to 2.3](migration.md#cdk-20-to-23) <br />
+22.2. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
+22.2.1. [Removed classes](migration.md#removed-classes) <br />
+22.2.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
+22.2.3. [Changed behavior](migration.md#changed-behavior) <br />
+22.2.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
+22.2.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
+22.2.6. [IsotopeFactory](migration.md#isotopefactory) <br />
+22.2.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
+22.2.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
+22.2.9. [Aromaticity calculations](migration.md#aromaticity-calculations) <br />
 
 [Index](indexList.md) <br />
 

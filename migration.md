@@ -86,7 +86,7 @@ The [`DescriptorEngine`](http://cdk.github.io/cdk/latest/docs/api/org/openscienc
 #### SMARTSQueryTool
 
 The second constructor that now needs a [`IChemObjectBuilder`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObjectBuilder.html) is that of the
-[`SMARTSQueryTool`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/smiles/smarts/SMARTSQueryTool.html). Here it is passed on to the `SMARTSParser` which
+`SMARTSQueryTool`. Here it is passed on to the `SMARTSParser` which
 needs it for its data structure for the matching.
 
 #### ModelBuilder3D
@@ -209,7 +209,7 @@ println "$smiles"
 
 ### Aromaticity calculations
 
-Aromaticity is differently calculated now, see Section [17.5](properties.md#sec:aromaticity).
+Aromaticity is differently calculated now, see Section [18.5](properties.md#sec:aromaticity).
 
 ## References
 

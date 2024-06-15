@@ -147,6 +147,6 @@ Monomer name: ALAA9
 ## References
 
 1. <a name="citeref1"></a>Henrick K, Feng Z, Bluhm WF, Dimitropoulos D, Doreleijers JF, Dutta S, et al. Remediation of the protein data bank archive. NAR. 2008 Jan;36(Database issue):D426-33.  doi:[10.1093/NAR/GKM937](https://doi.org/10.1093/NAR/GKM937) ([Scholia](https://scholia.toolforge.org/doi/10.1093/NAR/GKM937))
-2. <a name="citeref2"></a>MM T, WA H. Highly ordered crystals of the plant seed protein crambin. J Mol Biol. 1979 Jan 1;127(2):219–23.  doi:[10.1016/0022-2836(79)90242-0](https://doi.org/10.1016/0022-2836(79)90242-0) ([Scholia](https://scholia.toolforge.org/doi/10.1016/0022-2836(79)90242-0))
+2. <a name="citeref2"></a>Teeter MM, Hendrickson WA. Highly ordered crystals of the plant seed protein crambin. J Mol Biol [Internet]. 1979 Jan 1;127(2):219–23. Available from: https://api.elsevier.com/content/article/PII:0022283679902420?httpAccept=text/xml doi:[10.1016/0022-2836(79)90242-0](https://doi.org/10.1016/0022-2836(79)90242-0) ([Scholia](https://scholia.toolforge.org/doi/10.1016/0022-2836(79)90242-0))
 
 

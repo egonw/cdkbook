@@ -61,7 +61,7 @@ allowing one to mix descriptor calculation by various tools and to keep
 track of what value came from what vendor.
 
 For example, we can inspect these field values for the TPSA descriptor
-(see Section [17.3](properties.md#sec:tpsa)):
+(see Section [18.3](properties.md#sec:tpsa)):
 
 **<a name="script:TPSASpecs">Script 17.1</a>** [code/TPSASpecs.groovy](code/TPSASpecs.code.md)
 ```groovy
@@ -80,7 +80,7 @@ Title: org.openscience.cdk.qsar.descriptors.molecular.TPSADescriptor
 Reference: http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#...
   tpsa
 Vendor: The Chemistry Development Kit
-Identifier: 2.8
+Identifier: 2.9
 ```
 
 The identifier values originally referred to a String which held the
@@ -126,7 +126,7 @@ descriptor.parameterNames.each { name ->
 }
 ```
 
-which tells us how we can tune the descriptor calculation (see also Section [18.5](#sec:noCount)):
+which tells us how we can tune the descriptor calculation (see also Section [19.5](#sec:noCount)):
 
 ```plain
 elementName -> java.lang.String
@@ -178,11 +178,11 @@ java.lang.Boolean -> true
 With this information about the descriptor now clear, it is time to look at a descriptor
 value calculation. A molecular descriptor in the CDK is symbolized by the
 [`IMolecularDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/IMolecularDescriptor.html) interface, which extends the [`IDescriptor`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/IDescriptor.html) interface,
-as shown in Figure [18.1](#fig:descriptorInheritance).
+as shown in Figure [19.1](#fig:descriptorInheritance).
 
 <a name="fig:descriptorInheritance"></a>
 ![](images/descriptor.png)
-<br />**Figure 18.1**: The IDescriptor interface has a few derived interfaces, but only IMolecularDescriptor is shown here.
+<br />**Figure 19.1**: The IDescriptor interface has a few derived interfaces, but only IMolecularDescriptor is shown here.
 
 The relevant method now is the `calculate(IAtomContainer)` method, which returns
 a [`DescriptorValue`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/DescriptorValue.html). This class is returned rather than a double, because descriptors
@@ -207,7 +207,7 @@ value = result.getValue()
 The output shows us that quite some metadata is preserved:
 
 ```plain
-Specification: org.openscience.cdk.qsar.DescriptorSpecification@241fc278
+Specification: org.openscience.cdk.qsar.DescriptorSpecification@3e98b933
 Parameters names: [checkAromaticity]
 Parameters values: [false]
 Exception: null
@@ -262,14 +262,14 @@ Calculated values: 7
 ```
 
 The [`IDescriptorResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/IDescriptorResult.html) interface is currently implemented by various classes,
-outlined in Figure [18.2](#fig:descriptorResults). Each of the classes has a slightly different
+outlined in Figure [19.2](#fig:descriptorResults). Each of the classes has a slightly different
 API to get the actual values. The [`IntegerResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/IntegerResult.html), [`DoubleResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/DoubleResult.html),
 and [`BooleanResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/BooleanResult.html) classes have the methods `intValue()`,
 `doubleValue()`, and `booleanValue()` respectively.
 
 <a name="fig:descriptorResults"></a>
 ![](images/descriptorResults.png)
-<br />**Figure 18.2**: The IDescriptorResults interface has several implementation, each wrapping calculated descriptor values.
+<br />**Figure 19.2**: The IDescriptorResults interface has several implementation, each wrapping calculated descriptor values.
 
 The two array variants, [`IntegerArrayResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/IntegerArrayResult.html) and [`DoubleArrayResult`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/qsar/result/DoubleArrayResult.html),
 work slightly different, and both provide a `get(int)` method to iterate over all
@@ -334,7 +334,7 @@ the case for all descriptors, but many take this approach.
 ## References
 
 1. <a name="citeref1"></a>Wikberg J, Eklund M, Willighagen E, Spjuth O, Lapins M, Engkvist O, et al. Introduction to Pharmaceutical Bioinformatics. 2018. 
-2. <a name="citeref2"></a>Steinbeck C, Hoppe C, Hoppe C, Kuhn S, Floris M, Guha R, et al. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Curr Pharm Des [Internet]. 2006 Jun 1;12(17):2111–20. Available from: https://cdk.github.io/cdk-paper-2/ doi:[10.2174/138161206777585274](https://doi.org/10.2174/138161206777585274) ([Scholia](https://scholia.toolforge.org/doi/10.2174/138161206777585274))
+2. <a name="citeref2"></a>Steinbeck C, Hoppe C, Kuhn S, Floris M, Guha R, Willighagen E. Recent Developments of the Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Curr Pharm Des [Internet]. 2006 Jun 1;12(17):2111–20. Available from: https://cdk.github.io/cdk-paper-2/ doi:[10.2174/138161206777585274](https://doi.org/10.2174/138161206777585274) ([Scholia](https://scholia.toolforge.org/doi/10.2174/138161206777585274))
 3. <a name="citeref3"></a>Guha R, Howard MT, Hutchison GR, Murray-Rust P, Rzepa HS, Steinbeck C, et al. The Blue Obelisk-interoperability in chemical informatics. JCIM. 2006 Feb 22;46(3):991–8.  doi:[10.1021/CI050400B](https://doi.org/10.1021/CI050400B) ([Scholia](https://scholia.toolforge.org/doi/10.1021/CI050400B))
 4. <a name="citeref4"></a>Spjuth O, Willighagen E, Guha R, Eklund M, Wikberg J. Towards interoperable and reproducible QSAR analyses: Exchange of datasets. J Cheminform. 2010;2(1):5.  doi:[10.1186/1758-2946-2-5](https://doi.org/10.1186/1758-2946-2-5) ([Scholia](https://scholia.toolforge.org/doi/10.1186/1758-2946-2-5))
 5. <a name="citeref5"></a>[https://stackoverflow.com/questions/9363550/how-to-prevent-getting-a-groovy-boolean-in-an-object-array](https://stackoverflow.com/questions/9363550/how-to-prevent-getting-a-groovy-boolean-in-an-object-array)
