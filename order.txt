@@ -13,6 +13,7 @@ io
 atomtype
 graph
 missing
+depiction
 substructure
 properties
 descriptor

@@ -1,0 +1,13 @@
+#import org.openscience.cdk.depict.*;
+#import org.openscience.cdk.interfaces.*;
+#import org.openscience.cdk.templates.*;
+
+#IAtomContainer triazole = MoleculeFactory.make123Triazole()
+
+new DepictionGenerator()
+  .withSize(600, 600)
+  .withMargin(0.1)
+  .withZoom(3.0)
+  .withAtomColors()
+  .depict(triazole)
+  .writeTo("RenderMolecule.png");
