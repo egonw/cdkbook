@@ -1,5 +1,6 @@
 live
 !README.md
+!*.i.md
 *.md
 scriptcount.tex
 package*json
