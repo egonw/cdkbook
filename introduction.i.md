@@ -11,7 +11,7 @@ cheminformatics work [Christoph Steinbeck](https://en.wikipedia.org/wiki/Christo
 This book is not about those past projects, however; it is about the CDK as it is
 now. It has evolved enormously over the past 10 years, and got more and more
 functionality [<cite>Q27065423</cite>,<cite>Q30149558</cite>], thanx to the many contributors
-(see the [Author List](https://github.com/cdk/cdk/blob/master/AUTHORS.txt)). Moreover, by now, the CDK has shown its
+(see the [Author List](https://github.com/cdk/cdk/blob/main/AUTHORS.txt)). Moreover, by now, the CDK has shown its
 role in many cheminformatics and bioinformatics fields, and you will find that
 this book cites many scientific papers that use the CDK.
 
