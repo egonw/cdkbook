@@ -67,8 +67,8 @@ references.qids: findCitations.groovy
 	@groovy findCitations.groovy . | grep "^Q" | sort | uniq > references.qids
 
 references.dat: references.qids references.js references.extra.dat
-	@nodejs references.js
-	@cat references.extra.dat >> references.dat
+	#@nodejs references.js
+	#@cat references.extra.dat >> references.dat
 
 scriptcount.tex: code/scriptCount.tex
 	@mv code/scriptCount.tex scriptcount.tex
