@@ -58,33 +58,6 @@ The result of this code is depicted in Figure <xref>fig:backgroundColor</xref>.
 ![](images/generated/BackgroundColor.png) <br />
 </figure>
 
-## Substructure annotation
-
-As Section <xref>sec:atomnumbergenerator</xref> indicated, it is easy to add generators to provide
-additional information. And this has been done for quite a bit of functionality already.
-One such generators is available from the CDK-JChemPaint patch that extends the CDK with
-additional rendering and editing functionality. This patch (binary and source) can be
-downloaded from [https://github.com/egonw/groovy-jcp](https://github.com/egonw/groovy-jcp).
-
-<figure label="fig:RenderSelection" caption="Substructure highlighting in triazole with default (left) and customized settings (right).">
-![](images/generated/RenderSelection.png) &nbsp; ![](images/generated/LargerRedSelection.png)
-</figure>
-
-This is example code for how to mark a substructure. It a variations of the triazole examples
-I have given earlier. First thing is to add the proper generator, and to define the selection
-that you want to highlight, such as two bonds:
-
-<code>RenderSelection</code>
-
-Note that the order is important: if the <class>ExternalHighlightGenerator</class> is added after
-the atom generator, the labels will be hidden.
-
-The default parameters draw grey circles in the back of the selected atoms, as is visible
-from Figure <xref>fig:RenderSelection</xref>. But here too we can use rendering parameters to
-change the defaults:
-
-<code>LargerRedSelection</code>
-
 ## References
 
 <references/>
