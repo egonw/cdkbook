@@ -19,10 +19,14 @@ formal charge is currently unknown.
 
 The CDK interface <topic type="class">IAtom</topic> is the underlying data model of atoms. Creating
 a new atom is fairly easy. For example, we can create an atom of element
-type carbon, as defined by the element’s atomic number that we pass as parameter
+type carbon, as defined by the element’s <topic>atomic number</topic> that we pass as parameter
 in the constructor:
 
 <code>CreateAtom3</code>
+
+For this we can also use the atomic number from the `IElement` class:
+
+<code>CreateAtom4</code>
 
 An atom can also be constructed by passing in the symbol but this is marginally
 less efficient:

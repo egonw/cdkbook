@@ -1,0 +1,6 @@
+#import org.openscience.cdk.Atom;
+#import org.openscience.cdk.interfaces.IElement;
+#
+atom = new Atom(IElement.C);
+#assert atom.atomicNumber == 6;
+#assert atom.symbol == "C";
