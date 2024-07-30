@@ -19,12 +19,19 @@ formal charge is currently unknown.
 
 The CDK interface <a name="tp2">[`IAtom`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtom.html)</a> is the underlying data model of atoms. Creating
 a new atom is fairly easy. For example, we can create an atom of element
-type carbon, as defined by the element’s atomic number that we pass as parameter
+type carbon, as defined by the element’s <a name="tp3">atomic number</a> that we pass as parameter
 in the constructor:
 
 **<a name="script:CreateAtom3">Script 3.1</a>** [code/CreateAtom3.groovy](code/CreateAtom3.code.md)
 ```groovy
 atom = new Atom(6);
+```
+
+For this we can also use the atomic number from the `IElement` class:
+
+**Script** [code/CreateAtom4.groovy](code/CreateAtom4.code.md)
+```groovy
+atom = new Atom(IElement.C);
 ```
 
 An atom can also be constructed by passing in the symbol but this is marginally
@@ -59,7 +66,7 @@ atomic number: 6
 
 ### IElement
 
-The most common property of <a name="tp3">[`IElement`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IElement.html)</a>s are their symbol and atomic
+The most common property of <a name="tp4">[`IElement`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IElement.html)</a>s are their symbol and atomic
 number. Because the `IAtom` extends the `IElement`, CDK atoms also have
 these properties. Therefore, we can set these properties for atoms
 manually too:
@@ -88,7 +95,7 @@ Atomic number: 6
 
 ### IIsotope
 
-The <a name="tp4">`IIsotope`</a> information consists of the *mass number*, *exact mass* and
+The <a name="tp5">`IIsotope`</a> information consists of the *mass number*, *exact mass* and
 *natural abundance*:
 
 **<a name="script:IsotopeProperties">Script 3.6</a>** [code/IsotopeProperties.groovy](code/IsotopeProperties.code.md)
@@ -131,7 +138,7 @@ on the atom type infrastructure in the CDK library, and, for example,
 details how atom types can be perceived, and how atom type information
 is set for atoms.
 
-The <a name="tp5">`IAtomType`</a> interface contains fields that relate to atom types. These
+The <a name="tp6">`IAtomType`</a> interface contains fields that relate to atom types. These
 properties include formal charge, neighbor count, maximum bond order
 and atom type name:
 
@@ -145,9 +152,9 @@ atom.setFormalNeighbourCount(4)
 
 ### Coordinates
 
-The `IAtom` class supports three types of coordinates: <a name="tp6">2D coordinates</a>,
-used for diagrams, <a name="tp7">3D coordinates</a> for geometries, and crystal <a name="tp8">unit cell</a>
-or <a name="tp9">notional coordinates</a>. These properties are set with the respective
+The `IAtom` class supports three types of coordinates: <a name="tp7">2D coordinates</a>,
+used for diagrams, <a name="tp8">3D coordinates</a> for geometries, and crystal <a name="tp9">unit cell</a>
+or <a name="tp10">notional coordinates</a>. These properties are set with the respective
 methods:
 
 **<a name="script:AtomCoordinates">Script 3.9</a>** [code/AtomCoordinates.groovy](code/AtomCoordinates.code.md)
@@ -169,14 +176,14 @@ crystal structure functionality.
 
 ## Bonds
 
-The <a name="tp10">[`IBond`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html)</a> interface of the CDK is an interaction between two or more
-`IAtom`s, extending the <a name="tp11">`IElectronContainer`</a> interface. While the most
+The <a name="tp11">[`IBond`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IBond.html)</a> interface of the CDK is an interaction between two or more
+`IAtom`s, extending the <a name="tp12">`IElectronContainer`</a> interface. While the most
 common application in the CDK originates from graph theory [<a href="#citeref2">2</a>], it is not
 restricted to that. That said, many algorithms implemented in the CDK
 expect a graph theory based model, where each bond connects two, and
 not more, atoms.
 
-For example, to create <a name="tp12">ethanol</a> we write:
+For example, to create <a name="tp13">ethanol</a> we write:
 
 **<a name="script:Ethanol">Script 3.10</a>** [code/Ethanol.groovy](code/Ethanol.code.md)
 ```groovy
@@ -211,7 +218,7 @@ UNSET
 As you might notice, there is no `AROMATIC` bond defined. This is
 deliberate and the CDK allows to define single-double bond order patterns at
 the same time as aromaticity information. For example, a kekule
-structure of <a name="tp13">benzene</a> with bonds marked as aromatic can be constructed with:
+structure of <a name="tp14">benzene</a> with bonds marked as aromatic can be constructed with:
 
 **<a name="script:AromaticBond">Script 3.12</a>** [code/AromaticBond.groovy](code/AromaticBond.code.md)
 ```groovy
@@ -240,7 +247,7 @@ bond6.setFlag(CDKConstants.ISAROMATIC, true);
 Bond orders, as we have seen earlier, are commonly used in the CDK to
 indicate the electronic properties of a bond. At the same time, each bond
 consists of a number of atoms. For example, in a single (sigma) bond, two
-<a name="tp14">electrons</a> are involved. In a double (pi) bond, four electrons are involved,
+<a name="tp15">electrons</a> are involved. In a double (pi) bond, four electrons are involved,
 and in a triple bond, six electrons are involved. We can report on the
 electron counts for the various orders with this code:
 
@@ -277,7 +284,7 @@ The `IBond.setStereo()` method is discussed in Section [5.1](stereo.md#sec:stere
 
 We already saw in the previous pieces of code how the CDK can be used to create
 molecules, and while the above is, strictly speaking, enough to find all atoms in the
-<a name="tp15">molecule</a> starting with only one of the atoms in the molecule, it often is more
+<a name="tp16">molecule</a> starting with only one of the atoms in the molecule, it often is more
 convenient to store all atoms and bonds in a container.
 
 The CDK has one container: the [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html).
@@ -390,7 +397,7 @@ C 2
 O 1
 ```
 
-Similarly, we can also list all <a name="tp16">connected atoms</a>:
+Similarly, we can also list all <a name="tp17">connected atoms</a>:
 
 **<a name="script:ConnectedAtoms">Script 3.19</a>** [code/ConnectedAtoms.groovy](code/ConnectedAtoms.code.md)
 ```groovy
@@ -412,7 +419,7 @@ C is connected to C O
 O is connected to C 
 ```
 
-We can do the same thing for <a name="tp17">connected bonds</a>:
+We can do the same thing for <a name="tp18">connected bonds</a>:
 
 **<a name="script:ConnectedBonds">Script 3.20</a>** [code/ConnectedBonds.groovy](code/ConnectedBonds.code.md)
 ```groovy
@@ -437,7 +444,7 @@ O has bond(s) SINGLE
 <a name="sec:molecularFormula"></a>
 ## Molecular Formula
 
-Getting the <a name="tp18">molecular formula</a> of a molecule and returning that as a String
+Getting the <a name="tp19">molecular formula</a> of a molecule and returning that as a String
 is both done with the [`MolecularFormulaManipulator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/tools/manipulator/MolecularFormulaManipulator.html) class:
 
 **<a name="script:MFGeneration">Script 3.21</a>** [code/MFGeneration.groovy](code/MFGeneration.code.md)
@@ -515,7 +522,7 @@ used in the data model inherit from this interface. The [`IChemObject`](http://c
 interface provides a bit of basic functionality, including support
 for object identifiers, properties, and flags.
 
-For example. <a name="tp19">identifiers</a> are set and retrieved with the `setID()` and
+For example. <a name="tp20">identifiers</a> are set and retrieved with the `setID()` and
 `getID()` methods:
 
 **<a name="script:ChemObjectIdentifiers">Script 3.26</a>** [code/ChemObjectIdentifiers.groovy](code/ChemObjectIdentifiers.code.md)
@@ -525,7 +532,7 @@ butane.setID("cdkbook000000001")
 print "ID: " + butane.getID()
 ```
 
-If you have more than one identifier, or other <a name="tp20">properties</a> you like to
+If you have more than one identifier, or other <a name="tp21">properties</a> you like to
 associate with objects, you can use the `setProperty()` and
 `getProperty()` methods:
 
@@ -583,7 +590,7 @@ NAMES: 2-(acetyloxy)benzoic acid
 ```
 
 A third characteristic of the [`IChemObject`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IChemObject.html) interface is the concept of
-<a name="tp21">flags</a>. Flags are used in the CDK to indicate, for example, if
+<a name="tp22">flags</a>. Flags are used in the CDK to indicate, for example, if
 an atom or bond is aromatic (see Script [3.12](#script:AromaticBond))
 or if an atom is part of a ring:
 

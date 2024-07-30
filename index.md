@@ -167,6 +167,7 @@ to Python, please [file a request here](https://github.com/egonw/chempyformatics
 15.6. [Unknown Molecular Formula](missing.md#unknown-molecular-formula) <br />
 16. [Depiction](depiction.md) <br />
 16.1. [Molecules](depiction.md#molecules) <br />
+16.2. [Background color](depiction.md#background-color) <br />
 17. [Substructure Searching](substructure.md) <br />
 17.1. [Fingerprints](substructure.md#fingerprints) <br />
 17.1.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />

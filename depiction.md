@@ -54,6 +54,32 @@ new DepictionGenerator()
 
 This results in the image of triazole given in Figure [16.1](#fig:fig:triazole).
 
+## Background color
+
+Starting from the common pattern to set up a renderer used in the earlier sections,
+you can also customize the <a name="tp5">background color</a>. This too uses a parameter, but the
+color is also passed to the `Graphics2D` object:
+
+**Script** [code/BackgroundColor.groovy](code/BackgroundColor.code.md)
+```groovy
+backgroundColor = Color.lightGray;
+model = renderer.getRenderer2DModel()
+model.set(
+  BasicSceneGenerator.BackgroundColor.class,
+  backgroundColor
+)
+// paint the background
+Graphics2D g2 = (Graphics2D)image.getGraphics();
+g2.setColor(backgroundColor);
+g2.fillRect(0, 0, WIDTH, HEIGHT);
+```
+
+The result of this code is depicted in Figure [16.2](#fig:fig:backgroundColor).
+
+<a name="fig:fig:backgroundColor"></a>
+![](images/generated/BackgroundColor.png)
+<br />**Figure 16.2**: Triazole depicted with a custom, grey background.
+
 ## References
 
 1. <a name="citeref1"></a>Krause S, Willighagen E, Steinbeck C. JChemPaint - Using the Collaborative Forces of the Internet to Develop a Free Editor for 2D Chemical Structures. Molecules. 2000 Jan 28;5(1):93–8.  doi:[10.3390/50100093](https://doi.org/10.3390/50100093) ([Scholia](https://scholia.toolforge.org/doi/10.3390/50100093))

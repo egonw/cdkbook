@@ -20,6 +20,6 @@ for (atomContainer in set.atomContainers()) {
 **Output:**
 ```plain
 Number of containers: 2
-container's hashcode 32777062
-container's hashcode 1187406578
+container's hashcode 606061176
+container's hashcode 1551301860
 ```
