@@ -9,6 +9,14 @@ The set of changes include changed class names. For example, the CDK 1.2
 class <class>MDLWriter</class> is now called <class>MDLV2000Writer</class> to reflect the
 V2000 version of the MDL formats.
 
+## CDK 2.6 to 2.7
+
+### InChI functionality
+
+CDK 2.7 includes a InChI library no longer using the Java Native Interace (JNI, see [<cite>Q21092920</cite>]) but the Java Native Access (JNA). With this, the Java
+packages and classes changed. If you used the `net.sf.jniinchi` package before, you now need to use the `io.github.dan2097.jnainchi` package.
+An example update of this code is found in [this Bacting patch](https://github.com/egonw/bacting/commit/664d6941a6ddce4a9d99d5a5cec2fb181ca8b9c4).
+
 ## CDK 2.0 to 2.3
 
 #### Deprecated AllRingsFinder.setTimeout()
