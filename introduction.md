@@ -40,7 +40,7 @@ knowledge to a minimum, the examples will be pretty verbose.
 4. <a name="citeref4"></a>Willighagen E, Mayfield JW, Alvarsson J, Berg A, Carlsson L, Jeliazkova N, et al. The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching. J Cheminform. 2017 Jun 6;9(1).  doi:[10.1186/S13321-017-0220-4](https://doi.org/10.1186/S13321-017-0220-4) ([Scholia](https://scholia.toolforge.org/doi/10.1186/S13321-017-0220-4))
 5. <a name="citeref5"></a>Gasteiger J, Engel T, editors. Chemoinformatics: A Textbook. Weinheim, Deutschland: Wiley-VCH; 2003. 
 6. <a name="citeref6"></a>Leach AR, Gillet VJ. An introduction to chemoinformatics. Berlin, Deutschland: Springer Science+Business Media; 2007. 
-7. <a name="citeref7"></a>Faulon J-L, Bender A, editors. Handbook of Chemoinformatics Algorithms. 2010. 
+7. <a name="citeref7"></a>Faulon JL, Bender A, editors. Handbook of Chemoinformatics Algorithms. 2010. 
 8. <a name="citeref8"></a>Wikberg J, Eklund M, Willighagen E, Spjuth O, Lapins M, Engkvist O, et al. Introduction to Pharmaceutical Bioinformatics. 2018. 
 9. <a name="citeref9"></a>Wild DJ. Introducing Cheminformatics [Internet]. 2013. Available from: http://www.lulu.com/shop/david-wild/introducing-cheminformatics/ebook/product-20988418.html
 

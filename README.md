@@ -7,7 +7,7 @@
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
 
-© E.L. Willighagen 2011-2024
+© E.L. Willighagen 2011-2025
 
 License: CC-BY-SA 4.0 International
 

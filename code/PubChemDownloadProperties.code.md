@@ -56,6 +56,8 @@ Log P (XLogP3-AA)=-1.3
 Mass (Exact)=311.13688739
 Molecular Formula=C15H21NO6
 Molecular Weight=311.33
+SMILES (Absolute)=C[C@H](/C=C/C=C(/C)\textbackslash[C@H]1CN[C@@H]([C@H]1CC(=O)...
+  O)C(=O)O)C(=O)O
 SMILES (Canonical)=CC(C=CC=C(C)C1CNC(C1CC(=O)O)C(=O)O)C(=O)O
 SMILES (Isomeric)=C[C@H](/C=C/C=C(/C)\textbackslash[C@H]1CN[C@@H]([C@H]1CC(=O)...
   O)C(=O)O)C(=O)O

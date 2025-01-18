@@ -150,5 +150,5 @@ IChemObjectBuilder builder =
 ## References
 
 1. <a name="citeref1"></a>[https://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html](https://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html)
-2. <a name="citeref2"></a>Willighagen E, Data, Nonotify, or Silent?, [http://chem-bla-ics.blogspot.com/2011/07/data-nonotify-or-silent.html](http://chem-bla-ics.blogspot.com/2011/07/data-nonotify-or-silent.html)
+2. <a name="citeref2"></a>Willighagen E, Data, Nonotify, or Silent?, [https://chem-bla-ics.linkedchemistry.info/2011/07/13/data-nonotify-or-silent.html](https://chem-bla-ics.linkedchemistry.info/2011/07/13/data-nonotify-or-silent.html)
 

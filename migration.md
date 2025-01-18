@@ -9,6 +9,14 @@ The set of changes include changed class names. For example, the CDK 1.2
 class `MDLWriter` is now called [`MDLV2000Writer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/io/MDLV2000Writer.html) to reflect the
 V2000 version of the MDL formats.
 
+## CDK 2.6 to 2.7
+
+### InChI functionality
+
+CDK 2.7 includes a InChI library no longer using the Java Native Interace (JNI, see [<a href="#citeref1">1</a>]) but the Java Native Access (JNA). With this, the Java
+packages and classes changed. If you used the `net.sf.jniinchi` package before, you now need to use the `io.github.dan2097.jnainchi` package.
+An example update of this code is found in [this Bacting patch](https://github.com/egonw/bacting/commit/664d6941a6ddce4a9d99d5a5cec2fb181ca8b9c4).
+
 ## CDK 2.0 to 2.3
 
 #### Deprecated AllRingsFinder.setTimeout()
@@ -20,7 +28,7 @@ the percentage of PubChem for which the algorithm finishes. Use the new
 ## CDK 1.4 to 2.0
 
 This section highlights the important API changes between the CDK 1.4 and
-2.0 series. Innovations of CDK 2.0 are described in [<a href="#citeref1">1</a>].
+2.0 series. Innovations of CDK 2.0 are described in [<a href="#citeref2">2</a>].
 
 ### Removed classes
 
@@ -213,6 +221,7 @@ Aromaticity is differently calculated now, see Section [18.5](properties.md#sec:
 
 ## References
 
-1. <a name="citeref1"></a>Willighagen E, Mayfield JW, Alvarsson J, Berg A, Carlsson L, Jeliazkova N, et al. The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching. J Cheminform. 2017 Jun 6;9(1).  doi:[10.1186/S13321-017-0220-4](https://doi.org/10.1186/S13321-017-0220-4) ([Scholia](https://scholia.toolforge.org/doi/10.1186/S13321-017-0220-4))
+1. <a name="citeref1"></a>Spjuth O, Berg A, Adams S, Willighagen EL. Applications of the InChI in cheminformatics with the CDK and Bioclipse. J Cheminform. 2013 Mar 13;5(1):14.  doi:[10.1186/1758-2946-5-14](https://doi.org/10.1186/1758-2946-5-14) ([Scholia](https://scholia.toolforge.org/doi/10.1186/1758-2946-5-14))
+2. <a name="citeref2"></a>Willighagen E, Mayfield JW, Alvarsson J, Berg A, Carlsson L, Jeliazkova N, et al. The Chemistry Development Kit (CDK) v2.0: atom typing, depiction, molecular formulas, and substructure searching. J Cheminform. 2017 Jun 6;9(1).  doi:[10.1186/S13321-017-0220-4](https://doi.org/10.1186/S13321-017-0220-4) ([Scholia](https://scholia.toolforge.org/doi/10.1186/S13321-017-0220-4))
 
 

@@ -30,7 +30,7 @@ Edition 2.9-2
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
 
-© E.L. Willighagen 2011-2024
+© E.L. Willighagen 2011-2025
 
 License: CC-BY-SA 4.0 International
 
@@ -195,17 +195,19 @@ to Python, please [file a request here](https://github.com/egonw/chempyformatics
 21.2. [Depict a compound as an image](ctr.md#depict-a-compound-as-an-image) <br />
 21.3. [Working with SD tag data](ctr.md#working-with-sd-tag-data) <br />
 22. [Migration](migration.md) <br />
-22.1. [CDK 2.0 to 2.3](migration.md#cdk-20-to-23) <br />
-22.2. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
-22.2.1. [Removed classes](migration.md#removed-classes) <br />
-22.2.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
-22.2.3. [Changed behavior](migration.md#changed-behavior) <br />
-22.2.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
-22.2.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
-22.2.6. [IsotopeFactory](migration.md#isotopefactory) <br />
-22.2.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
-22.2.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
-22.2.9. [Aromaticity calculations](migration.md#aromaticity-calculations) <br />
+22.1. [CDK 2.6 to 2.7](migration.md#cdk-26-to-27) <br />
+22.1.1. [InChI functionality](migration.md#inchi-functionality) <br />
+22.2. [CDK 2.0 to 2.3](migration.md#cdk-20-to-23) <br />
+22.3. [CDK 1.4 to 2.0](migration.md#cdk-14-to-20) <br />
+22.3.1. [Removed classes](migration.md#removed-classes) <br />
+22.3.2. [Renamed classes and methods](migration.md#renamed-classes-and-methods) <br />
+22.3.3. [Changed behavior](migration.md#changed-behavior) <br />
+22.3.4. [Constructors that now require a builder](migration.md#constructors-that-now-require-a-builder) <br />
+22.3.5. [Static methods that are no longer](migration.md#static-methods-that-are-no-longer) <br />
+22.3.6. [IsotopeFactory](migration.md#isotopefactory) <br />
+22.3.7. [IFingerPrinter](migration.md#ifingerprinter) <br />
+22.3.8. [SMILESGenerator](migration.md#smilesgenerator) <br />
+22.3.9. [Aromaticity calculations](migration.md#aromaticity-calculations) <br />
 
 [Index](indexList.md) <br />
 
