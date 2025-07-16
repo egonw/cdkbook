@@ -30,7 +30,7 @@ new DepictionGenerator()
   .writeTo("RenderMolecule.png");
 ```
 
-This results in the image of triazole given in Figure [16.1](#fig:fig:triazole).
+This results in the image of triazole given in Figure [16.3](#fig:fig:triazole).
 
 <a name="fig:fig:triazole"></a>
 ![](images/generated/RenderMolecule.png)
@@ -64,7 +64,7 @@ The result of this code is depicted in Figure [16.2](#fig:fig:backgroundColor).
 Rendering wasn't as much fun, if you could not tune it to your needs. JChemPaint
 has long had many rendering parameters, which are now all converting to the new
 API. The following code is an modification of the code example in
-snippet \ref{script:RenderMolecule}, and adds some
+snippet `RenderMolecule`, and adds some
 code to list all rendering parameters for the three used generators:
 
 **Script** [code/RendererParameters.groovy](code/RendererParameters.code.md)
@@ -72,9 +72,9 @@ code to list all rendering parameters for the three used generators:
 // generators make the image elements
 List<IGenerator> generators =
   new ArrayList<IGenerator>();
+font = new Font(Font.SANS_SERIF, Font.PLAIN, 13)
 generators.add(new BasicSceneGenerator());
-generators.add(new BasicBondGenerator());
-generators.add(new BasicAtomGenerator());
+generators.add(new StandardGenerator(font));
 // dump all parameters
 for (generator in renderer.generators) {
   for (parameter in generator.parameters) {
@@ -104,22 +104,64 @@ parameter: BasicSceneGenerator$ShowMoleculeTitle -> false
 parameter: BasicSceneGenerator$ShowTooltip -> false
 parameter: BasicSceneGenerator$ArrowHeadWidth -> 10.0
 parameter: BasicSceneGenerator$ShowReactionTitle -> false
-parameter: BasicBondGenerator$BondWidth -> 1.0
-parameter: BasicBondGenerator$DefaultBondColor -> java.awt.Color[r=0,g=0,b=0]
-parameter: BasicBondGenerator$WedgeWidth -> 2.0
-parameter: BasicBondGenerator$BondDistance -> 2.0
-parameter: BasicBondGenerator$TowardsRingCenterProportion -> 0.15
-parameter: BasicAtomGenerator$AtomColor -> java.awt.Color[r=0,g=0,b=0]
-parameter: BasicAtomGenerator$AtomColorer -> org.openscience.cdk.renderer.colo...
-  r.CDK2DAtomColors@35554635
-parameter: BasicAtomGenerator$AtomRadius -> 8.0
-parameter: BasicAtomGenerator$ColorByType -> true
-parameter: BasicAtomGenerator$CompactShape -> SQUARE
-parameter: BasicAtomGenerator$CompactAtom -> false
-parameter: BasicAtomGenerator$KekuleStructure -> false
-parameter: BasicAtomGenerator$ShowEndCarbons -> false
-parameter: BasicAtomGenerator$ShowExplicitHydrogens -> true
+parameter: standard.StandardGenerator$AtomColor -> org.openscience.cdk.rendere...
+  r.color.UniColor@25dcf1b6
+parameter: standard.StandardGenerator$Visibility -> org.openscience.cdk.render...
+  er.generators.standard.SelectionVisibility@aa8dce8
+parameter: standard.StandardGenerator$StrokeRatio -> 1.0
+parameter: standard.StandardGenerator$BondSeparation -> 0.16
+parameter: standard.StandardGenerator$WedgeRatio -> 6.0
+parameter: standard.StandardGenerator$SymbolMarginRatio -> 2.0
+parameter: standard.StandardGenerator$HashSpacing -> 5.0
+parameter: standard.StandardGenerator$DashSection -> 8
+parameter: standard.StandardGenerator$WaveSpacing -> 5.0
+parameter: standard.StandardGenerator$FancyBoldWedges -> true
+parameter: standard.StandardGenerator$FancyHashedWedges -> true
+parameter: standard.StandardGenerator$Highlighting -> Colored
+parameter: standard.StandardGenerator$OuterGlowWidth -> 2.0
+parameter: standard.StandardGenerator$AnnotationColor -> java.awt.Color[r=255,...
+  g=0,b=0]
+parameter: standard.StandardGenerator$AnnotationDistance -> 0.25
+parameter: standard.StandardGenerator$AnnotationFontScale -> 0.5
+parameter: standard.StandardGenerator$SgroupBracketDepth -> 0.18
+parameter: standard.StandardGenerator$SgroupFontScale -> 0.6
+parameter: standard.StandardGenerator$OmitMajorIsotopes -> false
+parameter: standard.StandardGenerator$ForceDelocalisedBondDisplay -> false
+parameter: standard.StandardGenerator$DelocalisedDonutsBondDisplay -> true
+parameter: standard.StandardGenerator$DeuteriumSymbol -> true
+parameter: standard.StandardGenerator$PseudoFontStyle -> 3
 ```
+
+Of course, the idea is that you can override default parameter values. That way
+you can tune the output to your particular needs. An example use case is when a
+diagram gets smaller and the element symbols would become unreadable. Then
+you can choose to draw the non-carbon atoms as colored filled circles. To
+achieve this, we only need to change the `CompactAtom` and `CompactShape`
+parameters from the [`BasicAtomGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/renderer/generators/BasicAtomGenerator.html) as listed in the above output.
+
+We set parameter and extend our first example:
+
+**Script** [code/CompactAtomParam.groovy](code/CompactAtomParam.code.md)
+```groovy
+new DepictionGenerator()
+  .withSize(600, 600)
+  .withMargin(0.1)
+  .withZoom(3.0)
+  .withAtomColors()
+  .withParam(BasicAtomGenerator.CompactAtom, true)
+  .withParam(BasicAtomGenerator.CompactShape, BasicAtomGenerator.Shape.OVAL)
+  .depict(triazole)
+  .writeTo("RenderCompact.png");
+```
+
+The new output looks is given in Figure ??.
+
+<a name="fig:fig:triazole"></a>
+![](images/generated/RenderCompact.png)
+<br />**Figure 16.3**: 2D diagram of triazole
+
+
+
 
 ## References
 

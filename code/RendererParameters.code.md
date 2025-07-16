@@ -13,6 +13,7 @@ import org.openscience.cdk.layout.*;
 import org.openscience.cdk.renderer.*;
 import org.openscience.cdk.renderer.font.*;
 import org.openscience.cdk.renderer.generators.*;
+import org.openscience.cdk.renderer.generators.standard.StandardGenerator;
 import org.openscience.cdk.renderer.visitor.*;
 import org.openscience.cdk.templates.*;
 
@@ -27,9 +28,9 @@ triazole = sdg.getMolecule();
 // generators make the image elements
 List<IGenerator> generators =
   new ArrayList<IGenerator>();
+font = new Font(Font.SANS_SERIF, Font.PLAIN, 13)
 generators.add(new BasicSceneGenerator());
-generators.add(new BasicBondGenerator());
-generators.add(new BasicAtomGenerator());
+generators.add(new StandardGenerator(font));
 // the renderer needs to have a toolkit-specific font manager
 AtomContainerRenderer renderer =
   new AtomContainerRenderer(generators, new AWTFontManager());
@@ -60,19 +61,30 @@ parameter: BasicSceneGenerator$ShowMoleculeTitle -> false
 parameter: BasicSceneGenerator$ShowTooltip -> false
 parameter: BasicSceneGenerator$ArrowHeadWidth -> 10.0
 parameter: BasicSceneGenerator$ShowReactionTitle -> false
-parameter: BasicBondGenerator$BondWidth -> 1.0
-parameter: BasicBondGenerator$DefaultBondColor -> java.awt.Color[r=0,g=0,b=0]
-parameter: BasicBondGenerator$WedgeWidth -> 2.0
-parameter: BasicBondGenerator$BondDistance -> 2.0
-parameter: BasicBondGenerator$TowardsRingCenterProportion -> 0.15
-parameter: BasicAtomGenerator$AtomColor -> java.awt.Color[r=0,g=0,b=0]
-parameter: BasicAtomGenerator$AtomColorer -> org.openscience.cdk.renderer.colo...
-  r.CDK2DAtomColors@35554635
-parameter: BasicAtomGenerator$AtomRadius -> 8.0
-parameter: BasicAtomGenerator$ColorByType -> true
-parameter: BasicAtomGenerator$CompactShape -> SQUARE
-parameter: BasicAtomGenerator$CompactAtom -> false
-parameter: BasicAtomGenerator$KekuleStructure -> false
-parameter: BasicAtomGenerator$ShowEndCarbons -> false
-parameter: BasicAtomGenerator$ShowExplicitHydrogens -> true
+parameter: standard.StandardGenerator$AtomColor -> org.openscience.cdk.rendere...
+  r.color.UniColor@25dcf1b6
+parameter: standard.StandardGenerator$Visibility -> org.openscience.cdk.render...
+  er.generators.standard.SelectionVisibility@aa8dce8
+parameter: standard.StandardGenerator$StrokeRatio -> 1.0
+parameter: standard.StandardGenerator$BondSeparation -> 0.16
+parameter: standard.StandardGenerator$WedgeRatio -> 6.0
+parameter: standard.StandardGenerator$SymbolMarginRatio -> 2.0
+parameter: standard.StandardGenerator$HashSpacing -> 5.0
+parameter: standard.StandardGenerator$DashSection -> 8
+parameter: standard.StandardGenerator$WaveSpacing -> 5.0
+parameter: standard.StandardGenerator$FancyBoldWedges -> true
+parameter: standard.StandardGenerator$FancyHashedWedges -> true
+parameter: standard.StandardGenerator$Highlighting -> Colored
+parameter: standard.StandardGenerator$OuterGlowWidth -> 2.0
+parameter: standard.StandardGenerator$AnnotationColor -> java.awt.Color[r=255,...
+  g=0,b=0]
+parameter: standard.StandardGenerator$AnnotationDistance -> 0.25
+parameter: standard.StandardGenerator$AnnotationFontScale -> 0.5
+parameter: standard.StandardGenerator$SgroupBracketDepth -> 0.18
+parameter: standard.StandardGenerator$SgroupFontScale -> 0.6
+parameter: standard.StandardGenerator$OmitMajorIsotopes -> false
+parameter: standard.StandardGenerator$ForceDelocalisedBondDisplay -> false
+parameter: standard.StandardGenerator$DelocalisedDonutsBondDisplay -> true
+parameter: standard.StandardGenerator$DeuteriumSymbol -> true
+parameter: standard.StandardGenerator$PseudoFontStyle -> 3
 ```
