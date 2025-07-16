@@ -61,6 +61,11 @@ The result of this code is depicted in Figure [16.2](#fig:fig:backgroundColor).
 
 ## Coloring selections
 
+We can highlight atoms and bonds by giving them an annotation color. By default, it will color
+the atoms with that color, but we may prefer to give them an outer glow. That means we need
+to annotate the atoms, but also modify the generator parameter to select outer glow. The
+width of the glow can also be tuned:
+
 **Script** [code/RenderSelection.groovy](code/RenderSelection.code.md)
 ```groovy
 triazole.getAtom(0).setProperty(
@@ -71,6 +76,9 @@ new DepictionGenerator()
   .withMargin(0.1)
   .withZoom(3.0)
   .withAtomColors()
+  .withParam(StandardGenerator.Highlighting.class,
+             StandardGenerator.HighlightStyle.OuterGlow)
+  .withParam(StandardGenerator.OuterGlowWidth.class, 3d)
   .depict(triazole)
   .writeTo("RenderSelection.png");
 ```
