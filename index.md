@@ -168,7 +168,8 @@ to Python, please [file a request here](https://github.com/egonw/chempyformatics
 16. [Depiction](depiction.md) <br />
 16.1. [Molecules](depiction.md#molecules) <br />
 16.2. [Background color](depiction.md#background-color) <br />
-16.3. [Parameters](depiction.md#parameters) <br />
+16.3. [Coloring selections](depiction.md#coloring-selections) <br />
+16.4. [Parameters](depiction.md#parameters) <br />
 17. [Substructure Searching](substructure.md) <br />
 17.1. [Fingerprints](substructure.md#fingerprints) <br />
 17.1.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />

@@ -59,6 +59,30 @@ The result of this code is depicted in Figure [16.2](#fig:fig:backgroundColor).
 ![](images/generated/BackgroundColor.png)
 <br />**Figure 16.2**: Triazole depicted with a custom, grey background.
 
+## Coloring selections
+
+**Script** [code/RenderSelection.groovy](code/RenderSelection.code.md)
+```groovy
+triazole.getAtom(0).setProperty(
+  StandardGenerator.HIGHLIGHT_COLOR, new Color(0x98F08E)
+)
+new DepictionGenerator()
+  .withSize(600, 600)
+  .withMargin(0.1)
+  .withZoom(3.0)
+  .withAtomColors()
+  .depict(triazole)
+  .writeTo("RenderSelection.png");
+```
+
+This results in the image of triazole with an atom highlighted with a green background,
+as given in Figure [16.3](#fig:fig:triazoleSelection).
+
+<a name="fig:fig:triazoleSelection"></a>
+![](images/generated/RenderSelection.png)
+<br />**Figure 16.3**: 2D diagram of triazole
+
+
 ## Parameters
 
 Rendering wasn't as much fun, if you could not tune it to your needs. JChemPaint
