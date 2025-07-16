@@ -409,7 +409,7 @@ faster [<a href="#citeref3">3</a>].
 ## References
 
 1. <a name="citeref1"></a>Rojas-Cherto M, Kasper PT, Willighagen E, Vreeken RJ, Hankemeier T, Reijmers TH. Elemental composition determination based on MSn. Bioinformatics. 2011 Jul 14;27(17):2376–83.  doi:[10.1093/BIOINFORMATICS/BTR409](https://doi.org/10.1093/BIOINFORMATICS/BTR409) ([Scholia](https://scholia.toolforge.org/doi/10.1093/BIOINFORMATICS/BTR409))
-2. <a name="citeref2"></a>Yirik MA, Sorokina M, Steinbeck C. MAYGEN: an open-source chemical structure generator for constitutional isomers based on the orderly generation principle. J Cheminform. 2021 Jul 3;13(1).  doi:[10.1186/S13321-021-00529-9](https://doi.org/10.1186/S13321-021-00529-9) ([Scholia](https://scholia.toolforge.org/doi/10.1186/S13321-021-00529-9))
+2. <a name="citeref2"></a>Yırık MA, Sorokina M, Steinbeck C. MAYGEN: an open-source chemical structure generator for constitutional isomers based on the orderly generation principle. J Cheminform. 2021 Jul 3;13(1).  doi:[10.1186/S13321-021-00529-9](https://doi.org/10.1186/S13321-021-00529-9) ([Scholia](https://scholia.toolforge.org/doi/10.1186/S13321-021-00529-9))
 3. <a name="citeref3"></a>McKay BD, Yirik MA, Steinbeck C. Surge: a fast open-source chemical graph generator. J Cheminform. 2022 Apr 23;14(1).  doi:[10.1186/S13321-022-00604-9](https://doi.org/10.1186/S13321-022-00604-9) ([Scholia](https://scholia.toolforge.org/doi/10.1186/S13321-022-00604-9))
 
 

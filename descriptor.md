@@ -207,7 +207,7 @@ value = result.getValue()
 The output shows us that quite some metadata is preserved:
 
 ```plain
-Specification: org.openscience.cdk.qsar.DescriptorSpecification@134c38
+Specification: org.openscience.cdk.qsar.DescriptorSpecification@76ffc17c
 Parameters names: [checkAromaticity]
 Parameters values: [false]
 Exception: null

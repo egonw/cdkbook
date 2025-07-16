@@ -9,7 +9,7 @@ aromaticity [properties](properties.md#tp10)<br />
 ASN.1 [io](io.md#tp3)<br />
 atomic number [atomsbonds](atomsbonds.md#tp3) [missing](missing.md#tp1)<br />
 atom types [atomtype](atomtype.md#tp1)<br />
-background color [depiction](depiction.md#tp5)<br />
+background color [depiction](depiction.md#tp4)<br />
 benzene [atomsbonds](atomsbonds.md#tp14)<br />
 boiling points [cheminfo](cheminfo.md#tp2)<br />
 bond orders [missing](missing.md#tp11)<br />
@@ -148,7 +148,6 @@ periodic table [missing](missing.md#tp3)<br />
 period [missing](missing.md#tp5)<br />
 PLS [cheminfo](cheminfo.md#tp26)<br />
 PMPReader [ioclasseslist](ioclasseslist.md#tp32)<br />
-PNG [depiction](depiction.md#tp4)<br />
 principal component analysis [cheminfo](cheminfo.md#tp27)<br />
 products [reaction](reaction.md#tp3)<br />
 properties [atomsbonds](atomsbonds.md#tp21)<br />

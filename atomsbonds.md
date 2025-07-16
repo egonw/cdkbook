@@ -329,6 +329,22 @@ mol.addBond(0,3,IBond.Order.SINGLE);
 mol.addBond(0,4,IBond.Order.SINGLE);
 ```
 
+A third alternative takes advantage of the `newAtom()` and `newBond()` methods:
+
+**Script** [code/AtomContainerAddAtomsAndBonds3.groovy](code/AtomContainerAddAtomsAndBonds3.code.md)
+```groovy
+mol = new AtomContainer();
+c  = mol.newAtom((int)IElement.C);
+h1 = mol.newAtom((int)IElement.H);
+h2 = mol.newAtom((int)IElement.H);
+h3 = mol.newAtom((int)IElement.H);
+h4 = mol.newAtom((int)IElement.H);
+mol.newBond(c,h1,IBond.Order.SINGLE);
+mol.newBond(c,h2,IBond.Order.SINGLE);
+mol.newBond(c,h3,IBond.Order.SINGLE);
+mol.newBond(c,h4,IBond.Order.SINGLE);
+```
+
 ### Iterating over atoms and bonds
 
 The [`IAtomContainer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IAtomContainer.html) comes with convenience methods to iterate over atoms

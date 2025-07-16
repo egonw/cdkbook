@@ -20,6 +20,6 @@ for (i=0; i<set.getAtomContainerCount(); i++) {
 **Output:**
 ```plain
 Number of containers: 2
-container 0 has hashcode 663610034
-container 1 has hashcode 1394241900
+container 0 has hashcode 1119149914
+container 1 has hashcode 647786756
 ```
