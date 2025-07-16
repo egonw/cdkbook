@@ -30,7 +30,7 @@ new DepictionGenerator()
   .writeTo("RenderMolecule.png");
 ```
 
-This results in the image of triazole given in Figure [16.3](#fig:fig:triazole).
+This results in the image of triazole given in Figure [16.1](#fig:fig:triazole).
 
 <a name="fig:fig:triazole"></a>
 ![](images/generated/RenderMolecule.png)
@@ -131,37 +131,6 @@ parameter: standard.StandardGenerator$DelocalisedDonutsBondDisplay -> true
 parameter: standard.StandardGenerator$DeuteriumSymbol -> true
 parameter: standard.StandardGenerator$PseudoFontStyle -> 3
 ```
-
-Of course, the idea is that you can override default parameter values. That way
-you can tune the output to your particular needs. An example use case is when a
-diagram gets smaller and the element symbols would become unreadable. Then
-you can choose to draw the non-carbon atoms as colored filled circles. To
-achieve this, we only need to change the `CompactAtom` and `CompactShape`
-parameters from the [`BasicAtomGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/renderer/generators/BasicAtomGenerator.html) as listed in the above output.
-
-We set parameter and extend our first example:
-
-**Script** [code/CompactAtomParam.groovy](code/CompactAtomParam.code.md)
-```groovy
-new DepictionGenerator()
-  .withSize(600, 600)
-  .withMargin(0.1)
-  .withZoom(3.0)
-  .withAtomColors()
-  .withParam(BasicAtomGenerator.CompactAtom, true)
-  .withParam(BasicAtomGenerator.CompactShape, BasicAtomGenerator.Shape.OVAL)
-  .depict(triazole)
-  .writeTo("RenderCompact.png");
-```
-
-The new output looks is given in Figure ??.
-
-<a name="fig:fig:triazole"></a>
-![](images/generated/RenderCompact.png)
-<br />**Figure 16.3**: 2D diagram of triazole
-
-
-
 
 ## References
 
