@@ -11,6 +11,7 @@
 #import org.openscience.cdk.renderer.*;
 #import org.openscience.cdk.renderer.font.*;
 #import org.openscience.cdk.renderer.generators.*;
+#import org.openscience.cdk.renderer.generators.standard.StandardGenerator;
 #import org.openscience.cdk.renderer.visitor.*;
 #import org.openscience.cdk.templates.*;
 #
@@ -24,9 +25,9 @@
 // generators make the image elements
 List<IGenerator> generators =
   new ArrayList<IGenerator>();
+font = new Font(Font.SANS_SERIF, Font.PLAIN, 13)
 generators.add(new BasicSceneGenerator());
-generators.add(new BasicBondGenerator());
-generators.add(new BasicAtomGenerator());
+generators.add(new StandardGenerator(font));
 
 #// the renderer needs to have a toolkit-specific font manager
 #AtomContainerRenderer renderer =

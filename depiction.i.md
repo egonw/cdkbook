@@ -44,7 +44,7 @@ The result of this code is depicted in Figure <xref>fig:backgroundColor</xref>.
 Rendering wasn't as much fun, if you could not tune it to your needs. JChemPaint
 has long had many rendering parameters, which are now all converting to the new
 API. The following code is an modification of the code example in
-snippet \ref{script:RenderMolecule}, and adds some
+snippet `RenderMolecule`, and adds some
 code to list all rendering parameters for the three used generators:
 
 <code>RendererParameters</code>
@@ -52,6 +52,26 @@ code to list all rendering parameters for the three used generators:
 The output will look something like:
 
 <out>RendererParameters</out>
+
+Of course, the idea is that you can override default parameter values. That way
+you can tune the output to your particular needs. An example use case is when a
+diagram gets smaller and the element symbols would become unreadable. Then
+you can choose to draw the non-carbon atoms as colored filled circles. To
+achieve this, we only need to change the <class>CompactAtom</class> and <class>CompactShape</class>
+parameters from the <class>BasicAtomGenerator</class> as listed in the above output.
+
+We set parameter and extend our first example:
+
+<code>CompactAtomParam</code>
+
+The new output looks is given in Figure <xref>fig:compact</xref>.
+
+<figure label="fig:triazole" caption="2D diagram of triazole">
+![](images/generated/RenderCompact.png) <br />
+</figure>
+
+
+
 
 ## References
 
