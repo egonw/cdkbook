@@ -39,6 +39,20 @@ The result of this code is depicted in Figure <xref>fig:backgroundColor</xref>.
 ![](images/generated/BackgroundColor.png) <br />
 </figure>
 
+## Parameters
+
+Rendering wasn't as much fun, if you could not tune it to your needs. JChemPaint
+has long had many rendering parameters, which are now all converting to the new
+API. The following code is an modification of the code example in
+snippet \ref{script:RenderMolecule}, and adds some
+code to list all rendering parameters for the three used generators:
+
+<code>RendererParameters</code>
+
+The output will look something like:
+
+<out>RendererParameters</out>
+
 ## References
 
 <references/>
