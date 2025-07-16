@@ -39,6 +39,23 @@ The result of this code is depicted in Figure <xref>fig:backgroundColor</xref>.
 ![](images/generated/BackgroundColor.png) <br />
 </figure>
 
+## Coloring selections
+
+We can highlight atoms and bonds by giving them an annotation color. By default, it will color
+the atoms with that color, but we may prefer to give them an outer glow. That means we need
+to annotate the atoms, but also modify the generator parameter to select outer glow. The
+width of the glow can also be tuned:
+
+<code>RenderSelection</code>
+
+This results in the image of triazole with an atom highlighted with a green background,
+as given in Figure <xref>fig:triazoleSelection</xref>.
+
+<figure label="fig:triazoleSelection" caption="2D diagram of triazole">
+![](images/generated/RenderSelection.png) <br />
+</figure>
+
+
 ## Parameters
 
 Rendering wasn't as much fun, if you could not tune it to your needs. JChemPaint
