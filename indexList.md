@@ -52,13 +52,13 @@ CSD [cheminfo](cheminfo.md#tp19)<br />
 CTXReader [ioclasseslist](ioclasseslist.md#tp5)<br />
 databases [cheminfo](cheminfo.md#tp15)<br />
 DNA [protein](protein.md#tp2)<br />
-ECFP [substructure](substructure.md#tp2)<br />
+ECFP [substructure](substructure.md#tp4)<br />
 electronegativity [missing](missing.md#tp8)<br />
 electrons [atomsbonds](atomsbonds.md#tp15)<br />
 ethanol [atomsbonds](atomsbonds.md#tp13)<br />
 exception [descriptor](descriptor.md#tp5)<br />
 explicit hydrogens [missing](missing.md#tp14)<br />
-FCFP [substructure](substructure.md#tp3)<br />
+FCFP [substructure](substructure.md#tp5)<br />
 ferrocene} [cheminfo](cheminfo.md#tp22)<br />
 Figueras algorithm [graph](graph.md#tp8)<br />
 FixedH option [inchi](inchi.md#tp9)<br />
@@ -97,6 +97,7 @@ InChI [graph](graph.md#tp16) [inchi](inchi.md#tp1)<br />
 INChIPlainTextReader [ioclasseslist](ioclasseslist.md#tp19)<br />
 INChIReader [ioclasseslist](ioclasseslist.md#tp20)<br />
 isomeric SMILES [io](io.md#tp13)<br />
+isomorphism [substructure](substructure.md#tp2)<br />
 IUPAC name [cheminfo](cheminfo.md#tp5)<br />
 Java application [writingApps](writingApps.md#tp1)<br />
 javac [writingApps](writingApps.md#tp2)<br />
@@ -120,7 +121,7 @@ missing hydrogens [missing](missing.md#tp12)<br />
 Mol2Reader [ioclasseslist](ioclasseslist.md#tp30)<br />
 Mol2Writer [ioclasseslist](ioclasseslist.md#tp31)<br />
 molecular descriptors [cheminfo](cheminfo.md#tp30) [descriptor](descriptor.md#tp2)<br />
-molecular fingerprints [substructure](substructure.md#tp1)<br />
+molecular fingerprints [substructure](substructure.md#tp3)<br />
 molecular formula [atomsbonds](atomsbonds.md#tp19) [missing](missing.md#tp17)<br />
 molecular mass [properties](properties.md#tp1)<br />
 molecular volume [properties](properties.md#tp8)<br />
@@ -184,6 +185,7 @@ Standard InChI [inchi](inchi.md#tp4) [inchi](inchi.md#tp6)<br />
 statistical methods [cheminfo](cheminfo.md#tp32)<br />
 stereochemistry [inchi](inchi.md#tp12)<br />
 stereoisomerism [inchi](inchi.md#tp11)<br />
+substructure searching [substructure](substructure.md#tp1)<br />
 superimpose [stereo](stereo.md#tp3)<br />
 Sybyl atom type [atomtype](atomtype.md#tp3)<br />
 Sybyl Line Notation [io](io.md#tp10)<br />

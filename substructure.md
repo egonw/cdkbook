@@ -1,11 +1,72 @@
 # Substructure Searching
 
+The [`UniversalIsomorphismTester`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/isomorphism/UniversalIsomorphismTester.html) class in the CDK can be used
+for <a name="tp1">substructure searching</a>. It allows you to determine if some
+structure is a substructure and what the
+matching substructures are. As such, this can also be used to determine
+if two structures are identical.
+
+In this chapter we will see how the class returns all possible
+substructure matches, and we'll notice that redundancy occurs due
+to symmetrically equivalent matches, and how these redundant
+matches can be removed.
+
+<a name="sec:sec:exactsearch"></a>
+## Exact Search
+
+The [`UniversalIsomorphismTester`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/isomorphism/UniversalIsomorphismTester.html) class implements an algorithm
+that was originally developed for <a name="tp2">isomorphism</a> checking.
+However, it can be used for substructure search too.
+This section will first show how the class is used to
+check if two classes are identical:
+
+**<a name="script:Isomorphism">Script 20.1</a>** [code/Isomorphism.groovy](code/Isomorphism.code.md)
+```groovy
+butane = MoleculeFactory.makeAlkane(4);
+isomorphismTester = new UniversalIsomorphismTester()
+println "Is isomorphic: " +
+  isomorphismTester.isIsomorph(
+    butane, butane
+  )
+```
+
+This algorithm works by looking the how bonds are connected to each
+other. This is important to realize, because it explains a typical
+corner case for this algorithm: it cannot distinguish cyclopropane
+from isobutane (see Figure [17.1](#fig:cyclopropane:isobutane)) when
+they are hydrogen depleted:
+
+**Script** [code/UITLimitation.groovy](code/UITLimitation.code.md)
+```groovy
+isomorphismTester = new UniversalIsomorphismTester()
+println "Is isomorphic: " +
+  isomorphismTester.isIsomorph(
+    cyclopropane, isobutane
+  )
+```
+
+Fortunately, the CDK implementation has a workaround for this so that they are
+still considered different, based on the fact that they have
+different atom counts:
+
+```plain
+Is isomorphic: false
+```
+
+However, for substructure searching we're less lucky, as we will see shortly.
+
+
+
+<a name="fig:cyclopropane:isobutane"></a>
+![](images/generated/RenderCyclopropane.png) ![](images/generated/RenderIsobutane.png)
+<br />**Figure 17.1**: Cyclopropane (left) and isobutane (right).
+
 <a name="sec:descriptors:fingerprints"></a>
 ## Fingerprints
 
 Substructure searching is a relatively slow algorithm, and the time required
 to compare two molecules scales with the number of atoms in each molecule.
-To reduce the computation time, <a name="tp1">molecular fingerprints</a> were
+To reduce the computation time, <a name="tp3">molecular fingerprints</a> were
 invented. There are two key aspects to fingerprints that make them
 efficient: first, they have a fixed length so that the time to compare
 two molecule is independent of the size of the two structures;
@@ -149,7 +210,7 @@ ethanol: {81, 108, 113, 138, 152, 154, 156, 159, 163}
 
 ### ECFP and FCFP Fingerprints
 
-The CDK also has an implementation for the circular <a name="tp2">ECFP</a> and <a name="tp3">FCFP</a>
+The CDK also has an implementation for the circular <a name="tp4">ECFP</a> and <a name="tp5">FCFP</a>
 fingerprints [<a href="#citeref5">5</a>]. These are developed by Alex M. Clark at
 [Collaborative Drug Discovery, Inc](http://collaborativedrug.com) in the
 [`CircularFingerprinter`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/fingerprint/CircularFingerprinter.html) [<a href="#citeref6">6</a>].
