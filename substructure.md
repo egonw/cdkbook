@@ -61,6 +61,68 @@ However, for substructure searching we're less lucky, as we will see shortly.
 ![](images/generated/RenderCyclopropane.png) ![](images/generated/RenderIsobutane.png)
 <br />**Figure 17.1**: Cyclopropane (left) and isobutane (right).
 
+<a name="sec:"></a>
+## Substructures
+
+Starting from the above code to match two structures, the step to substructure searching
+is made via the `isSubgraph()` method:
+
+**Script** [code/IsSubgraph.groovy](code/IsSubgraph.code.md)
+```groovy
+butane = MoleculeFactory.makeAlkane(4);
+propane = MoleculeFactory.makeAlkane(3);
+isomorphismTester = new UniversalIsomorphismTester()
+println "Propane part of Butane: " +
+  isomorphismTester.isSubgraph(
+    butane, propane
+  )
+println "Butane part of Propane: " +
+  isomorphismTester.isSubgraph(
+    propane, butane
+  )
+```
+
+It gives this output:
+
+```plain
+Propane part of Butane: true
+Butane part of Propane: false
+```
+
+Now, you may wonder why propane is a subgraph of butane, because it is
+indeed not. But while the variable names suggest that that is what we have been testing,
+we have been testing something else: this code works because of the fact that the `MoleculeFactory`
+returns hydrogen depleted graphs (see Section ??).
+Therefore, butane is a chain of four carbons, and propane is a chain
+of three carbons. Then, the latter is a chemical subgraph of the
+former.
+
+If we now return to our previous cyclopropane-isobutane example, we can run a subgraph
+analysis on them too:
+
+**Script** [code/UITSubgraphLimitation.groovy](code/UITSubgraphLimitation.code.md)
+```groovy
+isomorphismTester = new UniversalIsomorphismTester()
+println "Cyclopropane part of isobutane: " +
+  isomorphismTester.isSubgraph(
+    isobutane, cyclopropane
+  )
+println "Isobutane part of cyclopropane: " +
+  isomorphismTester.isSubgraph(
+    cyclopropane, isobutane
+  )
+```
+
+Here we do see the intrinsic limitation of the algorithm reflected. While it is
+possible to see that isobutane has more atoms then cyclobutane and therefore cannot
+be a substructure, that conclusion cannot be derived for cyclobutane as substructure
+as isobutane, visualizing that algorithmic limitation:
+
+```plain
+Cyclopropane part of isobutane: true
+Isobutane part of cyclopropane: false
+```
+
 <a name="sec:descriptors:fingerprints"></a>
 ## Fingerprints
 
