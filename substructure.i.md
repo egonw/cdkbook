@@ -1,5 +1,136 @@
 # Substructure Searching
 
+The <class type="topic">UniversalIsomorphismTester</class> class in the CDK can be used
+for <topic>substructure searching</topic>. It allows you to determine if some
+structure is a substructure and what the
+matching substructures are. As such, this can also be used to determine
+if two structures are identical.
+
+In this chapter we will see how the class returns all possible
+substructure matches, and we'll notice that redundancy occurs due
+to symmetrically equivalent matches, and how these redundant
+matches can be removed.
+
+<section level="##" label="sec:exactsearch">Exact Search</section>
+
+The <class>UniversalIsomorphismTester</class> class implements an algorithm
+that was originally developed for <topic>isomorphism</topic> checking.
+However, it can be used for substructure search too.
+This section will first show how the class is used to
+check if two classes are identical:
+
+<code>Isomorphism</code>
+
+This algorithm works by looking the how bonds are connected to each
+other. This is important to realize, because it explains a typical
+corner case for this algorithm: it cannot distinguish cyclopropane
+from isobutane (see Figure <xref>cyclopropane:isobutane</xref>) when
+they are hydrogen depleted:
+
+<code>UITLimitation</code>
+
+Fortunately, the CDK implementation has a workaround for this so that they are
+still considered different, based on the fact that they have
+different atom counts:
+
+<out>UITLimitation</out>
+
+However, for substructure searching we're less lucky, as we will see shortly.
+
+%%% <code>RenderCyclopropane</code>
+%%% <code>RenderIsobutane</code>
+
+
+<figure label="cyclopropane:isobutane" caption="Cyclopropane (left) and isobutane (right).">
+![](images/generated/RenderCyclopropane.png) <!-- <code>RenderAdenineWithNumbers</code> -->
+![](images/generated/RenderIsobutane.png) <!-- <code>RenderOxazoleWithNumbers</code> -->
+</figure>
+
+<section level="##">Substructures</section>
+
+Starting from the above code to match two structures, the step to substructure searching
+is made via the `isSubgraph()` method:
+
+<code>IsSubgraph</code>
+
+It gives this output:
+
+<out>IsSubgraph</out>
+
+Now, you may wonder why propane is a subgraph of butane, because it is
+indeed not. But while the variable names suggest that that is what we have been testing,
+we have been testing something else: this code works because of the fact that the <class>MoleculeFactory</class>
+returns hydrogen depleted graphs (see Section <xref>sec:hydrogens</xref>).
+Therefore, butane is a chain of four carbons, and propane is a chain
+of three carbons. Then, the latter is a chemical subgraph of the
+former.
+
+If we now return to our previous cyclopropane-isobutane example, we can run a subgraph
+analysis on them too:
+
+<code>UITSubgraphLimitation</code>
+
+Here we do see the intrinsic limitation of the algorithm reflected. While it is
+possible to see that isobutane has more atoms then cyclobutane and therefore cannot
+be a substructure, that conclusion cannot be derived for cyclobutane as substructure
+as isobutane, visualizing that algorithmic limitation:
+
+<out>UITSubgraphLimitation</out>
+
+<section level="##">Matching Substructures</section>
+
+Substructure searching is finding in a target molecule the atoms that
+match the given searched substructure. With the <class>UniversalIsomorphismTester</class>
+we can do:
+
+<code>Overlap</code>
+
+However, this only returns us one match, selected as being the largest:
+
+<out>Overlap</out>
+
+There is an alternative:
+
+<code>Substructure</code>
+
+The `getSubgraphAtomsMaps()` methods returns a `List<List<RMap>>`
+object, where each `List<RMap>` represents on substructure match.
+When we look at the outer list, we see that the subgraph of three carbon atoms
+is found 4 times in butane, each with 3 atoms:
+
+<out>Substructure</out>
+
+This is caused by the symmetrical nature of the substructure. It can map
+twice onto the same three atoms in butane: once in the forward direction,
+and once in the backward direction.
+
+<section level="##" label="sec:smarts">SMARTS matching</section>
+
+A common method to find substructures in cheminformatics is the
+SMiles ARbitrary Target Specification (<topic>SMARTS</topic>). The CDK has a
+<class>SMARTSParser</class> class to parse SMARTS strings and a convenience tool to perform
+SMARTS substructure searches. This is a typical use case:
+
+<code>SMARTSSearching</code>
+
+This shows us that the SMARTS-encoded carboxylic acid substructure is found twice
+and which atoms in the input structure form that match:
+
+<out>SMARTSSearching</out>
+
+### Unique matches
+
+Symmetry can cause identical hits to match multiple times, in different ways. This
+is, for example, the case when we loosen the above substructure search to a carbon
+connected to two oxygens, whatever the bond order is:
+
+<code>SMARTSUniqueSearching</code>
+
+This shows the different between the `getMatchingAtoms` and `getUniqueMatchingAtoms`
+method:
+
+<out>SMARTSUniqueSearching</out>
+
 <section level="##" label="descriptors:fingerprints">Fingerprints</section>
 
 Substructure searching is a relatively slow algorithm, and the time required
