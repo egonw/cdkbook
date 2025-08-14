@@ -173,9 +173,10 @@ to Python, please [file a request here](https://github.com/egonw/chempyformatics
 17. [Substructure Searching](substructure.md) <br />
 17.1. [Exact Search](substructure.md#exact-search) <br />
 17.2. [Substructures](substructure.md#substructures) <br />
-17.3. [Fingerprints](substructure.md#fingerprints) <br />
-17.3.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
-17.3.2. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
+17.3. [Matching Substructures](substructure.md#matching-substructures) <br />
+17.4. [Fingerprints](substructure.md#fingerprints) <br />
+17.4.1. [MACCS Fingerprints](substructure.md#maccs-fingerprints) <br />
+17.4.2. [ECFP and FCFP Fingerprints](substructure.md#ecfp-and-fcfp-fingerprints) <br />
 18. [Molecular Properties](properties.md) <br />
 18.1. [Molecular Mass](properties.md#molecular-mass) <br />
 18.1.1. [Implicit Hydrogens](properties.md#implicit-hydrogens) <br />

@@ -123,6 +123,71 @@ Cyclopropane part of isobutane: true
 Isobutane part of cyclopropane: false
 ```
 
+<a name="sec:"></a>
+## Matching Substructures
+
+Substructure searching is finding in a target molecule the atoms that
+match the given searched substructure. With the [`UniversalIsomorphismTester`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/isomorphism/UniversalIsomorphismTester.html)
+we can do:
+
+**Script** [code/Overlap.groovy](code/Overlap.code.md)
+```groovy
+butane = MoleculeFactory.makeAlkane(4)
+ccc = MoleculeFactory.makeAlkane(3)
+isomorphismTester = new UniversalIsomorphismTester()
+hits = isomorphismTester.getOverlaps(
+  butane, ccc
+)
+println "Number of hits: " + hits.size()
+hits.each { substructure ->
+  println "Substructure in AtomContainer:"
+  println "  #atoms: " + substructure.atomCount
+}
+```
+
+However, this only returns us one match, selected as being the largest:
+
+```plain
+Number of hits: 1
+Substructure in AtomContainer:
+  #atoms: 3
+```
+
+There is an alternative:
+
+**Script** [code/Substructure.groovy](code/Substructure.code.md)
+```groovy
+butane = MoleculeFactory.makeAlkane(4);
+ccc = MoleculeFactory.makeAlkane(3);
+isomorphismTester = new UniversalIsomorphismTester()
+hits = isomorphismTester.getSubgraphAtomsMaps(
+     butane, ccc
+  )
+println "Number of hits: " + hits.size()
+hits.each { substructure ->
+  println "Atoms in substructure: " +
+    substructure.size()
+}
+```
+
+The `getSubgraphAtomsMaps()` methods returns a `List<List<RMap>>`
+object, where each `List<RMap>` represents on substructure match.
+When we look at the outer list, we see that the subgraph of three carbon atoms
+is found 4 times in butane, each with 3 atoms:
+
+```plain
+Number of hits: 4
+Atoms in substructure: 3
+Atoms in substructure: 3
+Atoms in substructure: 3
+Atoms in substructure: 3
+```
+
+This is caused by the symmetrical nature of the substructure. It can map
+twice onto the same three atoms in butane: once in the forward direction,
+and once in the backward direction.
+
+
 <a name="sec:descriptors:fingerprints"></a>
 ## Fingerprints
 
