@@ -187,13 +187,84 @@ This is caused by the symmetrical nature of the substructure. It can map
 twice onto the same three atoms in butane: once in the forward direction,
 and once in the backward direction.
 
+<a name="sec:sec:smarts"></a>
+## SMARTS matching
+
+A common method to find substructures in cheminformatics is the
+SMiles ARbitrary Target Specification (<a name="tp3">SMARTS</a>). The CDK has a
+`SMARTSParser` class to parse SMARTS strings and a convenience tool to perform
+SMARTS substructure searches. This is a typical use case:
+
+**Script** [code/SMARTSSearching.groovy](code/SMARTSSearching.code.md)
+```groovy
+atomContainer = sp.parseSmiles("CC(=O)OC(=O)C");
+querytool = new SMARTSQueryTool(
+  "O=CO", atomContainer.getBuilder()
+);
+found = querytool.matches(atomContainer);
+if (found) {
+   int nmatch = querytool.countMatches();
+   mappings = querytool.getMatchingAtoms();
+   for (int i = 1; i <= nmatch; i++) {
+      atomIndices = mappings.get(i-1);
+      println "match $i: $atomIndices"
+   }
+}
+```
+
+This shows us that the SMARTS-encoded carboxylic acid substructure is found twice
+and which atoms in the input structure form that match:
+
+```plain
+match 1: [2, 1, 3]
+match 2: [5, 4, 3]
+```
+
+### Unique matches
+
+Symmetry can cause identical hits to match multiple times, in different ways. This
+is, for example, the case when we loosen the above substructure search to a carbon
+connected to two oxygens, whatever the bond order is:
+
+**Script** [code/SMARTSUniqueSearching.groovy](code/SMARTSUniqueSearching.code.md)
+```groovy
+atomContainer = sp.parseSmiles("CC(=O)OC(=O)C");
+querytool = new SMARTSQueryTool(
+  "O~C~O", atomContainer.getBuilder()
+);
+found = querytool.matches(atomContainer);
+if (found) {
+   mappings = querytool.getMatchingAtoms();
+   for (int i = 1; i <= mappings.size(); i++) {
+      atomIndices = mappings.get(i-1);
+      println "match $i: $atomIndices"
+   }
+   mappings = querytool.getUniqueMatchingAtoms();
+   for (int i = 1; i <= mappings.size(); i++) {
+      atomIndices = mappings.get(i-1);
+      println "unique match $i: $atomIndices"
+   }
+}
+```
+
+This shows the different between the `getMatchingAtoms` and `getUniqueMatchingAtoms`
+method:
+
+```plain
+match 1: [2, 1, 3]
+match 2: [3, 1, 2]
+match 3: [3, 4, 5]
+match 4: [5, 4, 3]
+unique match 1: [2, 1, 3]
+unique match 2: [3, 4, 5]
+```
 
 <a name="sec:descriptors:fingerprints"></a>
 ## Fingerprints
 
 Substructure searching is a relatively slow algorithm, and the time required
 to compare two molecules scales with the number of atoms in each molecule.
-To reduce the computation time, <a name="tp3">molecular fingerprints</a> were
+To reduce the computation time, <a name="tp4">molecular fingerprints</a> were
 invented. There are two key aspects to fingerprints that make them
 efficient: first, they have a fixed length so that the time to compare
 two molecule is independent of the size of the two structures;
@@ -337,7 +408,7 @@ ethanol: {81, 108, 113, 138, 152, 154, 156, 159, 163}
 
 ### ECFP and FCFP Fingerprints
 
-The CDK also has an implementation for the circular <a name="tp4">ECFP</a> and <a name="tp5">FCFP</a>
+The CDK also has an implementation for the circular <a name="tp5">ECFP</a> and <a name="tp6">FCFP</a>
 fingerprints [<a href="#citeref5">5</a>]. These are developed by Alex M. Clark at
 [Collaborative Drug Discovery, Inc](http://collaborativedrug.com) in the
 [`CircularFingerprinter`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/fingerprint/CircularFingerprinter.html) [<a href="#citeref6">6</a>].

@@ -52,13 +52,13 @@ CSD [cheminfo](cheminfo.md#tp19)<br />
 CTXReader [ioclasseslist](ioclasseslist.md#tp5)<br />
 databases [cheminfo](cheminfo.md#tp15)<br />
 DNA [protein](protein.md#tp2)<br />
-ECFP [substructure](substructure.md#tp4)<br />
+ECFP [substructure](substructure.md#tp5)<br />
 electronegativity [missing](missing.md#tp8)<br />
 electrons [atomsbonds](atomsbonds.md#tp15)<br />
 ethanol [atomsbonds](atomsbonds.md#tp13)<br />
 exception [descriptor](descriptor.md#tp5)<br />
 explicit hydrogens [missing](missing.md#tp14)<br />
-FCFP [substructure](substructure.md#tp5)<br />
+FCFP [substructure](substructure.md#tp6)<br />
 ferrocene} [cheminfo](cheminfo.md#tp22)<br />
 Figueras algorithm [graph](graph.md#tp8)<br />
 FixedH option [inchi](inchi.md#tp9)<br />
@@ -121,7 +121,7 @@ missing hydrogens [missing](missing.md#tp12)<br />
 Mol2Reader [ioclasseslist](ioclasseslist.md#tp30)<br />
 Mol2Writer [ioclasseslist](ioclasseslist.md#tp31)<br />
 molecular descriptors [cheminfo](cheminfo.md#tp30) [descriptor](descriptor.md#tp2)<br />
-molecular fingerprints [substructure](substructure.md#tp3)<br />
+molecular fingerprints [substructure](substructure.md#tp4)<br />
 molecular formula [atomsbonds](atomsbonds.md#tp19) [missing](missing.md#tp17)<br />
 molecular mass [properties](properties.md#tp1)<br />
 molecular volume [properties](properties.md#tp8)<br />
@@ -174,6 +174,7 @@ sequence [protein](protein.md#tp5)<br />
 ShelXReader [ioclasseslist](ioclasseslist.md#tp40)<br />
 ShelXWriter [ioclasseslist](ioclasseslist.md#tp41)<br />
 Smallest Set of Smallest Rings [graph](graph.md#tp6)<br />
+SMARTS [substructure](substructure.md#tp3)<br />
 SMILES [cheminfo](cheminfo.md#tp8) [io](io.md#tp11) [migration](migration.md#tp1)<br />
 SMILESReader [ioclasseslist](ioclasseslist.md#tp38)<br />
 SMILESWriter [ioclasseslist](ioclasseslist.md#tp39)<br />
