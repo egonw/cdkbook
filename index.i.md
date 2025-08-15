@@ -41,8 +41,8 @@ License: CC-BY-SA 4.0 International
 This book is being opensourced [<cite>Q115942292</cite>]. This involves transforming the LaTeX source into Markdown,
 and updating all scripts to ensure all the automation works well. I have made good
 steps forward, but it will take some time for things to iron out. If you find issue,
-please report them [here](https://github.com/egonw/cdkbook/issues). If you like this
-book, please give the [GitHub repository](https://github.com/egonw/cdkbook/) a star.
+please report them [here](https://github.com/cdk/cdkbook/issues). If you like this
+book, please give the [GitHub repository](https://github.com/cdk/cdkbook/) a star.
 
 Most code snippets
 in this book are actually Groovy scripts, but [this repository](https://cdk.github.io/chempyformatics/)
