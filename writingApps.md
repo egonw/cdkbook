@@ -9,7 +9,7 @@ Java application, a BeanShell script, and a Groovy script.
 
 ## A (Very) Basic Java Application
 
-Given you already downloaded the [CDK jar](https://github.com/cdk/cdk/releases/tag/cdk-2.9) file,
+Given you already downloaded the [CDK jar](https://github.com/cdk/cdk/releases/tag/cdk-2.11) file,
 or compiled it from scratch, consider the following piece of
 Java source code:
 
@@ -29,13 +29,13 @@ This <a name="tp1">`Java application`</a> can then be compiled with <a name="tp2
 `BasicProgram.class`:
 
 ```shell
-$ javac -classpath cdk-2.9.jar BasicProgram
+$ javac -classpath cdk-2.11.jar BasicProgram
 ```
 
 And then run with:
 
 ```shell
-$ java -classpath .:cdk-2.9.jar BasicProgram
+$ java -classpath .:cdk-2.11.jar BasicProgram
 ```
 
 The downside of pure Java applications is the relative overhead
@@ -147,8 +147,8 @@ The introduction of this section showed how to use the environment variable
 a different way of doing this too, allowing it to `grab` its dependencies.
 
 ```groovy
-@Grab(group='org.openscience.cdk', module='cdk-io', version='2.9')
-@Grab(group='org.openscience.cdk', module='cdk-silent', version='2.9')
+@Grab(group='org.openscience.cdk', module='cdk-io', version='2.11')
+@Grab(group='org.openscience.cdk', module='cdk-silent', version='2.11')
 ```
 
 ## Python
@@ -162,7 +162,7 @@ to Python, please [file a request here](https://github.com/cdk/chempyformatics/i
 
 ```python
 from scyjava import config, jimport
-config.add_endpoints('org.openscience.cdk:cdk-bundle:2.9')
+config.add_endpoints('org.openscience.cdk:cdk-bundle:2.11')
 SmilesParser = jimport('org.openscience.cdk.smiles.SmilesParser')
 Builder = jimport('org.openscience.cdk.silent.SilentChemObjectBuilder')
 

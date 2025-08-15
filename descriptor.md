@@ -80,7 +80,7 @@ Title: org.openscience.cdk.qsar.descriptors.molecular.TPSADescriptor
 Reference: http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#...
   tpsa
 Vendor: The Chemistry Development Kit
-Identifier: 2.9
+Identifier: 2.11
 ```
 
 The identifier values originally referred to a String which held the
@@ -207,7 +207,7 @@ value = result.getValue()
 The output shows us that quite some metadata is preserved:
 
 ```plain
-Specification: org.openscience.cdk.qsar.DescriptorSpecification@76ffc17c
+Specification: org.openscience.cdk.qsar.DescriptorSpecification@5fe5c68b
 Parameters names: [checkAromaticity]
 Parameters values: [false]
 Exception: null

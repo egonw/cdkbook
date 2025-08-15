@@ -395,6 +395,29 @@ implements IChemObjectReaderErrorHandler {
     println message + "\n  -> " +
             exception.getMessage()
   };
+  public void handleFatalError(String message)
+  {
+    println "FATAL: " + message;
+  };
+  public void handleFatalError(String message,
+    Exception exception) {
+    println "FATAL: " + message + "\n  -> " +
+            exception.getMessage();
+  };
+  public void handleFatalError(String message,
+    int row, int colStart, int colEnd) {
+    print "FATAL at location: " + row + ", " +
+          colStart + "-" + colEnd + ": ";
+    println message;
+  };
+  public void handleFatalError(String message,
+    int row, int colStart, int colEnd,
+    Exception exception) {
+    print "FATAL at location: " + row + ", " +
+          colStart + "-" + colEnd + ": "
+    println message + "\n  -> " +
+            exception.getMessage()
+  };
 }
 ```
 
@@ -417,7 +440,7 @@ location: 6, 31-33: invalid symbol: D
 location: 7, 31-33: invalid symbol: T
 ```
 
-Because of an issue in version 2.9 of the CDK, the above does not show any warnings.
+Because of an issue in version 2.11 of the CDK, the above does not show any warnings.
 This has been fixed in CDK 2.3, see [commit 547b028e17656f54a080a885a166377320b3a8ad](https://github.com/cdk/cdk/commit/547b028e17656f54a080a885a166377320b3a8ad).
 
 <a name="sec:gzip"></a>

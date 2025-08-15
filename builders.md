@@ -66,7 +66,7 @@ refactoring to do.
 
 ## Implementations
 
-As indicated earlier, there are various implementations. CDK 2.9
+As indicated earlier, there are various implementations. CDK 2.11
 has three implementations: the default builder, a builder to create debug
 output creating classes, and two builders that create data classes that do
 not send around change events.
@@ -108,12 +108,12 @@ event is when the atom was added, while the second event is caused by the
 element symbol of the atom changing:
 
 ```plain
-Event: org.openscience.cdk.event.ChemObjectChangeEvent[source=AtomContainer(80...
-  1777708, #A:1, AtomRef{Atom(1244025760, S:C, AtomType(1244025760, FC:0, Isot...
-  ope(1244025760, Element(1244025760, S:C, AN:6))))})]
-Event: org.openscience.cdk.event.ChemObjectChangeEvent[source=Atom(1244025760,...
-   S:N, AtomType(1244025760, FC:0, Isotope(1244025760, Element(1244025760, S:N...
-  , AN:7))))]
+Event: org.openscience.cdk.event.ChemObjectChangeEvent[source=AtomContainer(13...
+  63574841, #A:1, AtomRef{Atom(493177695, S:C, AtomType(493177695, FC:0, Isoto...
+  pe(493177695, Element(493177695, S:C, AN:6))))})]
+Event: org.openscience.cdk.event.ChemObjectChangeEvent[source=Atom(493177695, ...
+  S:N, AtomType(493177695, FC:0, Isotope(493177695, Element(493177695, S:N, AN...
+  :7))))]
 ```
 
 ### The Debug Builder

@@ -66,6 +66,7 @@ factory = AtomTypeFactory.getInstance(
 <tr><td>Ar</td><td>Ar</td><td>0</td><td>0</td><td>SP3</td><td>4</td><td>0</td></tr>
 <tr><td>As</td><td>As</td><td>0</td><td>3</td><td>SP3</td><td>1</td><td>0</td></tr>
 <tr><td>As.3plus</td><td>As</td><td>3</td><td>0</td><td></td><td></td><td>0</td></tr>
+<tr><td>As.planar3</td><td>As</td><td>0</td><td>3</td><td></td><td>1</td><td>0</td></tr>
 <tr><td>As.plus</td><td>As</td><td>1</td><td>4</td><td>SP3</td><td>0</td><td>0</td></tr>
 <tr><td>As.5</td><td>As</td><td>0</td><td>4</td><td>SP3</td><td>0</td><td>1</td></tr>
 <tr><td>As.2</td><td>As</td><td>0</td><td>2</td><td>SP2</td><td>1</td><td>1</td></tr>
@@ -349,6 +350,7 @@ factory = AtomTypeFactory.getInstance(
 <tr><td>Ar</td><td>Ar</td><td>0</td><td>0</td><td>SP3</td><td>4</td><td>0</td></tr>
 <tr><td>As</td><td>As</td><td>0</td><td>3</td><td>SP3</td><td>1</td><td>0</td></tr>
 <tr><td>As.3plus</td><td>As</td><td>3</td><td>0</td><td></td><td></td><td>0</td></tr>
+<tr><td>As.planar3</td><td>As</td><td>0</td><td>3</td><td></td><td>1</td><td>0</td></tr>
 <tr><td>As.plus</td><td>As</td><td>1</td><td>4</td><td>SP3</td><td>0</td><td>0</td></tr>
 <tr><td>As.5</td><td>As</td><td>0</td><td>4</td><td>SP3</td><td>0</td><td>1</td></tr>
 <tr><td>As.2</td><td>As</td><td>0</td><td>2</td><td>SP2</td><td>1</td><td>1</td></tr>

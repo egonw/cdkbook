@@ -1,7 +1,7 @@
 # RendererParameters.groovy
 **Source code:**
 ```groovy
-@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.9')
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.11')
 
 import java.util.List;
 import java.awt.*;
@@ -62,9 +62,9 @@ parameter: BasicSceneGenerator$ShowTooltip -> false
 parameter: BasicSceneGenerator$ArrowHeadWidth -> 10.0
 parameter: BasicSceneGenerator$ShowReactionTitle -> false
 parameter: standard.StandardGenerator$AtomColor -> org.openscience.cdk.rendere...
-  r.color.UniColor@25dcf1b6
+  r.color.UniColor@55b62db8
 parameter: standard.StandardGenerator$Visibility -> org.openscience.cdk.render...
-  er.generators.standard.SelectionVisibility@aa8dce8
+  er.generators.standard.SelectionVisibility@e5c5e6
 parameter: standard.StandardGenerator$StrokeRatio -> 1.0
 parameter: standard.StandardGenerator$BondSeparation -> 0.16
 parameter: standard.StandardGenerator$WedgeRatio -> 6.0

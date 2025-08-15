@@ -1,7 +1,7 @@
 # ReadErrorHandler.groovy
 **Source code:**
 ```groovy
-@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.9')
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.11')
 
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.io.*;
@@ -34,6 +34,29 @@ implements IChemObjectReaderErrorHandler {
     Exception exception)
   {
     print "location: " + row + ", " +
+          colStart + "-" + colEnd + ": "
+    println message + "\n  -> " +
+            exception.getMessage()
+  };
+  public void handleFatalError(String message)
+  {
+    println "FATAL: " + message;
+  };
+  public void handleFatalError(String message,
+    Exception exception) {
+    println "FATAL: " + message + "\n  -> " +
+            exception.getMessage();
+  };
+  public void handleFatalError(String message,
+    int row, int colStart, int colEnd) {
+    print "FATAL at location: " + row + ", " +
+          colStart + "-" + colEnd + ": ";
+    println message;
+  };
+  public void handleFatalError(String message,
+    int row, int colStart, int colEnd,
+    Exception exception) {
+    print "FATAL at location: " + row + ", " +
           colStart + "-" + colEnd + ": "
     println message + "\n  -> " +
             exception.getMessage()

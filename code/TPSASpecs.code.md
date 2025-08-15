@@ -1,7 +1,7 @@
 # TPSASpecs.groovy
 **Source code:**
 ```groovy
-@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.9')
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.11')
 
 import org.openscience.cdk.qsar.descriptors.molecular.*;
 
@@ -18,5 +18,5 @@ Title: org.openscience.cdk.qsar.descriptors.molecular.TPSADescriptor
 Reference: http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#...
   tpsa
 Vendor: The Chemistry Development Kit
-Identifier: 2.9
+Identifier: 2.11
 ```

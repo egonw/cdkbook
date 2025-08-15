@@ -46,6 +46,7 @@ BIDIRECTIONAL
 NO_GO
 RETRO_SYNTHETIC
 RESONANCE
+UNDIRECTED
 ```
 
 There are matching get methods to access all <a name="tp2">reactants</a> and <a name="tp3">products</a>:
