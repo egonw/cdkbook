@@ -45,9 +45,9 @@ please report them [here](https://github.com/egonw/cdkbook/issues). If you like 
 book, please give the [GitHub repository](https://github.com/egonw/cdkbook/) a star.
 
 Most code snippets
-in this book are actually Groovy scripts, but [this repository](https://egonw.github.io/chempyformatics/)
+in this book are actually Groovy scripts, but [this repository](https://cdk.github.io/chempyformatics/)
 has some Jupyter notebook examples. If you want to know how any of those examples translates
-to Python, please [file a request here](https://github.com/egonw/chempyformatics/issues).
+to Python, please [file a request here](https://github.com/cdk/chempyformatics/issues).
 
 ## Contents
 

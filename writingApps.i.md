@@ -112,11 +112,11 @@ a different way of doing this too, allowing it to `grab` its dependencies.
 ## Python
 
 Using projects like [ScyJava](https://github.com/scijava/scyjava), the CDK can also be used in Python, for example, in a
-[Jupyter notebook on Google Colab](https://colab.research.google.com/github/egonw/chempyformatics/blob/main/docs/nb/CreateAtom3.ipynb).
+[Jupyter notebook on Google Colab](https://colab.research.google.com/github/cdk/chempyformatics/blob/main/docs/nb/CreateAtom3.ipynb).
 Most code snippets
-in this book are actually Groovy scripts, but [this repository](https://egonw.github.io/chempyformatics/)
+in this book are actually Groovy scripts, but [this repository](https://cdk.github.io/chempyformatics/)
 has some Jupyter notebook examples. If you want to know how any of those examples translates
-to Python, please [file a request here](https://github.com/egonw/chempyformatics/issues).
+to Python, please [file a request here](https://github.com/cdk/chempyformatics/issues).
 
 ```python
 from scyjava import config, jimport
