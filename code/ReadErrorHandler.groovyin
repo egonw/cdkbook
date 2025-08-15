@@ -33,6 +33,29 @@
 #    println message + "\n  -> " +
 #            exception.getMessage()
 #  };
+#  public void handleFatalError(String message)
+#  {
+#    println "FATAL: " + message;
+#  };
+#  public void handleFatalError(String message,
+#    Exception exception) {
+#    println "FATAL: " + message + "\n  -> " +
+#            exception.getMessage();
+#  };
+#  public void handleFatalError(String message,
+#    int row, int colStart, int colEnd) {
+#    print "FATAL at location: " + row + ", " +
+#          colStart + "-" + colEnd + ": ";
+#    println message;
+#  };
+#  public void handleFatalError(String message,
+#    int row, int colStart, int colEnd,
+#    Exception exception) {
+#    print "FATAL at location: " + row + ", " +
+#          colStart + "-" + colEnd + ": "
+#    println message + "\n  -> " +
+#            exception.getMessage()
+#  };
 #}
 reader = new MDLV2000Reader(
   new File("data/t.mol").newReader(),

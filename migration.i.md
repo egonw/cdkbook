@@ -9,6 +9,19 @@ The set of changes include changed class names. For example, the CDK 1.2
 class <class>MDLWriter</class> is now called <class>MDLV2000Writer</class> to reflect the
 V2000 version of the MDL formats.
 
+## CDK 2.9 to 2.10
+
+### IChemObjectReaderErrorHandler
+
+The <class type="topic">IChemObjectReaderErrorHandler</class> now has an extra error 
+level. Classes implementing this interface, now also need to implement these
+four methods:
+
+* `void handleFatalError(String message);`
+* `void handleFatalError(String message, Exception exception);`
+* `void handleFatalError(String message, int row, int colStart, int colEnd);`
+* `void handleFatalError(String message, int row, int colStart, int colEnd, Exception exception);`
+
 ## CDK 2.6 to 2.7
 
 ### InChI functionality
