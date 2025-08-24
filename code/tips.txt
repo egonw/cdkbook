@@ -1,0 +1,1 @@
+\ls -1 *groovyin | shuf -n 4

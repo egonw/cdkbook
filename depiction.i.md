@@ -70,6 +70,25 @@ The output will look something like:
 
 <out>RendererParameters</out>
 
+## Reactions
+
+Reactions can be rendered too. This functionality was originally developed to aid the curation of
+the MACiE database [<cite>Q28038506</cite>]. Section <xref>ch:reactions</xref> outlined the
+reaction data model, so we start from a populated <class>IReaction</class>
+here. The original approach used a special rendered, <class>ReactionRenderer</class>, additional generator classes,
+<class>ReactionScenceGenerator</class>, <class>ReactionArrowGenerator</class>, and with more than one reactant or
+product the <class>ReactionPlusGenerator</class>, and a extended draw visitor, called <class>ExtraAWTDrawVisitor</class>.
+
+However, now we can use the same <class>DepictionGenerator</class> as before:
+
+<code>RenderReaction</code>
+
+The result shown in Figure <xref>fig:RenderReaction</xref>, but some tweaking may be needed.
+
+<figure label="fig:RenderReaction" caption="Depiction of hydrolization of an alkene">
+![](images/generated/RenderReaction.png) <br />
+</figure>
+
 ## References
 
 <references/>

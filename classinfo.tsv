@@ -17,6 +17,7 @@ ConnectivityChecker	org.openscience.cdk.graph	standard
 CycleFinder	org.openscience.cdk.graph	core
 DebugChemObjectBuilder	org.openscience.cdk.debug	datadebug
 DefaultChemObjectBuilder	org.openscience.cdk	data
+DepictionGenerator	org.openscience.cdk.depict	depict
 DescriptorEngine	org.openscience.cdk.qsar	qsarmolecular
 DescriptorValue	org.openscience.cdk.qsar	standard
 DoubleArrayResult	org.openscience.cdk.qsar.result	standard
@@ -66,6 +67,9 @@ ModelBuilder3D	org.openscience.cdk.modeling.builder3d	builder3d
 Mol2Format	org.openscience.cdk.io.formats	ioformats
 MolecularFormulaManipulator	org.openscience.cdk.tools.manipulator	formula
 PDBReader	org.openscience.cdk.io	pdb
+ReactionArrowGenerator	org.openscience.cdk.renderer.generators	renderextra
+ReactionPlusGenerator	org.openscience.cdk.renderer.generators	renderextra
+ReactionRenderer	org.openscience.cdk.renderer	renderextra
 RebondTool	org.openscience.cdk.graph.rebond	standard
 SilentChemObjectBuilder	org.openscience.cdk.silent	silent
 SmilesGenerator	org.openscience.cdk.smiles	smiles
