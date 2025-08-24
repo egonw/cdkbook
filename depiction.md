@@ -199,5 +199,5 @@ The result shown in Figure [16.4](#fig:fig:RenderReaction), but some tweaking ma
 ## References
 
 1. <a name="citeref1"></a>Krause S, Willighagen E, Steinbeck C. JChemPaint - Using the Collaborative Forces of the Internet to Develop a Free Editor for 2D Chemical Structures. Molecules. 2000 Jan 28;5(1):93–8.  doi:[10.3390/50100093](https://doi.org/10.3390/50100093) ([Scholia](https://scholia.toolforge.org/doi/10.3390/50100093))
-2. <a name="citeref2"></a>Missing
+2. <a name="citeref2"></a>Holliday GL, Andreini C, Fischer JD, Rahman SA, Almonacid DE, Williams ST, et al. MACiE: exploring the diversity of biochemical reactions. NAR. 2011 Nov 3;40(Database issue):D783-9.  doi:[10.1093/NAR/GKR799](https://doi.org/10.1093/NAR/GKR799) ([Scholia](https://scholia.toolforge.org/doi/10.1093/NAR/GKR799))
 
