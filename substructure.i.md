@@ -13,6 +13,13 @@ matches can be removed.
 
 <section level="##" label="sec:exactsearch">Exact Search</section>
 
+Before we look at isomorphism checking, it should be noted that canonical SMILES
+and InChI generation (see elsewhere in this book) may be an appropriate
+way to determine identity and use this for database lookup.
+
+But historically, this below approach was the way to go
+and is included are prelude to the substructure search.
+
 The <class>UniversalIsomorphismTester</class> class implements an algorithm
 that was originally developed for <topic>isomorphism</topic> checking.
 However, it can be used for substructure search too.
