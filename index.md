@@ -170,6 +170,7 @@ to Python, please [file a request here](https://github.com/cdk/chempyformatics/i
 16.2. [Background color](depiction.md#background-color) <br />
 16.3. [Coloring selections](depiction.md#coloring-selections) <br />
 16.4. [Parameters](depiction.md#parameters) <br />
+16.5. [Reactions](depiction.md#reactions) <br />
 17. [Substructure Searching](substructure.md) <br />
 17.1. [Exact Search](substructure.md#exact-search) <br />
 17.2. [Substructures](substructure.md#substructures) <br />

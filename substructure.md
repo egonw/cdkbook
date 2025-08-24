@@ -14,6 +14,13 @@ matches can be removed.
 <a name="sec:sec:exactsearch"></a>
 ## Exact Search
 
+Before we look at isomorphism checking, it should be noted that canonical SMILES
+and InChI generation (see elsewhere in this book) may be an appropriate
+way to determine identity and use this for database lookup.
+
+But historically, this below approach was the way to go
+and is included are prelude to the substructure search.
+
 The [`UniversalIsomorphismTester`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/isomorphism/UniversalIsomorphismTester.html) class implements an algorithm
 that was originally developed for <a name="tp2">isomorphism</a> checking.
 However, it can be used for substructure search too.

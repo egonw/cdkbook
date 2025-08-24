@@ -164,7 +164,40 @@ parameter: standard.StandardGenerator$DeuteriumSymbol -> true
 parameter: standard.StandardGenerator$PseudoFontStyle -> 3
 ```
 
+## Reactions
+
+Reactions can be rendered too. This functionality was originally developed to aid the curation of
+the MACiE database [<a href="#citeref2">2</a>]. Section ?? outlined the
+reaction data model, so we start from a populated [`IReaction`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/interfaces/IReaction.html)
+here. The original approach used a special rendered, [`ReactionRenderer`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/renderer/ReactionRenderer.html), additional generator classes,
+`ReactionScenceGenerator`, [`ReactionArrowGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/renderer/generators/ReactionArrowGenerator.html), and with more than one reactant or
+product the [`ReactionPlusGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/renderer/generators/ReactionPlusGenerator.html), and a extended draw visitor, called `ExtraAWTDrawVisitor`.
+
+However, now we can use the same [`DepictionGenerator`](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/depict/DepictionGenerator.html) as before:
+
+**Script** [code/RenderReaction.groovy](code/RenderReaction.code.md)
+```groovy
+sp = new SmilesParser(
+  SilentChemObjectBuilder.getInstance()
+)
+reaction = sp.parseReactionSmiles("CC=C.O>[H+]>CCCO")
+new DepictionGenerator()
+  .withSize(1200, 600)
+  .withMargin(0.1)
+  .withZoom(3.0)
+  .withAtomColors()
+  .depict(reaction)
+  .writeTo("RenderReaction.png");
+```
+
+The result shown in Figure [16.4](#fig:fig:RenderReaction), but some tweaking may be needed.
+
+<a name="fig:fig:RenderReaction"></a>
+![](images/generated/RenderReaction.png)
+<br />**Figure 16.4**: Depiction of hydrolization of an alkene
+
 ## References
 
 1. <a name="citeref1"></a>Krause S, Willighagen E, Steinbeck C. JChemPaint - Using the Collaborative Forces of the Internet to Develop a Free Editor for 2D Chemical Structures. Molecules. 2000 Jan 28;5(1):93–8.  doi:[10.3390/50100093](https://doi.org/10.3390/50100093) ([Scholia](https://scholia.toolforge.org/doi/10.3390/50100093))
+2. <a name="citeref2"></a>Missing
 
