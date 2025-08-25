@@ -14,8 +14,7 @@ sp = new SmilesParser(
 reaction = sp.parseReactionSmiles("CC=C.O>[H+]>CCCO")
 new DepictionGenerator()
   .withSize(1200, 600)
-  .withMargin(0.1)
-  .withZoom(3.0)
+  .withFillToFit()
   .withAtomColors()
   .depict(reaction)
   .writeTo("RenderReaction.png");
