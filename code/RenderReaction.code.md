@@ -13,7 +13,7 @@ sp = new SmilesParser(
 )
 reaction = sp.parseReactionSmiles("CC=C.O>[H+]>CCCO")
 new DepictionGenerator()
-  .withSize(1200, 600)
+  .withSize(1200, 300)
   .withFillToFit()
   .withAtomColors()
   .depict(reaction)
