@@ -26,6 +26,12 @@ This results in the image of triazole given in Figure <xref>fig:triazole</xref>.
 ![](images/generated/RenderMolecule.png) <br />
 </figure>
 
+### Scalable Vector Graphics
+
+The image can also be generated as <topic>Scalable Vector Graphics</topic> (<topic>SVG</topic>):
+
+<code>RenderMoleculeSVG</code>
+
 ## Background color
 
 Starting from the above pattern, you can also customize the <topic>background color</topic>.
