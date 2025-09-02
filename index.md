@@ -20,12 +20,12 @@
   "keywords":"cheminformatics, chemoinformatics, java, Groovy, Chemistry Development Kit, CDK",
   "license":"CC BY-SA 4.0",
   "url": "https://egonw.github.io/cdkbook/",
-  "version":"2.11-0"
+  "version":"2.11-2"
 }
 </script>
 
 
-Edition 2.11-0
+Edition 2.11-2
 
 **Egon L. Willighagen** PhD<br />
 Long time CDK developer
@@ -167,6 +167,7 @@ to Python, please [file a request here](https://github.com/cdk/chempyformatics/i
 15.6. [Unknown Molecular Formula](missing.md#unknown-molecular-formula) <br />
 16. [Depiction](depiction.md) <br />
 16.1. [Molecules](depiction.md#molecules) <br />
+16.1.1. [Scalable Vector Graphics](depiction.md#scalable-vector-graphics) <br />
 16.2. [Background color](depiction.md#background-color) <br />
 16.3. [Coloring selections](depiction.md#coloring-selections) <br />
 16.4. [Parameters](depiction.md#parameters) <br />

@@ -36,9 +36,22 @@ This results in the image of triazole given in Figure [16.1](#fig:fig:triazole).
 ![](images/generated/RenderMolecule.png)
 <br />**Figure 16.1**: 2D diagram of triazole
 
+### Scalable Vector Graphics
+
+The image can also be generated as <a name="tp4">Scalable Vector Graphics</a> (<a name="tp5">SVG</a>):
+
+**Script** [code/RenderMoleculeSVG.groovy](code/RenderMoleculeSVG.code.md)
+```groovy
+new DepictionGenerator()
+  .withSize(600, 600)
+  .withAtomColors()
+  .depict(triazole)
+  .writeTo("RenderMolecule.svg");
+```
+
 ## Background color
 
-Starting from the above pattern, you can also customize the <a name="tp4">background color</a>.
+Starting from the above pattern, you can also customize the <a name="tp6">background color</a>.
 This code uses the `withParam()` method to customize the rendering:
 
 **Script** [code/BackgroundColor.groovy](code/BackgroundColor.code.md)

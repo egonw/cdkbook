@@ -9,7 +9,7 @@ aromaticity [properties](properties.md#tp10)<br />
 ASN.1 [io](io.md#tp3)<br />
 atomic number [atomsbonds](atomsbonds.md#tp3) [missing](missing.md#tp1)<br />
 atom types [atomtype](atomtype.md#tp1)<br />
-background color [depiction](depiction.md#tp4)<br />
+background color [depiction](depiction.md#tp6)<br />
 benzene [atomsbonds](atomsbonds.md#tp14)<br />
 boiling points [cheminfo](cheminfo.md#tp2)<br />
 bond orders [missing](missing.md#tp11)<br />
@@ -170,6 +170,7 @@ ring detection [graph](graph.md#tp5)<br />
 rings [graph](graph.md#tp9)<br />
 RssWriter [ioclasseslist](ioclasseslist.md#tp4)<br />
 salt [salts](salts.md#tp1)<br />
+Scalable Vector Graphics [depiction](depiction.md#tp4)<br />
 SDFWriter [ioclasseslist](ioclasseslist.md#tp30)<br />
 sequence [protein](protein.md#tp5)<br />
 ShelXReader [ioclasseslist](ioclasseslist.md#tp41)<br />
@@ -189,6 +190,7 @@ stereochemistry [inchi](inchi.md#tp12)<br />
 stereoisomerism [inchi](inchi.md#tp11)<br />
 substructure searching [substructure](substructure.md#tp1)<br />
 superimpose [stereo](stereo.md#tp3)<br />
+SVG [depiction](depiction.md#tp5)<br />
 Sybyl atom type [atomtype](atomtype.md#tp3)<br />
 Sybyl Line Notation [io](io.md#tp10)<br />
 symbol [missing](missing.md#tp2)<br />
