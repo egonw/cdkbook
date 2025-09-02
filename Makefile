@@ -76,7 +76,7 @@ scriptcount.tex: code/scriptCount.tex
 code/scriptCount.tex:
 	@cd code; make scriptCount.tex
 
-index.md: index.i.md toc.txt createMarkdown.groovy
+index.md: cdk.version index.i.md toc.txt createMarkdown.groovy
 	@echo "Creating $@"
 	@groovy createMarkdown.groovy index.i.md > index.md
 
