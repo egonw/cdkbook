@@ -9,7 +9,9 @@ cheminformatics work [Christoph Steinbeck](https://en.wikipedia.org/wiki/Christo
 [JChemPaint](https://jchempaint.github.io/) [<cite>Q27093381</cite>] and CompChem projects.
 
 This book is not about those past projects, however; it is about the CDK as it is
-now. It has evolved enormously over the past 10 years, and got more and more
+now. It has evolved enormously over the past 15 years: it started in 2009 as preparation
+for a [CDK workshop](http://www.steinbeck-molecular.de/steinblog/index.php/2009/02/17/cdk-workshop-at-ebi-on-april-2021/)
+(see [this blogpost](https://doi.org/10.59350/rzwcr-mq411)) and got more and more
 functionality [<cite>Q27065423</cite>,<cite>Q30149558</cite>], thanx to the many contributors
 (see the [Author List](https://github.com/cdk/cdk/blob/main/AUTHORS.txt)). Moreover, by now, the CDK has shown its
 role in many cheminformatics and bioinformatics fields, and you will find that
